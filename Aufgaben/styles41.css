@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body
+{
+    font-family: 'Open Sans', sans-serif;
+    width: 60%;
+}
+
+img
+{
+    width: 20%;
+    padding: 1em;
+}
+
+table
+{
+    width: 100%;
+}
+
+hr
+{
+    margin-top: 2em;
+}
+
+ul li
+{
+    padding-left: 30px;
+}
+footer
+{
+    padding-bottom: 2em;
+}
