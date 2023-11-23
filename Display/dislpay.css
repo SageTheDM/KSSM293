@@ -1,0 +1,35 @@
+body {
+    color: black;
+    background-color: black;
+}
+
+p {
+    color: white;
+    font-size: 1.5em;
+}
+
+
+span {
+    display: inline;
+    /* Standard */
+    display: inline-block;
+    /* Block im textfluss */
+    display: block;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    border: 1px solid blue;
+    background-color: yellow;
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.black {
+    color: black;
+}
