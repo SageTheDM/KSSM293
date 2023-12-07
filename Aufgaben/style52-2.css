@@ -12,6 +12,7 @@ body {
     line-height: 1.5;
         background-image: url(img/hd.jpg);
         background-size: cover;
+        border-radius: 3em;
 }
 
 main {
@@ -20,6 +21,7 @@ main {
         margin-top: 2em;
     background-color: white;
     padding: 0 2em 2em 2em;
+    border-radius: 3em;
     }
     
 span {
@@ -78,6 +80,45 @@ nav a {
 nav a:hover {
     background-color: #ad0950;
 }
+table {
+    width: 100%;
+
+}
+
+table,
+th,
+td {
+    border: 1px solid;
+    border-collapse: collapse;
+    padding: 0.5em;
+    vertical-align: top;
+}
+
+th {
+    text-align: left;
+}
+
+.darker {
+    background-color: #c7095c;
+}
+
+tr:hover {
+    background-color: #bd0856;
+
+}
+
+table tr td ul {
+    padding: 1em 0 1em 0;
+}
+
+td ul li {
+    list-style-type: none;
+    padding: 0 0 0 3em;
+    margin: 0;
+}
+
+
+/* ICH BIN EIN ABSTAND */
 @media screen and (max-width: 960px) {
     nav a {
         display: block;
