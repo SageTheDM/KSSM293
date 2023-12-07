@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.5s ease-in-out;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+body {
+    line-height: 1.5;
+        background-image: url(img/hd.jpg);
+        background-size: cover;
+}
+
+main {
+    width: 80%;
+    margin: auto;
+        margin-top: 2em;
+    background-color: white;
+    padding: 0 2em 2em 2em;
+    }
+    
+span {
+    color: #be0a66;
+}
+
+header {
+    padding: 0;
+}
+img#logo {
+    width: 5rem;
+    position: relative;
+    top: 0.5em;
+}
+
+nav,
+footer,
+article {
+    padding: 1em 2em;
+    color: white;
+}
+
+nav,
+footer {
+    background-color: #bd0856;
+}
+
+nav {
+    margin-top: 1em;
+    text-align: right;
+    padding: 0;
+    height: 4em;
+}
+
+article {
+    background-color: #de0a66;
+}
+
+nav a,
+footer a {
+    color: white;
+    text-decoration: none;
+}
+nav a {
+    display: inline-block;
+    background-color: #de0a66;
+    width: 8em;
+    height: 3.2em;
+    text-align: left;
+    padding: 0.8em;
+    margin: 0.4em 0.2em;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #ad0950;
+}
+@media screen and (max-width: 960px) {
+    nav a {
+        display: block;
+        width: 98.1%;
+}
+
+nav {
+    height: auto;
+}
+
+main {
+    width: 100%;
+}
+}
