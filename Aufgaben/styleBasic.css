@@ -73,3 +73,30 @@ nav {
 li a {
     text-align: center;
 }
+@media screen and (max-width: 960px) {
+    nav a {
+        display: block;
+        width: 98.1%;
+    }
+
+    nav {
+        height: auto;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    .container {
+        background-color: none;
+        color: none;
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        box-shadow: none;
+    }
+
+    article {
+        background-color: none;
+    }
+}

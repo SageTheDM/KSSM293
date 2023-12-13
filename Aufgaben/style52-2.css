@@ -120,7 +120,7 @@ td ul li {
 
 /* ICH BIN EIN ABSTAND */
 @media screen and (max-width: 960px) {
-    nav a {
+nav a {
         display: block;
         width: 98.1%;
 }
