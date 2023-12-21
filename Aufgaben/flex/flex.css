@@ -3,3 +3,25 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+div{
+    height: 200px;
+    text-align: center;
+    width: 15%;
+}
+
+#box01{
+    background-color: yellow;
+}
+
+#box02{
+    background-color: red;
+}
+
+#box03{
+    background-color: purple;
+}
+
+#box04{
+    background-color: black;
+}
