@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+section{
+    display: flex;
+    justify-content: center;
+    /* justify-content: space-around; */
+    /* justify-content: space-between; */
+}
+
 div{
     height: 200px;
     text-align: center;
@@ -12,16 +19,20 @@ div{
 
 #box01{
     background-color: yellow;
+    flex: 1;
 }
 
 #box02{
     background-color: red;
+    flex: 2;
 }
 
 #box03{
     background-color: purple;
+    flex: 1;
 }
 
 #box04{
     background-color: black;
+    flex: 1;
 }
