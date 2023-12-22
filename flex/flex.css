@@ -2,11 +2,25 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: 0.5s;
+}
+
+button{
+    padding: 20px;
+    color: white;
+    background-color: purple;
 }
 
 section{
+    height: 400px;
+    background-color: grey;
     display: flex;
-    justify-content: center;
+    /* The next two lines centers the code vertical*/
+    align-content: center;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    /* justify-content changes the horizontal view */
+    /* justify-content: center; */
     /* justify-content: space-around; */
     /* justify-content: space-between; */
 }
