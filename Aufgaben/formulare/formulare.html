@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formulare.css">
+    <title>Formulare</title>
+</head>
+<body>
+    <h1>Anmeldung zum Firmenausflug</h1>
+    <form action="anmeldung.php" method="post">
+        <!-- Border around fields -->
+        <fieldset>
+            <legend>Zu Ihrer Person</legend>
+            <p>
+                <input type="text" name="vorname" id="vorname" placeholder="Vorname schreiben..." required>
+                <input type="text" name="nachname" id="nachname" placeholder="Nachname schreiben..." required>
+            </p>
+            <p><input type="email" name="email" id="email" placeholder="Mail eingeben..." required></p>
+            <p>
+                <input type="text" name="strasse" id="strasse" placeholder="Strasse..." required>
+
+                <input type="text" name="nummer" id="nummer" placeholder="Nummer..." required> 
+            </p>
+            <p>
+                <input type="text" name="plz" id="plz" placeholder="Postleitzahl" required>
+                <input type="text" name="ort" id="ort" placeholder="Ort" required>
+            </p>
+            <p>
+                <input type="tel" name="tel" id="tel" placeholder="Telefonnummer" required>
+            </p>
+            
+        </fieldset>
+        <fieldset>
+            <!-- Radio elemente gehen auf die Namen -> pro Namen 1. elemnt auswählbar -->
+            <legend>Angaben zum Ausflug</legend>
+            <h4>Verfügen Sie über ein Abo?</h4>
+            <input type="radio" name="abo" id="keinAbo" value="keinAbo">
+            <label for="keinAbo">Kein Abo</label>
+            <br>
+            <input type="radio" name="abo" id="ga" value="ga">
+            <label for="ga">GA</label>
+            <br>
+            <input type="radio" name="abo" id="halbtax" value="halbtax">
+            <label for="halbtax">Halbtax</label>
+            <br>
+            <input type="radio" name="abo" id="strecke" value="strecke">
+            <label for="strecke">Strecken Abo</label>
+            <br>
+            <h4>Abendessen Menuwahl</h4>
+            <input type="radio" name="menu" id="menu1" value="Menü 1">
+            <label for="menu1">Menü 1</label>
+            <br>
+            <input type="radio" name="menu" id="menu2" value="Menü 2">
+            <label for="menu2">Menü 2</label>
+            <br>
+            <input type="radio" name="menu" id="menu3" value="Menü 3">
+            <label for="menu3">Menü 3</label>
+            <br>
+            <input type="radio" name="menu" id="menu4" value="Menü 4">
+            <label for="menu4">Menü 4</label>
+            <h4>Übernachtung</h4>
+            <select name="uebernachtung" id="uebernachtung">
+                <option value="1">keine Übernachtung</option>
+                <option value="2">Massenverschlag</option>
+                <option value="3">Einzelzimmer klein</option>
+                <option value="4">Doppelzimmer</option>
+                <option value="5">Luxuszimmer</option>
+            </select>
+            <h4>Bemerkungen</h4>
+            <textarea name="bemerkung" id="bemerkung" cols="30" rows="10" placeholder="I am a dwarf and I'm digging a hole diggy diggy hole..."></textarea>
+        </fieldset>
+        <p><input type="submit" value="Anmeldung versenden"><input type="reset" value="alles löschen"></p>
+    </form>
+</body>
+</html>
