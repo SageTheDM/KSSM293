@@ -1,12 +1,11 @@
 * {
+    box-sizing: border-box;
     transition: 0.5s;
-    hyphens: auto;
 }
 
 body {
-    height: 90%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f5f5f5;
     background-image: url(img/KSS.jpeg);
     background-repeat: no-repeat;
@@ -47,6 +46,7 @@ h1 {
 
 nav {
     margin-top: 20px;
+    text-align: center;
 }
 
 .folder-list {
@@ -54,74 +54,60 @@ nav {
     padding: 0;
 }
 
-.folder-list-item {
-    margin-bottom: 10px;
-}
-
-.folder-link {
+/* Updated button styles */
+.dropdown-btn {
     text-decoration: none;
     color: #555;
     font-weight: bold;
-    display: block;
-    padding: 5px;
+    display: inline-block;
+    padding: 10px;
+    position: relative;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
 
-.folder-link:hover {
+.dropdown-btn:hover {
     color: violet;
 }
 
-li a {
-    text-align: center;
-}
-@media screen and (max-width: 960px) {
-    nav a {
-        display: block;
-        width: 98.1%;
-    }
-
-    nav {
-        height: auto;
-    }
-
-    main {
-        width: 100%;
-    }
-
-    .container {
-        background-color: none;
-        color: none;
-        max-width: 600px;
-        margin: 20px auto;
-        padding: 20px;
-        box-shadow: none;
-    }
-
-    article {
-        background-color: none;
-    }
-}
-
+/* Dropdown Styles */
 .dropdown-content {
+    text-align: center;
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
+    border-radius: 5px;
+    overflow: hidden;
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+    width: 100%;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
+    transform: scaleY(1);
+}
+
+.dropdown-content a {
+    color: #555;
+    padding: 15px;
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #f9f9f9;
+}
+
+.droptext {
+    font-weight: bold;
+    text-align: center;
+    height: 2em;
 }

@@ -1,52 +1,46 @@
-*{
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    transition: 0.5s;
 }
 
-button{
-    padding: 20px;
-    color: white;
-    background-color: purple;
+#box01 {
+    background-color: blue;
+    flex: 1;
 }
 
-section{
-    height: 400px;
-    background-color: grey;
-    display: flex;
-    /* The next two lines centers the code vertical*/
-    align-content: center;
-    flex-wrap: wrap;
-    /* flex-direction: column; */
-    /* justify-content changes the horizontal view */
-    /* justify-content: center; */
-    /* justify-content: space-around; */
-    /* justify-content: space-between; */
+#box02 {
+    background-color: red;
+    flex: 2;
 }
 
-div{
+#box03 {
+    background-color: yellow;
+    flex: 1;
+}
+
+#box04 {
+    background-color: green;
+    flex: 1;
+}
+
+div {
     height: 200px;
     text-align: center;
     width: 15%;
 }
 
-#box01{
-    background-color: yellow;
-    flex: 1;
-}
-
-#box02{
-    background-color: red;
-    flex: 2;
-}
-
-#box03{
-    background-color: purple;
-    flex: 1;
-}
-
-#box04{
+section {
+    height: 400px;
     background-color: black;
-    flex: 1;
+    display: flex;
+    /* Die nächsten beiden Zeilen zentrieren die Boxen vertikal. */
+    align-content: center;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    /* justify-content beeinflusst die Darstellung horizontal. */
+    /* justify-content: center; */
+    /* justify-content: space-around; */
+    /* justify-content: space-between; */
+
 }

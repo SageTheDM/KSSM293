@@ -5,6 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Your Website Title</title>
     <link rel="stylesheet" href="styleBasic.css" />
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const tasksDropdown = document.getElementById("tasksDropdown");
+        const specialDropdown = document.getElementById("specialDropdown");
+
+        // Function to toggle dropdown
+        function toggleDropdown(dropdown) {
+          dropdown.classList.toggle("active");
+        }
+
+        // Event listeners for button click
+        tasksDropdown.addEventListener("click", function () {
+          toggleDropdown(tasksDropdown);
+        });
+
+        specialDropdown.addEventListener("click", function () {
+          toggleDropdown(specialDropdown);
+        });
+      });
+    </script>
   </head>
 
   <body>
@@ -14,32 +34,25 @@
           <h1>IMS Informatikmodul M293</h1>
         </header>
         <nav>
-    <ul class="folder-list">
-        <li class="folder-list-item">
-            <a class="folder-link" href="../Design/index.html">Design</a>
-        </li>
-        <li>
-            <a class="folder-link" href="../IMS-HTML/src/pages/Index.html">IMS-HTML</a>
-        </li>
-        <li class="folder-list-item dropdown">
-            <span class="dropdown-btn">Tasks</span>
-            <ul class="dropdown-content">
+          <ul class="folder-list">
+            <li class="folder-list-item dropdown" id="tasksDropdown">
+              <button class="dropdown-btn">Tasks</button>
+              <ul class="dropdown-content">
                 <li><a class="folder-link" href="aufgabe41.html">Task 41</a></li>
                 <li><a class="folder-link" href="aufgabe42.html">Task 42</a></li>
                 <li><a class="folder-link" href="aufgabe52.html">Task 52</a></li>
                 <li><a class="folder-link" href="aufgabe60.html">Task 60</a></li>
-            </ul>
-        </li>
-        <li class="folder-list-item dropdown">
-            <span class="dropdown-btn">Special</span>
-            <ul class="dropdown-content">
+              </ul>
+            </li>
+            <li class="folder-list-item dropdown" id="specialDropdown">
+              <button class="dropdown-btn">Special</button>
+              <ul class="dropdown-content">
                 <li><a class="folder-link" href="flex/flex.html">Flex</a></li>
                 <li><a class="folder-link" href="formulare/formulare.html">Formulare</a></li>
-            </ul>
-        </li>
-    </ul>
-</nav>
-
+              </ul>
+            </li>
+          </ul>
+        </nav>
       </div>
       <div class="container">
         <hr />
