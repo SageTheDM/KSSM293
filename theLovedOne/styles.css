@@ -1,5 +1,6 @@
 /* Browser Reset */
 * {
+    transition: 0.2s;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,17 +8,27 @@
 
 /* Basic styling */
 body {
-    background-color: #000;
-    color: #fff;
-    font-family: Arial, sans-serif;
+    background: url('pictures/heartOnFire.jpg') center/cover repeat fixed;
+    color: #3d3939; /* Dark red text color */
+    font-family: 'Times New Roman', serif; /* Romantic font */
 }
 
 .time{
-   margin: auto;
-   display: block;
-   top: 800px;
+    background: red;
+    margin: auto;
+    padding: 1em;
+    width: 80%;
+    border-radius: 20px;
 }
 
+.black{
+    background: rgb(0, 0, 0, 0.9);
+    margin: auto;
+    padding: 1em;
+    width: 100%;
+    border-radius: 20px;
+}
+/* Container styling */
 .container {
     max-width: 90%;
     height: 90%;
@@ -25,25 +36,30 @@ body {
     padding: 20px;
 }
 
+/* Header styling */
 h1 {
-    color: #ff0000;
+    color: #ff0055; /* Romantic red color for header */
 }
 
-/* Basic styling for the slideshow container */
+/* Slideshow container styling */
 .slideshow-container {
     width: auto;
     margin: auto;
     padding: 3em;
-    text-align: center; /* Center the content */
+    text-align: center;
+    background-color: #ff666649; /* Red background for slideshow container */
+    border-radius: 20px; /* More rounded corners */
+    box-shadow: 0 0 20px rgba(255, 0, 85, 0.5); /* Softer shadow */
 }
 
-/* Hide all images by default and center them */
+/* Slides styling */
 .mySlides {
     display: none;
     margin: auto;
+    border-radius: 20px; /* More rounded corners for images */
 }
 
-/* Next and previous buttons */
+/* Navigation buttons styling */
 .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -56,38 +72,36 @@ h1 {
     font-size: 18px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
+    background-color: rgba(61, 57, 57, 0.6); /* Semi-transparent dark red background */
 }
 
-/* Position the "previous" button to the left */
 .prev {
-    margin: auto;
     left: 0;
 }
 
-/* Position the "next" button to the right */
 .next {
-    margin: auto;
     right: 0;
     border-radius: 3px 0 0 3px;
 }
 
 /* On hover, change background color of buttons */
 .prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(61, 57, 57, 0.8);
 }
 
-/* Additional styling for images */
+/* Image styling */
 img {
     width: auto;
     height: auto;
     max-width: 100%;
+    border-radius: 20px; /* More rounded corners for images */
 }
 
-/* Additional styling for poem */
+/* Poem styling */
 .poem {
-    background-color: red;
+    background-color: #ff4d4d; /* Romantic red background for poem */
     padding: 1em;
-    border-radius: 2em;
+    border-radius: 20px; /* More rounded corners for poem container */
     margin: auto;
     margin-bottom: 5em;
     width: 75%;
@@ -95,55 +109,120 @@ img {
 
 p {
     text-align: center;
-    font-size: 1em;
-    color: black;
+    font-size: 1.2em; /* Slightly larger font for better readability */
+    color: #3d3939; /* Dark red text color */
+    font-style: italic;
 }
 
-/* Additional styling for count-up clock */
+/* Clock container styling */
 .clock-container {
     text-align: center;
-    color: #fff;
+    color: #3d3939;
     margin-top: 20px;
 }
 
+/* Clock styling */
 .clock {
     margin: auto;
     display: block;
     width: fit-content;
     font-size: 36px;
-    color: red;
+    color: #ff0055;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 20px; /* More rounded corners for clock container */
 }
 
-/* Additional styling for additional information */
+/* Additional information styling */
 .info {
     margin: auto;
     display: block;
     width: fit-content;
     font-size: 28px;
-    color: rgba(255, 0, 0, 0.504);
-    border-radius: 10px;
+    color: rgb(255, 0, 20); /* Semi-transparent romantic red color */
+    border-radius: 20px; /* More rounded corners for info container */
 }
 
+/* LoveH2 styling */
 #loveH2 {
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.685); /* Romantic red background for LoveH2 */
     color: gold;
     margin: auto;
     padding: 8px;
     display: block;
     width: fit-content;
     font-size: 46px;
-    border-radius: 10px;
+    border-radius: 20px; /* More rounded corners for LoveH2 container */
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333; /* Change the background color as needed */
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensure the navbar stays on top of other elements */
+}
+
+/* Style for the navbar links */
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline;
+    margin-right: 20px; /* Adjust spacing between links */
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white; /* Change the link color as needed */
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #FFD700; /* Change the hover color as needed */
+}
+
+iframe{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff0055; /* Romantic red background color */
+    color: white; /* White text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button a{
+    text-decoration: none;
+    color: black;
+}
+
+button:hover {
+    background-color: #cc0040; /* Darker red background color on hover */
 }
 
 /* Media query for larger screens (PCs) */
 @media only screen and (min-width: 768px) {
     .slideshow-container {
-        padding: 1em;
+        padding: 2em; /* Slightly reduced padding for larger screens */
     }
 
-    img{
+    img {
         max-height: 700px;
     }
 
@@ -151,35 +230,48 @@ p {
         width: 70%;
     }
 
-    
-    article{
+    article {
         max-height: 800px;
         min-height: 800px;
         margin: auto;
     }
 
-    main{
+    main {
         height: auto;
         margin: auto;
     }
+
+    iframe{
+        width: 80%;
+    }
+
+    .time, .black{
+        width: 100%;
+    }
+
+    
 }
 
 /* Media query for smaller screens (Phones) */
 @media only screen and (max-width: 767px) {
+    iframe{
+        width: 80%;
+    }
     img {
         margin: auto;
         height: auto;
         max-width: 100%;
     }
-    
-article{
-    max-height: 700px;
-    min-height: 700px;
-    margin: auto;
+
+    article {
+        max-height: 700px;
+        min-height: 700px;
+        margin: auto;
+    }
+
+    main {
+        height: auto;
+        margin: auto;
+    }
 }
 
-main{
-    height: auto;
-    margin: auto;
-}
-}
