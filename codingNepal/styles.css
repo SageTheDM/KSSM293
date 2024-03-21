@@ -58,6 +58,9 @@ header {
     color: #ddd;
 }
 
+
+/* Homepage */
+
 .homepage {
     position: relative;
     height: 100vh;
@@ -68,8 +71,8 @@ header {
 }
 
 .homepage::before {
-    content: "";
-    position: absolute;
+    content: '';
+    position: relative;
     height: 100%;
     width: 100%;
     top: 0;
@@ -78,7 +81,6 @@ header {
 }
 
 .homepage .content {
-    position: relative;
     height: 85%;
     flex-direction: column;
     justify-content: center;
@@ -90,7 +92,7 @@ header {
     margin-bottom: 50px;
 }
 
-.homepage.text h1 {
+.homepage .text h1 {
     font-size: 60px;
     font-weight: 700;
     margin-bottom: 10px;
@@ -103,7 +105,7 @@ header {
     padding: 10px 30px;
     border-radius: 5px;
     border: 2px solid #fff;
-    box-shadow: rgba(0, 0, 0, 0.3);
+    box-shadow: rgba(0, 0, 0, 0.3) 0 5px 10px;
     font-size: 18px;
     transition: 0.3s;
 }
@@ -113,6 +115,8 @@ header {
     background: rgba(255, 255, 255, 0.3);
 }
 
+
+/* Service */
 section {
     padding-top: 80px;
 }
@@ -139,7 +143,7 @@ section .card {
     padding: 40px 15px;
     border-radius: 5px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.04);
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 section .card img {
@@ -153,6 +157,7 @@ section .card p {
     margin-top: 5px;
 }
 
+/* Portfolio */
 .portfolio .card {
     padding: 0 0 20px;
 }
@@ -163,6 +168,7 @@ section .card p {
     border-radius: 8px 8px 0 0;
 }
 
+/* About */
 .about .company-info {
     margin-top: 30px;
 }
@@ -172,13 +178,14 @@ section .card p {
 }
 
 .about h3 {
-    margin-top: 30px 0 10px;
+    margin: 30px 0 10px;
 }
 
 .about ul {
     padding-left: 20px;
 }
 
+/* Contact */
 .contact .row {
     justify-content: space-between;
     margin: 60px 0 90px;
@@ -211,9 +218,9 @@ section .card p {
     padding: 15px;
     width: 100%;
     height: 150px;
+    border: 1px solid #bfbfbf;
     outline: none;
     resize: none;
-    border: 1px solid #bfbfbf;
 }
 
 .contact form button {
@@ -224,14 +231,15 @@ section .card p {
     margin-top: 10px;
     border: none;
     background: #333;
-    cursor: pointer;
     transition: 0.2s;
+    cursor: pointer;
 }
 
 .contact form button:hover {
     background: #525252;
 }
 
+/* Footer */
 .footer {
     background: #333;
     padding: 20px 0;
@@ -241,18 +249,69 @@ section .card p {
     color: #fff;
 }
 
-.navbar .nav-links {
-    position: fixed;
-    left: 0;
-    top: 65px;
-    height: 200%;
-    display: block;
-    background: #333;
-    width: 300px;
-    padding-left: 20px;
-    padding-top: 30px;
+#menu-toggler,
+#hamburger-btn {
+    display: none;
 }
 
-.nav-links li {
-    font-size: 18px;
+/* Responsive */
+@media (width < 860px) {
+    .navbar .nav-links {
+        position: fixed;
+        top: 65px;
+        left: 0;
+        height: 100%;
+        display: block;
+        background: #333;
+        width: 300px;
+        padding-left: 20px;
+        padding-top: 30px;
+        left: -100%;
+        transition: all 0.4s ease;
+    }
+
+    #menu-toggler:checked~.nav-links {
+        left: 0;
+    }
+
+    .nav-links li {
+        font-size: 18px;
+    }
+
+    #hamburger-btn {
+        display: block;
+        color: #fff;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    secttion .cards .card {
+        width: calc(100% / 2 - 15px);
+    }
+
+    .contact .row {
+        flex-direction: column;
+    }
+
+    .contact .row .col {
+        width: 100%;
+    }
+
+    .contact .row .col:last-child {
+        margin-top: 40px;
+    }
+}
+
+@media (width < 560px) {
+    secttion .cards .card {
+        width: 100%;
+    }
+
+    .homepage .text h1 {
+        font-size: 30px;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
 }
