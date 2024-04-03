@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KSS Mensa</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/18ba2e6d37.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar container flex">
+            <img src="images/Logo-SG.png" alt="Logo" class="imgLogo">
+            <h2 class="logo"><a href="#">KSS | Mensa</a></h2>
+            <input type="checkbox" id="menu-toggler">
+            <label for="menu-toggler" id="hamburger-btn"><i class="fas fa-bars"></i></label>
+            <ul class="nav-links flex">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Angebot</a></li>
+                <li><a href="#marketing">Marketing</a></li>
+                <li><a href="#contact">Contact us</a></li>
+                <li><a href="#about">About us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="homepage" id="home">
+        <div class="content flex">
+            <div class="text">
+                <h1>Welcome to KSS Mensa</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque aliquam, consectetur exercitationem
+                    pariatur sunt quasi.</p>
+            </div>
+            <a href="#services">Angebot</a>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Unser Angebot</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis neque, exercitationem sed repellat
+                    quos rerum?</p>
+            </div>
+
+            <ul class="cards flex">
+                <li class="card">
+                    <img src="images/vegan.jpg" alt="Vegan Menu">
+                    <h3>Vegan</h3>
+                    <ul>
+                        <li>Vorspeise: Leicht, Salate, Bruschetta</li>
+                        <li>Hauptgang: Pflanzliche Proteine, Gemüse, Getreide</li>
+                        <li>Zutaten: Tofu, Tempeh, Quinoa, saisonales Gemüse, Vollkornprodukte, Kräuter</li>
+                    </ul>
+                </li>
+                <li class="card">
+                    <img src="images/vegetarisch.jpg" alt="Vegetarisch Menu">
+                    <h3>Vegetarisch</h3>
+                    <ul>
+                        <li>Vorspeise: Salate, Suppen, Quiches</li>
+                        <li>Hauptgang: Gemüsereich, Käse, Eier, Nudeln, Reis, Risotto</li>
+                        <li>Zutaten: Gemüse, verschiedene Käsesorten, Nudeln, Reis, Pilze</li>
+                    </ul>
+                </li>
+                <li class="card">
+                    <img src="images/nicht_vegetarisch.jpg" alt="Nicht-Vegetarisch Menu">
+                    <h3>Nicht-vegetarisch</h3>
+                    <ul>
+                        <li>Vorspeise: Fleischhaltig, Salate, Suppen</li>
+                        <li>Hauptgang: Fleischgerichte, Burger, Steaks, Beilagen</li>
+                        <li>Zutaten: Hühnchen, Rind, Schwein, Kartoffeln, Gemüse, Burgerbrötchen, Saucen</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="marketing" id="marketing">
+        <div class="container">
+            <div class="section-title">
+                <h2>Unser Marketing</h2>
+                <p>Entdecken Sie, wie wir unsere Campingausrüstung und -essentials bewerben.</p>
+            </div>
+            <div class="marketing-content">
+                <div class="marketing-info">
+                    <h3>Social Media Kampagnen</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae eaque, alias exercitationem non
+                        architecto inventore.</p>
+                </div>
+                <div class="marketing-info">
+                    <h3>Email-Newsletter</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae eaque, alias exercitationem non
+                        architecto inventore.</p>
+                </div>
+                <div class="marketing-info">
+                    <h3>Partnerschaften</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae eaque, alias exercitationem non
+                        architecto inventore.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+    <div class="container">
+        <div class="section-title">
+            <h2>Kontaktieren Sie uns</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis neque, exercitationem sed repellat
+                quos rerum?</p>
+        </div>
+        <div class="row flex">
+            <div class="col information">
+                <div class="contact-details">
+                    <p><i class="fas fa-map-marker-alt"></i>12p Xampsite Avenue, Wilderness, CA 98765</p>
+                    <p><i class="fas fa-envelope"></i>info@campinggearexperts.com</p>
+                    <p><i class="fas fa-phone"></i>(123) 456-7890</p>
+                    <!-- More contact details -->
+                </div>
+            </div>
+            <div class="col form">
+                <form action="#">
+                    <input type="text" placeholder="Name*" required>
+                    <input type="email" placeholder="Email*" required>
+                    <textarea placeholder="Message*" required></textarea>
+                    <button type="submit" id="submit">Nachricht senden</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about" id="about">
+    <div class="container">
+        <div class="section-title">
+            <h2>Über uns</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis neque, exercitationem sed repellat
+                quos rerum?</p>
+        </div>
+        <div class="row company-info">
+           
+            <h3>Unsere Geschichte</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam atque aliquid error a! Commodi a animi
+                ex doloremque nostrum eos aperiam. Temporibus unde placeat quod sunt nihil aliquam commodi molestiae.
+            </p>
+            <!-- More about us content -->
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <span>&copy; 2024 KSS Mensa. Alle Rechte vorbehalten.</span>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

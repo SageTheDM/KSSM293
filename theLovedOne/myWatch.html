@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Babes Webpage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="love">
+    <div class="series-form">
+        <h2>Add Series to Watchlist</h2>
+        <form action="submit_form.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="type">Movie/Series:</label>
+            <select id="type" name="type">
+                <option value="Movie">Movie</option>
+                <option value="Series">Series</option>
+            </select><br>
+            <label for="priority">Priority:</label>
+            <select id="priority" name="priority">
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select><br>
+            <label for="status">Status:</label>
+            <select id="status" name="status">
+                <option value="Not Watched">Not Watched</option>
+                <option value="Watched">Watched</option>
+                <option value="Currently Watching">Currently Watching</option>
+            </select><br>
+            <label for="link">Link (optional):</label>
+            <input type="text" id="link" name="link"><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <div class="series-list">
+        <h2>Series Watchlist</h2>
+        <!-- Series information will be displayed here -->
+        <?php include 'display_series.php'; ?>
+    </div>
+
+</body>
+
+</html>
