@@ -19,10 +19,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST["name"];
     $type = $_POST["type"];
     $priority = $_POST["priority"];
+    $status = $_POST["status"]; // Get the status field
     $link = $_POST["link"];
 
     // Insert data into database
-    $sql = "INSERT INTO series (name, type, priority, link) VALUES ('$name', '$type', '$priority', '$link')";
+    $sql = "INSERT INTO series (name, type, priority, status, link) VALUES ('$name', '$type', '$priority', '$status', '$link')";
 
     if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";

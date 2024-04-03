@@ -13,19 +13,14 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Select data from database
+// Select all data from the database
 $sql = "SELECT * FROM series";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // Output data of each row
     while ($row = $result->fetch_assoc()) {
-        echo "<ul>";
-        echo "<li>Name: " . $row["name"] . "</li>";
-        echo "<li>Movie/Series: " . $row["type"] . "</li>";
-        echo "<li>Priority: " . $row["priority"] . "</li>";
-        echo "<li>Link: <a href='" . $row["link"] . "'>" . $row["link"] . "</a></li>";
-        echo "</ul>";
+        echo "Name: " . $row["name"] . "<br>Type: " . $row["type"] . "<br>Priority: " . $row["priority"] . "<br>Status: " . $row["status"] . "<br>Link: " . $row["link"] . "<br><br>";
     }
 } else {
     echo "0 results";
