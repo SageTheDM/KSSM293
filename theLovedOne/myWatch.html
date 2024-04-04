@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Babes Webpage</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body class="love">
     <div class="series-form">
         <h2>Add Series to Watchlist</h2>
@@ -37,11 +35,133 @@
         </form>
     </div>
 
-    <div class="series-list">
+    <div class="series-table-container">
+        <p class="Disclaimer">
+            Disclaimer! 
+            The entire table isn't dynamic at the moment and all content in it is hard coded into the website, so an update to the watchlist-table will only happen when the Lead programmer aka your dorky boyfriend is notified
+        </p>
+
+        <br><br>
         <h1>Watchlist</h1>
-        <?php include 'display_series.php'; ?>
+        <table id="watchlist-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Priority</th>
+            <th>Status</th>
+            <th>Link</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Spy x Family</td>
+            <td>Series</td>
+            <td>High</td>
+            <td>Currently Watching</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Kakegurui, Das Leben ist ein Spiel</td>
+            <td>Series</td>
+            <td>Low</td>
+            <td>Currently Watching</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>Helluva Boss</td>
+            <td>Series</td>
+            <td>Low</td>
+            <td>Currently Watching</td>
+            <td>Waiting for the next season</td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td>My Hero Academia</td>
+            <td>Series</td>
+            <td>High</td>
+            <td>Not Watched</td>
+            <td>SHOTO</td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>Death Note</td>
+            <td>Series</td>
+            <td>Medium</td>
+            <td>Not Watched</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>What We Do in the Shadows</td>
+            <td>Series</td>
+            <td>Low</td>
+            <td>Not Watched</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>How to Sell Drugs Online (Fast)</td>
+            <td>Series</td>
+            <td>Low</td>
+            <td>Watched</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Nimona</td>
+            <td>Movie</td>
+            <td>Low</td>
+            <td>Watched</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>The boy in the stripped pijama</td>
+            <td>Movie</td>
+            <td>Low</td>
+            <td>Watched</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Scott Pilgrim hebt ab</td>
+            <td>Series</td>
+            <td>Low</td>
+            <td>Watched</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>miraculous</td>
+            <td>Series</td>
+            <td>Low</td>
+            <td>Watched</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>(T)Raumschiff Surprise</td>
+            <td>Movie</td>
+            <td>Low</td>
+            <td>Watched</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>Der Schuh des Manitu</td>
+            <td>Movie</td>
+            <td>Low</td>
+            <td>Watched</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
     </div>
-
 </body>
-
 </html>
