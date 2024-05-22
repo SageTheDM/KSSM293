@@ -1,3 +1,4 @@
+/* Allgemeine Stile */
 * {
     margin: 0;
     padding: 0;
@@ -7,12 +8,20 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
     background: #f2f2f2;
 }
 
+.flyer{
+    max-width: 80%;
+    margin: auto;
+    padding: auto;
+}
+
+/* Header */
 header {
     position: fixed;
     top: 0;
@@ -22,9 +31,9 @@ header {
     z-index: 100;
 }
 
-.imgLogo{
-    width: 2em;
-    padding-right: 10px; /* Add padding to the right of the logo */
+.imgLogo {
+    width: 6em;
+    padding-right: 10px;
 }
 
 .flex {
@@ -46,7 +55,7 @@ header {
 .nav-links {
     gap: 20px;
     list-style: none;
-    margin-left: auto; /* Align links to the right */
+    margin-left: auto;
 }
 
 .navbar a {
@@ -62,14 +71,12 @@ header {
     color: #ddd;
 }
 
-
 /* Homepage */
-
 .homepage {
     position: relative;
     height: 100vh;
     width: 100%;
-    background: url("images/camping-2.jpg");
+    background: url("images/camera/AmbientBackground.JPG");
     background-position: center;
     background-size: cover;
 }
@@ -119,7 +126,6 @@ header {
     background: rgba(255, 255, 255, 0.3);
 }
 
-
 /* Service */
 section {
     padding-top: 80px;
@@ -152,12 +158,16 @@ section .card {
 
 section .card img {
     height: 120px;
-    width: 120px;
+    width: auto;
     border-radius: 50%;
     margin-bottom: 20px;
 }
 
-section .card p {
+section .card ul {
+    list-style: none;
+}
+
+.section .card p {
     margin-top: 5px;
 }
 
@@ -258,6 +268,93 @@ section .card p {
     display: none;
 }
 
+.slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider img {
+    width: 100%;
+    display: none;
+}
+
+.slider img:first-child {
+    display: block;
+}
+
+/* Team Cards */
+.about .cards {
+    margin-top: 50px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    display: flex; /* Added */
+}
+
+.about .card {
+    width: calc(100% / 2 - 30px);
+    text-align: center;
+    list-style: none;
+    background-color: #fff;
+    padding: 40px 15px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.04);
+    margin-bottom: 20px;
+}
+
+.about .card img {
+    height: 120px;
+    width: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.about .card ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.about .card ul li {
+    margin-bottom: 10px;
+}
+
+.about .card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#marketing .container img{
+    width: 100%;
+}
+
+/* Preisliste Styles */
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.price-table .row {
+    display: table-row;
+}
+
+.price-table .cell {
+    display: table-cell;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.price-table .header {
+    font-weight: bold;
+    background-color: #f2f2f2;
+}
+
+.tux{
+    max-width: 20px;
+    max-height: 20px;
+}
+
 /* Responsive */
 @media (max-width: 860px) {
     .navbar .nav-links {
@@ -318,19 +415,11 @@ section .card p {
     section h2 {
         font-size: 1.5rem;
     }
-}
 
-/* Adjustments for smaller screens */
-@media (max-width: 560px) {
-    section .cards .card {
-        width: 100%;
+    .price-list,
+    .price-table{
+        width: 80%;
     }
 
-    .homepage .text h1 {
-        font-size: 30px;
-    }
-
-    section h2 {
-        font-size: 1.5rem;
-    }
+    
 }
