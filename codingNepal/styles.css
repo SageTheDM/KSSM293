@@ -286,7 +286,7 @@ section .card p {
         cursor: pointer;
     }
 
-    secttion .cards .card {
+    section .cards .card {
         width: calc(100% / 2 - 15px);
     }
 
@@ -304,7 +304,7 @@ section .card p {
 }
 
 @media (width < 560px) {
-    secttion .cards .card {
+    section .cards .card {
         width: 100%;
     }
 
