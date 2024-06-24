@@ -2,13 +2,13 @@
     box-sizing: border-box; /* Include padding and border in element's total width and height */
     transition: 0.5s;
     hyphens: auto;
-    }
-    
-    body {
+}
+
+body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    background-image: url('img/KSS.jpeg');
     background-color: #f5f5f5;
+    background-image: url('img/KSS.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -24,7 +24,7 @@ article {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(45deg, #4CAF50, #FFC107); /* Gradient background */
+    background: linear-gradient(135deg, #3498db, #8e44ad); /* Updated gradient background */
     width: 50%;
     text-align: center; /* Center text content */
 }
@@ -61,17 +61,17 @@ nav {
 
 .folder-link {
     text-decoration: none;
-    color: #555;
+    color: #eee8e8;
     font-weight: bold;
     display: block;
     padding: 10px;
     border-radius: 5px;
-    background: linear-gradient(to right, #e0e0e0, #f9f9f9); /* Gradient background */
+    background: linear-gradient(135deg, #3498db, #8e44ad); /* Updated gradient background */
     transition: background 0.3s ease;
 }
 
 .folder-link:hover {
-    background: linear-gradient(to right, #f9f9f9, #e0e0e0); /* Gradient change on hover */
+    background: linear-gradient(135deg, #8e44ad, #3498db); /* Gradient change on hover */
     color: #333;
 }
 
@@ -85,15 +85,15 @@ p {
     text-align: justify; /* Justify text */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     article {
         width: 70%; /* Adjust width for smaller screens */
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     article {
-        width: 90%; /* Further adjust width for very small screens */
+        width: 100%; /* Further adjust width for very small screens */
         padding: 10px; /* Reduce padding for smaller screens */
     }
 

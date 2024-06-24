@@ -61,7 +61,7 @@ nav {
 
 .folder-link {
     text-decoration: none;
-    color: #555;
+    color: #eee8e8;
     font-weight: bold;
     display: block;
     padding: 10px;
@@ -85,15 +85,15 @@ p {
     text-align: justify; /* Justify text */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     article {
         width: 70%; /* Adjust width for smaller screens */
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     article {
-        width: 90%; /* Further adjust width for very small screens */
+        width: 100%; /* Further adjust width for very small screens */
         padding: 10px; /* Reduce padding for smaller screens */
     }
 
