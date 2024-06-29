@@ -1,0 +1,266 @@
+/* Reset styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+/* Apply a 0.2s transition to everything */
+* {
+    transition: all 0.2s ease-in-out;
+}
+
+h1,
+h2{
+    margin-bottom: 1em;
+    padding-bottom: 1e,;
+}
+
+/* Body styles */
+body {
+    margin-top: 8em;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden; /* Hide horizontal overflow */
+}
+
+/* Dark mode styles */
+.dark-mode {
+    background-color: #111;
+    color: #fff;
+}
+
+/* Content styles */
+.content-container {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.content {
+    text-align: justify;
+}
+
+.img1 {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Footer styles */
+.footer-container {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.footer-section {
+    margin: 5px;
+}
+
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.submit-button2 {
+    background-color: #ffa500;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Contact formular */
+.contact{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: black;
+    background-color: #333;
+    padding: 15px;
+    border-radius: 2em;
+}
+
+label, input{
+    border-radius: 1em;
+    color: white;
+    background-color: #ffa500;
+    margin: 10px;
+}
+
+input{
+    padding: 1em;
+    width: 100%;
+    color: white;
+}
+
+.submit-button{
+    background-color: #ffa500;
+    color: white;
+    border-radius: 2em;
+    margin: 2em;
+    padding: 10px 2em;
+}
+
+.submit-button:hover{
+    background-color: #ff5100;
+}
+
+#pictureContainer{
+    display: grid;
+    width: 90%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; /* Optional: Adjust the gap between grid items */
+}
+.picture{
+        width: 90%;
+        height: auto;
+        margin: auto;
+        padding: 2em;
+    }
+
+/* Additional necessary CSS rules */
+.picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Header styles */
+header {
+  background: linear-gradient(to right, #D60270, #0038A8);;
+  padding: 15px 0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgb(61, 61, 61);
+}
+.div-menu{
+  z-index: 1;
+  background-color: #211c1c;
+  width: 100%;
+  position: fixed;
+  top: 10px;
+  left: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 0; 
+  height: auto;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 10px auto;
+  flex-direction: row;
+  padding: 0 20px; /* Original padding */
+  z-index: 10;
+}
+
+.div-menu li {
+  margin: 1;
+  z-index: 1;
+  padding: 1em;
+}
+
+.div-menu a {
+  width: 100%;
+  padding: 12px 0;
+  text-align: center; /* Center align the menu items */
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px; /* Smaller padding */
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  justify-content: center;
+  z-index: 1;
+}
+
+.div-menu a:hover {
+  background-color: #34495e;
+}
+
+.project-name {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.5em; /* Updated font size */
+  font-weight: bold;
+  z-index: 11; /* Higher z-index to ensure it is above the menu */
+}
+
+.burger-menu {
+    position: absolute;
+    right: 1em;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1.5em; /* Updated font size */
+    cursor: pointer;
+    display: block;
+    padding: 0;
+    z-index: 12; /* Higher z-index to ensure it is above the menu */
+}
+
+.right-logo{
+    position: absolute;
+    right: 5em;
+    margin-top: 20px;
+    margin-bottom: 20px; 
+}
+
+.right-toggle{
+    position: absolute;
+    right: 10em;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  background-color: #211c1c;
+  position: absolute;
+  top: -50vh; 
+  left: 0;
+  width: 100%; /* Full width of the header */
+  z-index: 5; /* Lower z-index than header, header content, and project name */
+  padding: 0;
+  list-style: none;
+  justify-content: center; /* Center items vertically */
+  text-align: center; /* Center items horizontally */
+  animation: top 1s ease-in-out; /* Initial animation state */
+}
+
+.menu.active {
+  display: flex;
+  top: 10vh; 
+  z-index: 5; /* Lower z-index than header, header content, and project name */
+}
+
+.menu-logo{
+    height: 50px;
+    border-radius: 2em;
+}
+
+
+/* Dark Mode Toggle Button Styles */
+#darkModeToggle {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    margin-right: 20px;
+}
