@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../stylesheet.css">
+    <script src="../../header.js" type="text/javascript" defer></script>
+    <script src="../../burger.js" type="text/javascript" defer></script>
+    <script src="../../script.js" type="text/javascript" defer></script>
     <style>
         /* Custom styles for the popup */
         .popup {
@@ -132,48 +135,7 @@
     </div>
 
     <!-- Header -->
-    <header class="header-container">
-        <div class="header1">
-            <nav class="nav">
-                <ul>
-                    <li><a href="Index.html">Home</a></li>
-                    <li><a href="Photogallery.html">Photogallery</a></li>
-                    <li><a href="Setup.html">My Setup</a></li>
-                    <li><a href="post.html">Post Production</a></li>
-                    <li><a href="trips.html">Photo sessions</a></li>
-                </ul>
-            </nav>
-        </div>
-
-        <div class="header2">
-            <button class="header-button">
-                <a href="https://www.youtube.com/@sage_the_dm">
-                    <img class="header-button-picture"
-                        src="https://yt3.googleusercontent.com/ytc/AGIKgqNNfnJ4dic2F9k5wXJR1kCLY1GJLkRcDTswR86KoQ=s176-c-k-c0x00ffffff-no-rj"
-                        alt="Logo">
-                </a>
-            </button>
-            <div class="dropdown">
-                <button class="header-button">
-                    <img src="../../assets/Button dropdown.png" alt="Dropdownlogo">
-                </button>
-                <div class="dropdown-content">
-                    <nav>
-                        <ul>
-                            <li><a href="#section1">About Me</a></li>
-                            <li><a href="#section2">This Website</a></li>
-                            <li><a href="#section3">Contact me</a></li>
-                            <li><a href="#section4">AGBS</a></li>
-                            <li><a href="#section5">Impressum</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-            <div>
-                <img src="../../assets/button v2.png" id="darkModeToggle" alt="Light/Darkmode" class="header-button">
-            </div>
-        </div>
-    </header>
+    <header-component></header-component>
 
     <!-- Main Content -->
     <div class="content-container">

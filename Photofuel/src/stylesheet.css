@@ -6,11 +6,6 @@
 
 }
 
-/* Apply a 0.2s transition to everything */
-* {
-    transition: all 0.2s ease-in-out;
-}
-
 h1,
 h2{
     margin-bottom: 1em;
