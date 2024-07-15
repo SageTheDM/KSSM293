@@ -3,7 +3,12 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    /* transition: 0.5s; */
+}
 
+p {
+    hyphens: auto;
+    word-wrap: break-word;
 }
 
 h1,
