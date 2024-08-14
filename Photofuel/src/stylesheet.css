@@ -202,6 +202,7 @@ header {
     font-size: 1.5em;
     font-weight: bold;
     z-index: 11;
+    left: 1em;
 }
 
 .burger-menu {
