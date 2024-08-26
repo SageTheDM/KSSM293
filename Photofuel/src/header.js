@@ -25,7 +25,7 @@ class Header extends HTMLElement {
         <ul class="menu">
           <li><a href="index.html">Home</a></li>
           <li><a href="Photogallery.html">Photos</a></li>
-          <li><a href="Setup">My Setup</a></li>
+          <li><a href="Setup.html">My Setup</a></li>
           <li><a href="post.html">Post production</a></li>
           <li><a href="trips.html">Photo sessions</a></li>
         </ul>
