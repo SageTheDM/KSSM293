@@ -5,14 +5,21 @@
     padding: 0;
 }
 
-p{
+p {
     hyphens: auto;
 }
 
-h1,
-h2 {
-    margin-bottom: 1em;
-    padding-bottom: 1em;
+/* Header styles */
+header {
+    background: linear-gradient(to right, #D60270, #0038A8);
+    padding: 15px 0;
+    height: 5em;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgb(61, 61, 61);
 }
 
 /* Body styles */
@@ -41,9 +48,22 @@ body {
     text-align: justify;
 }
 
-.img1 {
+.setupimg {
     max-width: 100%;
     height: auto;
+}
+
+/* Column styles */
+.column {
+
+}
+
+.column img {
+  
+}
+
+.column p {
+  
 }
 
 /* Footer styles */
@@ -76,7 +96,7 @@ body {
     border-radius: 5px;
 }
 
-/* Contact formular */
+/* Contact form styles */
 .contact {
     display: flex;
     justify-content: center;
@@ -130,26 +150,13 @@ input {
     box-sizing: border-box;
 }
 
-/* Additional necessary CSS rules */
 .picture img {
     width: 100%;
     height: auto;
     display: block;
 }
 
-/* Header styles */
-header {
-    background: linear-gradient(to right, #D60270, #0038A8);
-    padding: 15px 0;
-    height: 5em;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgb(61, 61, 61);
-}
-
+/* Header menu styles */
 .div-menu {
     z-index: 1;
     background-color: #211c1c;
@@ -267,6 +274,7 @@ header {
     margin-right: 20px;
 }
 
+/* Responsive styles */
 @media (max-width: 999px) {
     #pictureContainer {
         display: grid;
@@ -275,15 +283,16 @@ header {
         gap: 20px; /* Optional: Adjust the gap between grid items */
         margin: 20px auto; /* Center horizontally with margin */
     }
-    /* Content styles */
+
     .content-container {
         max-width: 100%;
         margin: 0 auto;
         padding: 20px;
     }
+
     .burger-menu {
-    position: absolute;
-    right: 1em;
+        position: absolute;
+        right: 1em;
     }
 
     .right-logo {
@@ -296,5 +305,13 @@ header {
     .right-toggle {
         position: absolute;
         right: 6em;
+    }
+
+    .column {
+       
+    }
+
+    .setupimg {
+        
     }
 }
