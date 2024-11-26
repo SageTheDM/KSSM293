@@ -1,22 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+$pageTitle = 'Welcome to PHP';
+$pageHeader = 'Welcome to PHP';
+include 'header.php'; // Include the common header
+?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<section>
+    <h2>Welcome to the PHP Example Website</h2>
+    <nav>
+        <ul>
+            <li><a href="firstSteps.php">First Steps in PHP</a></li>
+            <li><a href="task1.php">Task 1</a></li>
+            <!-- Add other navigation links as needed -->
+        </ul>
+    </nav>
+</section>
 
-<body>
-    <?php
-    $author = "jon doe";
-    echo "<h1>Hello World</h1>
-    <p>This is dynamic web page was created by $author.</p>";
-    ?>
-    <?php
-    require 'vendor/autoload.php'; // include Composer's autoloader
-    $client = new MongoDB\Client("mongodb://localhost:27017");
-    ?>
-</body>
-
-</html>
+<?php include 'footer.php'; // Include the common footer ?>
