@@ -1,79 +1,65 @@
-/* General Container */
-.container {
+/* Grid Layout */
+.grid-wrapper {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
 }
 
-/* Person Cards */
-.person {
-    font-size: 18px;
-    padding: 10px;
-    border-radius: 10px;
+/* Person Card Styling */
+.grid-wrapper .person {
     background-color: #666;
-    margin-bottom: 20px;
-    opacity: 0.5; /* Default opacity for inactive entries */
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 18px;
+    color: #fff;
+    opacity: 0.5; /* Default for inactive entries */
 }
 
-.person.active {
-    opacity: 1; /* Active entries will be fully visible */
+.grid-wrapper .person.active {
+    opacity: 1; /* Highlight active entries */
 }
 
-/* Name (h3) */
-.person h3 {
+/* Image Styling */
+.grid-wrapper img {
+    max-width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Name and Age Styling */
+.grid-wrapper h3 {
     font-size: 32px;
+    margin: 10px 0;
 }
 
-/* Subtitles (h4) */
-.person h4 {
+/* Subtitle Styling */
+.grid-wrapper h4 {
     font-size: 12px;
     text-transform: uppercase;
     margin-top: 20px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
-/* About and Address */
-.person .about, .person .address, .person .email, .person .phone, .person .eyeColor {
-    margin-top: 10px;
-}
-
-/* Eye Color Span */
-.person .eyeColor span {
+/* Eye Color Indicator */
+.grid-wrapper .eyeColor span {
     display: block;
     width: 20px;
     height: 20px;
     border-radius: 100% 0px;
     transform: rotate(45deg);
-    background-color: #000; /* Default color */
 }
 
-/* Specific Eye Color Classes */
-.person .eyeColor .blue {
-    background-color: #2632BD; /* Blue */
+/* Eye Color Variants */
+.grid-wrapper .eyeColor .blue {
+    background-color: #2632BD;
 }
 
-.person .eyeColor .brown {
-    background-color: #70412D; /* Brown */
+.grid-wrapper .eyeColor .brown {
+    background-color: #70412D;
 }
 
-/* Image Styling */
-.person img {
-    max-width: 100%;
-    border-radius: 10px;
-}
-
-/* Section Styling */
-section {
-    margin-bottom: 40px;
-}
-
-/* Header Styling */
-h1, h2 {
-    text-align: center;
-}
-
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+.grid-wrapper .eyeColor .green {
+    background-color: #2A7B34;
 }

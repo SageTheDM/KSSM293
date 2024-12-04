@@ -182,6 +182,33 @@ include '../header.php'; // header
         ?>
     </section>
 
+    <!-- Task 10: Display Persons in a Grid -->
+    <section>
+        <h2>Task 10: Grid Layout</h2>
+        <div class="grid-wrapper">
+            <?php
+            // Assuming you're retrieving documents with the structure you provided
+            $documentsFour = $collection->find(["eyeColor" => "blue"], ['sort' => ['age' => -1]]);
+            foreach ($documentsFour as $document) {
+                echo '<div class="person">';
+
+                // Display the image
+                echo '<img src="https://via.placeholder.com/600" alt="Image of ' . $document['name'] . '">';
+
+                // Display the name and age in h3 tag
+                echo '<h3>' . $document['name'] . ' (' . $document['age'] . ')</h3>';
+
+                // Display the "about" attribute
+                echo '<div class="about">';
+                echo '<p>' . $document['about'] . '</p>';
+                echo '</div>';
+
+                echo '</div>';
+            }
+            ?>
+        </div>
+    </section>
+
 
 </body>
 
