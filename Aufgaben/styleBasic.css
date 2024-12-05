@@ -46,6 +46,17 @@ h1, h2 {
     color: #333;
 }
 
+h1{
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+h2{
+    font-size: 1.2em;
+    font-weight: light;
+    font-style: italic;
+}
+
 nav {
     margin-top: 20px;
 }
