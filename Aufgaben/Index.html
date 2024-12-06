@@ -93,8 +93,14 @@
       document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
         toggle.addEventListener('click', function() {
           const content = this.nextElementSibling;
-          if (content && content.classList.contains('dropdown-content')) {
+          const isActive = content && content.classList.contains('dropdown-content');
+          
+          // Toggle the active class on the content
+          if (isActive) {
             content.classList.toggle('active');
+            
+            // Toggle the 'open' class on the h1 to rotate the arrow
+            this.classList.toggle('open');
           }
         });
       });
@@ -103,11 +109,18 @@
       document.querySelectorAll('.dropdown-toggle-h2').forEach(toggle => {
         toggle.addEventListener('click', function() {
           const content = this.nextElementSibling;
-          if (content && content.classList.contains('dropdown-content-h2')) {
+          const isActive = content && content.classList.contains('dropdown-content-h2');
+          
+          // Toggle the active class on the content
+          if (isActive) {
             content.classList.toggle('active');
+            
+            // Toggle the 'open' class on the h2 to rotate the arrow
+            this.classList.toggle('open');
           }
         });
       });
+        
     </script>
   </body>
 </html>

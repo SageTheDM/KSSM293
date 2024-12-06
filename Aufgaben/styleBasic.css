@@ -79,13 +79,14 @@ h1:not(.webpage-title)::after, h2::after {
     transition: transform 0.3s ease;
 }
 
-h1.open::after, h2.open::after {
-    transform: translateY(-50%) rotate(90deg);
+/* Rotate arrow on open */
+h1:not(.webpage-title).open::after, h2.open::after {
+    transform: translateY(-50%) rotate(90deg); /* Rotate the arrow */
 }
 
 h2 {
     font-size: 1.2em;
-    font-weight: bolder;
+    font-weight: normal;
     font-style: italic;
     cursor: pointer;
 }
@@ -151,8 +152,12 @@ p {
         padding: 10px;
     }
 
-    h1, h2 {
+    h1{
         font-size: 24px;
+    }
+
+    h2 {
+        font-size: 18px;
     }
 
     .folder-link {
