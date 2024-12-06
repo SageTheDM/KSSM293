@@ -72,7 +72,8 @@ nav {
 
 .folder-link:hover {
     background: linear-gradient(to right, #02ecfd, #9e04f0); /* Gradient change on hover */
-    color: #333;
+    transform: scale(1.03);
+    transition: 0.2s;
 }
 
 .folder-link:active {

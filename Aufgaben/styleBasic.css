@@ -1,11 +1,10 @@
 /* Basic Reset and Global Settings */
 * {
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    box-sizing: border-box;
     transition: 0.5s;
     hyphens: auto;
 }
 
-/* Body styling */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -15,99 +14,86 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    padding: 20px; /* Add padding to body for spacing */
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    min-height: 100vh; /* Ensure full viewport height */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
 }
 
-/* Article Styling */
 article {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(135deg, #3498db, #8e44ad); /* Gradient background */
+    background: linear-gradient(135deg, #3498db, #8e44ad);
     width: 50%;
-    text-align: center; /* Center text content */
+    text-align: center;
 }
 
-/* Container Styling */
 .container {
     margin: 20px auto;
-    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 3em rgba(0, 0, 0, 0.1);
-    text-align: center; /* Center text content */
+    text-align: center;
 }
 
-/* Webpage Title Styling */
+header {
+    margin-bottom: 20px;
+}
+
 .webpage-title {
     font-size: 2.5em;
     font-weight: bold;
-    color: #ffffff; /* Bright color for visibility */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow for depth */
-    margin: 0;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
     padding: 10px 20px;
-    background: linear-gradient(135deg, #8e44ad, #3498db); /* Eye-catching gradient */
+    background: linear-gradient(135deg, #8e44ad, #3498db);
     border-radius: 10px;
     display: inline-block;
     transition: transform 0.3s ease, background 0.3s ease;
 }
 
-/* Header styling */
-header {
-    margin-bottom: 20px;
-}
-
-/* Dropdown Titles */
 h1, h2 {
     color: #333;
+    position: relative;
+    text-align: left;
 }
 
 h1 {
     font-size: 1.8em;
     font-weight: bold;
     cursor: pointer;
-    position: relative; /* Required for the arrow positioning */
-    padding-right: 20px; /* Space for the arrow */
-    transition: 0.3s ease;
+    padding-right: 20px;
 }
 
-/* Arrows for dropdown */
 h1:not(.webpage-title)::after, h2::after {
-    content: "▶"; /* Default arrow */
+    content: "▶";
     font-size: 0.8em;
     position: absolute;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    transition: transform 0.3s ease; /* Smooth rotation */
+    transition: transform 0.3s ease;
 }
 
-/* Rotate arrow on open */
-h1:not(.webpage-title).open::after, h2.open::after {
-    transform: translateY(-50%) rotate(90deg); /* Rotate the arrow */
+h1.open::after, h2.open::after {
+    transform: translateY(-50%) rotate(90deg);
 }
 
-/* Styling for h2 dropdowns */
 h2 {
     font-size: 1.2em;
-    font-weight: light;
+    font-weight: bolder;
     font-style: italic;
     cursor: pointer;
 }
 
-/* Navigation Styling */
-nav {
-    margin-top: 20px;
-}
-
-/* Folder List Styling */
 .folder-list {
     list-style-type: none;
     padding: 0;
+    text-align: center; /* Center-align the list items */
 }
 
 .folder-list-item {
@@ -118,71 +104,58 @@ nav {
     text-decoration: none;
     color: #eee8e8;
     font-weight: bold;
-    display: block;
+    display: inline-block; /* Keeps the links' original width */
     padding: 10px;
     border-radius: 5px;
-    background: linear-gradient(135deg, #3498db, #8e44ad); /* Gradient background */
+    background: linear-gradient(135deg, #3498db, #8e44ad);
+    width: 70%;
     transition: background 0.3s ease;
 }
 
 .folder-link:hover {
-    background: linear-gradient(135deg, #8e44ad, #3498db); /* Hover gradient */
-    color: #333;
+    background: linear-gradient(135deg, #8e44ad, #3498db);
+    transform: scale(1.06);
 }
 
 .folder-link:active {
-    transform: scale(0.98); /* Slight scale down on click */
+    transform: scale(0.98);
 }
 
-/* Text Paragraph Styling */
 p {
     color: #666;
     line-height: 1.6;
-    text-align: justify; /* Justify text */
+    text-align: justify;
 }
 
-/* Dropdown Content Styling */
-.dropdown-content {
-    display: none; /* Hidden by default */
-    margin-left: 20px;
-    padding-left: 20px;
-}
-
-.dropdown-content.active {
-    display: block; /* Show when active */
-}
-
-.dropdown-content-h2 {
+.dropdown-content, .dropdown-content-h2 {
     display: none;
-    margin-left: 20px;
 }
 
-.dropdown-content-h2.active {
+.dropdown-content.active, .dropdown-content-h2.active {
     display: block;
 }
 
-/* Responsive Design */
 @media (max-width: 1000px) {
     article {
-        width: 70%; /* Adjust width for smaller screens */
+        width: 70%;
     }
 }
 
 @media (max-width: 700px) {
     article {
-        width: 100%; /* Full width for very small screens */
-        padding: 10px; /* Reduce padding for smaller screens */
+        width: 100%;
+        padding: 10px;
     }
 
     .container {
-        padding: 10px; /* Reduce padding for smaller screens */
+        padding: 10px;
     }
 
     h1, h2 {
-        font-size: 24px; /* Decrease font size for smaller screens */
+        font-size: 24px;
     }
 
     .folder-link {
-        padding: 8px; /* Decrease padding for smaller screens */
+        padding: 8px;
     }
 }
