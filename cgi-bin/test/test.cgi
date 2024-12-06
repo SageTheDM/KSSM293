@@ -1,5 +1,5 @@
 #!/usr/bin/perl
-
+# what the hell are you?
 print <<HTML;
 Content-type: text/html
 
