@@ -1,9 +1,11 @@
+/* Basic Reset and Global Settings */
 * {
     box-sizing: border-box; /* Include padding and border in element's total width and height */
     transition: 0.5s;
     hyphens: auto;
 }
 
+/* Body styling */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -20,47 +22,89 @@ body {
     min-height: 100vh; /* Ensure full viewport height */
 }
 
+/* Article Styling */
 article {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(135deg, #3498db, #8e44ad); /* Updated gradient background */
+    background: linear-gradient(135deg, #3498db, #8e44ad); /* Gradient background */
     width: 50%;
     text-align: center; /* Center text content */
 }
 
+/* Container Styling */
 .container {
     margin: 20px auto;
-    background-color: rgba(255, 255, 255, 0.9); /* Fallback color */
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 3em rgba(0, 0, 0, 0.1);
     text-align: center; /* Center text content */
 }
 
+/* Webpage Title Styling */
+.webpage-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #ffffff; /* Bright color for visibility */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    margin: 0;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #8e44ad, #3498db); /* Eye-catching gradient */
+    border-radius: 10px;
+    display: inline-block;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Header styling */
 header {
     margin-bottom: 20px;
 }
 
+/* Dropdown Titles */
 h1, h2 {
     color: #333;
 }
 
-h1{
+h1 {
     font-size: 1.8em;
     font-weight: bold;
+    cursor: pointer;
+    position: relative; /* Required for the arrow positioning */
+    padding-right: 20px; /* Space for the arrow */
+    transition: 0.3s ease;
 }
 
-h2{
+/* Arrows for dropdown */
+h1:not(.webpage-title)::after, h2::after {
+    content: "▶"; /* Default arrow */
+    font-size: 0.8em;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease; /* Smooth rotation */
+}
+
+/* Rotate arrow on open */
+h1:not(.webpage-title).open::after, h2.open::after {
+    transform: translateY(-50%) rotate(90deg); /* Rotate the arrow */
+}
+
+/* Styling for h2 dropdowns */
+h2 {
     font-size: 1.2em;
     font-weight: light;
     font-style: italic;
+    cursor: pointer;
 }
 
+/* Navigation Styling */
 nav {
     margin-top: 20px;
 }
 
+/* Folder List Styling */
 .folder-list {
     list-style-type: none;
     padding: 0;
@@ -77,12 +121,12 @@ nav {
     display: block;
     padding: 10px;
     border-radius: 5px;
-    background: linear-gradient(135deg, #3498db, #8e44ad); /* Updated gradient background */
+    background: linear-gradient(135deg, #3498db, #8e44ad); /* Gradient background */
     transition: background 0.3s ease;
 }
 
 .folder-link:hover {
-    background: linear-gradient(135deg, #8e44ad, #3498db); /* Gradient change on hover */
+    background: linear-gradient(135deg, #8e44ad, #3498db); /* Hover gradient */
     color: #333;
 }
 
@@ -90,12 +134,34 @@ nav {
     transform: scale(0.98); /* Slight scale down on click */
 }
 
+/* Text Paragraph Styling */
 p {
     color: #666;
     line-height: 1.6;
     text-align: justify; /* Justify text */
 }
 
+/* Dropdown Content Styling */
+.dropdown-content {
+    display: none; /* Hidden by default */
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+.dropdown-content.active {
+    display: block; /* Show when active */
+}
+
+.dropdown-content-h2 {
+    display: none;
+    margin-left: 20px;
+}
+
+.dropdown-content-h2.active {
+    display: block;
+}
+
+/* Responsive Design */
 @media (max-width: 1000px) {
     article {
         width: 70%; /* Adjust width for smaller screens */
@@ -104,7 +170,7 @@ p {
 
 @media (max-width: 700px) {
     article {
-        width: 100%; /* Further adjust width for very small screens */
+        width: 100%; /* Full width for very small screens */
         padding: 10px; /* Reduce padding for smaller screens */
     }
 
