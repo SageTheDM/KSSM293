@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Comparison</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>BMI Comparison</h1>
+    <div>
+        <h2>Person 1</h2>
+        <label for="name1">Name:</label>
+        <input type="text" id="name1" placeholder="Enter name"><br>
+        <label for="weight1">Weight (kg):</label>
+        <input type="number" step="0.1" min="0" id="weight1" placeholder="Enter weight"><br>
+        <label for="height1">Height (m):</label>
+        <input type="number" step="0.1" min="0" id="height1" placeholder="Enter height"><br>
+    </div>
+    <div>
+        <h2>Person 2</h2>
+        <label for="name2">Name:</label>
+        <input type="text" id="name2" placeholder="Enter name"><br>
+        <label for="weight2">Weight (kg):</label>
+        <input type="number" step="0.1" min="0" id="weight2" placeholder="Enter weight"><br>
+        <label for="height2">Height (m):</label>
+        <input type="number" step="0.1" min="0" id="height2" placeholder="Enter height"><br>
+    </div>
+    <button onclick="compareBMI()">Compare BMI</button>
+    <h2 id="result"></h2>
+    <script src="script.js"></script>
+</body>
+</html>

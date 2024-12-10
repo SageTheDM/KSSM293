@@ -1,0 +1,94 @@
+/* Reset some default styles */
+body, h1, h2, label, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+/* Main heading styles */
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    font-size: 2.5em;
+    text-transform: uppercase;
+}
+
+/* Section styles */
+div {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+/* Subheading styles */
+h2 {
+    color: #2980b9;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    border-bottom: 2px solid #2980b9;
+    padding-bottom: 5px;
+}
+
+/* Label styles */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* Input styles */
+input[type="text"],
+input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #2980b9;
+    outline: none;
+}
+
+/* Button styles */
+button {
+    background-color: #2980b9;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #1a5276;
+    transform: translateY(-2px);
+}
+
+/* Result heading styles */
+#result {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 24px;
+    color: #e74c3c;
+    font-weight: bold;
+    border-top: 2px solid #e74c3c;
+    padding-top: 10px;
+}
