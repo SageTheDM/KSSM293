@@ -1,4 +1,6 @@
 // BMI calculator
+const hello = "XSS DETECTED";
+
 function calculateBMI(weight, height) {
     if (height <= 0) {
         return 0; // Prevent division by zero
@@ -26,8 +28,12 @@ function compareBMI() {
         result = "Der BMI von " + name2 + " ist gleich wie gross der BMI von " + name1;
     }
 
-    let resultMessage = name1 + "\n" + height1 + "\n" +weight1 + "\n" + bmi1 + "\n" + "\n" + 
-    name2 + "\n" + height2 + "\n" +weight2 + "\n" + bmi2 + "\n" + "\n" + result;
+    let resultMessage = `
+        ${name1}\n${height1}\n${weight1}\n${bmi1}\n\n
+        ${name2}\n${height2}\n${weight2}\n${bmi2}\n\n
+        ${result}
+`   ;
+
      // Display the result
-     document.getElementById('result').innerHTML = resultMessage.replace(/\n/g, '<br>');
+    document.getElementById('result').innerHTML = resultMessage.replace(/\n/g, '<br>');
 }
