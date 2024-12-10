@@ -17,15 +17,18 @@ function generateBill() {
     const tipAsCurrency = (amount / 100) * tip;
     const amountBeforeTip = amount;
 
+    // Get the custom currency symbol
+    const currencySymbol = document.getElementById('currencySymbol').value;
+
     // Generate the div as a bill
     const billContainer = document.getElementById('billContainer');
     billContainer.innerHTML = `
         <div class="bill">
             <h2>Bill Summary</h2>
-            <p>Amount Before Tip: ${amountBeforeTip.toFixed(2)}</p>
+            <p>Amount Before Tip: ${currencySymbol} ${amountBeforeTip.toFixed(2)}</p>
             <p>Tip Percentage: ${tipAsPercentage}%</p>
-            <p>Tip Amount: ${tipAsCurrency.toFixed(2)}</p>
-            <p>Total Amount: ${totalAmount.toFixed(2)}</p>
+            <p>Tip Amount: ${currencySymbol} ${tipAsCurrency.toFixed(2)}</p>
+            <p>Total Amount: ${currencySymbol} ${totalAmount.toFixed(2)}</p>
         </div>
     `;
 }

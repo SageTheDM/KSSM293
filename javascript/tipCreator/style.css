@@ -26,7 +26,8 @@ label {
     font-weight: bold;
 }
 
-input[type="number"] {
+input[type="number"],
+input[type="text"] {
     width: calc(100% - 20px);
     padding: 10px;
     border: 1px solid #ccc;
