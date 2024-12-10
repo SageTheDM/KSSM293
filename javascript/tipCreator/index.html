@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Your informations</h1>
+    <div>
+        <h2>Billing data</h2>
+        <label for="low">Lowest amount of normal tip range</label>
+        <input type="number" step="0.1" min="0" id="low" placeholder="Enter an amount"><br>
+        <label for="high">Highest amount of normal tip range</label>
+        <input type="number" step="0.1" min="0" id="high" placeholder="Enter an amount"><br>
+        <label for="tipInRange">Normal tip (in percentage)</label>
+        <input type="number" step="0.1" min="0" id="tipInRange" placeholder="Enter an amount"><br>
+        <label for="otherTip">Other tip (in percentage)</label>
+        <input type="number" step="0.1" min="0" id="otherTip" placeholder="Enter an amount"><br>
+        <label for="amount">The price without tip</label>
+        <input type="number" step="0.1" min="0" id="amount" placeholder="Enter an amount"><br>
+        
+    </div>
+    <button onclick="generateBill()">Generate Bill</button>
+    <div id="billContainer"></div>
+    <script src="script.js"></script>
+</body>
+</html>
