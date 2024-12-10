@@ -3,7 +3,8 @@
 // Loose equality (==) compares values for equality after converting them to a common type
 let a = '5'
 var b = 5 // var not recommended
-console.log(a + " " + b)
+c = 5; // definitely not recommended
+console.log("let variable: "+ a + " var variable: " + b + " variable without specification: " + c);
 
 console.log(5 == "5") // true, because '5' is converted to 5 for comparison
 
@@ -29,6 +30,10 @@ console.log(typeof float)
 javaIsFun = "yaaas"
 age = true
 float = true
+
+console.log(javaIsFun)
+console.log(age)
+console.log(float)
 
 console.log(typeof javaIsFun)
 console.log(typeof age)
