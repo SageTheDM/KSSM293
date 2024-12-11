@@ -3,28 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tip generator</title>
+    <title>Gymnastics Team Results</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Your informations</h1>
-    <div>
-        <h2>Billing data</h2>
-        <label for="low">Lowest amount of normal tip range</label>
-        <input type="number" step="0.1" min="0" id="low" placeholder="Enter an amount"><br>
-        <label for="high">Highest amount of normal tip range</label>
-        <input type="number" step="0.1" min="0" id="high" placeholder="Enter an amount"><br>
-        <label for="tipInRange">Normal tip (in percentage)</label>
-        <input type="number" step="0.1" min="0" id="tipInRange" placeholder="Enter an amount"><br>
-        <label for="otherTip">Other tip (in percentage)</label>
-        <input type="number" step="0.1" min="0" id="otherTip" placeholder="Enter an amount"><br>
-        <label for="amount">The price without tip</label>
-        <input type="number" step="0.1" min="0" id="amount" placeholder="Enter an amount"><br>
-        <label for="currencySymbol">Currency Symbol:</label>
-        <input type="text" id="currencySymbol" value="$"><br>
+    <h1>Gymnastics Team Results</h1>
+    <h2>Enter Team Names and Scores</h2>
+
+    <form id="scoreForm">
+        <div>
+            <label for="team1Name">Team 1 Name:</label><br>
+            <input type="text" id="team1Name" placeholder="Enter team 1 name"><br>
+            <label for="team1Scores">Team 1 Scores (comma-separated):</label><br>
+            <input type="text" id="team1Scores" placeholder="e.g., 44, 23, 71">
+        </div>
+        <div>
+            <label for="team2Name">Team 2 Name:</label><br>
+            <input type="text" id="team2Name" placeholder="Enter team 2 name"><br>
+            <label for="team2Scores">Team 2 Scores (comma-separated):</label><br>
+            <input type="text" id="team2Scores" placeholder="e.g., 65, 54, 49">
+        </div>
+        <button type="button" onclick="processScores()">Submit Scores</button>
+    </form>
+
+    <div id="resultsContainer">
+        <h2>Results</h2>
+        <p id="winnerMessage"></p>
+        <div id="graphContainer" style="display: flex; justify-content: space-around; margin-top: 20px;"></div>
     </div>
-    <button onclick="generateBill()">Generate Bill</button>
-    <div id="billContainer"></div>
+
     <script src="script.js"></script>
 </body>
 </html>
