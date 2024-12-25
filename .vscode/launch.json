@@ -4,7 +4,7 @@
         {
             "type": "firefox",
             "request": "launch",
-            "name": "Launch chrome against localhost",
+            "name": "Launch firefox against localhost",
             "url": "http://localhost/KSSM293/${relativeFile}",
             "webRoot": "${workspaceFolder}"
         }
