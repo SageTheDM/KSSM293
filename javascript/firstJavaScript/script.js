@@ -4,7 +4,7 @@
 let a = '5'
 var b = 5 // var not recommended
 c = 5; // definitely not recommended
-console.log("let variable: "+ a + " var variable: " + b + " variable without specification: " + c);
+console.log("let variable: " + a + " var variable: " + b + " variable without specification: " + c);
 
 console.log(5 == "5") // true, because '5' is converted to 5 for comparison
 
