@@ -186,6 +186,8 @@ include '../header.php'; // header
     <section>
         <h2>Task 10: Grid Layout</h2>
         <div class="grid-wrapper">
+            <a href='add.php'>Hinzufügen</a>
+
             <?php
             // Assuming you're retrieving documents with the structure you provided
             $documentsFour = $collection->find(["eyeColor" => "blue"], ['sort' => ['age' => -1]]);

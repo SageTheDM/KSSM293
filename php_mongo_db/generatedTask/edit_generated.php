@@ -17,8 +17,7 @@
 
         <?php
         $id = $_GET['id'];
-        //echo $id;
-        
+
         require '../vendor/autoload.php'; // include Composer's autoloader
         $client = new MongoDB\Client("mongodb://localhost:27017");
 
@@ -27,14 +26,42 @@
 
         foreach ($results as $document) {
             $name = $document->name;
+            $about = $document->about;
+            $address = $document->address;
+            $email = $document->email;
+            $phone = $document->phone;
         }
         ?>
 
         <form action="process_edit_generated.php" method="post">
 
+            <div>
+                <input type="hidden" name="id" value="<?php echo $id; ?>">
+            </div>
+
             <div class="input-field">
-                <input type="text" name="name" value="<?php echo $name ?>">
+                <input type="text" name="name" value="<?php echo $name; ?>">
                 <label>Name</label>
+            </div>
+
+            <div class="input-field">
+                <textarea name="about" class="materialize-textarea"><?php echo $about; ?></textarea>
+                <label>About</label>
+            </div>
+            
+            <div class="input-field">
+                <input type="text" name="address" value="<?php echo $address; ?>">
+                <label>Address</label>
+            </div>
+            
+            <div class="input-field">
+                <input type="text" name="email" value="<?php echo $email; ?>">
+                <label>E-Mail</label>
+            </div>
+            
+            <div class="input-field">
+                <input type="text" name="phone" value="<?php echo $phone; ?>">
+                <label>Phone</label>
             </div>
 
             <div>

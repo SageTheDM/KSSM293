@@ -167,7 +167,8 @@ header {
     var(--homepage-text),
     var(--dark-background)
   );
-  -webkit-background-clip: text;
+  background-clip: text;
+  -moz-background-clip: text; /* For Firefox */
   color: transparent;
 }
 
