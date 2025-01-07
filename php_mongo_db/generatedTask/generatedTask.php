@@ -201,8 +201,8 @@ include '../header.php'; // header
                 // Display the "about" attribute
                 echo '<div class="about">';
                 echo '<p>' . $document['about'] . '</p>';
+                echo '<a href="edit_generated.php" target="_blank">edit</a>';
                 echo '</div>';
-
                 echo '</div>';
             }
             ?>
