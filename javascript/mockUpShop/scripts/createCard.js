@@ -1,4 +1,24 @@
-function createCard(produktname, description, image, price) {
+// Function to fetch JSON and create cards
+async function loadCards() {
+    try {
+        // Fetch the JSON file
+        const response = await fetch('json/inventory.json');
+        if (!response.ok) throw new Error('Failed to fetch inventory.json');
+
+        // Parse the JSON data
+        const inventory = await response.json();
+
+        // Loop through each item and create a card
+        inventory.forEach(item => {
+            createCard(item.produktname, item.description, item.image, item.price, item.category, item.stock, item.rating, item.reviews);
+        });
+    } catch (error) {
+        console.error('Error loading cards:', error);
+    }
+}
+
+// Function to create a single card
+function createCard(produktname, description, image, price, category, stock, rating, reviews) {
     // Create card container
     const card = document.createElement('div');
     card.className = 'card';
@@ -30,10 +50,31 @@ function createCard(produktname, description, image, price) {
     priceElement.className = 'card-price';
     cardContent.appendChild(priceElement);
 
+    // Add category
+    const categoryElement = document.createElement('p');
+    categoryElement.textContent = `Category: ${category}`;
+    categoryElement.className = 'card-category';
+    cardContent.appendChild(categoryElement);
+
+    // Add stock
+    const stockElement = document.createElement('p');
+    stockElement.textContent = `Stock: ${stock}`;
+    stockElement.className = 'card-stock';
+    cardContent.appendChild(stockElement);
+
+    // Add rating and reviews
+    const ratingElement = document.createElement('p');
+    ratingElement.textContent = `Rating: ${rating} (${reviews} reviews)`;
+    ratingElement.className = 'card-rating';
+    cardContent.appendChild(ratingElement);
+
     // Append card content to card
     card.appendChild(cardContent);
 
-    // Append card to the body or a specific container
+    // Append card to the container
     const container = document.getElementById('card-container');
     container.appendChild(card);
 }
+
+// Load cards when the page loads
+document.addEventListener('DOMContentLoaded', loadCards);

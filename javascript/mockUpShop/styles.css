@@ -8,10 +8,12 @@
   --dark-background: #004e0e;
   --dark-background-transparent: #004e0e60;
   --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --font-family: "Lora", serif;
+  --font-family: "Lora", Georgia, serif;
   --font-size: 16px;
   --transition-speed: 0.3s;
   --homepage-text: white;
+  --card-bg: #fff;
+  --card-hover-bg: #f0f0f0;
 }
 
 /* Reset */
@@ -24,6 +26,7 @@
 body {
   font-family: var(--font-family);
   font-size: var(--font-size);
+  background-color: var(--background-color);
 }
 
 /* Header */
@@ -168,8 +171,59 @@ header {
     var(--dark-background)
   );
   background-clip: text;
-  -moz-background-clip: text; /* For Firefox */
   color: transparent;
+}
+
+/* Cards */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  margin-top: 6em; /* Avoid overlap with the fixed header */
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  transition: background-color var(--transition-speed), transform var(--transition-speed);
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  background-color: var(--card-hover-bg);
+  transform: scale(1.05);
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card h3 {
+  font-size: 1.5em;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: var(--primary-color);
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.card-price {
+  font-size: 1.2em;
+  color: var(--accent-color);
+  font-weight: bold;
 }
 
 /* Footer */

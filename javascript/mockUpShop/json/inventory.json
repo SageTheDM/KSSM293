@@ -1,0 +1,122 @@
+[
+  {
+    "produktname": "Product 1",
+    "description": "Product 1 is a high-quality item designed for everyday use. Its durable materials and ergonomic design make it a top choice for users looking for reliability and style.",
+    "image": "image1.jpg",
+    "price": "$10.00",
+    "category": "Accessories",
+    "stock": 50,
+    "rating": 4.5,
+    "reviews": 120
+  },
+  {
+    "produktname": "Product 2",
+    "description": "Product 2 offers exceptional performance and sleek aesthetics. Ideal for professionals and enthusiasts alike, it combines form and function seamlessly.",
+    "image": "image2.jpg",
+    "price": "$15.00",
+    "category": "Electronics",
+    "stock": 30,
+    "rating": 4.8,
+    "reviews": 95
+  },
+  {
+    "produktname": "Product 3",
+    "description": "Product 3 is a versatile solution for those seeking efficiency and convenience. Its innovative features set it apart from competitors.",
+    "image": "image3.jpg",
+    "price": "$20.00",
+    "category": "Home & Garden",
+    "stock": 75,
+    "rating": 4.6,
+    "reviews": 150
+  },
+  {
+    "produktname": "Product 4",
+    "description": "Product 4 is crafted with premium materials to ensure longevity. Perfect for both casual and professional settings, it’s a must-have in its category.",
+    "image": "image4.jpg",
+    "price": "$25.00",
+    "category": "Lifestyle",
+    "stock": 20,
+    "rating": 4.4,
+    "reviews": 80
+  },
+  {
+    "produktname": "Product 5",
+    "description": "Experience the difference with Product 5, designed to provide unparalleled comfort and utility. It’s an excellent choice for discerning customers.",
+    "image": "image5.jpg",
+    "price": "$30.00",
+    "category": "Apparel",
+    "stock": 60,
+    "rating": 4.7,
+    "reviews": 200
+  },
+  {
+    "produktname": "Product 6",
+    "description": "Product 6 redefines value with its combination of affordability and performance. It’s perfect for those who want quality without breaking the bank.",
+    "image": "image6.jpg",
+    "price": "$35.00",
+    "category": "Sports",
+    "stock": 40,
+    "rating": 4.3,
+    "reviews": 140
+  },
+  {
+    "produktname": "Product 7",
+    "description": "Built to last, Product 7 offers reliability and cutting-edge features. Whether for personal or professional use, it exceeds expectations.",
+    "image": "image7.jpg",
+    "price": "$40.00",
+    "category": "Technology",
+    "stock": 25,
+    "rating": 4.9,
+    "reviews": 85
+  },
+  {
+    "produktname": "Product 8",
+    "description": "Product 8 is a stylish and functional item designed to enhance your daily life. Its minimalist design complements any setting.",
+    "image": "image8.jpg",
+    "price": "$45.00",
+    "category": "Accessories",
+    "stock": 35,
+    "rating": 4.2,
+    "reviews": 100
+  },
+  {
+    "produktname": "Product 9",
+    "description": "Product 9 combines innovative technology with user-friendly features. It’s a favorite among customers who value excellence.",
+    "image": "image9.jpg",
+    "price": "$50.00",
+    "category": "Electronics",
+    "stock": 45,
+    "rating": 4.8,
+    "reviews": 160
+  },
+  {
+    "produktname": "Product 10",
+    "description": "Product 10 stands out with its premium build and advanced features. Designed for those who demand the best, it delivers top-notch performance.",
+    "image": "image10.jpg",
+    "price": "$55.00",
+    "category": "Luxury",
+    "stock": 15,
+    "rating": 5.0,
+    "reviews": 70
+  },
+  {
+    "produktname": "Product 11",
+    "description": "Discover the potential of Product 11, engineered to meet the highest standards. Its versatility makes it a valuable addition to any collection.",
+    "image": "image11.jpg",
+    "price": "$60.00",
+    "category": "Lifestyle",
+    "stock": 10,
+    "rating": 4.6,
+    "reviews": 45
+  },
+  {
+    "produktname": "Product 12",
+    "description": "Product 12 is a masterpiece of innovation and design. Created to cater to the needs of modern users, it blends tradition and technology.",
+    "image": "image12.jpg",
+    "price": "$65.00",
+    "category": "Artisan",
+    "stock": 5,
+    "rating": 4.9,
+    "reviews": 25
+  }
+]
