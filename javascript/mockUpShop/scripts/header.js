@@ -13,9 +13,10 @@ class Header extends HTMLElement {
       </header>
       <div class="div-menu">
           <ul class="menu">
-            <li><a href="index.html#shop">Our Shop</a></li>
-            <li><a href="index.html#faq">Our Faq</a></li>
-            <li><a href="index.html#about">About us</a></li>
+            <li><a href="index.html#products">Unsere Produkte</a></li>
+            <li><a href="index.html#faq">Häufig gestellte Fragen</a></li>
+            <li><a href="index.html#about-us">Über uns</a></li>
+            <li><a href="index.html#impressum">Impressum</a></li>
           </ul>
       </div>
     `;

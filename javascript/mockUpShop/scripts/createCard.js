@@ -10,7 +10,16 @@ async function loadCards() {
 
         // Loop through each item and create a card
         inventory.forEach(item => {
-            createCard(item.produktname, item.description, item.image, item.price, item.category, item.stock, item.rating, item.reviews);
+            createCard(
+                item.produktname,
+                item.beschreibung,
+                item.bild,
+                item.preis,
+                item.kategorie,
+                item.lagerbestand,
+                item.bewertung,
+                item.bewertungen
+            );
         });
     } catch (error) {
         console.error('Error loading cards:', error);
