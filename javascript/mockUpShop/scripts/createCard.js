@@ -77,12 +77,58 @@ function createCard(produktname, description, image, price, category, stock, rat
     ratingElement.className = 'card-rating';
     cardContent.appendChild(ratingElement);
 
+    // Create "Add to Cart" button
+    const addToCartButton = document.createElement('button');
+    addToCartButton.textContent = 'Add to Cart';
+    addToCartButton.className = 'add-to-cart-button';
+    addToCartButton.addEventListener('click', () => {
+        addToCart({
+            produktname,
+            description,
+            image,
+            price,
+            category,
+            stock,
+            rating,
+            reviews
+        });
+    });
+    cardContent.appendChild(addToCartButton);
+
     // Append card content to card
     card.appendChild(cardContent);
 
     // Append card to the container
     const container = document.getElementById('card-container');
     container.appendChild(card);
+}
+
+// Function to add an item to the cart and store it in localStorage
+function addToCart(item) {
+    // Get the current cart from localStorage or initialize an empty array if not available
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Add the item to the cart
+    cart.push(item);
+
+    // Save the updated cart back to localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    console.log('Gegenstand wurde dem Wahrenkorb hinzugefügt: ', item);
+
+    // Create a popup element
+    const popup = document.createElement('div');
+    popup.className = 'popup';
+    popup.textContent = `${item.produktname} wurde zum Wahrenkorb hinzugefügt`;
+
+    // Append the popup to the page
+    const body = document.body;
+    body.appendChild(popup);
+
+    // Set a timeout to remove the popup after 2 seconds
+    setTimeout(() => {
+        body.removeChild(popup);
+    }, 2000);
 }
 
 // Load cards when the page loads

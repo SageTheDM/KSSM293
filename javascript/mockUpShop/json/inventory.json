@@ -11,7 +11,7 @@
   },
   {
     "produktname": "Fujifilm X100V",
-    "beschreibung": "Die Fujifilm X100V kombiniert klassische Kameradesigns mit moderner Technologie, ideal für Street Photography mit einer erstklassigen Festbrennweite und außergewöhnlicher Bildqualität.",
+    "beschreibung": "Die Fujifilm X100V kombiniert klassische Kameradesigns mit moderner Technologie, ideal für Street Photography mit einer erstklassigen Festbrennweite und aussergewöhnlicher Bildqualität.",
     "bild": "fujifilm_x100v.jpg",
     "preis": "CHF 1'499.00",
     "kategorie": "Kameras",
@@ -111,7 +111,7 @@
   },
   {
     "produktname": "Fujifilm EF-60 Blitzgerät",
-    "beschreibung": "Der Fujifilm EF-60 ist ein leistungsstarker Blitz mit einer Leitzahl von 60, ideal für Studio- und Außenaufnahmen mit hoher Lichtleistung.",
+    "beschreibung": "Der Fujifilm EF-60 ist ein leistungsstarker Blitz mit einer Leitzahl von 60, ideal für Studio- und Aussenaufnahmen mit hoher Lichtleistung.",
     "bild": "fujifilm_ef_60.jpg",
     "preis": "CHF 499.00",
     "kategorie": "Zubehör",
@@ -151,7 +151,7 @@
   },
   {
     "produktname": "Fujifilm X-E4",
-    "beschreibung": "Die Fujifilm X-E4 ist eine kompakte, spiegellose Kamera mit einer großen Bildqualität und einer Vielzahl von Funktionen, ideal für Fotografen, die nach einer vielseitigen und portablen Lösung suchen.",
+    "beschreibung": "Die Fujifilm X-E4 ist eine kompakte, spiegellose Kamera mit einer grossen Bildqualität und einer Vielzahl von Funktionen, ideal für Fotografen, die nach einer vielseitigen und portablen Lösung suchen.",
     "bild": "fujifilm_xe4.jpg",
     "preis": "CHF 1'099.00",
     "kategorie": "Kameras",
@@ -221,7 +221,7 @@
   },
   {
     "produktname": "Canon Speedlite 600EX II-RT",
-    "beschreibung": "Der Canon Speedlite 600EX II-RT ist ein leistungsstarker Blitz mit einer Leitzahl von 60, der sich perfekt für Studioaufnahmen und Außenaufnahmen eignet.",
+    "beschreibung": "Der Canon Speedlite 600EX II-RT ist ein leistungsstarker Blitz mit einer Leitzahl von 60, der sich perfekt für Studioaufnahmen und Aussenaufnahmen eignet.",
     "bild": "canon_speedlite_600ex_ii_rt.jpg",
     "preis": "CHF 649.00",
     "kategorie": "Zubehör",
@@ -361,7 +361,7 @@
   },
   {
     "produktname": "Sony HVL-F60RM Blitz",
-    "beschreibung": "Der Sony HVL-F60RM Blitz bietet eine hohe Leitzahl und eine schnelle Aufladezeit, ideal für Studio- und Außenaufnahmen.",
+    "beschreibung": "Der Sony HVL-F60RM Blitz bietet eine hohe Leitzahl und eine schnelle Aufladezeit, ideal für Studio- und Aussenaufnahmen.",
     "bild": "sony_hvl_f60rm.jpg",
     "preis": "CHF 659.00",
     "kategorie": "Zubehör",
@@ -461,7 +461,7 @@
   },
   {
     "produktname": "Sony SF-G Tough 64GB SD UHS-II",
-    "beschreibung": "Die Sony SF-G Tough 64GB SD UHS-II Speicherkarte ist stoßfest, wasserfest und ermöglicht ultraschnelle Schreib- und Lesegeschwindigkeiten für professionelle Anwendungen.",
+    "beschreibung": "Die Sony SF-G Tough 64GB SD UHS-II Speicherkarte ist stossfest, wasserfest und ermöglicht ultraschnelle Schreib- und Lesegeschwindigkeiten für professionelle Anwendungen.",
     "bild": "sony_sf_g_tough_64gb.jpg",
     "preis": "CHF 119.00",
     "kategorie": "Speicherkarten",

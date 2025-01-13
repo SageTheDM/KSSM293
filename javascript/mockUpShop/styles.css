@@ -29,7 +29,8 @@ body {
   background-color: var(--background-color);
 }
 
-main{
+/* Main Section */
+main {
   margin: 0 0 10em 0;
 }
 
@@ -50,24 +51,59 @@ header {
   justify-content: space-between;
 }
 
+/* Header content - align items and space them out */
 .header-content {
   display: flex;
   align-items: center;
-  width: 100%;
   justify-content: space-between;
+  width: 100%;
 }
 
+/* Project name */
 .project-name {
   font-size: 2em;
   font-weight: bolder;
   color: var(--accent-color);
   text-decoration: none;
   transition: color var(--transition-speed), text-shadow var(--transition-speed);
+  margin-right: auto; 
 }
 
 .project-name:hover {
   color: var(--hover-color);
   text-shadow: 0 0 10px var(--hover-color);
+}
+
+/* Cart button and span */
+.headerCartBtn {
+  background: none;
+  border: none;
+  color: var(--light-background);
+  font-size: 1.8em;
+  cursor: pointer;
+  display: block;
+  padding: 0;
+  z-index: 110;
+  margin-left: auto;
+  margin-right: 40px;
+}
+
+.cartIcon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  fill: white;
+}
+
+.cart-count {
+  font-size: 1.2em;
+  background-color: var(--accent-color);
+  color: var(--light-background);
+  border-radius: 50%;
+  padding: 3px 8px;
+  position: absolute;
+  top: -5px;
+  right: 70px;
 }
 
 /* Burger Menu */
@@ -246,6 +282,24 @@ header {
   font-weight: bold;
 }
 
+/* Add to Cart Button */
+.add-to-cart-button {
+  background-color: var(--accent-color);
+  border: none;
+  color: var(--light-background);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color var(--transition-speed), transform var(--transition-speed);
+  margin-top: 10px;
+}
+
+.add-to-cart-button:hover {
+  background-color: var(--hover-color);
+  transform: scale(1.05);
+}
+
 /* About Us Section */
 #about-us {
   background-color: var(--light-background);
@@ -353,13 +407,134 @@ footer {
   align-items: center;
 }
 
-footer a {
+footer a{
   color: var(--accent-color);
-  text-decoration: none;
-  margin-left: 10px;
-  transition: color var(--transition-speed);
 }
 
-footer a:hover {
-  color: var(--hover-color);
+
+/* Cart Container Styling */
+.cart {
+  background-color: var(--light-background);
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 6em;
+}
+
+.cart h1 {
+  font-size: 2em;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Cart Items */
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  transition: background-color var(--transition-speed);
+}
+
+.cart-item:hover {
+  background-color: var(--card-hover-bg);
+}
+
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.cart-item .item-details {
+  flex-grow: 1;
+  margin-left: 20px;
+}
+
+.cart-item .item-details h4 {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.cart-item .item-details p {
+  font-size: 1em;
+  color: var(--secondary-color);
+}
+
+.cart-item .item-price {
+  font-weight: bold;
+}
+
+.cart-item .remove-item {
+  background-color: var(--accent-color);
+  color: var(--light-background);
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color var(--transition-speed);
+  font-size: 1em;
+}
+
+.cart-item .remove-item:hover {
+  background-color: var(--hover-color);
+}
+
+/* Cart Summary */
+.cart-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.cart-summary .total {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.cart-summary .total span {
+  color: var(--accent-color);
+}
+
+/* Checkout Button */
+.checkout-btn {
+  background-color: var(--accent-color);
+  color: var(--light-background);
+  border: none;
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color var(--transition-speed);
+  box-shadow: var(--box-shadow);
+}
+
+.checkout-btn:hover {
+  background-color: var(--hover-color);
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
