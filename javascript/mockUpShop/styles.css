@@ -147,6 +147,22 @@ header {
   background-size: cover;
 }
 
+.homepageBtn {
+  border: 2px solid var(--accent-color);
+  padding: 20px;
+  border-radius: 20px;
+  margin: 20px;
+  text-decoration: none;
+  color: var(--homepage-text);
+  background: rgba(0, 0, 0, 0.750);
+}
+
+.homepageBtn:hover {
+  transition: 0.3s;
+  background-color: var(--hover-color);
+  transform: translateY(-2px) scale(1.05);
+}
+
 .text {
   color: var(--homepage-text);
   display: flex;
