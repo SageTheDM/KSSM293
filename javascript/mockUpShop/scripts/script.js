@@ -1,13 +1,13 @@
 // Header Component
 class Header extends HTMLElement {
-    constructor() {
-        super();
-    }
+  constructor() {
+    super();
+  }
 
-    connectedCallback() {
-        const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+  connectedCallback() {
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
 
-        this.innerHTML = `
+    this.innerHTML = `
       <header>
         <div class="header-content">
           <div><a href="index.html" class="project-name">Photofuel - Shop</a></div>
@@ -28,150 +28,141 @@ class Header extends HTMLElement {
           <li><a href="index.html#impressum">Impressum</a></li>
         </ul>
       </div>
-    `;
-    }
+      `;
+  }
 }
 
 customElements.define('header-component', Header);
 
 // Function to fetch JSON and create cards
 async function loadCards() {
-    try {
-        // Fetch the JSON file
-        const response = await fetch('json/inventory.json');
-        if (!response.ok) throw new Error('Failed to fetch inventory.json');
+  try {
+    // Fetch the JSON file
+    const response = await fetch('json/inventory.json');
+    if (!response.ok) throw new Error('Failed to fetch inventory.json');
 
-        // Parse the JSON data
-        const inventory = await response.json();
+    // Parse the JSON data
+    const inventory = await response.json();
 
-        // Loop through each item and create a card
-        inventory.forEach(item => {
-            createCard(
-                item.produktname,
-                item.beschreibung,
-                item.bild,
-                item.preis,
-                item.kategorie,
-                item.lagerbestand,
-                item.bewertung,
-                item.bewertungen
-            );
-        });
-    } catch (error) {
-        console.error('Error loading cards:', error);
-    }
+    // Loop through each item and create a card
+    inventory.forEach(item => {
+      createCard(
+        item.produktname,
+        item.beschreibung,
+        item.bild,
+        item.preis,
+        item.kategorie,
+        item.lagerbestand,
+        item.bewertung,
+        item.bewertungen
+      );
+    });
+  } catch (error) {
+    console.error('Error loading cards:', error);
+  }
 }
 
 // Function to create a single card
 function createCard(produktname, description, image, price, category, stock, rating, reviews) {
-    // Create card container
-    const card = document.createElement('div');
-    card.className = 'card';
+  // Create card container
+  const card = document.createElement('div');
+  card.className = 'card';
 
-    // Create image element
-    const img = document.createElement('img');
-    img.src = image;
-    img.alt = produktname;
-    img.className = 'card-image';
-    card.appendChild(img);
+  // Create image element
+  const img = document.createElement('img');
+  img.src = image;
+  img.alt = produktname;
+  img.className = 'card-image';
+  card.appendChild(img);
 
-    // Create card content container
-    const cardContent = document.createElement('div');
-    cardContent.className = 'card-content';
+  // Create card content container
+  const cardContent = document.createElement('div');
+  cardContent.className = 'card-content';
 
-    // Add product name
-    const title = document.createElement('h3');
-    title.textContent = produktname;
-    cardContent.appendChild(title);
+  // Add product name
+  const title = document.createElement('h3');
+  title.textContent = produktname;
+  cardContent.appendChild(title);
 
-    // Add description
-    const desc = document.createElement('p');
-    desc.textContent = description;
-    cardContent.appendChild(desc);
+  // Add description
+  const desc = document.createElement('p');
+  desc.textContent = description;
+  cardContent.appendChild(desc);
 
-    // Add price
-    const priceElement = document.createElement('p');
-    priceElement.textContent = `Price: CHF ${price}`;
-    priceElement.className = 'card-price';
-    cardContent.appendChild(priceElement);
+  // Add price
+  const priceElement = document.createElement('p');
+  priceElement.textContent = `Price: ${price}`;
+  priceElement.className = 'card-price';
+  cardContent.appendChild(priceElement);
 
-    // Add category
-    const categoryElement = document.createElement('p');
-    categoryElement.textContent = `Category: ${category}`;
-    categoryElement.className = 'card-category';
-    cardContent.appendChild(categoryElement);
+  // Add category
+  const categoryElement = document.createElement('p');
+  categoryElement.textContent = `Category: ${category}`;
+  categoryElement.className = 'card-category';
+  cardContent.appendChild(categoryElement);
 
-    // Add stock
-    const stockElement = document.createElement('p');
-    stockElement.textContent = `Stock: ${stock}`;
-    stockElement.className = 'card-stock';
-    cardContent.appendChild(stockElement);
+  // Add stock
+  const stockElement = document.createElement('p');
+  stockElement.textContent = `Stock: ${stock}`;
+  stockElement.className = 'card-stock';
+  cardContent.appendChild(stockElement);
 
-    // Add rating and reviews
-    const ratingElement = document.createElement('p');
-    ratingElement.textContent = `Rating: ${rating} (${reviews} reviews)`;
-    ratingElement.className = 'card-rating';
-    cardContent.appendChild(ratingElement);
+  // Add rating and reviews
+  const ratingElement = document.createElement('p');
+  ratingElement.textContent = `Rating: ${rating} (${reviews} reviews)`;
+  ratingElement.className = 'card-rating';
+  cardContent.appendChild(ratingElement);
 
-    // Create "Add to Cart" button
-    const addToCartButton = document.createElement('button');
-    addToCartButton.textContent = 'Add to Cart';
-    addToCartButton.className = 'add-to-cart-button';
-    addToCartButton.addEventListener('click', () => {
-        addToCart({
-            produktname,
-            description,
-            image,
-            price,
-            category,
-            stock,
-            rating,
-            reviews
-        });
+  // Create "Add to Cart" button
+  const addToCartButton = document.createElement('button');
+  addToCartButton.textContent = 'Add to Cart';
+  addToCartButton.className = 'add-to-cart-button';
+  addToCartButton.addEventListener('click', () => {
+    addToCart({
+      produktname,
+      description,
+      image,
+      price,
+      category,
+      stock,
+      rating,
+      reviews
     });
-    cardContent.appendChild(addToCartButton);
+  });
+  cardContent.appendChild(addToCartButton);
 
-    // Append card content to card
-    card.appendChild(cardContent);
+  // Append card content to card
+  card.appendChild(cardContent);
 
-    // Append card to the container
-    const container = document.getElementById('card-container');
-    container.appendChild(card);
+  // Append card to the container
+  const container = document.getElementById('card-container');
+  container.appendChild(card);
 }
 
 // Function to add an item to the cart and store it in localStorage
 function addToCart(item) {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  cart.push(item);
+  localStorage.setItem('cart', JSON.stringify(cart));
 
-    // Remove CHF symbol from the price before saving
-    const priceWithoutCHF = item.price.replace('CHF', '').trim();
+  console.log('Item added to cart:', item);
 
-    // Add the item with the modified price to the cart
-    cart.push({
-        ...item,
-        price: priceWithoutCHF
-    });
+  // Create a popup element
+  const popup = document.createElement('div');
+  popup.className = 'popup';
+  popup.textContent = `${item.produktname} wurde zum Warenkorb hinzugefügt`;
 
-    localStorage.setItem('cart', JSON.stringify(cart));
+  // Append the popup to the page
+  document.body.appendChild(popup);
 
-    console.log('Item added to cart:', item);
+  // Remove the popup after 2 seconds
+  setTimeout(() => {
+    document.body.removeChild(popup);
+  }, 2000);
 
-    // Create a popup element
-    const popup = document.createElement('div');
-    popup.className = 'popup';
-    popup.textContent = `${item.produktname} wurde zum Warenkorb hinzugefügt`;
-
-    // Append the popup to the page
-    document.body.appendChild(popup);
-
-    // Remove the popup after 2 seconds
-    setTimeout(() => {
-        document.body.removeChild(popup);
-    }, 2000);
-
-    // Update cart count in the header
-    const cartCount = document.querySelector('.cart-count');
-    cartCount.textContent = cart.length;
+  // Update cart count in the header
+  const cartCount = document.querySelector('.cart-count');
+  cartCount.textContent = cart.length;
 }
 
 // Load cards when the page loads

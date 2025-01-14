@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stileinstellungen</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scripts/footer.js" defer></script>
+    <script src="scripts/script.js" defer></script>
+    <script src="scripts/dropdown.js"></script>
+  </head>
+  <body>
+    <header-component></header-component>
+    <main>
+      <section class="settings-container">
+        <h1>Stil-Anpassung</h1>
+
+        <!-- Tab Navigation -->
+        <div class="tab-container">
+          <button class="tab-btn" onclick="switchTab('tab1')">Vorgefertigte Stile</button>
+          <button class="tab-btn" onclick="switchTab('tab2')">Einfache Farbänderungen</button>
+          <button class="tab-btn" onclick="switchTab('tab3')">Manuelle Anpassungen</button>
+        </div>
+
+        <!-- Tab-Inhalte -->
+        <div class="tab-content" id="tab1">
+          <h2>Vorgefertigte Stile</h2>
+          <form>
+            <input type="radio" name="theme" id="light-theme">
+            <label for="light-theme">Helles Thema</label><br>
+            <input type="radio" name="theme" id="dark-theme">
+            <label for="dark-theme">Dunkles Thema</label><br>
+            <input type="radio" name="theme" id="custom-theme">
+            <label for="custom-theme">Benutzerdefiniertes Thema</label>
+          </form>
+        </div>
+
+        <div class="tab-content" id="tab2">
+          <h2>Einfache Farbänderungen</h2>
+          <label for="background-color">Hintergrundfarbe:</label>
+          <input type="color" id="background-color"><br>
+
+          <label for="text-color">Textfarbe:</label>
+          <input type="color" id="text-color"><br>
+
+          <label for="accent-color">Akzentfarbe:</label>
+          <input type="color" id="accent-color">
+        </div>
+
+        <div class="tab-content" id="tab3">
+          <h2>Manuelle Anpassungen</h2>
+          <label for="custom-bg">Hintergrund:</label>
+          <input type="color" id="custom-bg"><br>
+
+          <label for="custom-text">Text:</label>
+          <input type="color" id="custom-text"><br>
+
+          <label for="custom-accent">Akzent:</label>
+          <input type="color" id="custom-accent">
+        </div>
+      </section>
+    </main>
+    <footer-component></footer-component>
+  </body>
+</html>
