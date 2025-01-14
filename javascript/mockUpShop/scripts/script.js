@@ -3,7 +3,6 @@ class Header extends HTMLElement {
   constructor() {
     super();
   }
-
   connectedCallback() {
     const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
 
@@ -26,6 +25,7 @@ class Header extends HTMLElement {
           <li><a href="index.html#faq">Häufig gestellte Fragen</a></li>
           <li><a href="index.html#about-us">Über uns</a></li>
           <li><a href="index.html#impressum">Impressum</a></li>
+          <li><a href="settings.html">Locale Einstellungen</a></li>
         </ul>
       </div>
       `;
