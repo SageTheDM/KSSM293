@@ -16,13 +16,24 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateTotalPrice() {
         let totalPrice = 0;
         cart.forEach(item => {
-            totalPrice += parseFloat(item.price);
+            const itemPrice = parseFloat(item.price.replace('CHF', '').trim());
+            totalPrice += itemPrice * item.quantity;  // Multiply by quantity
         });
         totalPriceElement.textContent = `Gesamt: CHF ${totalPrice.toFixed(2)}`;
     }
 
-    // Loop through the cart items and display them
-    cart.forEach(item => {
+    // Group items by product name and calculate quantities
+    const itemQuantities = cart.reduce((acc, item) => {
+        const itemKey = item.produktname;  // Use product name as the key
+        if (!acc[itemKey]) {
+            acc[itemKey] = { ...item, quantity: 0 };
+        }
+        acc[itemKey].quantity += 1;  // Increase quantity for each occurrence of the item
+        return acc;
+    }, {});
+
+    // Loop through the unique items and display them
+    Object.values(itemQuantities).forEach(item => {
         const itemElement = document.createElement('div');
         itemElement.className = 'cart-item';
 
@@ -37,42 +48,54 @@ document.addEventListener('DOMContentLoaded', () => {
         const itemName = document.createElement('h3');
         itemName.textContent = item.produktname;
 
+        // Display price as it is stored (with CHF)
         const itemPrice = document.createElement('p');
         itemPrice.textContent = `CHF ${item.price}`;
 
-        // Add item details to itemElement
-        itemDetails.appendChild(itemName);
-        itemDetails.appendChild(itemPrice);
+        const itemQuantity = document.createElement('p');
+        itemQuantity.textContent = `Quantity: ${item.quantity}`;
 
         const itemRemoveButton = document.createElement('button');
         itemRemoveButton.className = 'remove-item';
         itemRemoveButton.textContent = 'Entfernen';
-        itemRemoveButton.addEventListener('click', () => removeItemFromCart(item.id, itemElement));
+        itemRemoveButton.addEventListener('click', () => removeItemFromCart(item.produktname, itemElement));
 
-        // Add remove button
+        // Add item details and remove button
+        itemDetails.appendChild(itemName);
+        itemDetails.appendChild(itemPrice);
+        itemDetails.appendChild(itemQuantity);
         itemDetails.appendChild(itemRemoveButton);
+
         itemElement.appendChild(itemImage);
         itemElement.appendChild(itemDetails);
-
         cartContainer.appendChild(itemElement);
     });
 
     // Remove item from cart
-    function removeItemFromCart(itemId, itemElement) {
-        cart = cart.filter(item => item.id !== itemId);
+    function removeItemFromCart(itemName, itemElement) {
+        // Find the item in the cart and decrease the quantity
+        const itemIndex = cart.findIndex(item => item.produktname === itemName);
+        if (itemIndex > -1) {
+            const item = cart[itemIndex];
+            item.quantity -= 1;
+            if (item.quantity <= 0) {
+                cart.splice(itemIndex, 1);  // Remove the item if quantity is zero
+            }
+        }
+
+    // Update localStorage
         localStorage.setItem('cart', JSON.stringify(cart));
 
-        // Remove the item element from the DOM without refreshing the page
+        // Remove the item element from the DOM
         itemElement.remove();
 
-        // Update the total price
-        updateTotalPrice();
-
-        // If cart is empty, display empty cart message
+        // If the cart is empty, display a message
         if (cart.length === 0) {
             cartContainer.innerHTML = '<p>Ihr Warenkorb ist leer!</p>';
-            totalPriceElement.textContent = 'Gesamt: CHF 0';
         }
+
+        // Recalculate and update the total price
+        updateTotalPrice();
     }
 
     // Initial update of the total price
