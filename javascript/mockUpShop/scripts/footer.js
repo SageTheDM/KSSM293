@@ -1,10 +1,10 @@
 class Footer extends HTMLElement {
-    constructor() {
-        super();
-    }
+  constructor() {
+    super();
+  }
 
-    connectedCallback() {
-        this.innerHTML = `
+  connectedCallback() {
+    this.innerHTML = `
       <center>
           <footer>
           <div class="footer-content">
@@ -14,7 +14,7 @@ class Footer extends HTMLElement {
         </footer>
       </center>
       `;
-    }
+  }
 }
 
 customElements.define('footer-component', Footer);

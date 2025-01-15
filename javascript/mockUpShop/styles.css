@@ -5,7 +5,7 @@
   --color-light-bg: #ffffff;
   --color-dark-bg: #004e0e;
   --color-dark-bg-transparent: #004e0e60;
-  
+
   /* Text Colors */
   --color-primary-text: #2e2e2e;
   --color-secondary-text: #4a6a75;
@@ -49,7 +49,8 @@ main {
 button {
   font-family: var(--font-family-default);
   border-radius: 5px;
-  transition: background-color var(--transition-default), transform var(--transition-default);
+  transition: background-color var(--transition-default),
+    transform var(--transition-default);
 }
 /*#endregion*/
 
@@ -82,7 +83,8 @@ header {
   font-weight: bolder;
   color: var(--color-accent);
   text-decoration: none;
-  transition: color var(--transition-default), text-shadow var(--transition-default);
+  transition: color var(--transition-default),
+    text-shadow var(--transition-default);
   margin-right: auto;
 }
 
@@ -112,14 +114,14 @@ header {
 }
 
 .cart-count {
-  font-size: 1.2em;
+  font-size: 0.7em;
   background-color: var(--color-accent);
   color: var(--color-light-bg);
   border-radius: 50%;
   padding: 3px 8px;
   position: absolute;
-  top: -5px;
-  right: 70px;
+  top: 0px;
+  right: 75px;
 }
 
 .burger-menu {
@@ -208,7 +210,7 @@ header {
   margin: 20px;
   text-decoration: none;
   color: var(--color-homepage-text);
-  background: rgba(0, 0, 0, 0.750);
+  background: rgba(0, 0, 0, 0.75);
 }
 
 .homepageBtn:hover {
@@ -259,7 +261,8 @@ header {
   border-radius: 10px;
   box-shadow: var(--box-shadow-default);
   overflow: hidden;
-  transition: background-color var(--transition-default), transform var(--transition-default);
+  transition: background-color var(--transition-default),
+    transform var(--transition-default);
   display: flex;
   flex-direction: column;
 }
@@ -305,7 +308,8 @@ header {
   border-radius: 5px;
   font-size: 1em;
   cursor: pointer;
-  transition: background-color var(--transition-default), transform var(--transition-default);
+  transition: background-color var(--transition-default),
+    transform var(--transition-default);
   margin-top: 10px;
 }
 
@@ -414,25 +418,154 @@ address a:hover {
   border-radius: 10px;
 }
 
-#danke h2, #danke p {
+#danke h2,
+#danke p {
   color: var(--color-primary-text);
   text-align: center;
   margin-bottom: 20px;
 }
 
-#danke h2 { font-size: 2em; }
-#danke p, #danke ul li { font-size: 1.2em; }
-#danke ul { list-style: none; padding: 0; text-align: center; }
-#danke ul li { color: var(--color-primary-text); margin: 10px 0; }
+#danke h2 {
+  font-size: 2em;
+}
+#danke p,
+#danke ul li {
+  font-size: 1.2em;
+}
+#danke ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+#danke ul li {
+  color: var(--color-primary-text);
+  margin: 10px 0;
+}
 /*#endregion*/
 
 /*#region settings */
-#settings{
+#settings {
   width: 80%;
   margin: auto;
   margin-top: 6em;
 }
 /*#endregion */
+
+/*#region checkout */
+/* Main container styling */
+#checkout-form {
+  background-color: var(--color-light-bg);
+  padding: 40px;
+  margin-top: 6em;
+  box-shadow: var(--box-shadow-default);
+  border-radius: 10px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--color-dark-text);
+}
+
+/* Section titles */
+#checkout-form h1,
+#checkout-form h2 {
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+/* Form label styling */
+#checkout-form label {
+  display: block;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  color: var(--color-text-dark);
+}
+
+/* Input fields */
+#checkout-form input[type="text"],
+#checkout-form input[type="email"] {
+  width: 100%;
+  padding: 14px 18px;
+  margin-bottom: 18px;
+  border: 2px solid var(--color-accent);
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 1.1em;
+  background-color: var(--color-light-input-bg);
+  transition: all 0.3s ease;
+}
+
+#checkout-form input[type="text"]:focus,
+#checkout-form input[type="email"]:focus {
+  outline: solid 2px;
+  border-color: var(--color-dark-bg);
+  background-color: var(--color-light-focus-bg);
+  box-shadow: 0 0 5px var(--color-primary);
+}
+
+/* Radio button labels */
+#checkout-form label input[type="radio"] {
+  margin-right: 10px;
+}
+
+/* Invoice container */
+#invoice {
+  background-color: var(--color-light-card);
+  padding: 20px;
+  border: 2px solid var(--color-border-light);
+  border-radius: 8px;
+  margin-top: 20px;
+  font-size: 1em;
+  color: var(--color-text-dark);
+}
+
+#invoice h3 {
+  text-align: center;
+  color: var(--color-primary);
+  margin-bottom: 1em;
+}
+
+#invoice ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#invoice li {
+  border-bottom: 1px solid var(--color-border-light);
+  padding: 8px 0;
+}
+
+#invoice p {
+  text-align: right;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Button styling */
+#submit-order {
+  background-color: var(--color-dark-bg);
+  color: white;
+  border: none;
+  padding: 18px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: bold;
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#submit-order:hover {
+  transform: scale(1.05);
+}
+
+#submit-order:active {
+  transform: scale(1);
+}
+/*#endregion  */
 
 /*#region Footer */
 footer {
@@ -454,7 +587,9 @@ footer a {
   transition: color var(--transition-default);
 }
 
-footer a:hover { color: var(--color-hover); }
+footer a:hover {
+  color: var(--color-hover);
+}
 /*#endregion*/
 
 /*#region Cart */
@@ -491,7 +626,9 @@ footer a:hover { color: var(--color-hover); }
   transition: background-color var(--transition-default);
 }
 
-.cart-item:hover { background-color: var(--color-card-hover-bg); }
+.cart-item:hover {
+  background-color: var(--color-card-hover-bg);
+}
 
 .cart-item img {
   width: 80px;
@@ -515,7 +652,9 @@ footer a:hover { color: var(--color-hover); }
   color: var(--color-secondary-text);
 }
 
-.cart-item .item-price { font-weight: bold; }
+.cart-item .item-price {
+  font-weight: bold;
+}
 
 .cart-item .remove-item {
   background-color: var(--color-accent);
@@ -528,7 +667,9 @@ footer a:hover { color: var(--color-hover); }
   font-size: 1em;
 }
 
-.cart-item .remove-item:hover { background-color: var(--color-hover); }
+.cart-item .remove-item:hover {
+  background-color: var(--color-hover);
+}
 
 .cart-summary {
   display: flex;
@@ -542,7 +683,9 @@ footer a:hover { color: var(--color-hover); }
   font-weight: bold;
 }
 
-.cart-summary .total span { color: var(--color-accent); }
+.cart-summary .total span {
+  color: var(--color-accent);
+}
 
 .checkout-btn {
   background-color: var(--color-accent);
@@ -556,7 +699,9 @@ footer a:hover { color: var(--color-hover); }
   box-shadow: var(--box-shadow-default);
 }
 
-.checkout-btn:hover { background-color: var(--color-hover); }
+.checkout-btn:hover {
+  background-color: var(--color-hover);
+}
 /*#endregion*/
 
 /*#region Popup Styling */

@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const cartContainer = document.getElementById('cart-container');
     const totalPriceElement = document.getElementById('total-price');
+    const checkoutButton = document.querySelector('.checkout-btn');
 
-    // Fetch the cart from localStorage once
+    // Fetch the cart from localStorage
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     console.log("Initial cart data:", cart);
 
@@ -11,33 +12,27 @@ document.addEventListener('DOMContentLoaded', () => {
         const totalPrice = cart.reduce((total, item) => {
             return total + parseFloat(item.price || 0) * (item.quantity || 1);
         }, 0);
-        totalPriceElement.textContent = `Gesamt: CHF ${totalPrice.toFixed(2)}`;
-        console.log("Updated total price:", totalPrice);
+        totalPriceElement.textContent = `CHF ${totalPrice.toFixed(2)}`;
+        return totalPrice;
     }
 
     // Function to render the cart
     function renderCart() {
-        // Clear existing content
         cartContainer.innerHTML = "";
 
-        // If cart is empty, show message and return
         if (cart.length === 0) {
             cartContainer.innerHTML = '<p>Ihr Warenkorb ist leer!</p>';
-            totalPriceElement.textContent = 'Gesamt: CHF 0';
+            totalPriceElement.textContent = 'CHF 0.00';
             return;
         }
 
-        // Group items by name
         const groupedCart = cart.reduce((acc, item) => {
             const key = item.produktname;
-            if (!acc[key]) {
-                acc[key] = { ...item, quantity: 0 };
-            }
+            if (!acc[key]) acc[key] = { ...item, quantity: 0 };
             acc[key].quantity += 1;
             return acc;
         }, {});
 
-        // Create elements for each item
         Object.values(groupedCart).forEach(item => {
             const itemElement = document.createElement('div');
             itemElement.className = 'cart-item';
@@ -57,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
             itemPrice.textContent = `CHF ${item.price}`;
 
             const itemQuantity = document.createElement('p');
-            itemQuantity.textContent = `Quantity: ${item.quantity}`;
+            itemQuantity.textContent = `Menge: ${item.quantity}`;
 
             const removeButton = document.createElement('button');
             removeButton.textContent = 'Entfernen';
@@ -66,7 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 removeItem(item.produktname);
             });
 
-            // Append details
             itemDetails.appendChild(itemName);
             itemDetails.appendChild(itemPrice);
             itemDetails.appendChild(itemQuantity);
@@ -81,11 +75,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to remove an item
     function removeItem(itemName) {
         cart = cart.filter(item => item.produktname !== itemName);
-        localStorage.setItem('cart', JSON.stringify(cart)); // Update storage
+        localStorage.setItem('cart', JSON.stringify(cart));
         console.log("Item removed, new cart:", cart);
-        renderCart(); // Re-render cart
-        updateTotalPrice(); // Update total price
+        renderCart();
+        updateTotalPrice();
     }
+
+    // Handle checkout process
+    checkoutButton.addEventListener('click', () => {
+        const gesamtbetrag = updateTotalPrice();
+        localStorage.setItem('gesamtbetrag', gesamtbetrag.toFixed(2));
+        window.location.href = 'checkout.html';
+    });
 
     // Initial render
     renderCart();
