@@ -426,6 +426,14 @@ address a:hover {
 #danke ul li { color: var(--color-primary-text); margin: 10px 0; }
 /*#endregion*/
 
+/*#region settings */
+#settings{
+  width: 80%;
+  margin: auto;
+  margin-top: 6em;
+}
+/*#endregion */
+
 /*#region Footer */
 footer {
   background-color: var(--color-secondary-text);
