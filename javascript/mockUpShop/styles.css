@@ -484,7 +484,8 @@ address a:hover {
 
 /* Input fields */
 #checkout-form input[type="text"],
-#checkout-form input[type="email"] {
+#checkout-form input[type="email"],
+#checkout-form input[type="tel"] {
   width: 100%;
   padding: 14px 18px;
   margin-bottom: 18px;
@@ -497,7 +498,8 @@ address a:hover {
 }
 
 #checkout-form input[type="text"]:focus,
-#checkout-form input[type="email"]:focus {
+#checkout-form input[type="email"]:focus,
+#checkout-form input[type="tel"]:focus {
   outline: solid 2px;
   border-color: var(--color-dark-bg);
   background-color: var(--color-light-focus-bg);
@@ -565,6 +567,7 @@ address a:hover {
 #submit-order:active {
   transform: scale(1);
 }
+
 /*#endregion  */
 
 /*#region Footer */
