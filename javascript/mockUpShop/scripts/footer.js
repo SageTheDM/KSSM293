@@ -9,7 +9,7 @@ class Footer extends HTMLElement {
           <footer>
           <div class="footer-content">
               <p>&copy; 2025 Photofuel.tech</p>
-              <p>Mehr Infos unter: <a href="#impressum" target="_blank">www.photofuel.tech/impressum</a></p>
+              <p>Mehr Infos unter: <a href="index.html#impressum" target="_blank">www.photofuel.tech/impressum</a></p>
           </div>     
         </footer>
       </center>
