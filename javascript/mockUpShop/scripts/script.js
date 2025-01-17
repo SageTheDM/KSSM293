@@ -37,14 +37,10 @@ customElements.define('header-component', Header);
 // Function to fetch JSON and create cards
 async function loadCards() {
   try {
-    // Fetch the JSON file
     const response = await fetch('json/inventory.json');
     if (!response.ok) throw new Error('Failed to fetch inventory.json');
-
-    // Parse the JSON data
     const inventory = await response.json();
 
-    // Loop through each item and create a card
     inventory.forEach(item => {
       createCard(
         item.produktname,
@@ -54,7 +50,9 @@ async function loadCards() {
         item.kategorie,
         item.lagerbestand,
         item.bewertung,
-        item.bewertungen
+        item.bewertungen,
+        item.Herkunft.geokoordinaten.breite,
+        item.Herkunft.geokoordinaten.laenge
       );
     });
   } catch (error) {
@@ -63,57 +61,47 @@ async function loadCards() {
 }
 
 // Function to create a single card
-function createCard(produktname, description, image, price, category, stock, rating, reviews) {
-  // Create card container
+function createCard(produktname, description, image, price, category, stock, rating, reviews, latitude, longitude) {
   const card = document.createElement('div');
   card.className = 'card';
 
-  // Create image element
   const img = document.createElement('img');
   img.src = image;
   img.alt = produktname;
   img.className = 'card-image';
   card.appendChild(img);
 
-  // Create card content container
   const cardContent = document.createElement('div');
   cardContent.className = 'card-content';
 
-  // Add product name
   const title = document.createElement('h3');
   title.textContent = produktname;
   cardContent.appendChild(title);
 
-  // Add description
   const desc = document.createElement('p');
   desc.textContent = description;
   cardContent.appendChild(desc);
 
-  // Add price
   const priceElement = document.createElement('p');
   priceElement.textContent = `Price: ${price}`;
   priceElement.className = 'card-price';
   cardContent.appendChild(priceElement);
 
-  // Add category
   const categoryElement = document.createElement('p');
   categoryElement.textContent = `Category: ${category}`;
   categoryElement.className = 'card-category';
   cardContent.appendChild(categoryElement);
 
-  // Add stock
   const stockElement = document.createElement('p');
   stockElement.textContent = `Stock: ${stock}`;
   stockElement.className = 'card-stock';
   cardContent.appendChild(stockElement);
 
-  // Add rating and reviews
   const ratingElement = document.createElement('p');
   ratingElement.textContent = `Rating: ${rating} (${reviews} reviews)`;
   ratingElement.className = 'card-rating';
   cardContent.appendChild(ratingElement);
 
-  // Create "Add to Cart" button
   const addToCartButton = document.createElement('button');
   addToCartButton.textContent = 'Add to Cart';
   addToCartButton.className = 'add-to-cart-button';
@@ -131,39 +119,61 @@ function createCard(produktname, description, image, price, category, stock, rat
   });
   cardContent.appendChild(addToCartButton);
 
-  // Append card content to card
+  const expandButton = document.createElement('button');
+  expandButton.textContent = 'Expand';
+  expandButton.className = 'expand-button';
+  cardContent.appendChild(expandButton);
+
+  const detailedSection = document.createElement('div');
+  detailedSection.className = 'detailed-section';
+  detailedSection.style.display = 'none';
+
+  const mapContainer = document.createElement('div');
+  mapContainer.className = 'map-container';
+  const mapIframe = document.createElement('iframe');
+  mapIframe.src = `https://www.google.com/maps?q=${latitude},${longitude}&hl=de`;
+  mapIframe.width = '400';
+  mapIframe.height = '300';
+  mapIframe.style.transition = 'all 0.5s ease';
+  mapContainer.appendChild(mapIframe);
+
+  const details = document.createElement('div');
+  details.className = 'more-details';
+  details.innerHTML = `<p>More details about the product...</p><p>Additional information...</p>`;
+  detailedSection.appendChild(mapContainer);
+  detailedSection.appendChild(details);
+  cardContent.appendChild(detailedSection);
+
+  expandButton.addEventListener('click', () => {
+    if (detailedSection.style.display === 'none') {
+      detailedSection.style.display = 'block';
+      mapIframe.style.height = '500px';
+    } else {
+      detailedSection.style.display = 'none';
+      mapIframe.style.height = '300px';
+    }
+  });
+
   card.appendChild(cardContent);
 
-  // Append card to the container
   const container = document.getElementById('card-container');
   container.appendChild(card);
 }
 
-// Function to add an item to the cart and store it in localStorage
+// Function to add an item to the cart and update localStorage
 function addToCart(item) {
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
   cart.push(item);
   localStorage.setItem('cart', JSON.stringify(cart));
 
-  console.log('Item added to cart:', item);
-
-  // Create a popup element
   const popup = document.createElement('div');
   popup.className = 'popup';
   popup.textContent = `${item.produktname} wurde zum Warenkorb hinzugefügt`;
-
-  // Append the popup to the page
   document.body.appendChild(popup);
+  setTimeout(() => document.body.removeChild(popup), 2000);
 
-  // Remove the popup after 2 seconds
-  setTimeout(() => {
-    document.body.removeChild(popup);
-  }, 2000);
-
-  // Update cart count in the header
   const cartCount = document.querySelector('.cart-count');
   cartCount.textContent = cart.length;
 }
 
-// Load cards when the page loads
 document.addEventListener('DOMContentLoaded', loadCards);
