@@ -1,0 +1,557 @@
+This is kryptographie.info, produced by makeinfo version 7.1.1 from
+test.texi.
+
+1 Thema 2: Kryptographie
+========================
+
+1.1 2.1 Einführung
+------------------
+
+   • Bedrohungen:
+        • Lesen
+        • Verändern
+        • Vortäuschen (falscher Partner)
+
+   • Dienste:
+        • Vertraulichkeit: Niemand kann die Informationen lesen.
+        • Integrität: Niemand kann die Informationen unbemerkt
+          verändern.
+        • Authentizität: Bestätigung, wer auf der anderen Seite ist bzw.
+          wer die Informationen verfasst hat.
+        • Nicht-Abstreitbarkeit: Alle können überprüfen, wer die
+          Informationen verfasst hat.
+
+   • Angriffe auf Schlüssel:
+        • Ciphertext-only: Immer möglich.
+        • Known-plaintext: Teile des Klartextes sind bekannt.
+        • Chosen-plaintext: Angreifer wählt Klartext und erhält den
+          entsprechenden Ciphertext.
+        • Chosen-ciphertext: Angreifer wählt Ciphertext und erhält den
+          entsprechenden Klartext.
+
+   • Angriffe auf Verfahren:
+        • Vertiefte mathematische Analyse.
+
+   • Kerckhoffs’sches Prinzip:
+        • Auguste Kerckhoffs, 1883.  Verfahren sollten auch dann sicher
+          sein, wenn sie in die Hände des Gegners fallen.
+
+   • Ableitung:
+        • Der (geheime) Schlüssel muss geschützt werden, nicht das
+          Verfahren.
+
+1.2 2.2 Historische Verfahren
+-----------------------------
+
+   • Skytale:
+        • Die älteste Form der Verschlüsselung.
+        • Ursprünglich in Sparta, 5.  Jahrhundert v.  Chr.
+        • Schlüssel: Dicke des Stabes.
+        • Brechen: Brute-Force: Verschiedene Abstände/Stabdicken
+          ausprobieren.
+        • Schwäche: Der Schlüssel hat zu wenige Möglichkeiten.
+
+   • Cäsar:
+        • Buchstaben werden um eine bestimmte Anzahl von Positionen
+          verschoben.
+        • Beispiel: k=3 ⇒ A→D, B→E, C→F, ...  X→A, Y→B, Z→C.
+        • Brechen: Brute-Force: maximal 26 Möglichkeiten.
+        • Schwäche: Der Schlüssel hat zu wenige Möglichkeiten.
+
+   • Vigenère (Mittelalter):
+        • Ähnlich wie das Cäsar-Verfahren, aber mit mehreren Schlüsseln
+          (Schlüsselwort).
+        • Jeder n-te Buchstabe wird mit dem gleichen Abstand verschoben.
+   • Vigenère Brechen bei bekannter Schlüssellänge N:
+        • Text in n Teile aufteilen (jeder n-te Buchstabe).
+        • Für jeden Teil: häufigster Buchstabe ermitteln, sollte "E"
+          sein.  Schlüssel gebrochen.
+
+   • Vigenère Brechen bei unbekannter Schlüssellänge N:
+        • Alle Schlüssellängen durchprobieren.
+        • "Autokorrelation" liefert die Schlüssellänge.
+
+     Beispiel:
+     O   1   P
+     M   2   O
+     N   3   Q
+     I   1   J
+     A   2   C
+
+1.3 Vernam, 1917 (One-Time Pad):
+--------------------------------
+
+   • Jedes Bit wird per XOR mit dem Schlüssel verknüpft.
+   • Perfekte Sicherheit: Eine Verschlüsselung ist perfekt sicher, wenn
+     die Wahrscheinlichkeit für eine Klartext-0 genau 0.5 ist.
+   • Vernam ist perfekt sicher, wenn:
+        • der Schlüssel echt zufällig ist,
+        • der Schlüssel nur einmal verwendet wird,
+        • der Schlüssel genauso lang ist wie die Nachricht selbst ->
+          unpraktisch.
+
+1.4 Chiffriermaschinen: Beispiel Enigma
+---------------------------------------
+
+   • Prinzip:
+        • Mechanische Maschine
+
+   • Schlüsselraum:
+        • 2 * 10^23, entspricht 77 Bit Sicherheit
+
+   • Aufgabe 2.1:
+        • Angenommen, wir könnten 1'000'000 Schlüssel pro Sekunde
+          testen.  Wie lange würde ein Brute-Force-Angriff maximal
+          dauern?
+
+   • Schwächen:
+        • c_i ungleich t_i für alle i
+        • Klartextbuchstaben werden nicht in sich selbst verschlüsselt.
+        • Kleine statistische Auffälligkeit in Abweichung von
+          scheinbarem Zufall
+        • Angriffsmöglichkeit
+
+   • Gebrochen durch:
+        • Alan Turing (Turing-Bombe, Operation Bletchley-Park)
+
+   • Fazit:
+        • Sich nicht einfach in Sicherheit wiegen.
+        • Keine statistischen Schwächen
+
+1.5 2.3 Blockverschlüsseler
+---------------------------
+
+   • Prinzip:
+
+        • Klartext wird in Blöcke unterteilt, z.B. 128-Bit-Blöcke.
+          Jeder Block wird in einer Operation E (encrypt) und einem
+          Schlüssel k verschlüsselt.  Mit D (decrypt) und k wird
+          entschlüsselt.
+               Klartext (plaintext)        p1        p2         p3     ...    pn
+                                            |        |          |              |
+                                          k>E      k>E        k>E            k>E
+                                            |        |          |              |
+                                           c1        c2         c3     ...    cn
+
+               Entschlüsseln:
+                                            c1       c2         c3     ...    cn
+                                            |        |          |              |
+                                          k>D      k>D        k>D            k>D
+                                            |        |          |              |
+                                           p1        p2         p3     ...    pn
+
+   • Veraltetes DES (Data Encryption Standard)
+
+        • Schlüsselgröße: 56 Bit -> gebrochen.
+        • Blockgröße: 64 Bit -> unsicher.
+
+        • Standard aus den 70er-Jahren, entwickelt in den USA im Auftrag
+          der NSA (National Security Agency).
+        • Designziel: Schnell in Hardware, langsam in Software (HW/SW).
+        • Idee: aus dem Kalten Krieg -> wurde wie ein Rüstungsgut
+          behandelt und benötigte eine Exportlizenz.
+
+   • Triple-DES
+
+        • Triple-DES (macht DES sicherer...).
+        • Warum EDE und nicht EEE? - Triple-DES kann auch Single-DES,
+          wenn k1=k2.
+        • Warum Triple und nicht Doppel-DES - Meet-in-the-Middle-Angriff
+          mit Aufwand 2⁵⁷.
+
+                          m_i
+               	    |
+                          k1>E
+               	    |
+                          k2>D
+               	    |
+                           k1>E
+               	    |
+                          c_i
+
+             • Vorwärts: Mit allen möglichen k1 wird E_k1(p) berechnet
+               und in DB gespeichert.
+             • Rückwärts: Mit allen möglichen k2 wird E_k2(c) berechnet
+               und in der DB gesucht.
+             • Aufwand: 2⁵⁶ + 2⁵⁶ = 2⁵⁷ Aufwand.
+             • -> Double DES würde nur 57 Bit Sicherheit liefern, statt
+               112 Bits!
+        • Warum zwei und nicht drei Schlüssel?
+             • Sicherheit ist ca.  2¹¹²+2⁵⁶ bei drei Schlüsseln.
+               Praktisch kein Gewinn durch den dritten Schlüssel.
+             • (Fünf wären noch sicherer) - dies wurde in der Praxis
+               jedoch nicht umgesetzt.
+
+        • AES (Advanced Encryption Standard)
+        • ...  heutiger Standard seit 2001.
+
+             • Öffentlicher Wettbewerb 1997, gewonnen von Daemen und
+               Rijmen mit Rijndael.
+             • -> schafft Vertrauen in AES.
+             • Schlüsselgröße wählbar: 128, 192, 256 Bit.
+             • Designziel: schnell in Software.
+
+             • Kein praktischer Angriff möglich, bester theoretischer
+               Angriff mit Aufwand 2¹²⁶.
+
+   • Verschlüsselungsmodi: ECB (Electronic Codebook Mode)
+
+1.6 Kryptographische Hashfunktionen
+-----------------------------------
+
+   • Definition Eine Hashfunktion bildet einen Text beliebiger Größe
+     eindeutig auf einen Wert fixer Größe ab.
+
+   • Beispiel: Die 8-Bit-ASCII-Werte eines Textes werden mit XOR
+     verknüpft.  \rightarrow Eingabe beliebig groß, Resultat immer 8 Bit
+     groß.
+
+              H = 0100 1000
+              A = 0100 0001
+              L = 0100 1100
+              L = 0100 1100
+              O = 0100 1111
+              -------------
+                  0100 0110 = h("HALLO")
+
+   • Kryptographische Hashfunktion Eine kryptographische Hashfunktion
+     (Einweg-Hashfunktion) erfüllt folgende Bedingungen:
+       1. Es ist praktisch unmöglich, zu einem Hashwert einen passenden
+          Text zu finden.
+       2. Es ist praktisch unmöglich, zwei Texte mit gleichem Hashwert
+          zu finden (starke Kollisionsresistenz).
+
+   • Aufgabe: Finde passende Texte zum Hashwert von h("HALLO") = 0100
+     0110.
+
+     Lösung:
+              h("F") = h("FFF") = h("FAA") = h("AFA") = h("HAO") = etc.
+
+   • Aufgabe: Finde Texte mit gleichem Hashwert, ohne den Hashwert zu
+     berechnen (Hashfunktion wie oben).
+
+     Lösung:
+              h("GRUN") = h("NURG") = h("UNRG") = h("XGRUNX") = h("GRUNROLFROLF")
+
+   • Warum ist Bedingung 2 wichtig?  Reicht Bedingung 1 nicht aus?
+        • Geburtstagsparadox: Die Wahrscheinlichkeit, dass in einer
+          Gruppe zwei Leute denselben Geburtstag haben, wird
+          unterschätzt.
+
+        • Finden sich zwei gleiche Hashwerte, ist die Funktion
+          unbrauchbar.
+
+        • Wenn eine Hashfunktion nicht stark kollisionsresistent ist,
+          können viele Varianten zweier Texte erzeugt werden.
+
+1.7 Dedizierte Hashfunktionen (ohne Schlüssel)
+----------------------------------------------
+
+Es gibt Hashfunktionen, die die Einweg-Eigenschaften erfüllen.  Bisher
+wurden keine praktischen Verfahren für Kollisionen in diesen Funktionen
+gefunden.
+
+   • Die wichtigsten Standards:
+        • SHA-2: ‘SHA-256’, ‘SHA-512’ (Secure Hash Algorithm, Standard).
+        • SHA-3: Standard seit 2015 (nach öffentlichem Wettbewerb).
+
+   • Nicht gebrochen:
+        • ‘RIPEMD-160’.
+
+   • Gebrochen:
+        • ‘MD2’, ‘MD4’, ‘MD5’ (Message Digest).
+        • ‘SHA-1’.
+
+1.8 Hashfunktionen mit Schlüsseln
+---------------------------------
+
+Hashfunktionen mit Schlüsseln erzeugen MAC (Message Authentication
+Code): *Authentizität und Integrität*.
+
+     CBC-MAC
+   • Erzeugung: Mit einem geheimen Schlüssel ‘k’ wird die CBC (Cipher
+     Block Chaining) berechnet und _nur der letzte Block_ behalten.
+        • Vollständigkeit abhängig vom Schlüssel und der Nachricht.
+        • Ohne Schlüssel sind keine Kollisionen möglich.
+   • Verifikation: Der Empfänger (z.  B. Bob) berechnet ebenfalls den
+     CBC-MAC und vergleicht ihn mit dem zugesandten MAC.
+
+   *Wichtig:* Für Verschlüsselung und MAC-Verfahren sollten
+unterschiedliche sichere Schlüssel verwendet werden.
+
+1.9 Schlüsselbasierte Hashfunktionen aus schlüssellosen Varianten
+-----------------------------------------------------------------
+
+   • *Variante 1:* Schlüssel ‘k’ ebenfalls hashen
+        • Gegeben: Schlüssel ‘k’ und Text ‘M’.
+        • Vorgehen: Schlüssel und Nachricht miteinander verketten und
+          hashen: ‘h(k | M)’.
+        • Eigenschaften:
+             • Ohne Kenntnis von ‘k’ keine Kollision möglich.
+             • Der Schlüssel ‘k’ kann nicht aus dem Hashwert berechnet
+               werden (kein Zurückrechnen möglich).
+
+   • *Variante 2:* HMAC (Hash-based Message Authentication Code) gem.
+     de-facto-Standard
+        • Blockgröße entspricht der verwendeten Hashfunktion.
+        • Verwendung von ‘ipad’ und ‘opad’ (Konstanten), um
+          sicherzustellen, dass der Schlüssel nicht zweimal identisch
+          verarbeitet wird.
+
+1.10 ÜBUNGEN VON TEAMS
+----------------------
+
+  1. Verschlüssle den Text "OMNIAGALLA" mit dem Cäsar-Verfahren und dem
+     Schlüssel k=3.
+        • Ergebnis: RPQLDJDOOD
+
+  2. Folgender Text ist mit dem Cäsar-Verfahren verschlüsselt.  Breche
+     den Text!  Welcher Schlüssel wurde verwendet?
+        • Verschlüsselter Text: NXYJNSKFHMeZGWJHMJS
+        • Klartext: ISTEINFACHzUBRECHEN
+        • Schlüssel: k=5
+
+  3. Folgender Text ist mit Vigenère mit dem Schlüssel "KEY"
+     verschlüsselt.  Entschlüssele den Text!
+        • Verschlüsselter Text: LIQCIPKPQMECCEP
+        • Klartext: BESERALSCESAR
+        • Schlüssel: KEY
+
+  4. Übung 2: Blockverschlüssler
+
+     Wie lange dauert es maximal, einen DES-Schlüssel durch
+     Known-Plaintext-Brute-Force-Angriff zu brechen, wenn:
+        • a) Ein Spezialcomputer zur Verfügung steht, der 100x100
+          DES-Chips enthält, die je 10^9 Verschlüsselungen je Sekunde
+          durchführen könnten?
+             • Schlüsselraum für DES: 2^56 mögliche Schlüssel.
+             • Geschwindigkeit des Computers: 100 * 100 * 10^9 = 10^13
+               Schlüssel pro Sekunde.
+             • Maximale Zeit für Brute-Force-Angriff: 2^56 / 10^13 ≈
+               7200 Sekunden ≈ 120 Minuten -> 2 Stunden.
+
+        • b) Wie lange würde der gleiche Angriff für Triple-DES mit
+          Zweifachschlüssel benötigen?
+             • Schlüsselraum für Triple-DES (Zweifachschlüssel): 2^112
+               mögliche Schlüssel.
+             • Geschwindigkeit des Computers: 10^13 Schlüssel pro
+               Sekunde.
+             • Maximale Zeit für Brute-Force-Angriff: 2^112 / 10^13 ≈
+               5.7 x 10^22 Sekunden.
+             • Umgerechnet: ca.  16.5 x 10^12 Jahre (16'500'000'000'000
+               Jahre).
+
+        • c) Wie lange würde der Angriff auf AES-128, AES-192 oder
+          AES-256 dauern?
+             • AES-128: Schlüsselraum von 2^128.
+             • AES-192: Schlüsselraum von 2^192.
+             • AES-256: Schlüsselraum von 2^256.
+             • Geschwindigkeit des Computers: 10^11 Schlüssel pro
+               Sekunde.
+             • Maximale Zeit für Brute-Force:
+                  • AES-128: 2^128 / 10^11 ≈ 10^27 Sekunden ≈ 10^18
+                    Jahre.
+                  • AES-192: 2^192 / 10^11 ≈ 2 x 10^37 Jahre.
+                  • AES-256: 2^256 / 10^11 ≈ 3.7 x 10^56 Jahre.
+
+  5. Übung 3: CBC-MAC und Hashwert
+
+       1. Erstelle eine Tabelle mit dem CBC-MAC mit AES-256 des Textes
+          «MAC schützt die Integrität» und den Schlüsseln:
+             • a) Alle Bits sind 0: CBC-MAC =
+               'c8d19704a9cf2e7b8bda96c06a07abf8'
+             • b) Alle Bits sind 1: CBC-MAC =
+               'df3e4c80d53557098876b31b19be8f63'
+             • c) 0101.......0101: CBC-MAC =
+               '43a205a07e51fef839531bf1a053da56'
+
+       2. Füge der Tabelle oben die Hashwerte des leicht abgeänderten
+          Textes «MAC schützt die Integrität» hinzu.
+             • a) Alle Bits sind 0: CBC-MAC =
+               '784a0b160a9d85c118c6e21764fcf60d'
+             • b) Alle Bits sind 1: CBC-MAC =
+               '54b35e24e0e0d21fa9c68a3f3faadba4'
+             • c) 0101.......0101: CBC-MAC =
+               '8f6f2a37c6c2c98fc2789072b1390ba9'
+
+       3. Erstelle eine Tabelle mit den Hashwerten des Textes «Ich kenne
+          die Hashverfahren» und den folgenden Verfahren: SHA-1,
+          SHA-256, SHA-512, RIPEMD-160.
+          SHA-1 3a5ad0be8425d4d8f7d2d3ff3d38b1cf3cc9d137
+          SHA-256 29d4a4d1979a0be000a89d9b9e6b1bdbf815a1c4901d6b5c50e69771e6ed70e4
+          SHA-512 4b7fbdc89f1d7a13e6b25f45198a0dff657cb88e36f433ce5d342e2db95a31e77d7f74c3cf2b0e0c28332b8f915b1852f3dfd4b62ba8b02b227413a3db9a46a6
+          RIPEMD-160 de2fb98d073c5a93e490ffb5be65e74f9b7d4243
+
+       4. Gegeben ist ein Hashwert h(m) von 64 Bit Länge.  Wie lange
+          dauert es im Mittel, bis durch Probieren ein zugehöriges m
+          gefunden wird, wenn pro Sekunde 240 (ca.  10^12 = 1 Bio.)
+          Werte berechnet und verglichen werden können?
+       5. Antwort: Bei einem 64-Bit Hashwert gibt es 2^64 mögliche
+          Werte.  Bei 240 Berechnungen pro Sekunde dauert es im Mittel:
+       6. Zeit = 2^64 / 240 ≈ 7.3 × 10^16 Sekunden.  Das entspricht etwa
+          185 tage.
+
+       7. Wie lange dauert es bei einem 128-Bit Hashwert, wenn im Mittel
+          ca.  2^(n/2) Berechnungen benötigt werden, um eine Kollision
+          zu finden?
+             • a) Wie lange würde der Angriff benötigen bei
+               128-Bit-Hashwert und 240 Operationen pro Sekunde?
+             • Antwort: Zeit = 2^64 / 240 ≈ 7.5 × 10^16 Sekunden.  Das
+               entspricht etwa 2,4 Milliarden Jahren.
+             • b) Wie lange bei 192-Bit langem Hashwert?
+             • Antwort: Zeit = 2^96 / 240 ≈ 3.3 × 10^26 Sekunden.  Das
+               entspricht vielen Milliarden Jahren.
+
+       8. Kann eine Hashfunktion mit einer Hashwertlänge von 16 eine
+          kryptographische Hashfunktion sein?
+       9. Antwort: Nein, eine 16-Bit-Hashfunktion kann keine sichere
+          kryptographische Hashfunktion sein.  Sie bietet nur 65,536
+          mögliche Werte (2^16), was eine Kollision bereits nach wenigen
+          Berechnungen wahrscheinlich macht.  Eine kryptographische
+          Hashfunktion sollte mindestens 128 Bits lang sein, besser 256
+          Bits, um eine angemessene Sicherheit zu gewährleisten.
+
+  6. Übung 4: End-User Guidelines and Information
+
+       1. Warum die digitale Signatur überprüfen?
+       2. Antwort: Die Überprüfung der digitalen Signatur stellt sicher,
+          dass die heruntergeladene Datei nicht manipuliert wurde und
+          tatsächlich von den Entwicklern von VeraCrypt stammt.  Dies
+          schützt vor potenziellen Angriffen, bei denen schadhafte
+          Software als legitimes Programm getarnt wird.
+
+       3. Benchmark-Test Ergebnisse (Speed):
+       4. Frage: Wie schnell ist dein Rechner bei Verschlüsselung und
+          Hashing?
+       5. Antwort:
+             • Verschlüsselung (AES): 628 MiB/s
+             • Hashing (SHA-512): 8.4 GiB/s
+             • Der schnellste Algorithmus für Hashing ist SHA-512.
+
+       6. Was bedeutet Portable-Mode?
+       7. Antwort: Der Portable-Mode erlaubt es, VeraCrypt ohne
+          Installation direkt von einem USB-Stick oder einer anderen
+          tragbaren Quelle auszuführen.
+             • Vorteil: Keine Systemänderung nötig.
+             • Nachteil: Benötigt Administratorrechte, um Laufwerke zu
+               mounten.
+
+       8. Was ist die VeraCrypt Rescue Disc?
+       9. Antwort: Eine Rescue Disc wird bei der Verschlüsselung eines
+          kompletten Laufwerks erstellt.  Sie dient dazu, im Falle von
+          Boot-Problemen oder beschädigten Header-Daten die
+          Laufwerksverschlüsselung zu reparieren oder zu entschlüsseln.
+             • Vorteil: Rettung verschlüsselter Daten bei Problemen.
+             • Nachteil: Zusätzlicher Verwaltungsaufwand (Disc muss
+               sicher aufbewahrt werden).
+
+       10. Wie ist ein sicherer Backup vorzunehmen?
+       11. Antwort: Ein sicheres Backup sollte verschlüsselt erfolgen,
+          idealerweise mit einem zweiten unabhängigen Schlüssel.  Der
+          Backup-Datenträger sollte offline aufbewahrt werden (z.  B. in
+          einem Tresor).
+
+       12. Welche zwei Möglichkeiten gibt es, ein Laufwerk über ein
+          Netzwerk zu teilen?
+       13. Antwort:
+             • Methode 1: VeraCrypt-Container in Netzwerkfreigabe
+               ablegen.
+             • Vorteil: Einfach einzurichten.
+             • Nachteil: Langsam bei vielen gleichzeitigen Zugriffen.
+             • Methode 2: iSCSI-Server verwenden und verschlüsseltes
+               Laufwerk darüber einbinden.
+             • Vorteil: Schnellere Zugriffe und höhere Flexibilität.
+             • Nachteil: Komplexere Konfiguration.
+
+       14. Wie funktioniert das Entschlüsseln eines Laufwerks?
+       15. Antwort: Das Laufwerk wird über den VeraCrypt-Treiber
+          entschlüsselt.  Der Benutzer muss das Passwort (und ggf.
+          Schlüsseldateien) eingeben.  Der Treiber entschlüsselt die
+          Daten in Echtzeit beim Zugriff und verschlüsselt sie beim
+          Schreiben.
+
+  7. Technical Details
+
+       1. Wie ist das Laufwerk gesichert (Algorithmen, Modi)?
+       2. Antwort:
+             • Verschlüsselungsalgorithmus: AES (Advanced Encryption
+               Standard)
+             • Hashing: SHA-512
+             • Modus: XTS
+
+       3. Was ist PBKDF2 PRF?
+       4. Antwort: PBKDF2 (Password-Based Key Derivation Function 2) ist
+          ein Algorithmus, der aus einem Passwort und einem Salt
+          kryptografische Schlüssel ableitet.
+             • Verwendung in VeraCrypt: Erhöht die Sicherheit, indem es
+               das Passwort gegen brute-force Angriffe schützt, da
+               Schlüsselableitung zeitintensiv ist.
+
+       5. Wie geht VeraCrypt mit unverschlüsselten Daten im RAM um?
+       6. Antwort: VeraCrypt verschlüsselt keine Daten im RAM, da dies
+          die Performance erheblich beeinflussen würde.  Es minimiert
+          jedoch die Zeit, in der Schlüssel im RAM ungeschützt sind,
+          indem es Schlüssel schnell löscht, wenn sie nicht benötigt
+          werden.
+             • Grenzen: RAM bleibt angreifbar, insbesondere bei einem
+               Kaltstartangriff.
+
+       7. Schützt VeraCrypt die Datenintegrität?
+       8. Antwort: Nein, VeraCrypt schützt die Datenintegrität nicht.
+          Es schützt nur die Vertraulichkeit der Daten.  Datenkorruption
+          durch Hardwarefehler oder Malware wird nicht erkannt.
+
+       9. Warum verwendet VeraCrypt den XTS-Modus anstelle von CBC?
+       10. Antwort: Der XTS-Modus (XOR Encrypt XOR Tweakable Block
+          Cipher) wurde entwickelt, um besser
+
+
+        • ============================
+        • General Information
+        • ============================
+
+
+2 Generating Info Files
+=======================
+
+For generating an Info file from a Texinfo source file, use the
+following command:
+
+   ‘makeinfo yourfile.texi’
+
+   This will produce a file named ‘yourfile.info’.
+
+3 Generating PDF Files
+======================
+
+To convert a Texinfo file to PDF format, use the command:
+
+   ‘texi2pdf yourfile.texi’
+
+   The output will be a PDF file named ‘yourfile.pdf’.
+
+4 Generating HTML Files
+=======================
+
+To convert a Texinfo file to HTML format, use the following command:
+
+   ‘makeinfo --html yourfile.texi’
+
+   This command will generate a directory named ‘yourfile’ containing
+the HTML files.
+
+
+   • ============================
+   • Thank you for reading!
+   • ============================
+
+
+
+Tag Table:
+
+End Tag Table
+
+
+Local Variables:
+coding: utf-8
+End:

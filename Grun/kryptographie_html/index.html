@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html>
+  <!-- Created by GNU Texinfo 7.1.1, https://www.gnu.org/software/texinfo/ -->
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Kryptographie</title>
+
+    <meta name="description" content="Kryptographie" />
+    <meta name="keywords" content="Kryptographie" />
+    <meta name="resource-type" content="document" />
+    <meta name="distribution" content="global" />
+    <meta name="Generator" content="makeinfo" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="../styleBackUp.css" />
+  </head>
+
+  <body lang="en">
+    <h1 class="title">Kryptographie</h1>
+
+    <div class="section-level-extent" id="Thema-2_003a-Kryptographie">
+      <h3 class="section">
+        <span
+          >1 Thema 2: Kryptographie<a
+            class="copiable-link"
+            href="#Thema-2_003a-Kryptographie"
+          >
+            &para;</a
+          ></span
+        >
+      </h3>
+
+      <ul class="mini-toc">
+        <li>
+          <a href="#g_t2_002e1-Einfuhrung" accesskey="1">2.1 Einführung</a>
+        </li>
+        <li>
+          <a href="#g_t2_002e2-Historische-Verfahren" accesskey="2"
+            >2.2 Historische Verfahren</a
+          >
+        </li>
+        <li>
+          <a
+            href="#Vernam_002c-1917-_0028One_002dTime-Pad_0029_003a"
+            accesskey="3"
+            >Vernam, 1917 (One-Time Pad):</a
+          >
+        </li>
+        <li>
+          <a href="#Chiffriermaschinen_003a-Beispiel-Enigma" accesskey="4"
+            >Chiffriermaschinen: Beispiel Enigma</a
+          >
+        </li>
+        <li>
+          <a href="#g_t2_002e3-Blockverschlusseler" accesskey="5"
+            >2.3 Blockverschlüsseler</a
+          >
+        </li>
+        <li>
+          <a href="#Kryptographische-Hashfunktionen" accesskey="6"
+            >Kryptographische Hashfunktionen</a
+          >
+        </li>
+        <li>
+          <a
+            href="#Dedizierte-Hashfunktionen-_0028ohne-Schlussel_0029"
+            accesskey="7"
+            >Dedizierte Hashfunktionen (ohne Schlüssel)</a
+          >
+        </li>
+        <li>
+          <a href="#Hashfunktionen-mit-Schlusseln" accesskey="8"
+            >Hashfunktionen mit Schlüsseln</a
+          >
+        </li>
+        <li>
+          <a
+            href="#Schlusselbasierte-Hashfunktionen-aus-schlussellosen-Varianten"
+            accesskey="9"
+            >Schlüsselbasierte Hashfunktionen aus schlüssellosen Varianten</a
+          >
+        </li>
+        <li><a href="#UBUNGEN-VON-TEAMS">ÜBUNGEN VON TEAMS</a></li>
+        <li><a href="#Owasp-sponsors">Owasp sponsors</a></li>
+        <li>
+          <a href="#A08-_002d-Software_002d-und-Datenintegritatsfehler"
+            >A08 - Software- und Datenintegritätsfehler</a
+          >
+        </li>
+      </ul>
+      <div class="subsection-level-extent" id="g_t2_002e1-Einfuhrung">
+        <h4 class="subsection">
+          <span
+            >1.1 2.1 Einführung<a
+              class="copiable-link"
+              href="#g_t2_002e1-Einfuhrung"
+            >
+              &para;</a
+            ></span
+          >
+        </h4>
+
+        <ul class="itemize mark-bullet">
+          <li>
+            Bedrohungen:
+            <ul class="itemize mark-bullet">
+              <li>Lesen</li>
+              <li>Verändern</li>
+              <li>Vortäuschen (falscher Partner)</li>
+            </ul>
+          </li>
+          <li>
+            Dienste:
+            <ul class="itemize mark-bullet">
+              <li>Vertraulichkeit: Niemand kann die Informationen lesen.</li>
+              <li>
+                Integrität: Niemand kann die Informationen unbemerkt verändern.
+              </li>
+              <li>
+                Authentizität: Bestätigung, wer auf der anderen Seite ist bzw.
+                wer die Informationen verfasst hat.
+              </li>
+              <li>
+                Nicht-Abstreitbarkeit: Alle können überprüfen, wer die
+                Informationen verfasst hat.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Angriffe auf Schlüssel:
+            <ul class="itemize mark-bullet">
+              <li>Ciphertext-only: Immer möglich.</li>
+              <li>Known-plaintext: Teile des Klartextes sind bekannt.</li>
+              <li>
+                Chosen-plaintext: Angreifer wählt Klartext und erhält den
+                entsprechenden Ciphertext.
+              </li>
+              <li>
+                Chosen-ciphertext: Angreifer wählt Ciphertext und erhält den
+                entsprechenden Klartext.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Angriffe auf Verfahren:
+            <ul class="itemize mark-bullet">
+              <li>Vertiefte mathematische Analyse.</li>
+            </ul>
+          </li>
+          <li>
+            Kerckhoffs’sches Prinzip:
+            <ul class="itemize mark-bullet">
+              <li>
+                Auguste Kerckhoffs, 1883. Verfahren sollten auch dann sicher
+                sein, wenn sie in die Hände des Gegners fallen.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Ableitung:
+            <ul class="itemize mark-bullet">
+              <li>
+                Der (geheime) Schlüssel muss geschützt werden, nicht das
+                Verfahren.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="subsection-level-extent"
+        id="g_t2_002e2-Historische-Verfahren"
+      >
+        <h4 class="subsection">
+          <span
+            >1.2 2.2 Historische Verfahren<a
+              class="copiable-link"
+              href="#g_t2_002e2-Historische-Verfahren"
+            >
+              &para;</a
+            ></span
+          >
+        </h4>
+
+        <ul class="itemize mark-bullet">
+          <li>
+            Skytale:
+            <ul class="itemize mark-bullet">
+              <li>Die älteste Form der Verschlüsselung.</li>
+              <li>Ursprünglich in Sparta, 5. Jahrhundert v. Chr.</li>
+              <li>Schlüssel: Dicke des Stabes.</li>
+              <li>
+                Brechen: Brute-Force: Verschiedene Abstände/Stabdicken
+                ausprobieren.
+              </li>
+              <li>Schwäche: Der Schlüssel hat zu wenige Möglichkeiten.</li>
+            </ul>
+          </li>
+          <li>
+            Cäsar:
+            <ul class="itemize mark-bullet">
+              <li>
+                Buchstaben werden um eine bestimmte Anzahl von Positionen
+                verschoben.
+              </li>
+              <li>Beispiel: k=3 ⇒ A→D, B→E, C→F, ... X→A, Y→B, Z→C.</li>
+              <li>Brechen: Brute-Force: maximal 26 Möglichkeiten.</li>
+              <li>Schwäche: Der Schlüssel hat zu wenige Möglichkeiten.</li>
+            </ul>
+          </li>
+          <li>
+            Vigenère (Mittelalter):
+            <ul class="itemize mark-bullet">
+              <li>
+                Ähnlich wie das Cäsar-Verfahren, aber mit mehreren Schlüsseln
+                (Schlüsselwort).
+              </li>
+              <li>
+                Jeder n-te Buchstabe wird mit dem gleichen Abstand verschoben.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Vigenère Brechen bei bekannter Schlüssellänge N:
+            <ul class="itemize mark-bullet">
+              <li>Text in n Teile aufteilen (jeder n-te Buchstabe).</li>
+              <li>
+                Für jeden Teil: häufigster Buchstabe ermitteln, sollte
+                &quot;E&quot; sein. Schlüssel gebrochen.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Vigenère Brechen bei unbekannter Schlüssellänge N:
+            <ul class="itemize mark-bullet">
+              <li>Alle Schlüssellängen durchprobieren.</li>
+              <li>&quot;Autokorrelation&quot; liefert die Schlüssellänge.</li>
+            </ul>
+          </li>
+        </ul>
+
+        <div class="example">
+          <pre class="example-preformatted">
+Beispiel:
+O   1   P
+M   2   O
+N   3   Q
+I   1   J
+A   2   C
+</pre
+          >
+        </div>
+      </div>
+      <div
+        class="subsection-level-extent"
+        id="Vernam_002c-1917-_0028One_002dTime-Pad_0029_003a"
+      >
+        <h4 class="subsection">
+          <span
+            >1.3 Vernam, 1917 (One-Time Pad):<a
+              class="copiable-link"
+              href="#Vernam_002c-1917-_0028One_002dTime-Pad_0029_003a"
+            >
+              &para;</a
+            ></span
+          >
+        </h4>
+        <ul class="itemize mark-bullet">
+          <li>Jedes Bit wird per XOR mit dem Schlüssel verknüpft.</li>
+          <li>
+            Perfekte Sicherheit: Eine Verschlüsselung ist perfekt sicher, wenn
+            die Wahrscheinlichkeit für eine Klartext-0 genau 0.5 ist.
+          </li>
+          <li>
+            Vernam ist perfekt sicher, wenn:
+            <ul class="itemize mark-bullet">
+              <li>der Schlüssel echt zufällig ist,</li>
+              <li>der Schlüssel nur einmal verwendet wird,</li>
+              <li>
+                der Schlüssel genauso lang ist wie die Nachricht selbst
+                &ndash;&gt; unpraktisch.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="subsection-level-extent"
+        id="Chiffriermaschinen_003a-Beispiel-Enigma"
+      >
+        <h4 class="subsection">
+          <span
+            >1.4 Chiffriermaschinen: Beispiel Enigma<a
+              class="copiable-link"
+              href="#Chiffriermaschinen_003a-Beispiel-Enigma"
+            >
+              &para;</a
+            ></span
+          >
+        </h4>
+
+        <ul class="itemize mark-bullet">
+          <li>
+            Prinzip:
+            <ul class="itemize mark-bullet">
+              <li>Mechanische Maschine</li>
+            </ul>
+          </li>
+          <li>
+            Schlüsselraum:
+            <ul class="itemize mark-bullet">
+              <li>2 * 10^23, entspricht 77 Bit Sicherheit</li>
+            </ul>
+          </li>
+          <li>
+            Aufgabe 2.1:
+            <ul class="itemize mark-bullet">
+              <li>
+                Angenommen, wir könnten 1&rsquo;000&rsquo;000 Schlüssel pro
+                Sekunde testen. Wie lange würde ein Brute-Force-Angriff maximal
+                dauern?
+              </li>
+            </ul>
+          </li>
+          <li>
+            Schwächen:
+            <ul class="itemize mark-bullet">
+              <li>c_i ungleich t_i für alle i</li>
+              <li>
+                Klartextbuchstaben werden nicht in sich selbst verschlüsselt.
+              </li>
+              <li>
+                Kleine statistische Auffälligkeit in Abweichung von scheinbarem
+                Zufall
+              </li>
+              <li>Angriffsmöglichkeit</li>
+            </ul>
+          </li>
+          <li>
+            Gebrochen durch:
+            <ul class="itemize mark-bullet">
+              <li>Alan Turing (Turing-Bombe, Operation Bletchley-Park)</li>
+            </ul>
+          </li>
+          <li>
+            Fazit:
+            <ul class="itemize mark-bullet">
+              <li>Sich nicht einfach in Sicherheit wiegen.</li>
+              <li>Keine statistischen Schwächen</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="subsection-level-extent" id="g_t2_002e3-Blockverschlusseler">
+        <h4 class="subsection">
+          <span
+            >1.5 2.3 Blockverschlüsseler<a
+              class="copiable-link"
+              href="#g_t2_002e3-Blockverschlusseler"
+            >
+              &para;</a
+            ></span
+          >
+        </h4>
+
+        <ul class="itemize mark-bullet">
+          <li>
+            Prinzip:https://duckduckgo.com/?t=ffab1
+
+            <ul class="itemize mark-bullet">
+              <li>
+                Klartext wird in Blöcke unterteilt, z.B. 128-Bit-Blöcke. Jeder
+                Block wird in einer Operation E (encrypt) und einem Schlüssel k
+                verschlüsselt. Mit D (decrypt) und k wird entschlüsselt.
+                <div class="example">
+                  <pre class="example-preformatted">
+Klartext (plaintext)        p1        p2         p3     ...    pn
+                             |        |          |              |
+                           k&gt;E      k&gt;E        k&gt;E            k&gt;E
+                             |        |          |              |
+                            c1        c2         c3     ...    cn
+ 
+Entschlüsseln:
+                             c1       c2         c3     ...    cn
+                             |        |          |              |
+                           k&gt;D      k&gt;D        k&gt;D            k&gt;D
+                             |        |          |              |
+                            p1        p2         p3     ...    pn
+        </pre
+                  >
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li>
+            Veraltetes DES (Data Encryption Standard)
+            <ul class="itemize mark-bullet">
+              <li>Schlüsselgrösse: 56 Bit &ndash;&gt; gebrochen.</li>
+              <li>Blockgrösse: 64 Bit &ndash;&gt; unsicher.</li>
+              <li>
+                Standard aus den 70er-Jahren, entwickelt in den USA im Auftrag
+                der NSA (National Security Agency).
+              </li>
+              <li>
+                Designziel: Schnell in Hardware, langsam in Software (HW/SW).
+              </li>
+              <li>
+                Idee: aus dem Kalten Krieg &ndash;&gt; wurde wie ein Rüstungsgut
+                behandelt und benötigte eine Exportlizenz.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Triple-DES
+
+            <ul class="itemize mark-bullet">
+              <li>Triple-DES (macht DES sicherer...).</li>
+              <li>
+                Warum EDE und nicht EEE? - Triple-DES kann auch Single-DES, wenn
+                k1=k2.
+              </li>
+              <li>
+                Warum Triple und nicht Doppel-DES - Meet-in-the-Middle-Angriff
+                mit Aufwand 2⁵⁷.
+
+                <div class="example">
+                  <pre class="example-preformatted">
+           m_i
+	    |
+           k1&gt;E
+	    |
+           k2&gt;D
+	    |
+            k1&gt;E
+	    |
+           c_i
+        </pre
+                  >
+                </div>
+
+                <ul class="itemize mark-bullet">
+                  <li>
+                    Vorwärts: Mit allen möglichen k1 wird E_k1(p) berechnet und
+                    in DB gespeichert.
+                  </li>
+                  <li>
+                    Rückwärts: Mit allen möglichen k2 wird E_k2(c) berechnet und
+                    in der DB gesucht.
+                  </li>
+                  <li>Aufwand: 2⁵⁶ + 2⁵⁶ = 2⁵⁷ Aufwand.</li>
+                  <li>
+                    &ndash;&gt; Double DES würde nur 57 Bit Sicherheit liefern,
+                    statt 112 Bits!
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Warum zwei und nicht drei Schlüssel?
+                <ul class="itemize mark-bullet">
+                  <li>
+                    Sicherheit ist ca. 2¹¹²+2⁵⁶ bei drei Schlüsseln. Praktisch
+                    kein Gewinn durch den dritten Schlüssel.
+                  </li>
+                  <li>
+                    (Fünf wären noch sicherer) - dies wurde in der Praxis jedoch
+                    nicht umgesetzt.
+                  </li>
+                </ul>
+              </li>
+              <li>AES (Advanced Encryption Standard)</li>
+              <li>
+                ... heutiger Standard seit 2001.
+
+                <ul class="itemize mark-bullet">
+                  <li>
+                    Öffentlicher Wettbewerb 1997, gewonnen von Daemen und Rijmen
+                    mit Rijndael.
+                  </li>
+                  <li>&ndash;&gt; schafft Vertrauen in AES.</li>
+                  <li>Schlüsselgrösse wählbar: 128, 192, 256 Bit.</li>
+                  <li>Designziel: schnell in Software.</li>
+                  <li>
+                    Kein praktischer Angriff möglich, bester theoretischer
+                    Angriff mit Aufwand 2¹²⁶.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Verschlüsselungsmodi: ECB (Electronic Codebook Mode)</li>
+        </ul>
+      </div>
+      <div class="subsection-level-extent" id="Kryptographische-Hashfunktionen">
+        <h4 class="subsection">
+          <span
+            >1.6 Kryptographische Hashfunktionen<a
+              class="copiable-link"
+              href="#Kryptographische-Hashfunktionen"
+            >
+              &para;</a
+            ></span
+          >
+        </h4>
+
+        <ul class="itemize mark-bullet">
+          <li>
+            Definition Eine Hashfunktion bildet einen Text beliebiger Grösse
+            eindeutig auf einen Wert fixer Grösse ab.
+          </li>
+          <li>
+            Beispiel: Die 8-Bit-ASCII-Werte eines Textes werden mit XOR
+            verknüpft. <em class="math">\rightarrow</em> Eingabe beliebig gross,
+            Resultat immer 8 Bit gross.
+
+            <div class="example">
+              <pre class="example-preformatted">
+    H = 0100 1000  
+    A = 0100 0001  
+    L = 0100 1100  
+    L = 0100 1100  
+    O = 0100 1111  
+    -------------
+        0100 0110 = h(&quot;HALLO&quot;)
+  </pre
+              >
+            </div>
+          </li>
+          <li>
+            Kryptographische Hashfunktion Eine kryptographische Hashfunktion
+            (Einweg-Hashfunktion) erfüllt folgende Bedingungen:
+            <ol class="enumerate">
+              <li>
+                Es ist praktisch unmöglich, zu einem Hashwert einen passenden
+                Text zu finden.
+              </li>
+              <li>
+                Es ist praktisch unmöglich, zwei Texte mit gleichem Hashwert zu
+                finden (starke Kollisionsresistenz).
+              </li>
+            </ol>
+          </li>
+          <li>
+            Aufgabe: Finde passende Texte zum Hashwert von
+            <em class="math">h(&quot;HALLO&quot;) = 0100 0110</em>.
+
+            <p>Lösung:</p>
+            <div class="example">
+              <pre class="example-preformatted">
+    h(&quot;F&quot;) = h(&quot;FFF&quot;) = h(&quot;FAA&quot;) = h(&quot;AFA&quot;) = h(&quot;HAO&quot;) = etc.
+  </pre
+              >
+            </div>
+          </li>
+          <li>
+            Aufgabe: Finde Texte mit gleichem Hashwert, ohne den Hashwert zu
+            berechnen (Hashfunktion wie oben).
+
+            <p>Lösung:</p>
+            <div class="example">
+              <pre class="example-preformatted">
+    h(&quot;GRUN&quot;) = h(&quot;NURG&quot;) = h(&quot;UNRG&quot;) = h(&quot;XGRUNX&quot;) = h(&quot;GRUNROLFROLF&quot;)
+  </pre
+              >
+            </div>
+          </li>
+          <li>
+            Warum ist Bedingung 2 wichtig? Reicht Bedingung 1 nicht aus?
+            <ul class="itemize mark-bullet">
+              <li>
+                Geburtstagsparadox: Die Wahrscheinlichkeit, dass in einer Gruppe
+                zwei Leute denselben Geburtstag haben, wird unterschätzt.
+              </li>
+              <li>
+                Finden sich zwei gleiche Hashwerte, ist die Funktion
+                unbrauchbar.
+              </li>
+              <li>
+                Wenn eine Hashfunktion nicht stark kollisionsresistent ist,
+                können viele Varianten zweier Texte erzeugt werden.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="subsection-level-extent"
+        id="Dedizierte-Hashfunktionen-_0028ohne-Schlussel_0029"
+      >
+        <h4 class="subsection">
+          <span
+            >1.7 Dedizierte Hashfunktionen (ohne Schlüssel)<a
+              class="copiable-link"
+              href="#Dedizierte-Hashfunktionen-_0028ohne-Schlussel_0029"
+            >
+              &para;</a
+            ></span
+          >
+        </h4>
+
+        <p>
+          Es gibt Hashfunktionen, die die Einweg-Eigenschaften erfüllen. Bisher
+          wurden keine praktischen Verfahren für Kollisionen in diesen
+          Funktionen gefunden.
+        </p>
+        <ul class="itemize mark-bullet">
+          <li>
+            Die wichtigsten Standards:
+            <ul class="itemize mark-bullet">
+              <li>
+                SHA-2: <code class="code">SHA-256</code>,
+                <code class="code">SHA-512</code> (Secure Hash Algorithm,
+                Standard).
+              </li>
+              <li>SHA-3: Standard seit 2015 (nach öffentlichem Wettbewerb).</li>
+            </ul>
+          </li>
+          <li>
+            Nicht gebrochen:
+            <ul class="itemize mark-bullet">
+              <li><code class="code">RIPEMD-160</code>.</li>
+            </ul>
+          </li>
+          <li>
+            Gebrochen:
+            <ul class="itemize mark-bullet">
+              <li>
+                <code class="code">MD2</code>, <code class="code">MD4</code>,
+                <code class="code">MD5</code> (Message Digest).
+              </li>
+              <li><code class="code">SHA-1</code>.</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="subsection-level-extent" id="Hashfunktionen-mit-Schlusseln">
+        <h4 class="subsection">
+          <span
+            >1.8 Hashfunktionen mit Schlüsseln<a
+              class="copiable-link"
+              href="#Hashfunktionen-mit-Schlusseln"
+            >
+              &para;</a
+            ></span
+          >
+        </h4>
+
+        <p>
+          Hashfunktionen mit Schlüsseln erzeugen MAC (Message Authentication
+          Code): <strong class="strong">Authentizität und Integrität</strong>.
+        </p>
+        <div class="example">
+          <pre class="example-preformatted">
+CBC-MAC
+</pre
+          >
+        </div>
+        <ul class="itemize mark-bullet">
+          <li>
+            Erzeugung: Mit einem geheimen Schlüssel
+            <code class="code">k</code> wird die CBC (Cipher Block Chaining)
+            berechnet und <em class="emph">nur der letzte Block</em> behalten.
+            <ul class="itemize mark-bullet">
+              <li>Vollständigkeit abhängig vom Schlüssel und der Nachricht.</li>
+              <li>Ohne Schlüssel sind keine Kollisionen möglich.</li>
+            </ul>
+          </li>
+          <li>
+            Verifikation: Der Empfänger (z. B. Bob) berechnet ebenfalls den
+            CBC-MAC und vergleicht ihn mit dem zugesandten MAC.
+          </li>
+        </ul>
+
+        <p>
+          <strong class="strong">Wichtig:</strong> Für Verschlüsselung und
+          MAC-Verfahren sollten unterschiedliche sichere Schlüssel verwendet
+          werden.
+        </p>
+      </div>
+      <div
+        class="subsection-level-extent"
+        id="Schlusselbasierte-Hashfunktionen-aus-schlussellosen-Varianten"
+      >
+        <h4 class="subsection">
+          <span
+            >1.9 Schlüsselbasierte Hashfunktionen aus schlüssellosen Varianten<a
+              class="copiable-link"
+              href="#Schlusselbasierte-Hashfunktionen-aus-schlussellosen-Varianten"
+            >
+              &para;</a
+            ></span
+          >
+        </h4>
+
+        <ul class="itemize mark-bullet">
+          <li>
+            <strong class="strong">Variante 1:</strong> Schlüssel
+            <code class="code">k</code> ebenfalls hashen
+            <ul class="itemize mark-bullet">
+              <li>
+                Gegeben: Schlüssel <code class="code">k</code> und Text
+                <code class="code">M</code>.
+              </li>
+              <li>
+                Vorgehen: Schlüssel und Nachricht miteinander verketten und
+                hashen: <code class="code">h(k | M)</code>.
+              </li>
+              <li>
+                Eigenschaften:
+                <ul class="itemize mark-bullet">
+                  <li>
+                    Ohne Kenntnis von <code class="code">k</code> keine
+                    Kollision möglich.
+                  </li>
+                  <li>
+                    Der Schlüssel <code class="code">k</code> kann nicht aus dem
+                    Hashwert berechnet werden (kein Zurückrechnen möglich).
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong class="strong">Variante 2:</strong> HMAC (Hash-based Message
+            Authentication Code) gem. de-facto-Standard
+            <ul class="itemize mark-bullet">
+              <li>Blockgrösse entspricht der verwendeten Hashfunktion.</li>
+              <li>
+                Verwendung von <code class="code">ipad</code> und
+                <code class="code">opad</code> (Konstanten), um sicherzustellen,
+                dass der Schlüssel nicht zweimal identisch verarbeitet wird.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="subsection-level-extent" id="UBUNGEN-VON-TEAMS">
+        <h4 class="subsection">
+          <span
+            >1.10 ÜBUNGEN VON TEAMS<a
+              class="copiable-link"
+              href="#UBUNGEN-VON-TEAMS"
+            >
+              &para;</a
+            ></span
+          >
+        </h4>
+
+        <ol class="enumerate">
+          <li>
+            Verschlüssle den Text &quot;OMNIAGALLA&quot; mit dem Cäsar-Verfahren
+            und dem Schlüssel k=3.
+            <ul class="itemize mark-bullet">
+              <li>Ergebnis: RPQLDJDOOD</li>
+            </ul>
+          </li>
+          <li>
+            Folgender Text ist mit dem Cäsar-Verfahren verschlüsselt. Breche den
+            Text! Welcher Schlüssel wurde verwendet?
+            <ul class="itemize mark-bullet">
+              <li>Verschlüsselter Text: NXYJNSKFHMeZGWJHMJS</li>
+              <li>Klartext: ISTEINFACHzUBRECHEN</li>
+              <li>Schlüssel: k=5</li>
+            </ul>
+          </li>
+          <li>
+            Folgender Text ist mit Vigenère mit dem Schlüssel &quot;KEY&quot;
+            verschlüsselt. Entschlüssele den Text!
+            <ul class="itemize mark-bullet">
+              <li>Verschlüsselter Text: LIQCIPKPQMECCEP</li>
+              <li>Klartext: BESERALSCESAR</li>
+              <li>Schlüssel: KEY</li>
+            </ul>
+          </li>
+          <li>
+            Übung 2: Blockverschlüssler
+
+            <p>
+              Wie lange dauert es maximal, einen DES-Schlüssel durch
+              Known-Plaintext-Brute-Force-Angriff zu brechen, wenn:
+            </p>
+            <ul class="itemize mark-bullet">
+              <li>
+                a) Ein Spezialcomputer zur Verfügung steht, der 100x100
+                DES-Chips enthält, die je 10^9 Verschlüsselungen je Sekunde
+                durchführen könnten?
+                <ul class="itemize mark-bullet">
+                  <li>Schlüsselraum für DES: 2^56 mögliche Schlüssel.</li>
+                  <li>
+                    Geschwindigkeit des Computers: 100 * 100 * 10^9 = 10^13
+                    Schlüssel pro Sekunde.
+                  </li>
+                  <li>
+                    Maximale Zeit für Brute-Force-Angriff: 2^56 / 10^13 ≈ 7200
+                    Sekunden ≈ 120 Minuten &ndash;&gt; 2 Stunden.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                b) Wie lange würde der gleiche Angriff für Triple-DES mit
+                Zweifachschlüssel benötigen?
+                <ul class="itemize mark-bullet">
+                  <li>
+                    Schlüsselraum für Triple-DES (Zweifachschlüssel): 2^112
+                    mögliche Schlüssel.
+                  </li>
+                  <li>
+                    Geschwindigkeit des Computers: 10^13 Schlüssel pro Sekunde.
+                  </li>
+                  <li>
+                    Maximale Zeit für Brute-Force-Angriff: 2^112 / 10^13 ≈ 5.7 x
+                    10^22 Sekunden.
+                  </li>
+                  <li>
+                    Umgerechnet: ca. 16.5 x 10^12 Jahre
+                    (16&rsquo;500&rsquo;000&rsquo;000&rsquo;000 Jahre).
+                  </li>
+                </ul>
+              </li>
+              <li>
+                c) Wie lange würde der Angriff auf AES-128, AES-192 oder AES-256
+                dauern?
+                <ul class="itemize mark-bullet">
+                  <li>AES-128: Schlüsselraum von 2^128.</li>
+                  <li>AES-192: Schlüsselraum von 2^192.</li>
+                  <li>AES-256: Schlüsselraum von 2^256.</li>
+                  <li>
+                    Geschwindigkeit des Computers: 10^11 Schlüssel pro Sekunde.
+                  </li>
+                  <li>
+                    Maximale Zeit für Brute-Force:
+                    <ul class="itemize mark-bullet">
+                      <li>
+                        AES-128: 2^128 / 10^11 ≈ 10^27 Sekunden ≈ 10^18 Jahre.
+                      </li>
+                      <li>AES-192: 2^192 / 10^11 ≈ 2 x 10^37 Jahre.</li>
+                      <li>AES-256: 2^256 / 10^11 ≈ 3.7 x 10^56 Jahre.</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            Übung 3: CBC-MAC und Hashwert
+
+            <ol class="enumerate">
+              <li>
+                Erstelle eine Tabelle mit dem CBC-MAC mit AES-256 des Textes
+                «MAC schützt die Integrität» und den Schlüsseln:
+                <ul class="itemize mark-bullet">
+                  <li>
+                    a) Alle Bits sind 0: CBC-MAC =
+                    &lsquo;c8d19704a9cf2e7b8bda96c06a07abf8&lsquo;
+                  </li>
+                  <li>
+                    b) Alle Bits sind 1: CBC-MAC =
+                    &lsquo;df3e4c80d53557098876b31b19be8f63&lsquo;
+                  </li>
+                  <li>
+                    c) 0101.......0101: CBC-MAC =
+                    &lsquo;43a205a07e51fef839531bf1a053da56&lsquo;
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Füge der Tabelle oben die Hashwerte des leicht abgeänderten
+                Textes «MAC schützt die Integrität» hinzu.
+                <ul class="itemize mark-bullet">
+                  <li>
+                    a) Alle Bits sind 0: CBC-MAC =
+                    &lsquo;784a0b160a9d85c118c6e21764fcf60d&lsquo;
+                  </li>
+                  <li>
+                    b) Alle Bits sind 1: CBC-MAC =
+                    &lsquo;54b35e24e0e0d21fa9c68a3f3faadba4&lsquo;
+                  </li>
+                  <li>
+                    c) 0101.......0101: CBC-MAC =
+                    &lsquo;8f6f2a37c6c2c98fc2789072b1390ba9&lsquo;
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Erstelle eine Tabelle mit den Hashwerten des Textes «Ich kenne
+                die Hashverfahren» und den folgenden Verfahren: SHA-1, SHA-256,
+                SHA-512, RIPEMD-160.
+                <dl class="table">
+                  <dt>
+                    SHA-1
+                    <code class="t"
+                      >3a5ad0be8425d4d8f7d2d3ff3d38b1cf3cc9d137</code
+                    >
+                  </dt>
+                  <dt>
+                    SHA-256
+                    <code class="t"
+                      >29d4a4d1979a0be000a89d9b9e6b1bdbf815a1c4901d6b5c50e69771e6ed70e4</code
+                    >
+                  </dt>
+                  <dt>
+                    SHA-512
+                    <code class="t"
+                      >4b7fbdc89f1d7a13e6b25f45198a0dff657cb88e36f433ce5d342e2db95a31e77d7f74c3cf2b0e0c28332b8f915b1852f3dfd4b62ba8b02b227413a3db9a46a6</code
+                    >
+                  </dt>
+                  <dt>
+                    RIPEMD-160
+                    <code class="t"
+                      >de2fb98d073c5a93e490ffb5be65e74f9b7d4243</code
+                    >
+                  </dt>
+                </dl>
+              </li>
+              <li>
+                Gegeben ist ein Hashwert h(m) von 64 Bit Länge. Wie lange dauert
+                es im Mittel, bis durch Probieren ein zugehöriges m gefunden
+                wird, wenn pro Sekunde 240 (ca. 10^12 = 1 Bio.) Werte berechnet
+                und verglichen werden können?
+              </li>
+              <li>
+                Antwort: Bei einem 64-Bit Hashwert gibt es 2^64 mögliche Werte.
+                Bei 240 Berechnungen pro Sekunde dauert es im Mittel:
+              </li>
+              <li>
+                Zeit = 2^64 / 240 ≈ 7.3 × 10^16 Sekunden. Das entspricht etwa
+                185 tage.
+              </li>
+              <li>
+                Wie lange dauert es bei einem 128-Bit Hashwert, wenn im Mittel
+                ca. 2^(n/2) Berechnungen benötigt werden, um eine Kollision zu
+                finden?
+                <ul class="itemize mark-bullet">
+                  <li>
+                    a) Wie lange würde der Angriff benötigen bei
+                    128-Bit-Hashwert und 240 Operationen pro Sekunde?
+                  </li>
+                  <li>
+                    Antwort: Zeit = 2^64 / 240 ≈ 7.5 × 10^16 Sekunden. Das
+                    entspricht etwa 2,4 Milliarden Jahren.
+                  </li>
+                  <li>b) Wie lange bei 192-Bit langem Hashwert?</li>
+                  <li>
+                    Antwort: Zeit = 2^96 / 240 ≈ 3.3 × 10^26 Sekunden. Das
+                    entspricht vielen Milliarden Jahren.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Kann eine Hashfunktion mit einer Hashwertlänge von 16 eine
+                kryptographische Hashfunktion sein?
+              </li>
+              <li>
+                Antwort: Nein, eine 16-Bit-Hashfunktion kann keine sichere
+                kryptographische Hashfunktion sein. Sie bietet nur 65,536
+                mögliche Werte (2^16), was eine Kollision bereits nach wenigen
+                Berechnungen wahrscheinlich macht. Eine kryptographische
+                Hashfunktion sollte mindestens 128 Bits lang sein, besser 256
+                Bits, um eine angemessene Sicherheit zu gewährleisten.
+              </li>
+            </ol>
+          </li>
+          <li>
+            Übung 4: End-User Guidelines and Information
+
+            <ol class="enumerate">
+              <li>Warum die digitale Signatur überprüfen?</li>
+              <li>
+                Antwort: Die Überprüfung der digitalen Signatur stellt sicher,
+                dass die heruntergeladene Datei nicht manipuliert wurde und
+                tatsächlich von den Entwicklern von VeraCrypt stammt. Dies
+                schützt vor potenziellen Angriffen, bei denen schadhafte
+                Software als legitimes Programm getarnt wird.
+              </li>
+              <li>Benchmark-Test Ergebnisse (Speed):</li>
+              <li>
+                Frage: Wie schnell ist dein Rechner bei Verschlüsselung und
+                Hashing?
+              </li>
+              <li>
+                Antwort:
+                <ul class="itemize mark-bullet">
+                  <li>Verschlüsselung (AES): 628 MiB/s</li>
+                  <li>Hashing (SHA-512): 8.4 GiB/s</li>
+                  <li>Der schnellste Algorithmus für Hashing ist SHA-512.</li>
+                </ul>
+              </li>
+              <li>Was bedeutet Portable-Mode?</li>
+              <li>
+                Antwort: Der Portable-Mode erlaubt es, VeraCrypt ohne
+                Installation direkt von einem USB-Stick oder einer anderen
+                tragbaren Quelle auszuführen.
+                <ul class="itemize mark-bullet">
+                  <li>Vorteil: Keine Systemänderung nötig.</li>
+                  <li>
+                    Nachteil: Benötigt Administratorrechte, um Laufwerke zu
+                    mounten.
+                  </li>
+                </ul>
+              </li>
+              <li>Was ist die VeraCrypt Rescue Disc?</li>
+              <li>
+                Antwort: Eine Rescue Disc wird bei der Verschlüsselung eines
+                kompletten Laufwerks erstellt. Sie dient dazu, im Falle von
+                Boot-Problemen oder beschädigten Header-Daten die
+                Laufwerksverschlüsselung zu reparieren oder zu entschlüsseln.
+                <ul class="itemize mark-bullet">
+                  <li>Vorteil: Rettung verschlüsselter Daten bei Problemen.</li>
+                  <li>
+                    Nachteil: Zusätzlicher Verwaltungsaufwand (Disc muss sicher
+                    aufbewahrt werden).
+                  </li>
+                </ul>
+              </li>
+              <li>Wie ist ein sicherer Backup vorzunehmen?</li>
+              <li>
+                Antwort: Ein sicheres Backup sollte verschlüsselt erfolgen,
+                idealerweise mit einem zweiten unabhängigen Schlüssel. Der
+                Backup-Datenträger sollte offline aufbewahrt werden (z. B. in
+                einem Tresor).
+              </li>
+              <li>
+                Welche zwei Möglichkeiten gibt es, ein Laufwerk über ein
+                Netzwerk zu teilen?
+              </li>
+              <li>
+                Antwort:
+                <ul class="itemize mark-bullet">
+                  <li>
+                    Methode 1: VeraCrypt-Container in Netzwerkfreigabe ablegen.
+                  </li>
+                  <li>Vorteil: Einfach einzurichten.</li>
+                  <li>
+                    Nachteil: Langsam bei vielen gleichzeitigen Zugriffen.
+                  </li>
+                  <li>
+                    Methode 2: iSCSI-Server verwenden und verschlüsseltes
+                    Laufwerk darüber einbinden.
+                  </li>
+                  <li>Vorteil: Schnellere Zugriffe und höhere Flexibilität.</li>
+                  <li>Nachteil: Komplexere Konfiguration.</li>
+                </ul>
+              </li>
+              <li>Wie funktioniert das Entschlüsseln eines Laufwerks?</li>
+              <li>
+                Antwort: Das Laufwerk wird über den VeraCrypt-Treiber
+                entschlüsselt. Der Benutzer muss das Passwort (und ggf.
+                Schlüsseldateien) eingeben. Der Treiber entschlüsselt die Daten
+                in Echtzeit beim Zugriff und verschlüsselt sie beim Schreiben.
+              </li>
+            </ol>
+          </li>
+          <li>
+            Technical Details
+
+            <ol class="enumerate">
+              <li>Wie ist das Laufwerk gesichert (Algorithmen, Modi)?</li>
+              <li>
+                Antwort:
+                <ul class="itemize mark-bullet">
+                  <li>
+                    Verschlüsselungsalgorithmus: AES (Advanced Encryption
+                    Standard)
+                  </li>
+                  <li>Hashing: SHA-512</li>
+                  <li>Modus: XTS</li>
+                </ul>
+              </li>
+              <li>Was ist PBKDF2 PRF?</li>
+              <li>
+                Antwort: PBKDF2 (Password-Based Key Derivation Function 2) ist
+                ein Algorithmus, der aus einem Passwort und einem Salt
+                kryptografische Schlüssel ableitet.
+                <ul class="itemize mark-bullet">
+                  <li>
+                    Verwendung in VeraCrypt: Erhöht die Sicherheit, indem es das
+                    Passwort gegen brute-force Angriffe schützt, da
+                    Schlüsselableitung zeitintensiv ist.
+                  </li>
+                </ul>
+              </li>
+              <li>Wie geht VeraCrypt mit unverschlüsselten Daten im RAM um?</li>
+              <li>
+                Antwort: VeraCrypt verschlüsselt keine Daten im RAM, da dies die
+                Performance erheblich beeinflussen würde. Es minimiert jedoch
+                die Zeit, in der Schlüssel im RAM ungeschützt sind, indem es
+                Schlüssel schnell löscht, wenn sie nicht benötigt werden.
+                <ul class="itemize mark-bullet">
+                  <li>
+                    Grenzen: RAM bleibt angreifbar, insbesondere bei einem
+                    Kaltstartangriff.
+                  </li>
+                </ul>
+              </li>
+              <li>Schützt VeraCrypt die Datenintegrität?</li>
+              <li>
+                Antwort: Nein, VeraCrypt schützt die Datenintegrität nicht. Es
+                schützt nur die Vertraulichkeit der Daten. Datenkorruption durch
+                Hardwarefehler oder Malware wird nicht erkannt.
+              </li>
+              <li>Warum verwendet VeraCrypt den XTS-Modus anstelle von CBC?</li>
+              <li>
+                Antwort: Der XTS-Modus (XOR Encrypt XOR Tweakable Block Cipher)
+                wurde entwickelt, um besser
+              </li>
+            </ol>
+          </li>
+        </ol>
+      </div>
+      <div class="subsection-level-extent" id="Owasp-sponsors">
+        <h4 class="subsection">
+          <span
+            >1.11 Owasp sponsors<a class="copiable-link" href="#Owasp-sponsors">
+              &para;</a
+            ></span
+          >
+        </h4>
+        <ol class="enumerate">
+          <li>
+            OWASP
+            <ul class="itemize mark-bullet">
+              <li>
+                Finde zuerst heraus, wer die OWASP ist und wer die OWASP
+                unterstützt.
+              </li>
+              <li>Antwort:</li>
+              <li>
+                Corporate Supporter:
+                <ul class="itemize mark-bullet">
+                  <li>Atlassian</li>
+                  <li>automattic</li>
+                  <li>Crowdstrike/Bionic</li>
+                  <li>Bloomberg</li>
+                  <li>Fortify</li>
+                  <li>root</li>
+                  <li>salesforce</li>
+                  <li>tenable</li>
+                  <li>wallarm</li>
+                  <li>appdome</li>
+                  <li>arnica</li>
+                  <li>Backslash</li>
+                  <li>blend-ed</li>
+                  <li>Checkmarx</li>
+                  <li>equixly</li>
+                  <li>Guardsquare</li>
+                  <li>invicti</li>
+                  <li>Promon</li>
+                  <li>SailPoint</li>
+                  <li>Scitum</li>
+                  <li>ThreatModeler</li>
+                  <li>Zinad</li>
+                  <li>Zimperium</li>
+                  <li>aikido</li>
+                  <li>Apiiro</li>
+                  <li>Aprroach Cyber</li>
+                  <li>ArmorCode</li>
+                  <li>BLST/Panen138</li>
+                  <li>Check Point</li>
+                  <li>Cryptosoft</li>
+                  <li>Cybozu</li>
+                  <li>Cydrill</li>
+                  <li>deepfactor</li>
+                  <li>DefectDojo</li>
+                  <li>digital.ai</li>
+                  <li>eShard</li>
+                  <li>GitGuardian</li>
+                  <li>GuidePoint</li>
+                  <li>Heeler</li>
+                  <li>Hitachi</li>
+                  <li>impart</li>
+                  <li>IrusRisk</li>
+                  <li>Jit</li>
+                  <li>miteinander</li>
+                  <li>nedap</li>
+                  <li>NowSecure</li>
+                  <li>OccamSec</li>
+                  <li>Phoenix Security</li>
+                  <li>Pynt</li>
+                  <li>Rakuten</li>
+                  <li>RAxis</li>
+                  <li>Red Hat</li>
+                  <li>Riscosity</li>
+                  <li>SCSK</li>
+                  <li>SDS</li>
+                  <li>SKUDONET</li>
+                  <li>Salt</li>
+                  <li>Security Journey</li>
+                  <li>Synopsys</li>
+                  <li>Team Secure</li>
+                  <li>ThreatSpike</li>
+                  <li>Traefik Labs</li>
+                  <li>and many more...</li>
+                  <li>https://owasp.org/supporters/list</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+      <div
+        class="subsection-level-extent"
+        id="A08-_002d-Software_002d-und-Datenintegritatsfehler"
+      >
+        <h4 class="subsection">
+          <span
+            >1.12 A08 - Software- und Datenintegritätsfehler<a
+              class="copiable-link"
+              href="#A08-_002d-Software_002d-und-Datenintegritatsfehler"
+            >
+              &para;</a
+            ></span
+          >
+        </h4>
+
+        <ol class="enumerate">
+          <li>
+            A08:2021 – Software- und Datenintegritätsfehler (OWASP Top 10)
+          </li>
+          <li>
+            Beschreibung
+
+            <p>
+              Software- und Datenintegritätsfehler beziehen sich auf
+              Situationen, in denen Systeme auf nicht vertrauenswürdige
+              Datenquellen angewiesen sind oder es an ausreichenden
+              Schutzmaßnahmen für die Integrität kritischer Daten mangelt. Diese
+              Kategorie umfasst:
+            </p>
+            <ul class="itemize mark-bullet">
+              <li>
+                Schwachstellen in der Lieferkette: Ausnutzung unsicherer
+                Softwareentwicklungs- oder Integrationsprozesse.
+              </li>
+              <li>
+                Unsichere Aktualisierungsmechanismen: Nicht authentifizierte
+                oder nicht verifizierte Updates für Software, Bibliotheken oder
+                Konfigurationsdateien.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Hauptsächliche Risiken
+
+            <ul class="itemize mark-bullet">
+              <li>
+                Manipulation von Software-Builds oder Daten: Angreifer können
+                Daten oder Code manipulieren, um Schwachstellen einzufügen oder
+                sensible Informationen zu stehlen.
+              </li>
+              <li>
+                Kompromittierte Umgebungen in CI/CD-Pipelines: Ein Angreifer,
+                der Zugang zu einer CI/CD-Pipeline erhält, kann bösartigen Code
+                einschleusen oder Konfigurationen ändern.
+              </li>
+              <li>
+                Nicht vertrauenswürdige Abhängigkeiten: Wenn
+                Softwarekomponenten, einschließlich Drittanbieterbibliotheken
+                oder Pakete, nicht ordnungsgemäß geprüft werden, können
+                Angreifer diese als Einstiegspunkte für Schwachstellen
+                ausnutzen.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Präventionsmethoden
+
+            <ul class="itemize mark-bullet">
+              <li>
+                Integritätsprüfung: Authentizität von Software, Updates und
+                Abhängigkeiten stets mithilfe von kryptografischen Signaturen
+                oder Prüfsummen überprüfen.
+              </li>
+              <li>
+                Zugriffskontrolle: Absicherung der Build- und
+                Bereitstellungspipelines durch starke Authentifizierungs- und
+                Autorisierungsmechanismen.
+              </li>
+              <li>
+                Sicherer Softwareentwicklungslebenszyklus: Sicherheitsprüfungen
+                und -validierungen in jeder Phase der Softwareentwicklung
+                implementieren, einschließlich Code-Reviews und automatisierter
+                Scans.
+              </li>
+              <li>
+                Datenintegritätsprüfungen: Mechanismen zur Datenvalidierung
+                nutzen, um die Integrität von Daten, insbesondere während der
+                Deserialisierung oder bei Softwareupdates, sicherzustellen.
+              </li>
+            </ul>
+          </li>
+          <li>Codecov-Sicherheitsvorfall (bezogen auf A08)</li>
+          <li>
+            Vorfallübersicht
+
+            <p>
+              Der Codecov-Sicherheitsvorfall ist ein prominentes Beispiel für
+              einen Datenintegritätsfehler im Kontext der
+              CI/CD-Pipeline-Sicherheit:
+            </p>
+            <p>
+              Das Codecov Bash Uploader-Skript wurde von einer Drittpartei
+              kompromittiert, die einen unsicheren Prozess zur Erstellung von
+              Docker-Images nutzte. Dadurch konnte der Angreifer das
+              Uploader-Skript zwischen dem 31. Januar und dem 1. April 2021
+              verändern und sensible Umgebungsvariablen aus den CI-Systemen der
+              Nutzer exfiltrieren.
+            </p>
+            <ul class="itemize mark-bullet">
+              <li>
+                Bösartiger Code: Das geänderte Bash-Skript verwendete einen
+                curl-Befehl, um Umgebungsvariablen, einschließlich Anmeldedaten,
+                Token und anderer sensibler Daten, an einen bösartigen Server zu
+                senden.
+              </li>
+              <li>
+                Betroffene Bereiche:
+                <ul class="itemize mark-bullet">
+                  <li>
+                    Git-Remote-Informationen und Umgebungsvariablen in
+                    CI-Pipelines wurden offengelegt.
+                  </li>
+                  <li>
+                    Das bösartige Skript wurde in verschiedenen CI-Systemen
+                    angewendet, einschließlich GitHub Actions, CircleCI und
+                    Bitrise.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Empfehlungen für betroffene Nutzer</li>
+          <li>
+            Sofortmaßnahmen
+            <ul class="itemize mark-bullet">
+              <li>Anmeldedaten, Token und Schlüssel neu ausstellen.</li>
+              <li>Veraltete Bash-Uploader-Skripte ersetzen.</li>
+              <li>
+                Sicherstellen, dass die Konfigurationen der CI/CD-Pipelines
+                sicher sind.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Prävention und Abmilderung
+            <ul class="itemize mark-bullet">
+              <li>
+                Aktualisieren und Sichern von Drittanbieter-Tools oder Skripten.
+              </li>
+              <li>
+                Regelmäßige Überprüfung der Pipeline-Konfiguration und der
+                Softwareabhängigkeiten auf Integrität.
+              </li>
+              <li>
+                Prüfsummen oder kryptografische Signaturen für hochgeladene oder
+                geteilte Skripte verwenden, um unbefugte Änderungen zu
+                verhindern.
+              </li>
+            </ul>
+          </li>
+          <li>Deserialisierungs-Cheat-Sheet (OWASP)</li>
+          <li>
+            Übersicht
+
+            <p>
+              Deserialisierungsprobleme treten auf, wenn nicht vertrauenswürdige
+              Daten ohne angemessene Validierung deserialisiert werden.
+              Angreifer können diese Schwachstellen ausnutzen, um bösartige
+              Objekte oder Daten in eine Anwendung einzuschleusen und so
+              möglicherweise deren Sicherheit zu gefährden.
+            </p>
+          </li>
+          <li>
+            Mögliche Risiken
+
+            <ul class="itemize mark-bullet">
+              <li>
+                Bösartige Payloads: Die Deserialisierung von Daten aus nicht
+                vertrauenswürdigen Quellen kann Angreifern ermöglichen,
+                beliebigen Code auszuführen, was die Anwendung und die zugrunde
+                liegende Infrastruktur gefährden kann.
+              </li>
+              <li>
+                Datenmanipulation: Ein Angreifer kann serialisierte Daten
+                manipulieren, was die Integrität und Funktionalität der
+                Anwendung beeinträchtigt.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Leitfaden für sichere Deserialisierung
+
+            <ul class="itemize mark-bullet">
+              <li>
+                Eingabevalidierung: Eingaben stets validieren und bereinigen,
+                bevor sie deserialisiert werden.
+              </li>
+              <li>
+                Objektintegrität: Kryptografische Signaturen verwenden, um
+                sicherzustellen, dass die serialisierten Objekte nicht verändert
+                wurden.
+              </li>
+              <li>
+                Sichere Bibliotheken verwenden: Bibliotheken und Frameworks
+                bevorzugen, die die Deserialisierung automatisch sicher
+                handhaben.
+              </li>
+              <li>
+                Deserialisierung einschränken: Daten aus nicht
+                vertrauenswürdigen Quellen vermeiden oder zumindest beschränken,
+                welche Objekttypen deserialisiert werden können.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Fazit
+
+            <p>
+              Die Kategorie A08:2021 – Software- und Datenintegritätsfehler
+              zeigt die wachsenden Risiken auf, die mit der Wahrung der
+              Integrität von Software und Daten, insbesondere in modernen
+              CI/CD-Pipelines, verbunden sind. Der Codecov-Vorfall demonstriert,
+              wie Schwachstellen in CI/CD-Prozessen ausgenutzt werden können, um
+              sensible Daten zu exfiltrieren und die Systemintegrität zu
+              gefährden.
+            </p>
+            <p>Beste Praktiken zur Risikominderung umfassen:</p>
+            <ul class="itemize mark-bullet">
+              <li>
+                Sichere Entwicklungspraktiken, wie sichere Code-Reviews und
+                automatisierte Scans, einsetzen.
+              </li>
+              <li>
+                Integritätsprüfungen (wie kryptografische Signaturen und
+                Prüfsummen) für Software und Daten verwenden, um die
+                Authentizität sicherzustellen.
+              </li>
+              <li>Externe Abhängigkeiten prüfen und verifizieren.</li>
+              <li>
+                Eingaben vor der Deserialisierung validieren und kryptografische
+                Methoden zur Sicherung serialisierter Daten einsetzen, um
+                potenzielle Angriffe zu verhindern.
+              </li>
+            </ul>
+
+            <p>
+              Durch die Umsetzung dieser Sicherheitspraktiken können
+              Organisationen das Risiko von Software- und
+              Datenintegritätsfehlern erheblich verringern und so die allgemeine
+              Systemsicherheit verbessern.
+            </p>
+          </li>
+        </ol>
+
+        <br />
+        <br />
+
+        <ul class="itemize mark-bullet">
+          <li>============================</li>
+          <li>General Information</li>
+          <li>============================</li>
+        </ul>
+
+        <br />
+      </div>
+    </div>
+    <div class="section-level-extent" id="Generating-Info-Files">
+      <h3 class="section">
+        <span
+          >2 Generating Info Files<a
+            class="copiable-link"
+            href="#Generating-Info-Files"
+          >
+            &para;</a
+          ></span
+        >
+      </h3>
+
+      <p>
+        For generating an Info file from a Texinfo source file, use the
+        following command:
+      </p>
+      <p><code class="code">makeinfo yourfile.texi</code></p>
+      <p>
+        This will produce a file named <samp class="file">yourfile.info</samp>.
+      </p>
+    </div>
+    <div class="section-level-extent" id="Generating-PDF-Files">
+      <h3 class="section">
+        <span
+          >3 Generating PDF Files<a
+            class="copiable-link"
+            href="#Generating-PDF-Files"
+          >
+            &para;</a
+          ></span
+        >
+      </h3>
+
+      <p>To convert a Texinfo file to PDF format, use the command:</p>
+      <p><code class="code">texi2pdf yourfile.texi</code></p>
+      <p>
+        The output will be a PDF file named
+        <samp class="file">yourfile.pdf</samp>.
+      </p>
+    </div>
+    <div class="section-level-extent" id="Generating-HTML-Files">
+      <h3 class="section">
+        <span
+          >4 Generating HTML Files<a
+            class="copiable-link"
+            href="#Generating-HTML-Files"
+          >
+            &para;</a
+          ></span
+        >
+      </h3>
+
+      <p>
+        To convert a Texinfo file to HTML format, use the following command:
+      </p>
+      <p><code class="code">makeinfo --html yourfile.texi</code></p>
+      <p>
+        This command will generate a directory named
+        <samp class="file">yourfile</samp> containing the HTML files.
+      </p>
+      <br />
+
+      <ul class="itemize mark-bullet">
+        <li>============================</li>
+        <li>Thank you for reading!</li>
+        <li>============================</li>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+/* Copiable links visibility */
+a.copiable-link {
+    visibility: hidden;
+    text-decoration: none;
+    line-height: 0em;
+}
+
+span:hover a.copiable-link {
+    visibility: visible;
+}
+
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 2rem;
+    padding: 0;
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+}
+
+/* Title styling */
+h1.title {
+    text-align: center;
+    color: #61dafb;
+    font-size: 2.5rem;
+    margin: 1.5rem 0;
+}
+
+/* Section headings */
+h3.section, h4.subsection {
+    color: #61dafb;
+    font-weight: bold;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid #61dafb;
+    padding-bottom: 0.2rem;
+}
+
+/* Anchor links */
+a {
+    color: #61dafb;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    text-decoration: underline;
+}
+
+/* Mini TOC styling */
+ul.mini-toc {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 1rem 0;
+    background-color: #2a2a2a;
+    border-left: 4px solid #61dafb;
+    padding: 1rem;
+}
+
+ul.mini-toc li {
+    margin: 0.5rem 0;
+}
+
+ul.mini-toc li a {
+    font-weight: bold;
+}
+
+/* Itemized lists */
+ul.itemize.mark-bullet {
+    list-style-type: disc;
+    margin-left: 2em;
+    margin-top: 1em;
+    color: #f0f0f0;
+}
+
+ul.itemize.mark-bullet ul.itemize.mark-bullet {
+    list-style-type: circle;
+}
+
+/* Example box styling */
+div.example {
+    margin: 1.5rem 3.2rem;
+    padding: 1rem;
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    border-radius: 5px;
+}
+
+pre.example-preformatted {
+    background-color: #1e1e1e;
+    padding: 1rem;
+    border-radius: 5px;
+    overflow-x: auto;
+    color: #f0f0f0;
+}
+
+/* Accessibility improvements */
+:focus {
+    outline: 2px solid #61dafb;
+    outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 90%;
+    }
+
+    h1.title {
+        font-size: 2rem;
+    }
+
+    ul.mini-toc {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+}
