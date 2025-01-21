@@ -28,17 +28,17 @@ class Header extends HTMLElement {
           <li><a href="settings.html">Lokale Einstellungen</a></li>
         </ul>
       </div>
-      `;
+    `;
   }
 }
 
 customElements.define('header-component', Header);
 
-// Function to fetch JSON and create cards
+// Funktion, um JSON zu laden und Karten zu erstellen
 async function loadCards() {
   try {
     const response = await fetch('json/inventory.json');
-    if (!response.ok) throw new Error('Failed to fetch inventory.json');
+    if (!response.ok) throw new Error('Fehler beim Laden der inventory.json');
     const inventory = await response.json();
 
     inventory.forEach(item => {
@@ -50,18 +50,17 @@ async function loadCards() {
         item.kategorie,
         item.lagerbestand,
         item.bewertung,
-        item.bewertungen,
-        item.Herkunft.geokoordinaten.breite,
-        item.Herkunft.geokoordinaten.laenge
+        item.bewertungen
       );
     });
   } catch (error) {
-    console.error('Error loading cards:', error);
+    console.error('Fehler beim Laden der Karten:', error);
   }
 }
 
-// Function to create a single card
-function createCard(produktname, description, image, price, category, stock, rating, reviews, latitude, longitude) {
+// Funktion zum Erstellen einer einzelnen Karte
+// Funktion zum Erstellen einer einzelnen Karte
+function createCard(produktname, description, image, price, category, stock, rating, reviews, technicalData) {
   const card = document.createElement('div');
   card.className = 'card';
 
@@ -83,27 +82,27 @@ function createCard(produktname, description, image, price, category, stock, rat
   cardContent.appendChild(desc);
 
   const priceElement = document.createElement('p');
-  priceElement.textContent = `Price: ${price}`;
+  priceElement.textContent = `Preis: ${price}`;
   priceElement.className = 'card-price';
   cardContent.appendChild(priceElement);
 
   const categoryElement = document.createElement('p');
-  categoryElement.textContent = `Category: ${category}`;
+  categoryElement.textContent = `Kategorie: ${category}`;
   categoryElement.className = 'card-category';
   cardContent.appendChild(categoryElement);
 
   const stockElement = document.createElement('p');
-  stockElement.textContent = `Stock: ${stock}`;
+  stockElement.textContent = `Bestand: ${stock}`;
   stockElement.className = 'card-stock';
   cardContent.appendChild(stockElement);
 
   const ratingElement = document.createElement('p');
-  ratingElement.textContent = `Rating: ${rating} (${reviews} reviews)`;
+  ratingElement.textContent = `Bewertung: ${rating} (${reviews} Bewertungen)`;
   ratingElement.className = 'card-rating';
   cardContent.appendChild(ratingElement);
 
   const addToCartButton = document.createElement('button');
-  addToCartButton.textContent = 'Add to Cart';
+  addToCartButton.textContent = 'In den Warenkorb';
   addToCartButton.className = 'add-to-cart-button';
   addToCartButton.addEventListener('click', () => {
     addToCart({
@@ -119,38 +118,68 @@ function createCard(produktname, description, image, price, category, stock, rat
   });
   cardContent.appendChild(addToCartButton);
 
+  const expandButtonContainer = document.createElement('div');
+  expandButtonContainer.className = 'expand-button-container';
+
   const expandButton = document.createElement('button');
-  expandButton.textContent = 'Expand';
+  expandButton.textContent = 'Erweitern';
   expandButton.className = 'expand-button';
-  cardContent.appendChild(expandButton);
+  expandButtonContainer.appendChild(expandButton);
+  cardContent.appendChild(expandButtonContainer);
 
   const detailedSection = document.createElement('div');
   detailedSection.className = 'detailed-section';
   detailedSection.style.display = 'none';
 
-  const mapContainer = document.createElement('div');
-  mapContainer.className = 'map-container';
-  const mapIframe = document.createElement('iframe');
-  mapIframe.src = `https://www.google.com/maps?q=${latitude},${longitude}&hl=de`;
-  mapIframe.width = '400';
-  mapIframe.height = '300';
-  mapIframe.style.transition = 'all 0.5s ease';
-  mapContainer.appendChild(mapIframe);
+  const technicalDetailsContainer = document.createElement('div');
+  technicalDetailsContainer.className = 'technical-details';
+
+  // Dynamisch die technischen Daten anzeigen
+  if (technicalData) {
+    Object.keys(technicalData).forEach(key => {
+      const detailElement = document.createElement('p');
+      detailElement.textContent = `${key}: ${technicalData[key]}`;
+      technicalDetailsContainer.appendChild(detailElement);
+    });
+  }
 
   const details = document.createElement('div');
   details.className = 'more-details';
-  details.innerHTML = `<p>More details about the product...</p><p>Additional information...</p>`;
-  detailedSection.appendChild(mapContainer);
+  details.innerHTML = `<p>Weitere Details zum Produkt...</p><p>Zusätzliche Informationen...</p>`;
+  detailedSection.appendChild(technicalDetailsContainer);
   detailedSection.appendChild(details);
+
+  // Schliessen-Button hinzufügen
+  const closeButton = document.createElement('button');
+  closeButton.textContent = 'Schliessen';
+  closeButton.className = 'close-button';
+  detailedSection.appendChild(closeButton);
+
+  // Event Listener für den Schliessen-Button
+  closeButton.addEventListener('click', () => {
+    card.style.gridColumnEnd = ''; // Setzt das Layout zurück
+    card.style.gridRowEnd = ''; // Setzt das Layout zurück
+    detailedSection.style.display = 'none'; // Versteckt die detaillierte Ansicht
+  });
+
   cardContent.appendChild(detailedSection);
 
   expandButton.addEventListener('click', () => {
-    if (detailedSection.style.display === 'none') {
+    const cardContainer = document.getElementById('card-container');
+    const cardRect = card.getBoundingClientRect();
+    const availableWidth = window.innerWidth - cardRect.left - cardRect.width;
+    const availableHeight = window.innerHeight - cardRect.top - cardRect.height;
+
+    if (availableWidth > 300) {
+      card.style.gridColumnEnd = 'span 2'; // Vergrössert die Karte auf der X-Achse
       detailedSection.style.display = 'block';
-      mapIframe.style.height = '500px';
+    } else if (availableHeight > 300) {
+      card.style.gridRowEnd = 'span 2'; // Vergrössert die Karte auf der Y-Achse
+      detailedSection.style.display = 'block';
     } else {
-      detailedSection.style.display = 'none';
-      mapIframe.style.height = '300px';
+      card.style.gridColumnEnd = 'span 2';
+      card.style.gridRowEnd = 'span 2';
+      detailedSection.style.display = 'block';
     }
   });
 
@@ -160,7 +189,7 @@ function createCard(produktname, description, image, price, category, stock, rat
   container.appendChild(card);
 }
 
-// Function to add an item to the cart and update localStorage
+// Funktion zum Hinzufügen eines Artikels zum Warenkorb und Aktualisieren von localStorage
 function addToCart(item) {
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
   cart.push(item);

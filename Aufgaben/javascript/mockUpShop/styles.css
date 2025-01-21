@@ -262,7 +262,9 @@ header {
   box-shadow: var(--box-shadow-default);
   overflow: hidden;
   transition: background-color var(--transition-default),
-    transform var(--transition-default);
+    transform var(--transition-default),
+    grid-column-end var(--transition-default),
+    grid-row-end var(--transition-default);
   display: flex;
   flex-direction: column;
 }
@@ -300,7 +302,8 @@ header {
   font-weight: bold;
 }
 
-.add-to-cart-button {
+.add-to-cart-button,
+.expand-button {
   background-color: var(--color-accent);
   border: none;
   color: var(--color-light-bg);
@@ -313,9 +316,38 @@ header {
   margin-top: 10px;
 }
 
-.add-to-cart-button:hover {
+.add-to-cart-button:hover,
+.expand-button:hover {
   background-color: var(--color-hover);
   transform: scale(1.05);
+}
+
+/* New Styles for Expanding the Card in the Grid */
+.card-expanded {
+  grid-column-end: span 2; /* Horizontal Expansion */
+  grid-row-end: span 2; /* Vertical Expansion */
+}
+
+.detailed-section {
+  margin-top: 15px;
+  display: none;
+}
+
+.detailed-section.show {
+  display: block;
+}
+
+.map-container {
+  margin-top: 10px;
+  width: 100%;
+  overflow: hidden;
+}
+
+iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+  transition: all 0.5s ease;
 }
 /*#endregion*/
 
