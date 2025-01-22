@@ -223,6 +223,7 @@ footer a:hover {
   width: 100vw;
   background: url("images/background.jpg") no-repeat center center/cover;
   margin: 0;
+  margin-top: -5em;
   padding: 0;
   overflow: hidden;
   z-index: 1;
@@ -280,3 +281,69 @@ footer a:hover {
   margin-top: 20px;
 }
 /*#endregion*/
+
+/*#region about */
+#about {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  color: white;
+  padding: 40px;
+  margin: 20px auto;
+  width: 70%;
+  text-align: center;
+  border-radius: 20px; 
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); 
+}
+
+#about img {
+  width: 400px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#about h1, #about h2 {
+  color: black; /* Updated for better contrast */
+  margin: 10px 0;
+}
+
+#about p {
+  color: #333; /* Updated for better readability */
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: justify;
+  hyphens: auto;
+}
+
+#about a {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  background: linear-gradient(to right, #9e04f0, #02ecfd);
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: auto;
+  transition: background 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+#about a:hover {
+  background: linear-gradient(to right, #02ecfd, #9e04f0);
+  transform: scale(1.03);
+}
+
+#about a:active {
+  transform: scale(0.98);
+}
+
+/* #endregion */
+
+/*#region about */
+/* #endregion */
