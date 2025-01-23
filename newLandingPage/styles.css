@@ -11,7 +11,7 @@
   --color-header-gradient-middle: #9b4f96;
   --color-header-gradient-end: #0038a8;
   --color-hover-bg: #d9b68c;
-  --color-menu-bg: rgba(0, 78, 14, 0.38);
+  --color-menu-bg: rgba(74, 0, 78, 0.519);
   --color-background: #f8f9fa;
   --color-light-bg: #ffffff;
   --color-primary-text: #333333;
@@ -174,7 +174,7 @@ header {
 
 .menu.active {
   display: flex;
-  top: var(--header-height);
+  top: 4em;
 }
 /*#endregion*/
 
@@ -226,7 +226,6 @@ footer a:hover {
   margin-top: -5em;
   padding: 0;
   overflow: hidden;
-  z-index: 1;
 }
 
 .homepageBtn {
@@ -343,7 +342,11 @@ footer a:hover {
   transform: scale(0.98);
 }
 
+#abut h1{
+  color: var();
+}
+
 /* #endregion */
 
-/*#region about */
+/*#region scool */
 /* #endregion */
