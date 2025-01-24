@@ -14,7 +14,7 @@ class Header extends HTMLElement {
       <div class="div-menu">
         <ul class="menu">
           <li><a href="index.html#about">About me</a></li>
-          <li><a href="index.html#scool">Tasks from scool</a></li>
+          <li><a href="index.html#school">Tasks from school</a></li>
           <li><a href="index.html#private">Private Code</a></li>
           <li><a href="index.html#interstellar">Interstellardevelopment</a></li>
           <li><a href="photos.html">Photography</a></li>

@@ -182,9 +182,13 @@ header {
 main {
   margin-top: calc(var(--header-height) + var(--main-padding));
   margin-bottom: calc(var(--footer-height) + var(--main-padding));
-  background: var(--main-bg);
+  background-image: url(images/background-code.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
   box-shadow: var(--box-shadow-default);
-  min-height: calc(100vh - var(--header-height) - var(--footer-height));
+  min-height: calc(100vh - var(--header-height));
+  margin-bottom: calc(var(--footer-height));
+  padding-bottom: 2em;
 }
 /*#endregion*/
 
@@ -259,15 +263,16 @@ footer a:hover {
   border-radius: 15px;
   padding: 20px;
   box-shadow: var(--box-shadow-default);
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.283);
 }
 
 .text h1 {
   font-size: 2.2em;
   background-image: linear-gradient(
     to right,
-    var(--gradient-text-start),
-    var(--gradient-text-end)
+    var(--color-header-gradient-start),
+    var(--color-header-gradient-middle),
+    var(--color-header-gradient-end)
   );
   background-clip: text;
   color: transparent;
@@ -281,7 +286,7 @@ footer a:hover {
 }
 /*#endregion*/
 
-/*#region about */
+/*#region About Section */
 #about {
   position: relative;
   display: flex;
@@ -294,8 +299,8 @@ footer a:hover {
   margin: 20px auto;
   width: 70%;
   text-align: center;
-  border-radius: 20px; 
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); 
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 #about img {
@@ -306,13 +311,31 @@ footer a:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#about h1, #about h2 {
-  color: black; /* Updated for better contrast */
+#about h1,
+#about h2 {
+  color: black;
   margin: 10px 0;
+  font-family: "Arial", sans-serif;
+}
+
+#about h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #9b4f96, #0038a8);
+  background-clip: text;
+  color: transparent;
+}
+
+#about h2 {
+  font-size: 1.8em;
+  font-weight: 600;
+  color: #555555;
+  margin-bottom: 20px;
 }
 
 #about p {
-  color: #333; /* Updated for better readability */
+  color: #333;
   line-height: 1.6;
   margin-bottom: 15px;
   text-align: justify;
@@ -341,12 +364,449 @@ footer a:hover {
 #about a:active {
   transform: scale(0.98);
 }
+/*#endregion*/
 
-#abut h1{
-  color: var();
+/*#region School Section */
+#school {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  color: white;
+  padding: 40px;
+  margin: 20px auto;
+  width: 70%;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
+#school img {
+  width: 400px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#school h1,
+#school h2 {
+  color: black;
+  margin: 10px 0;
+  font-family: "Arial", sans-serif;
+}
+
+#school h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #9b4f96, #d60270);
+  background-clip: text;
+  color: transparent;
+}
+
+#school h2 {
+  font-size: 1.8em;
+  font-weight: 600;
+  color: #555555;
+  margin-bottom: 20px;
+}
+
+#school p {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: justify;
+  hyphens: auto;
+}
+
+#school a {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  background: linear-gradient(to right, #9e04f0, #02ecfd);
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: auto;
+  transition: background 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+#school a:hover {
+  background: linear-gradient(to right, #02ecfd, #9e04f0);
+  transform: scale(1.03);
+}
+
+#school a:active {
+  transform: scale(0.98);
+}
+/*#endregion*/
+
+/* #region Private Section */
+#private {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-light-bg);
+  color: var(--color-primary-text);
+  padding: 40px;
+  margin: 20px auto;
+  width: 70%;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: var(--box-shadow-default);
+}
+
+#private h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: linear-gradient(
+    to right,
+    var(--color-header-gradient-start),
+    var(--color-header-gradient-middle),
+    var(--color-header-gradient-end)
+  );
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+#private p {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: justify;
+  hyphens: auto;
+}
+
+#private a {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  background: linear-gradient(to right, #9e04f0, #02ecfd);
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: auto;
+  transition: background 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+#private a:hover {
+  background: linear-gradient(to right, #02ecfd, #9e04f0);
+  transform: scale(1.03);
+}
+
+#private a:active {
+  transform: scale(0.98);
+}
 /* #endregion */
 
-/*#region scool */
+/* #region interstellar Section */
+#interstellar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white; /* Adjust the background color as needed */
+  color: white;
+  padding: 40px;
+  margin: 20px auto;
+  width: 70%;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+#interstellar img {
+  width: 400px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#interstellar h1,
+#interstellar h2 {
+  color: black;
+  margin: 10px 0;
+  font-family: "Arial", sans-serif;
+}
+
+#interstellar h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #9b4f96, #0038a8);
+  background-clip: text;
+  color: transparent;
+}
+
+#interstellar h2 {
+  font-size: 1.8em;
+  font-weight: 600;
+  color: #555555;
+  margin-bottom: 20px;
+}
+
+#interstellar p {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: justify;
+  hyphens: auto;
+}
+
+#interstellar a {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  background: linear-gradient(to right, #9e04f0, #02ecfd);
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: auto;
+  transition: background 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+#interstellar a:hover {
+  background: linear-gradient(to right, #02ecfd, #9e04f0);
+  transform: scale(1.03);
+}
+
+#interstellar a:active {
+  transform: scale(0.98);
+}
+/* #endregion */
+
+/* #region impressum Section */
+/* Dark Mode Styling for the Entire Impressum Section */
+#impressum {
+  font-family: Arial, sans-serif;
+  color: #f4f4f4; /* Light text on dark background */
+  background-color: #2c2c2c; /* Dark background */
+  padding: 30px;
+  border-radius: 8px;
+  width: 100vw;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border-top: 5px solid #007acc; /* Clean top border */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-bottom: 12em;
+  text-align: center;
+}
+
+#impressum h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #9b4f96, #0038a8);
+  background-clip: text;
+  color: transparent;
+}
+
+#impressum p {
+  margin: 12px 0;
+  font-size: 16px;
+}
+
+#impressum p strong {
+  font-weight: bold;
+}
+
+#impressum a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+#impressum a:hover {
+  text-decoration: underline;
+}
+
+#impressum ul {
+  margin-top: 10px;
+  padding-left: 20px;
+  list-style: none;
+}
+
+#impressum ul li {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+#impressum ul li span {
+  font-weight: bold;
+}
+
+#impressum:hover {
+  background-color: #333; /* Slightly darker background on hover */
+}
+/* #endregion */
+
+/* #region Responsive Styles */
+@media (max-width: 1200px) {
+  .homepageBtn {
+    padding: 15px;
+  }
+
+  .text {
+    font-size: 1.6em;
+    width: 80%;
+  }
+
+  #about,
+  #school {
+    width: 80%;
+  }
+
+  #about img,
+  #school img {
+    width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Header */
+  header {
+    padding: 10px 15px;
+    height: auto;
+  }
+
+  .burger-menu {
+    font-size: 1.5em;
+  }
+
+  .project-name {
+    font-size: 1.5em;
+  }
+
+  /* Main Content */
+  .text {
+    font-size: 1.4em;
+    width: 90%;
+  }
+
+  #about,
+  #school {
+    width: 90%;
+  }
+
+  #about img,
+  #school img {
+    width: 200px;
+  }
+
+  .homepageBtn {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Header */
+  header {
+    padding: 10px;
+    height: auto;
+  }
+
+  .burger-menu {
+    font-size: 1.4em;
+  }
+
+  .project-name {
+    font-size: 1.2em;
+  }
+
+  /* Main Content */
+  .text {
+    font-size: 1.2em;
+    width: 95%;
+  }
+
+  #about,
+  #school {
+    width: 95%;
+    padding: 20px;
+  }
+
+  #about img,
+  #school img {
+    width: 180px;
+  }
+
+  /* Homepage */
+  .homepage {
+    margin-top: 0;
+  }
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  #impressum {
+    padding: 20px;
+  }
+
+  #impressum h2 {
+    font-size: 22px;
+  }
+
+  #impressum p {
+    font-size: 14px;
+  }
+}
+
+/* #region Responsive Private Section */
+@media (max-width: 1200px) {
+  #private {
+    width: 80%;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  #private {
+    width: 90%;
+    padding: 20px;
+  }
+
+  #private h1 {
+    font-size: 2em;
+  }
+
+  #private p {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  #private {
+    width: 95%;
+    padding: 15px;
+  }
+
+  #private h1 {
+    font-size: 1.8em;
+  }
+
+  #private p {
+    font-size: 0.9em;
+  }
+}
+/* #endregion */
+/* #endregion */
+
+/* #region temporary coming soon */
+.coming-soon {
+  width: 100vw;
+  height: auto;
+}
 /* #endregion */
