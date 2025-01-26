@@ -653,6 +653,70 @@ footer a:hover {
 }
 /* #endregion */
 
+/* #region gallery */
+/* General styling for the gallery */
+#gallery {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column; /* Sections stacked vertically */
+  gap: 30px;
+  margin-top: 5em; /* Ensure the gallery starts below the header */
+}
+
+/* Title for the gallery */
+#gallery h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #9b4f96, #0038a8);
+  background-clip: text;
+  color: transparent;
+}
+
+/* Gallery section styling */
+.gallery-section {
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Title for each section */
+.gallery-section h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #555;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+/* Grid layout for images inside each gallery section */
+.gallery-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 pictures per row */
+  gap: 20px; /* Space between images */
+}
+
+/* Gallery image styling */
+.gallery-images img {
+  width: 100%;
+  height: 200px; /* Fixed height for all images */
+  object-fit: cover; /* Ensures images are cropped correctly */
+  border-radius: 8px;
+}
+
+/* Hover effect for each gallery section */
+.gallery-section:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.05);
+}
+/* #endregion */
+
 /*#region Responsive */
 @media (max-width: 1200px) {
   * {
@@ -723,6 +787,10 @@ footer a:hover {
     margin: 15px;
     font-size: 1em; /* Reduced font size for buttons */
     border-radius: 15px;
+  }
+
+  #gallery {
+    grid-template-columns: 1fr 1fr; /* 2 columns on medium screens */
   }
 }
 

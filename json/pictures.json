@@ -1,0 +1,203 @@
+[
+  {
+    "pictureKind": "Bike",
+    "bikeKind": "Piaggo",
+    "country": "Switzerland",
+    "camera": {
+      "kindOfCamera": "DSLR",
+      "objektive": "50mm f/1.8"
+    },
+    "photos": [
+      "piaggo_photo1.jpg",
+      "piaggo_photo2.jpg",
+      "piaggo_photo3.jpg",
+      "piaggo_photo4.jpg",
+      "piaggo_photo5.jpg",
+      "piaggo_photo6.jpg",
+      "piaggo_photo7.jpg",
+      "piaggo_photo8.jpg",
+      "piaggo_photo9.jpg",
+      "piaggo_photo10.jpg"
+    ]
+  },
+  {
+    "pictureKind": "Bike",
+    "bikeKind": "Brixton",
+    "country": "Switzerland",
+    "camera": {
+      "kindOfCamera": "Mirrorless",
+      "objektive": "24-70mm f/2.8"
+    },
+    "photos": [
+      "brixton_photo1.jpg",
+      "brixton_photo2.jpg",
+      "brixton_photo3.jpg",
+      "brixton_photo4.jpg",
+      "brixton_photo5.jpg",
+      "brixton_photo6.jpg",
+      "brixton_photo7.jpg",
+      "brixton_photo8.jpg",
+      "brixton_photo9.jpg",
+      "brixton_photo10.jpg"
+    ]
+  },
+  {
+    "pictureKind": "Bike",
+    "bikeKind": "Harley",
+    "country": "Switzerland",
+    "camera": {
+      "kindOfCamera": "Point and Shoot",
+      "objektive": "Built-in"
+    },
+    "photos": [
+      "harley_photo1.jpg",
+      "harley_photo2.jpg",
+      "harley_photo3.jpg",
+      "harley_photo4.jpg",
+      "harley_photo5.jpg",
+      "harley_photo6.jpg",
+      "harley_photo7.jpg",
+      "harley_photo8.jpg",
+      "harley_photo9.jpg",
+      "harley_photo10.jpg"
+    ]
+  },
+  {
+    "pictureKind": "Travel",
+    "location": "Sweden",
+    "camera": {
+      "kindOfCamera": "DSLR",
+      "objektive": "35mm f/1.4"
+    },
+    "photos": [
+      "sweden_photo1.jpg",
+      "sweden_photo2.jpg",
+      "sweden_photo3.jpg",
+      "sweden_photo4.jpg",
+      "sweden_photo5.jpg",
+      "sweden_photo6.jpg",
+      "sweden_photo7.jpg",
+      "sweden_photo8.jpg",
+      "sweden_photo9.jpg",
+      "sweden_photo10.jpg"
+    ]
+  },
+  {
+    "pictureKind": "Travel",
+    "location": "France",
+    "camera": {
+      "kindOfCamera": "Mirrorless",
+      "objektive": "16-35mm f/4"
+    },
+    "photos": [
+      "france_photo1.jpg",
+      "france_photo2.jpg",
+      "france_photo3.jpg",
+      "france_photo4.jpg",
+      "france_photo5.jpg",
+      "france_photo6.jpg",
+      "france_photo7.jpg",
+      "france_photo8.jpg",
+      "france_photo9.jpg",
+      "france_photo10.jpg"
+    ]
+  },
+  {
+    "pictureKind": "Travel",
+    "location": "Ireland",
+    "camera": {
+      "kindOfCamera": "Compact",
+      "objektive": "Fixed"
+    },
+    "photos": [
+      "ireland_photo1.jpg",
+      "ireland_photo2.jpg",
+      "ireland_photo3.jpg",
+      "ireland_photo4.jpg",
+      "ireland_photo5.jpg",
+      "ireland_photo6.jpg",
+      "ireland_photo7.jpg",
+      "ireland_photo8.jpg",
+      "ireland_photo9.jpg",
+      "ireland_photo10.jpg"
+    ]
+  },
+  {
+    "pictureKind": "Travel",
+    "location": "Czech",
+    "camera": {
+      "kindOfCamera": "DSLR",
+      "objektive": "70-200mm f/2.8"
+    },
+    "photos": [
+      "czech_photo1.jpg",
+      "czech_photo2.jpg",
+      "czech_photo3.jpg",
+      "czech_photo4.jpg",
+      "czech_photo5.jpg",
+      "czech_photo6.jpg",
+      "czech_photo7.jpg",
+      "czech_photo8.jpg",
+      "czech_photo9.jpg",
+      "czech_photo10.jpg"
+    ]
+  },
+  {
+    "pictureKind": "Travel",
+    "location": "Other",
+    "camera": {
+      "kindOfCamera": "Mirrorless",
+      "objektive": "24mm f/1.4"
+    },
+    "photos": [
+      "other_travel_photo1.jpg",
+      "other_travel_photo2.jpg",
+      "other_travel_photo3.jpg",
+      "other_travel_photo4.jpg",
+      "other_travel_photo5.jpg",
+      "other_travel_photo6.jpg",
+      "other_travel_photo7.jpg",
+      "other_travel_photo8.jpg",
+      "other_travel_photo9.jpg",
+      "other_travel_photo10.jpg"
+    ]
+  },
+  {
+    "pictureKind": "Portrait",
+    "camera": {
+      "kindOfCamera": "DSLR",
+      "objektive": "85mm f/1.4"
+    },
+    "photos": [
+      "portrait_photo1.jpg",
+      "portrait_photo2.jpg",
+      "portrait_photo3.jpg",
+      "portrait_photo4.jpg",
+      "portrait_photo5.jpg",
+      "portrait_photo6.jpg",
+      "portrait_photo7.jpg",
+      "portrait_photo8.jpg",
+      "portrait_photo9.jpg",
+      "portrait_photo10.jpg"
+    ]
+  },
+  {
+    "pictureKind": "Other",
+    "camera": {
+      "kindOfCamera": "Point and Shoot",
+      "objektive": "Built-in"
+    },
+    "photos": [
+      "other_photo1.jpg",
+      "other_photo2.jpg",
+      "other_photo3.jpg",
+      "other_photo4.jpg",
+      "other_photo5.jpg",
+      "other_photo6.jpg",
+      "other_photo7.jpg",
+      "other_photo8.jpg",
+      "other_photo9.jpg",
+      "other_photo10.jpg"
+    ]
+  }
+]
