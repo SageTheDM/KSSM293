@@ -3,62 +3,248 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Overview | Luca Fabian Burger </title>
-    <link rel="stylesheet" href="styleBasic.css" />
-    <title>overview</title>
+    <title>Photofuel</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scripts/footer.js" defer></script>
+    <script src="scripts/header.js" defer></script>
+    <script src="scripts/dropdown.js" defer></script>
   </head>
-
   <body>
-    <article>
-      <div class="container">
-        <hr />
-        <h2>Welcome to the overview!</h2>
-        <p>
-          On November 16, 2005, I was born in the picturesque country of
-          Switzerland, and since then, I've had a passion for exploring life.
-          Growing up, I discovered my love for various hobbies. This website
-          provides an overview of my journey. I began my studies at an
-          Informatics school in the summer of 2023, excited to expand my
-          knowledge of the digital world with the support of family and friends.
-          In conclusion, I'm grateful for the support of my loved ones and the
-          joy these experiences bring into my life. I look forward to continuing
-          my exploration.
-        </p>
-        <!-- Add more welcome text or content here -->
-      </div>
-      <div class="container">
-        <header> 
-          <h1>KSS Luca Fabian Burger</h1>
-        </header>
-        <nav>
-          <ul class="folder-list">
-            <li class="folder-list-item">
-              <a class="folder-link" target="_blank" href="Aufgaben/Index.html">Tasks</a>
-            <!-- Disabled until we fix  the website-->
-            <!-- </li>
-            <li class="folder-list-item">
-              <a class="folder-link" target="_blank" href="Photofuel/src/pages/Englisch/index-popup.html">Photofuel</a>
-            </li> -->
-            <li class="folder-list-item">
-              <a class="folder-link" target="_blank" href="https://interstellardevelopment.org/code/sageTheDm">Forgejo Account</a>
-            </li>
-            <h1>Friends</h1>
+    <header-component></header-component>
+    <main>
+      <section class="homepage" id="home">
+        <div class="content flex">
+          <div class="text">
+            <h1 class="gradient title">Welcome to Photofuel</h1>
             <p>
-              If you’re in search of an exceptional backend programmer, look no further than Patrick. Not only is he one of the best programmers in our class, but he also excels as a systems administrator and project manager. His diverse skill set and expertise have repeatedly proven invaluable, saving both me and my classmates during complex projects. Patrick’s problem-solving abilities, technical acumen, and compassion make him a standout talent and a reliable asset in any team.
+              Here you will find diverse coding projects, my favorite photos,
+              and general tomfoolery from me.
             </p>
-            <li class="folder-list-item">
-              <a class="folder-link" target="_blank" href="https://interstellardevelopment.org/code/Patrick_Pluto">Patrick</a>
-            </li>
+            <a href="#about" class="homepageBtn">Let's get started</a>
+          </div>
+        </div>
+      </section>
 
-            <p>
-             If you’re searching for a truly versatile and talented programmer, I highly recommend Niki. She excels in web design, crafting exceptional music for projects, and brings a remarkable level of creativity to everything she does. While her coding skills are strong, it's her innovative approach and creative flair that set her apart from the rest. In our class, no one matches her creativity, making her an invaluable asset to any team.
-            </p>
-             <li class="folder-list-item">
-              <a class="folder-link" target="_blank" href="https://www.metallherunterladen.store/" >Niki</a>
+      <section id="about">
+        <h1>About me</h1>
+        <img
+          src="images/VIKING.PNG"
+          alt="A photo of me holding a sword and shield"
+        />
+        <p>
+          Hi, I'm Luca Burger, a 17-year-old Swiss student with a passion for
+          technology and the great outdoors. Born on November 16, 2005, I'm
+          currently attending the Informatik Mittelschule (IMS) in Sargans.
+        </p>
+        <p>
+          As a strong advocate for free and open-source software (FOSS), I'm
+          proud to support the Free Software Foundation (FSF). In my free time,
+          you can find me coding, capturing life's moments through photography
+          with my trusty Fujifilm XT3, or riding my 1996 Harley Davidson
+          Sportster 1200cc.
+        </p>
+        <h2>My Projects and Journey</h2>
+        <p>I'm excited to share my involvement in the open-source project</p>
+        <a href="https://interstellardevelopment.org/"
+          >Interstellar Development</a
+        >
+        <p>, which I'm working on with some friends.</p>
+        <p>
+          As I continue to explore my passions, I'm grateful for the support of
+          my loved ones and the joy these experiences bring into my life. I'm
+          looking forward to continuing my journey and sharing my story with
+          you.
+        </p>
+        <h2>A Little More About My Background</h2>
+        <p>
+          Born in Switzerland on November 16, 2005, I've always had a curiosity
+          for life. Growing up, I discovered my love for various hobbies, and
+          this website provides an overview of my journey. I began my studies at
+          an Informatics school in the summer of 2023, excited to expand my
+          knowledge of the digital world.
+        </p>
+      </section>
+
+      <section id="school">
+        <div class="container">
+          <h1>School</h1>
+          <p>
+            This section provides an overview of my journey. I began my studies
+            at an Informatics school in the summer of 2023 and in the fall of
+            2024 I had the opurtunity to work together with Patrick and Yasin at
+            IOMarket on an AI-chatbot. excited to expand my knowledge of the
+            digital world with the support of family and friends. In conclusion,
+            I'm grateful for the support of my loved ones and the joy these
+            experiences bring into my life. I look forward to continuing my
+            exploration.
+          </p>
+        </div>
+
+        <div class="container">
+          <h2>Special Thanks</h2>
+          <p>
+            If you're looking for an exceptional backend programmer, Patrick is
+            your go-to person. He’s a master of systems administration, backend
+            programming, and project management, always ready to save the day.
+            Check out his work:
+          </p>
+          <ul>
+            <li>
+              <a
+                href="https://interstellardevelopment.org/code/Patrick_Pluto"
+                target="_blank"
+              >
+                Patrick's Forgejo Account
+              </a>
             </li>
           </ul>
-        </nav>
-      </div>
-    </article>
+
+          <p>
+            Niki is an incredibly creative and versatile talent. From web design
+            to music composition, her unique perspective adds value to any
+            project. Explore her work here:
+          </p>
+          <ul>
+            <li>
+              <a href="https://www.metallherunterladen.store/" target="_blank">
+                Niki's Website
+              </a>
+            </li>
+          </ul>
+          <br />
+          <ul>
+            <li>
+              <a
+                href="https://interstellardevelopment.org/code/niki"
+                target="_blank"
+              >
+                Niki's Forgejo Account
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="container">
+          <h2>My Perspective</h2>
+          <p>
+            While school sometimes tests my patience, it’s also the place where
+            I find the inspiration to grow. The Kantonschule Sargans and the IMS
+            program continue to shape not only my technical skills but also my
+            resilience and determination.
+          </p>
+          <ul>
+            <li>
+              <a href="Aufgaben/Index.html" target="_blank">Link to Tasks</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="private">
+        <h1>Private Projects</h1>
+        <p>
+          In my free time, I love experimenting with code and working on smaller
+          projects. These include everything from creating this website to
+          running various tests or revisiting and refining old school
+          assignments. Coding has always been more than just a skill—it's a way
+          for me to explore new ideas, gain knowledge, push the boundaries of my
+          creativity, and tackle challenging problems. I find immense joy in
+          turning concepts into reality through code, which constantly keeps me
+          inspired to improve.
+        </p>
+        <p>
+          If you're curious about my work and would like to see examples of what
+          I've been up to, feel free to explore my portfolio and repositories.
+          They give you a glimpse of the different kinds of projects I’ve poured
+          my heart and energy into over time.
+        </p>
+        <a
+          href="https://interstellardevelopment.org/code/sageTheDm"
+          target="_blank"
+        >
+          Forgejo account
+        </a>
+        <p>
+          Where many of my repositories are public for anyone interested to
+          explore. You’ll find a wide range of projects showcasing my interests,
+          from personal experiments to collaborative efforts. Please note that
+          while this website is private, there are plenty of other repositories
+          and projects available to check out. Feel free to dive in and discover
+          the work I’ve done, as I’m always excited to share my journey with
+          others!
+        </p>
+      </section>
+
+      <section id="interstellar">
+        <h1>Interstellar Development</h1>
+        <p>
+          A huge thanks to my friend Patrick, who kept pushing me to code and
+          supporting me throughout this journey. Without his encouragement, this
+          project wouldn't be where it is today.
+        </p>
+        <p>
+          Interstellar Development is driven by our passion for free and
+          open-source software. The Free Software Foundation (FSF) has been a
+          major inspiration for us. Their philosophy on user freedom and open
+          collaboration deeply influences our work, and we strive to carry that
+          vision forward with every project we undertake.
+        </p>
+        <p>
+          What we're trying to achieve is simple but important: to build
+          high-quality software that is freely available to everyone, and to
+          create a space where open-source gaming can thrive. We want to develop
+          games and tools that are not only accessible across platforms but also
+          built on principles of openness and community.
+        </p>
+        <p>To learn more about our work and projects, visit our website:</p>
+        <a href="https://interstellardevelopment.org/" target="_blank"
+          >Interstellar Development</a
+        >.
+      </section>
+    </main>
+    <section id="impressum">
+      <h1>Impressum</h1>
+      <p><strong>Photofuel:</strong> Luca Fabian Burger</p>
+      <p><strong>Address:</strong></p>
+      <p>
+        Kantonschule Sargans<br />
+        Pizolstrasse 14<br />
+        7320 Sargans<br />
+        St. Gallen, Switzerland
+      </p>
+      <p><strong>Phone:</strong> +41 76 306 72 03</p>
+      <p>
+        <strong>Email:</strong>
+        <a href="mailto:info@photofuel.tech">info@photofuel.tech</a>
+      </p>
+      <p><strong>Responsible for content:</strong> Luca Fabian Burger</p>
+
+      <h1>Acknowledgments</h1>
+      <p>
+        A heartfelt thank you goes to all the providers listed below who
+        supported us with photos.
+      </p>
+      <ul>
+        <li>
+          <span>Pexels</span> – For the background photo.
+          <a
+            href="https://www.pexels.com/de-de/foto/natur-baume-wildnis-holz-17479925/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Pexels Photo</a
+          >
+        </li>
+        <li>
+          <span>Fontawesome</span> – For the icons.
+          <a
+            href="https://fontawesome.com/search?q=trolley&o=r"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Fontawesome Icons</a
+          >
+        </li>
+      </ul>
+    </section>
+    <footer-component></footer-component>
   </body>
 </html>
