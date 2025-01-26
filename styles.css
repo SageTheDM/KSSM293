@@ -11,7 +11,7 @@
   --color-header-gradient-middle: #9b4f96;
   --color-header-gradient-end: #0038a8;
   --color-hover-bg: #d9b68c;
-  --color-menu-bg: rgba(74, 0, 78, 0.519);
+  --color-menu-bg: rgba(74, 0, 78, 0.806);
   --color-background: #f8f9fa;
   --color-light-bg: #ffffff;
   --color-primary-text: #333333;
@@ -653,162 +653,78 @@ footer a:hover {
 }
 /* #endregion */
 
-/* #region Responsive Styles */
+/*#region Responsive */
 @media (max-width: 1200px) {
-  .homepageBtn {
-    top: 0;
-    padding-top: 0;
-    margin-top: 0;
-    padding: 15px;
+  * {
+    font-size: 12px;
   }
 
-  .text {
-    font-size: 1.6em;
-    width: 80%;
+  main {
+    overflow-x: hidden;
+    margin: 0;
   }
 
-  #about,
+  main section,
   #interstellar,
-  #school {
-    width: 80%;
-  }
-
-  #about img,
-  #school img,
-  #interstellar img {
-    width: 250px;
-  }
-}
-
-@media (max-width: 768px) {
-  /* Header */
-  header {
-    padding: 10px 15px;
-    height: auto;
-  }
-
-  .burger-menu {
-    font-size: 1.5em;
-  }
-
-  .project-name {
-    font-size: 1.5em;
-  }
-
-  /* Main Content */
-  .text {
-    font-size: 1.4em;
-    width: 90%;
-  }
-
   #about,
-  #interstellar,
-  #school {
-    width: 90%;
+  #school,
+  #impressum,
+  #private {
+    width: 100vw;
+    margin: 0;
+    margin-top: 2em;
+    margin-bottom: 2em;
   }
 
-  #about img,
-  #school img,
-  #interstellar img {
-    width: 200px;
-  }
-
-  .homepageBtn {
-    padding: 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  /* Header */
-  header {
-    padding: 10px;
-    height: auto;
-  }
-
-  .burger-menu {
-    font-size: 1.4em;
-  }
-
-  .project-name {
-    font-size: 1.2em;
-  }
-
-  /* Main Content */
-  .text {
-    font-size: 1.2em;
-    width: 95%;
-  }
-
-  #about,
-  #interstellar,
-  #school {
-    width: 95%;
-    padding: 20px;
-  }
-
-  #about img,
-  #school img,
-  #interstellar img {
-    width: 180px;
-  }
-
-  /* Homepage */
-  .homepage {
-    margin-top: 0;
-  }
-}
-
-@media (max-width: 768px) {
   #impressum {
-    padding: 20px;
+    margin-bottom: 4em;
   }
 
-  #impressum h2 {
-    font-size: 22px;
+  header {
+    width: 100vw;
+    position: fixed;
+    top: 0;
   }
 
-  #impressum p {
-    font-size: 14px;
-  }
-}
-/* #region Responsive Private Section */
-@media (max-width: 1200px) {
-  #private {
-    width: 80%;
-    padding: 30px;
-  }
-}
-
-@media (max-width: 768px) {
-  #private {
-    width: 90%;
-    padding: 20px;
+  .content,
+  .flex {
+    position: absolute;
+    top: 0;
+    padding-top: 5em; /* Reduced for smaller screens */
+    margin-top: 0;
+    flex-direction: column;
+    text-align: center;
   }
 
-  #private h1 {
-    font-size: 2em;
+  .homepage,
+  #home {
+    margin-top: 0;
+    position: relative;
   }
-
-  #private p {
-    font-size: 1em;
-  }
-}
-
-@media (max-width: 480px) {
-  #private {
-    width: 95%;
+  .text {
+    width: 90%; /* Adjusted width for smaller screens */
+    font-size: 1.8em; /* Slightly smaller font size */
     padding: 15px;
+    border-radius: 10px;
   }
 
-  #private h1 {
-    font-size: 1.8em;
+  .text h1 {
+    font-size: 1.8em; /* Scaled down header font size */
   }
 
-  #private p {
-    font-size: 0.9em;
+  .text p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-top: 15px;
+  }
+
+  .homepageBtn {
+    padding: 15px;
+    margin: 15px;
+    font-size: 1em; /* Reduced font size for buttons */
+    border-radius: 15px;
   }
 }
-/* #endregion */
 
 /* #endregion */
 
