@@ -50,24 +50,31 @@ async function loadCards() {
         item.kategorie,
         item.lagerbestand,
         item.bewertung,
-        item.bewertungen
+        item.bewertungen,
+        item.TechnischeDaten // <-- Ensure this is passed
       );
     });
+
   } catch (error) {
     console.error('Fehler beim Laden der Karten:', error);
   }
 }
 
 // Funktion zum Erstellen einer einzelnen Karte
-// Funktion zum Erstellen einer einzelnen Karte
 function createCard(produktname, description, image, price, category, stock, rating, reviews, technicalData) {
   const card = document.createElement('div');
   card.className = 'card';
 
   const img = document.createElement('img');
-  img.src = image;
+  img.src = image || 'images/fallback-product.jpg'; // Setzt ein Fallback-Bild, falls kein Bild vorhanden ist
   img.alt = produktname;
   img.className = 'card-image';
+
+  // Fallback-Bild bei Fehler laden
+  img.onerror = () => {
+    img.src = 'images/fallback-product.jpg';
+  };
+
   card.appendChild(img);
 
   const cardContent = document.createElement('div');
@@ -113,7 +120,7 @@ function createCard(produktname, description, image, price, category, stock, rat
       category,
       stock,
       rating,
-      reviews
+      reviews,
     });
   });
   cardContent.appendChild(addToCartButton);
@@ -131,23 +138,33 @@ function createCard(produktname, description, image, price, category, stock, rat
   detailedSection.className = 'detailed-section';
   detailedSection.style.display = 'none';
 
-  const technicalDetailsContainer = document.createElement('div');
-  technicalDetailsContainer.className = 'technical-details';
+  // Tabelle für technische Daten erstellen
+  const technicalTable = document.createElement('table');
+  technicalTable.className = 'technical-table';
 
-  // Dynamisch die technischen Daten anzeigen
   if (technicalData) {
-    Object.keys(technicalData).forEach(key => {
-      const detailElement = document.createElement('p');
-      detailElement.textContent = `${key}: ${technicalData[key]}`;
-      technicalDetailsContainer.appendChild(detailElement);
+    const tableHeader = document.createElement('tr');
+    const keyHeader = document.createElement('th');
+    keyHeader.textContent = 'Eigenschaft';
+    const valueHeader = document.createElement('th');
+    valueHeader.textContent = 'Wert';
+    tableHeader.appendChild(keyHeader);
+    tableHeader.appendChild(valueHeader);
+    technicalTable.appendChild(tableHeader);
+
+    Object.keys(technicalData).forEach((key) => {
+      const row = document.createElement('tr');
+      const keyCell = document.createElement('td');
+      keyCell.textContent = key;
+      const valueCell = document.createElement('td');
+      valueCell.textContent = technicalData[key];
+      row.appendChild(keyCell);
+      row.appendChild(valueCell);
+      technicalTable.appendChild(row);
     });
   }
 
-  const details = document.createElement('div');
-  details.className = 'more-details';
-  details.innerHTML = `<p>Weitere Details zum Produkt...</p><p>Zusätzliche Informationen...</p>`;
-  detailedSection.appendChild(technicalDetailsContainer);
-  detailedSection.appendChild(details);
+  detailedSection.appendChild(technicalTable);
 
   // Schliessen-Button hinzufügen
   const closeButton = document.createElement('button');
@@ -170,10 +187,10 @@ function createCard(produktname, description, image, price, category, stock, rat
     const availableWidth = window.innerWidth - cardRect.left - cardRect.width;
     const availableHeight = window.innerHeight - cardRect.top - cardRect.height;
 
-    if (availableWidth > 300) {
+    if (availableWidth > 500) {
       card.style.gridColumnEnd = 'span 2'; // Vergrössert die Karte auf der X-Achse
       detailedSection.style.display = 'block';
-    } else if (availableHeight > 300) {
+    } else if (availableHeight > 500) {
       card.style.gridRowEnd = 'span 2'; // Vergrössert die Karte auf der Y-Achse
       detailedSection.style.display = 'block';
     } else {
@@ -188,6 +205,7 @@ function createCard(produktname, description, image, price, category, stock, rat
   const container = document.getElementById('card-container');
   container.appendChild(card);
 }
+
 
 // Funktion zum Hinzufügen eines Artikels zum Warenkorb und Aktualisieren von localStorage
 function addToCart(item) {

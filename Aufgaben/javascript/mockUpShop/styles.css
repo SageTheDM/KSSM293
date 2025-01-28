@@ -303,7 +303,8 @@ header {
 }
 
 .add-to-cart-button,
-.expand-button {
+.expand-button,
+.close-button {
   background-color: var(--color-accent);
   border: none;
   color: var(--color-light-bg);
@@ -317,7 +318,8 @@ header {
 }
 
 .add-to-cart-button:hover,
-.expand-button:hover {
+.expand-button:hover,
+.close-button:hover {
   background-color: var(--color-hover);
   transform: scale(1.05);
 }
@@ -341,6 +343,24 @@ header {
   margin-top: 10px;
   width: 100%;
   overflow: hidden;
+}
+
+.technical-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+}
+
+.technical-table th,
+.technical-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.technical-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
 }
 
 iframe {
@@ -753,3 +773,36 @@ footer a:hover {
   text-align: center;
 }
 /*#endregion*/
+
+/* #region responsive design */
+@media (max-width: 1200px) {
+  .homepage,
+  #home {
+    margin-top: 0;
+    position: relative;
+  }
+  .text {
+    width: 90%; /* Adjusted width for smaller screens */
+    font-size: 1.8em; /* Slightly smaller font size */
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .text h1 {
+    font-size: 1.8em; /* Scaled down header font size */
+  }
+
+  .text p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-top: 15px;
+  }
+
+  .homepageBtn {
+    padding: 15px;
+    margin: 15px;
+    font-size: 1em; /* Reduced font size for buttons */
+    border-radius: 15px;
+  }
+}
+/* #endregion */
