@@ -248,6 +248,84 @@ header {
 /*#endregion*/
 
 /*#region Cards */
+/* #region filter */
+/* Filter Container */
+.filter-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Labels for Filters */
+.filter-container label {
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Styling for the Select Dropdown */
+.filter-container select,
+.filter-container input[type="number"],
+.filter-container input[type="text"] {
+  padding: 10px;
+  font-size: 1rem;
+  color: #555;
+  background-color: #e7e7e7;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.filter-container select:hover,
+.filter-container input[type="number"]:hover,
+.filter-container input[type="text"]:hover {
+  background-color: #d0d0d0;
+}
+
+.filter-container select:focus,
+.filter-container input[type="number"]:focus,
+.filter-container input[type="text"]:focus {
+  border-color: #009688;
+  outline: none;
+}
+
+/* Styling for Dynamic Filters (if any) */
+#dynamic-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Button for Applying Filters */
+#applyFilters {
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  color: white;
+  background-color: #009688;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center;
+}
+
+#applyFilters:hover {
+  background-color: #00796b;
+}
+
+/* #endregion */
+
+#products h2 {
+  margin: auto;
+  text-align: center;
+  font-size: 3em;
+  padding-top: 3em;
+}
 .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
