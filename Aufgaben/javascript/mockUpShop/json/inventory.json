@@ -1385,5 +1385,260 @@
       "gewicht": "1.4 kg",
       "beinklemmen": "Dreh-Locks"
     }
+  },
+  {
+    "produktname": "Fujifilm XF 16-80mm f/4 R OIS WR",
+    "beschreibung": "Ein vielseitiges Standard-Zoom-Objektiv mit 5-fach-Zoom und Bildstabilisierung, ideal für Reisen und Alltagsfotografie.",
+    "bild": "fujifilm_xf_16_80mm.jpg",
+    "preis": 799.0,
+    "kategorie": "Objektive",
+    "lagerbestand": 18,
+    "bewertung": 4.7,
+    "bewertungen": 220,
+    "TechnischeDaten": {
+      "brennweite": "16-80mm",
+      "blende": "f/4",
+      "filterdurchmesser": "72mm",
+      "gewicht": "440 g",
+      "kompatibilität": "Fujifilm X-Mount"
+    }
+  },
+  {
+    "produktname": "Fujifilm XF 56mm f/1.2 R",
+    "beschreibung": "Ein lichtstarkes Porträt-Objektiv mit hervorragender Hintergrundunschärfe, ideal für Porträtfotografie.",
+    "bild": "fujifilm_xf_56mm.jpg",
+    "preis": 999.0,
+    "kategorie": "Objektive",
+    "lagerbestand": 12,
+    "bewertung": 4.9,
+    "bewertungen": 180,
+    "TechnischeDaten": {
+      "brennweite": "56mm",
+      "blende": "f/1.2",
+      "filterdurchmesser": "62mm",
+      "gewicht": "405 g",
+      "kompatibilität": "Fujifilm X-Mount"
+    }
+  },
+  {
+    "produktname": "Fujifilm XF 18-135mm f/3.5-5.6 R LM OIS WR",
+    "beschreibung": "Ein All-in-One-Zoom-Objektiv mit großem Brennweitenbereich und Wetterfestigkeit, ideal für vielseitige Aufnahmesituationen.",
+    "bild": "fujifilm_xf_18_135mm.jpg",
+    "preis": 899.0,
+    "kategorie": "Objektive",
+    "lagerbestand": 20,
+    "bewertung": 4.6,
+    "bewertungen": 160,
+    "TechnischeDaten": {
+      "brennweite": "18-135mm",
+      "blende": "f/3.5-5.6",
+      "filterdurchmesser": "67mm",
+      "gewicht": "490 g",
+      "kompatibilität": "Fujifilm X-Mount"
+    }
+  },
+  {
+    "produktname": "Fujifilm XF 35mm f/1.4 R",
+    "beschreibung": "Ein klassisches Standard-Objektiv mit hoher Lichtstärke, ideal für Porträts und Alltagsfotografie.",
+    "bild": "fujifilm_xf_35mm.jpg",
+    "preis": 599.0,
+    "kategorie": "Objektive",
+    "lagerbestand": 25,
+    "bewertung": 4.8,
+    "bewertungen": 210,
+    "TechnischeDaten": {
+      "brennweite": "35mm",
+      "blende": "f/1.4",
+      "filterdurchmesser": "52mm",
+      "gewicht": "187 g",
+      "kompatibilität": "Fujifilm X-Mount"
+    }
+  },
+  {
+    "produktname": "Fujifilm XF 100-400mm f/4.5-5.6 R LM OIS WR",
+    "beschreibung": "Ein Super-Telezoom-Objektiv mit leistungsstarker Bildstabilisierung, ideal für Sport- und Tierfotografie.",
+    "bild": "fujifilm_xf_100_400mm.jpg",
+    "preis": 1899.0,
+    "kategorie": "Objektive",
+    "lagerbestand": 5,
+    "bewertung": 4.9,
+    "bewertungen": 130,
+    "TechnischeDaten": {
+      "brennweite": "100-400mm",
+      "blende": "f/4.5-5.6",
+      "filterdurchmesser": "77mm",
+      "gewicht": "1375 g",
+      "kompatibilität": "Fujifilm X-Mount"
+    }
+  },
+  {
+    "produktname": "SanDisk Ultra SDHC 16GB",
+    "beschreibung": "Eine zuverlässige SD-Karte für alltägliche Fotos und Videos in Full HD.",
+    "bild": "sandisk_ultra_16gb.jpg",
+    "preis": 9.99,
+    "kategorie": "Speicherkarten",
+    "lagerbestand": 60,
+    "bewertung": 4.6,
+    "bewertungen": 450,
+    "TechnischeDaten": {
+      "kapazität": "16GB",
+      "lesegeschwindigkeit": "80 MB/s",
+      "schreibgeschwindigkeit": "30 MB/s",
+      "klasse": "UHS-I U1",
+      "typ": "SDHC"
+    }
+  },
+  {
+    "produktname": "Kingston Canvas Select Plus SDHC 32GB",
+    "beschreibung": "Eine erschwingliche Speicherkarte für kompakte Kameras und Camcorder.",
+    "bild": "kingston_canvas_32gb.jpg",
+    "preis": 12.99,
+    "kategorie": "Speicherkarten",
+    "lagerbestand": 55,
+    "bewertung": 4.7,
+    "bewertungen": 320,
+    "TechnischeDaten": {
+      "kapazität": "32GB",
+      "lesegeschwindigkeit": "100 MB/s",
+      "schreibgeschwindigkeit": "45 MB/s",
+      "klasse": "UHS-I U1 V10",
+      "typ": "SDHC"
+    }
+  },
+  {
+    "produktname": "Lexar Professional 1000x SDXC 64GB",
+    "beschreibung": "Eine schnelle SD-Karte mit UHS-II für hochauflösende Fotos und Videos.",
+    "bild": "lexar_professional_64gb.jpg",
+    "preis": 24.99,
+    "kategorie": "Speicherkarten",
+    "lagerbestand": 40,
+    "bewertung": 4.8,
+    "bewertungen": 210,
+    "TechnischeDaten": {
+      "kapazität": "64GB",
+      "lesegeschwindigkeit": "150 MB/s",
+      "schreibgeschwindigkeit": "80 MB/s",
+      "klasse": "UHS-II U3 V60",
+      "typ": "SDXC"
+    }
+  },
+  {
+    "produktname": "Transcend 300S SDXC 128GB",
+    "beschreibung": "Eine zuverlässige und schnelle SD-Karte für 4K-Videoaufnahmen.",
+    "bild": "transcend_300s_128gb.jpg",
+    "preis": 29.99,
+    "kategorie": "Speicherkarten",
+    "lagerbestand": 35,
+    "bewertung": 4.7,
+    "bewertungen": 280,
+    "TechnischeDaten": {
+      "kapazität": "128GB",
+      "lesegeschwindigkeit": "95 MB/s",
+      "schreibgeschwindigkeit": "45 MB/s",
+      "klasse": "UHS-I U3 V30",
+      "typ": "SDXC"
+    }
+  },
+  {
+    "produktname": "Sony Tough SF-G128 SDXC 128GB",
+    "beschreibung": "Eine extrem robuste und schnelle Speicherkarte für Profis.",
+    "bild": "sony_tough_128gb.jpg",
+    "preis": 129.99,
+    "kategorie": "Speicherkarten",
+    "lagerbestand": 15,
+    "bewertung": 4.9,
+    "bewertungen": 150,
+    "TechnischeDaten": {
+      "kapazität": "128GB",
+      "lesegeschwindigkeit": "300 MB/s",
+      "schreibgeschwindigkeit": "299 MB/s",
+      "klasse": "UHS-II U3 V90",
+      "typ": "SDXC"
+    }
+  },
+  {
+    "produktname": "Samsung EVO Plus microSDXC 256GB",
+    "beschreibung": "Eine schnelle und zuverlässige microSD-Karte für Smartphones, Drohnen und Kameras.",
+    "bild": "samsung_evo_plus_256gb.jpg",
+    "preis": 34.99,
+    "kategorie": "Speicherkarten",
+    "lagerbestand": 40,
+    "bewertung": 4.8,
+    "bewertungen": 600,
+    "TechnischeDaten": {
+      "kapazität": "256GB",
+      "lesegeschwindigkeit": "130 MB/s",
+      "schreibgeschwindigkeit": "90 MB/s",
+      "klasse": "UHS-I U3 A2 V30",
+      "typ": "microSDXC"
+    }
+  },
+  {
+    "produktname": "Delkin Devices Power CFexpress 128GB",
+    "beschreibung": "Eine professionelle CFexpress-Karte mit extrem hoher Geschwindigkeit für hochauflösende Videos und RAW-Fotografie.",
+    "bild": "delkin_power_cfexpress_128gb.jpg",
+    "preis": 199.99,
+    "kategorie": "Speicherkarten",
+    "lagerbestand": 20,
+    "bewertung": 4.9,
+    "bewertungen": 90,
+    "TechnischeDaten": {
+      "kapazität": "128GB",
+      "lesegeschwindigkeit": "1730 MB/s",
+      "schreibgeschwindigkeit": "1540 MB/s",
+      "klasse": "CFexpress Typ B",
+      "typ": "CFexpress"
+    }
+  },
+  {
+    "produktname": "ProGrade Digital SDXC 256GB",
+    "beschreibung": "Eine professionelle SD-Karte für 4K- und 8K-Videoaufnahmen mit extrem hohen Schreibgeschwindigkeiten.",
+    "bild": "prograde_digital_256gb.jpg",
+    "preis": 179.99,
+    "kategorie": "Speicherkarten",
+    "lagerbestand": 10,
+    "bewertung": 4.9,
+    "bewertungen": 130,
+    "TechnischeDaten": {
+      "kapazität": "256GB",
+      "lesegeschwindigkeit": "250 MB/s",
+      "schreibgeschwindigkeit": "200 MB/s",
+      "klasse": "UHS-II U3 V90",
+      "typ": "SDXC"
+    }
+  },
+  {
+    "produktname": "Angelbird AV PRO microSD 128GB",
+    "beschreibung": "Eine leistungsstarke microSD-Karte für Drohnen, Actioncams und 6K-Videoaufnahmen.",
+    "bild": "angelbird_avpro_128gb.jpg",
+    "preis": 99.99,
+    "kategorie": "Speicherkarten",
+    "lagerbestand": 25,
+    "bewertung": 4.8,
+    "bewertungen": 80,
+    "TechnischeDaten": {
+      "kapazität": "128GB",
+      "lesegeschwindigkeit": "280 MB/s",
+      "schreibgeschwindigkeit": "160 MB/s",
+      "klasse": "UHS-II V60",
+      "typ": "microSDXC"
+    }
+  },
+  {
+    "produktname": "PNY Elite Performance SDXC 64GB",
+    "beschreibung": "Eine schnelle und zuverlässige Speicherkarte für professionelle Foto- und Videoaufnahmen.",
+    "bild": "pny_elite_performance_64gb.jpg",
+    "preis": 19.99,
+    "kategorie": "Speicherkarten",
+    "lagerbestand": 30,
+    "bewertung": 4.7,
+    "bewertungen": 200,
+    "TechnischeDaten": {
+      "kapazität": "64GB",
+      "lesegeschwindigkeit": "95 MB/s",
+      "schreibgeschwindigkeit": "60 MB/s",
+      "klasse": "UHS-I U3",
+      "typ": "SDXC"
+    }
   }
 ]

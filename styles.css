@@ -655,6 +655,14 @@ footer a:hover {
 
 /* #region gallery */
 /* General styling for the gallery */
+#gallery-main {
+  background-image: none;
+}
+
+#gallery-main #equipment {
+  margin-top: 2em;
+  background-color: black;
+}
 #gallery {
   padding: 20px;
   margin: 0 auto;

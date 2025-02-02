@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="styles.css" />
     <script src="scripts/footer.js" defer></script>
     <script src="scripts/script.js" defer></script>
-    <script src="scripts/dropdown.js"></script>
+    <script src="scripts/dropdown.js" defer></script>
+    <script src="scripts/filter.js" defer></script>
   </head>
   <body>
     <header-component></header-component>
@@ -27,6 +28,36 @@
 
       <section id="products" class="products-section">
         <h2>Unsere Produkte</h2>
+
+        <div class="filter-container">
+          <!-- Kategorie -->
+          <label for="category">Kategorie:</label>
+          <select id="category" onchange="updateFilters()">
+            <option value="all">Alle</option>
+            <option value="Kameras">Kameras</option>
+            <option value="Objektive">Objektive</option>
+            <option value="Speicherkarten">Speicherkarten</option>
+            <option value="Drohnen">Drohnen</option>
+            <option value="Tripods">Tripods</option>
+            <option value="Gimbals">Gimbals</option>
+            <option value="Studio-Beleuchtung">Studio-Beleuchtung</option>
+            <option value="Kamerataschen">Kamerataschen</option>
+            <option value="Audio-Equipment">Audio-Equipment</option>
+            <option value="Action-Kameras">Action-Kameras</option>
+            <option value="Blitzgeräte">Blitzgeräte</option>
+            <option value="Rucksäcke">Rucksäcke</option>
+            <option value="Software">Software</option>
+            <option value="Monitore">Monitore</option>
+            <option value="Tastaturen">Tastaturen</option>
+            <option value="Zubehör">Zubehör</option>
+          </select>
+
+          <!-- Dynamische Filteroptionen -->
+          <div id="dynamic-filters"></div>
+
+          <button id="applyFilters">Filter anwenden</button>
+        </div>
+
         <div id="card-container" class="card-container"></div>
       </section>
 

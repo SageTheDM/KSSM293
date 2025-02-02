@@ -13,6 +13,7 @@ const createImageElement = (src, alt) => {
     const img = document.createElement("img");
     img.src = src;
     img.alt = alt;
+    img.loading = "lazy"; // Enable lazy loading
     img.onerror = () => { img.src = defaultImage; }; // Fallback to default image if loading fails
 
     link.appendChild(img);
@@ -23,10 +24,13 @@ const createImageElement = (src, alt) => {
 const loadGallery = async () => {
     try {
         const response = await fetch(jsonPath);
+        if (!response.ok) throw new Error("Failed to fetch gallery data.");
+
         const data = await response.json();
 
         data.forEach(entry => {
             let sectionId;
+            // Determine the section ID based on the entry
             if (entry.pictureKind === "Bike") {
                 sectionId = entry.bikeKind.toLowerCase();
             } else if (entry.pictureKind === "Travel") {
@@ -39,6 +43,9 @@ const loadGallery = async () => {
 
             const section = document.getElementById(sectionId);
             if (section) {
+                // Add a unique class to the section for custom styling
+                section.classList.add(`gallery-section-${sectionId}`);
+
                 // Create a container for images if not already present
                 let imageContainer = section.querySelector(".gallery-images");
                 if (!imageContainer) {
@@ -47,11 +54,13 @@ const loadGallery = async () => {
                     section.appendChild(imageContainer);
                 }
 
-                // Append the images to the container
+                // Append images from the JSON entry to the container
                 entry.photos.forEach(photo => {
                     const img = createImageElement(`images/${photo}`, `${entry.pictureKind} - ${photo}`);
                     imageContainer.appendChild(img);
                 });
+            } else {
+                console.warn(`Section with ID "${sectionId}" not found.`);
             }
         });
     } catch (error) {
@@ -59,5 +68,5 @@ const loadGallery = async () => {
     }
 };
 
-// Load the gallery after DOM content is loaded
+// Load the gallery after the DOM content is fully loaded
 document.addEventListener("DOMContentLoaded", loadGallery);
