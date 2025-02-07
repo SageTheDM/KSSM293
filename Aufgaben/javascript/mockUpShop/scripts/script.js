@@ -66,7 +66,7 @@ function createCard(produktname, description, image, price, category, stock, rat
   card.className = 'card';
 
   const img = document.createElement('img');
-  img.src = image || 'images/fallback-product.jpg'; // Setzt ein Fallback-Bild, falls kein Bild vorhanden ist
+  img.src = "images/" + image || 'images/fallback-product.jpg'; // Setzt ein Fallback-Bild, falls kein Bild vorhanden ist
   img.alt = produktname;
   img.className = 'card-image';
 
@@ -89,7 +89,7 @@ function createCard(produktname, description, image, price, category, stock, rat
   cardContent.appendChild(desc);
 
   const priceElement = document.createElement('p');
-  priceElement.textContent = `Preis: ${price}`;
+  priceElement.textContent = `Preis: ${price} CHF`;
   priceElement.className = 'card-price';
   cardContent.appendChild(priceElement);
 
