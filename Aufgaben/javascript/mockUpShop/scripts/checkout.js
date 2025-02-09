@@ -127,5 +127,12 @@ Ihr Photofuel.tech Team
         // Open the mailto link in the email client
         window.location.href = mailtoLink;
         localStorage.removeItem("cart");
+        alert("Bestellung wurde erfolgreich abgeschlossen");
+
+        // Delay redirect to allow mailto to process
+        setTimeout(() => {
+            window.location.href = "index.html";
+        }, 1000);
+
     });
 });
