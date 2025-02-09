@@ -7,7 +7,7 @@ async function loadFAQ() {
 
 // Funktion, um die FAQ anzuzeigen
 function renderFAQ(faqData) {
-    const faqContainer = document.getElementById("faq");
+    const faqContainer = document.getElementById("faq-display");
     faqContainer.innerHTML = "";
     faqData.forEach((item, index) => {
         const question = document.createElement("div");
