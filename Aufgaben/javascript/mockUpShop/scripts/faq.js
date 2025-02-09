@@ -43,7 +43,9 @@ function filterFAQ() {
         const answer = document.getElementById(`answer-${index}`);
         const isVisible = item.textContent.toLowerCase().includes(searchTerm);
         item.style.display = isVisible ? "block" : "none";
-        answer.style.display = "none"; // Bei Suchergebnissen die Antwort verstecken
+        if (!isVisible) {
+            answer.classList.remove("open"); // Antwort auch wirklich schließen
+        }
     });
 }
 
