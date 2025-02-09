@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Lädt die gespeicherten Werte aus dem LocalStorage
     function loadSettings() {
         fields.forEach(field => {
-            const savedValue = localStorage.getItem(`${field}`);
-            const input = document.getElementById(`${field}`);
+            const savedValue = localStorage.getItem(field);
+            const input = document.getElementById(field);
             if (input && savedValue) {
                 input.value = savedValue; // Pre-fill field with saved value if exists
             }
@@ -38,8 +38,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Löscht alle gespeicherten Werte
     function clearSettings() {
         fields.forEach(field => {
-            localStorage.removeItem(`${field}`); // Remove individual field from localStorage
-            const input = document.getElementById(`${field}`);
+            localStorage.removeItem(field); // Remove individual field from localStorage
+            const input = document.getElementById(field);
             if (input) input.value = ""; // Clear the field
         });
 
