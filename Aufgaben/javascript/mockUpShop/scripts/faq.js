@@ -28,8 +28,8 @@ function renderFAQ(faqData) {
 // Funktion, um die Antwort ein- oder auszublenden
 function toggleAnswer(index) {
     const allAnswers = document.querySelectorAll(".faq-answer");
-    allAnswers.forEach((el) => {
-        el.classList.remove("open"); // Alle Antworten schliessen
+    allAnswers.forEach((element) => {
+        element.classList.remove("open"); // Alle Antworten schliessen
     });
 
     const answer = document.getElementById(`answer-${index}`);
