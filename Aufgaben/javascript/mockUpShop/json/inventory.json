@@ -418,23 +418,6 @@
     }
   },
   {
-    "produktname": "Manfrotto Befree Advanced Stativ",
-    "beschreibung": "Ein leichtes und kompaktes Stativ für Reisen und professionelle Fotografie mit reibungslosem Kugelkopf.",
-    "bild": "manfrotto_befree_advanced.jpg",
-    "preis": 199.99,
-    "kategorie": "Stative",
-    "lagerbestand": 40,
-    "bewertung": 4.8,
-    "bewertungen": 700,
-    "TechnischeDaten": {
-      "material": "Aluminium",
-      "maximale_hoehe": "150 cm",
-      "tragkraft": "8 kg",
-      "gewicht": "1.5 kg",
-      "packmaß": "40 cm"
-    }
-  },
-  {
     "produktname": "Adobe Creative Cloud Jahreslizenz",
     "beschreibung": "Eine umfassende Sammlung kreativer Software-Tools für Fotografen, Designer und Videobearbeiter.",
     "bild": "adobe_creative_cloud.jpg",
@@ -448,23 +431,6 @@
       "plattformen": "Windows, macOS",
       "programme": "Photoshop, Lightroom, Premiere Pro, uvm.",
       "cloudspeicher": "100 GB"
-    }
-  },
-  {
-    "produktname": "DJI RS 3 Pro Gimbal",
-    "beschreibung": "Ein professioneller Gimbal für Kamerastabilisierung bei Videoaufnahmen mit leistungsstarken Motoren und erweiterten Funktionen.",
-    "bild": "dji_rs3_pro.jpg",
-    "preis": 869.0,
-    "kategorie": "Zubehör",
-    "lagerbestand": 12,
-    "bewertung": 4.8,
-    "bewertungen": 520,
-    "TechnischeDaten": {
-      "nutzlast": "4.5 kg",
-      "gewicht": "1.5 kg",
-      "akkulaufzeit": "12 Stunden",
-      "verbindung": "Bluetooth, USB-C",
-      "features": "ActiveTrack, SuperSmooth"
     }
   },
   {
@@ -518,22 +484,6 @@
     }
   },
   {
-    "produktname": "SanDisk Extreme Pro SDXC 128GB",
-    "beschreibung": "Hochleistungs-Speicherkarte für professionelle Fotografie und Video.",
-    "bild": "sandisk_extreme_pro_128gb.jpg",
-    "preis": 39.99,
-    "kategorie": "Speicher",
-    "lagerbestand": 150,
-    "bewertung": 4.8,
-    "bewertungen": 2000,
-    "TechnischeDaten": {
-      "speicherkapazität": "128 GB",
-      "geschwindigkeit": "170 MB/s",
-      "klasse": "UHS-I, V30",
-      "kompatibilität": "Kameras, Drohnen"
-    }
-  },
-  {
     "produktname": "Neewer 660 LED Videolicht",
     "beschreibung": "Professionelles LED-Licht für Videoaufnahmen mit einstellbarer Farbtemperatur.",
     "bild": "neewer_660_led.jpg",
@@ -547,22 +497,6 @@
       "leistung": "40W",
       "gewicht": "1.5 kg",
       "stromversorgung": "Netzteil oder Akku"
-    }
-  },
-  {
-    "produktname": "Rode VideoMic NTG",
-    "beschreibung": "Ein vielseitiges Richtrohrmikrofon für professionelle Audioaufnahmen.",
-    "bild": "rode_videomic_ntg.jpg",
-    "preis": 249.0,
-    "kategorie": "Audio",
-    "lagerbestand": 35,
-    "bewertung": 4.8,
-    "bewertungen": 870,
-    "TechnischeDaten": {
-      "typ": "Richtrohr",
-      "frequenzgang": "20Hz-20kHz",
-      "gewicht": "94 g",
-      "anschluss": "USB-C, 3.5mm"
     }
   },
   {
