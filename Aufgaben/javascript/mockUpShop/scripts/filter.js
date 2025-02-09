@@ -217,3 +217,5 @@ function renderProducts(products) {
     );
   });
 }
+
+updateFilters();
