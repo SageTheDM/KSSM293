@@ -23,7 +23,7 @@
   },
   {
     "produktname": "Fujifilm X100V",
-    "beschreibung": "Die Fujifilm X100V kombiniert klassische Kameradesigns mit moderner Technologie, ideal für Street Photography mit einer erstklassigen Festbrennweite und außergewöhnlicher Bildqualität.",
+    "beschreibung": "Die Fujifilm X100V kombiniert klassische Kameradesigns mit moderner Technologie, ideal für Street Photography mit einer erstklassigen Festbrennweite und aussergewöhnlicher Bildqualität.",
     "bild": "fujifilm_x100v.jpg",
     "preis": 1499.0,
     "kategorie": "Kameras",
@@ -133,7 +133,7 @@
   },
   {
     "produktname": "Sony Alpha 7R IV",
-    "beschreibung": "Die Sony Alpha 7R IV bietet eine hohe Auflösung von 61 MP und ist ideal für professionelle Fotografen, die außergewöhnliche Detailtreue benötigen.",
+    "beschreibung": "Die Sony Alpha 7R IV bietet eine hohe Auflösung von 61 MP und ist ideal für professionelle Fotografen, die aussergewöhnliche Detailtreue benötigen.",
     "bild": "sony_a7r_iv.jpg",
     "preis": 3299.0,
     "kategorie": "Kameras",
@@ -368,7 +368,7 @@
   },
   {
     "produktname": "DJI RS 3 Pro",
-    "beschreibung": "Ein professioneller 3-Achsen-Gimbal für Kameras, der außergewöhnliche Stabilität und Kontrolle bietet.",
+    "beschreibung": "Ein professioneller 3-Achsen-Gimbal für Kameras, der aussergewöhnliche Stabilität und Kontrolle bietet.",
     "bild": "dji_rs3_pro.jpg",
     "preis": 869.0,
     "kategorie": "Stabilisatoren",
@@ -603,7 +603,7 @@
   },
   {
     "produktname": "Aputure Light Dome II",
-    "beschreibung": "Ein professioneller Softbox-Diffusor für Video- und Studioaufnahmen mit gleichmäßigem Licht.",
+    "beschreibung": "Ein professioneller Softbox-Diffusor für Video- und Studioaufnahmen mit gleichmässigem Licht.",
     "bild": "aputure_light_dome_ii.jpg",
     "preis": 179.0,
     "kategorie": "Studio-Beleuchtung",
@@ -751,7 +751,7 @@
   },
   {
     "produktname": "Sony FX6",
-    "beschreibung": "Die Sony FX6 ist eine kompakte Cine-Kamera mit einem Full-Frame-Sensor und einer außergewöhnlichen 4K-Videoleistung.",
+    "beschreibung": "Die Sony FX6 ist eine kompakte Cine-Kamera mit einem Full-Frame-Sensor und einer aussergewöhnlichen 4K-Videoleistung.",
     "bild": "sony_fx6.jpg",
     "preis": 5999.0,
     "kategorie": "Kameras",
@@ -999,7 +999,7 @@
   },
   {
     "produktname": "Sigma 12-24mm f/4 DG HSM Art",
-    "beschreibung": "Ein Ultraweitwinkel-Zoomobjektiv mit hervorragender Bildqualität und außergewöhnlicher Leistung bei schwachem Licht.",
+    "beschreibung": "Ein Ultraweitwinkel-Zoomobjektiv mit hervorragender Bildqualität und aussergewöhnlicher Leistung bei schwachem Licht.",
     "bild": "sigma_12_24mm.jpg",
     "preis": 1499.0,
     "kategorie": "Objektive",
@@ -1154,7 +1154,7 @@
   },
   {
     "produktname": "Sony A1",
-    "beschreibung": "Die Sony A1 ist eine Spitzenkamera für Profis, die 50.1 MP mit 8K-Video und außergewöhnlicher Geschwindigkeit kombiniert.",
+    "beschreibung": "Die Sony A1 ist eine Spitzenkamera für Profis, die 50.1 MP mit 8K-Video und aussergewöhnlicher Geschwindigkeit kombiniert.",
     "bild": "sony_a1.jpg",
     "preis": 6499.0,
     "kategorie": "Kameras",
@@ -1356,7 +1356,7 @@
   },
   {
     "produktname": "Fujifilm XF 18-135mm f/3.5-5.6 R LM OIS WR",
-    "beschreibung": "Ein All-in-One-Zoom-Objektiv mit großem Brennweitenbereich und Wetterfestigkeit, ideal für vielseitige Aufnahmesituationen.",
+    "beschreibung": "Ein All-in-One-Zoom-Objektiv mit grossem Brennweitenbereich und Wetterfestigkeit, ideal für vielseitige Aufnahmesituationen.",
     "bild": "fujifilm_xf_18_135mm.jpg",
     "preis": 899.0,
     "kategorie": "Objektive",

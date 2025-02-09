@@ -1,8 +1,8 @@
 function initMap() {
     // Koordinaten für Hauptsitz und Nebensitz
     const locations = {
-        hauptsitz: [52.5200, 13.4050], // Berlin
-        nebensitz: [47.3769, 8.5417]   // Zürich
+        hauptsitz: [47.044287, 9.440292], // Kantonsschule Sargans
+        nebensitz: [46.899024, 9.564224]   // Trimmis
     };
 
     let currentLocation = locations.hauptsitz;
@@ -45,3 +45,5 @@ function initMap() {
         marker.setLatLng(currentLocation);
     });
 }
+
+initMap();

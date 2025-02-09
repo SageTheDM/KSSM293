@@ -118,7 +118,7 @@ ${paymentInstructions}
 
 Vielen Dank für Ihre Bestellung! Bei weiteren Fragen stehen wir Ihnen gerne zur Verfügung.
 
-Mit freundlichen Grüßen,  
+Mit freundlichen Grüssen,  
 Ihr Photofuel.tech Team
         `;
 

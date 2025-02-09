@@ -11,6 +11,7 @@
     <script src="scripts/dropdown.js" defer></script>
     <script src="scripts/filter.js" defer></script>
     <script src="scripts/map.js" defer></script>
+    <script src="scripts/faq.js" defer></script>
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   </head>
   <body>
@@ -102,22 +103,8 @@
       <!-- FAQ Section -->
       <section id="faq">
         <h2>Häufig gestellte Fragen</h2>
-        <dl>
-          <dt>Welche Produkte bieten Sie an?</dt>
-          <dd>
-            Wir bieten eine breite Palette an Fotografie-Ausrüstung, von Kameras
-            bis hin zu Zubehör.
-          </dd>
-          <dt>Wie kann ich Bestellungen aufgeben?</dt>
-          <dd>
-            Sie können Ihre Bestellungen direkt über unsere Website aufgeben.
-          </dd>
-          <dt>Bieten Sie Beratung an?</dt>
-          <dd>
-            Ja, wir bieten massgeschneiderte Beratung für Ihre
-            Fotografiebedürfnisse an.
-          </dd>
-        </dl>
+        <input type="text" id="search" placeholder="Frage suchen..." onkeyup="filterFAQ()">
+        <div id="faq"></div>
       </section>
 
       <!-- Impressum Section -->
@@ -125,8 +112,9 @@
         <h2>Impressum</h2>
         <address>
           Photofuel.tech<br />
-          Musterstrasse 123<br />
-          7000 Chur, Bündnerland<br />
+          Kantonsschule Sargans <br />
+          Pizolstrasse 14<br />
+          7320 Sargans<br />
           Schweiz<br />
           E-Mail: <a href="mailto:info@photofuel.tech">info@photofuel.tech</a
           ><br />

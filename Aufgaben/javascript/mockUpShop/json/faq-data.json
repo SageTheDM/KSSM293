@@ -1,0 +1,58 @@
+[
+    {
+        "question": "Welche Produkte bieten Sie an?",
+        "answer": "Wir bieten eine breite Palette an Fotografie-Ausrüstung, von Kameras bis hin zu Zubehör."
+    },
+    {
+        "question": "Wie kann ich Bestellungen aufgeben?",
+        "answer": "Sie können Ihre Bestellungen direkt über unsere Website aufgeben."
+    },
+    {
+        "question": "Bieten Sie Beratung an?",
+        "answer": "Ja, wir bieten massgeschneiderte Beratung auf Anfrage und ohne zusätzlichen Kostenzuschlag zu einer Bestellung an."
+    },
+    {
+        "question": "Wird beim Bestellen auf Kompatibilität geprüft?",
+        "answer": "Nein, unsere Webseite tut dies nicht, aber sobald die Bestellung abgesendet wurde, wird diese von einem Mitarbeiter überprüft und man setzt sich direkt mit Ihnen in Verbindung."
+    },
+    {
+        "question": "Haben Sie eine Garantie auf Ihre Produkte?",
+        "answer": "Ja, alle Produkte haben eine Herstellergarantie. Weitere Informationen finden Sie auf den jeweiligen Produktseiten."
+    },
+    {
+        "question": "Kann ich meine Bestellung nach dem Absenden ändern?",
+        "answer": "Leider ist eine Änderung der Bestellung nach dem Absenden nicht möglich. Bitte überprüfen Sie Ihre Bestellung sorgfältig, bevor Sie sie abschicken."
+    },
+    {
+        "question": "Wie lange dauert die Lieferung?",
+        "answer": "Die Lieferung dauert in der Regel 3 bis 5 Werktage, abhängig von Ihrem Standort innerhalb der Schweiz."
+    },
+    {
+        "question": "Bieten Sie internationalen Versand an?",
+        "answer": "Nein, wir liefern ausschliesslich innerhalb der Schweiz."
+    },
+    {
+        "question": "Sind die Produktfotos urheberrechtlich geschützt?",
+        "answer": "Da es sich nur um eine Schulwebseite handelt, halten wir kein Urheberrecht an den Fotos. Falls Sie ein Foto erkennen, das Ihnen gehört, können Sie sich gerne bei info@photofuel.tech melden, und wir werden das Foto entfernen."
+    },
+    {
+        "question": "Wie kann ich mich für den Newsletter anmelden?",
+        "answer": "Sie können sich für unseren Newsletter anmelden, indem Sie das Anmeldeformular auf unserer Webseite ausfüllen."
+    },
+    {
+        "question": "Bieten Sie Rabatte an?",
+        "answer": "Ja, wir bieten gelegentliche Rabatte und Sonderaktionen an. Abonnieren Sie unseren Newsletter, um über aktuelle Angebote informiert zu bleiben."
+    },
+    {
+        "question": "Kann ich eine Rückerstattung erhalten, wenn ich mit einem Produkt nicht zufrieden bin?",
+        "answer": "Ja, Sie können eine Rückerstattung beantragen, wenn Sie mit dem Produkt innerhalb von 30 Tagen nach dem Kauf nicht zufrieden sind, solange es in unbenutztem Zustand ist."
+    },
+    {
+        "question": "Wie kann ich den Kundenservice erreichen?",
+        "answer": "Sie können uns per E-Mail unter support@photofuel.tech oder telefonisch unter unserer Service-Hotline erreichen."
+    },
+    {
+        "question": "Akzeptieren Sie Geschenkgutscheine?",
+        "answer": "Wir akzeptieren keine Geschenkgutscheine. Auf Absprache können jedoch gültige Steam-Gutscheine als Barersatz an der Kasse verwendet werden."
+    }
+]
