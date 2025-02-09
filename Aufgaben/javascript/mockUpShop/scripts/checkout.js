@@ -54,32 +54,17 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Auto-fill functionality for form fields using data from localStorage
-    const fields = [
-        "firstname", "lastname", "email", "phone", "street", "number", "zipcode", "city"
-    ];
-
-    fields.forEach(field => {
-        const savedData = localStorage.getItem(`settings-${field}`);
-        if (savedData) {
-            const inputElement = document.getElementById(`settings-${field}`);
-            if (inputElement) {
-                inputElement.value = savedData;
-            }
-        }
-    });
-
     // Bestellformular-Absenden
     document.getElementById("submit-order").addEventListener("click", () => {
-        const firstName = document.getElementById("settings-firstname").value.trim();
-        const lastName = document.getElementById("settings-lastname").value.trim();
-        const email = document.getElementById("settings-email").value.trim();
+        const firstName = document.getElementById("firstname").value.trim();
+        const lastName = document.getElementById("lastname").value.trim();
+        const email = document.getElementById("email").value.trim();
         const deliveryOption = document.querySelector('input[name="delivery-option"]:checked')?.value;
         const paymentMethod = document.querySelector('input[name="payment-method"]:checked')?.value;
         const orderNumber = Math.floor(10000 + Math.random() * 90000);
 
         const anrede = document.querySelector('input[name="anrede"]:checked')?.value || "";
-        const customAnrede = document.getElementById("settings-custom-anrede").value.trim();
+        const customAnrede = document.getElementById("custom-anrede").value.trim();
         const fullAnrede = customAnrede || anrede;
 
         // Überprüfung, ob alle Felder ausgefüllt sind
@@ -121,26 +106,26 @@ E-Mail: ${email}
 Lieferoption: ${deliveryOption}
 Zahlungsmethode: ${paymentMethod}
 
-Bestellübersicht:
-${Object.values(groupedCart)
-                .map(item => `${item.produktname}: CHF ${item.price.toFixed(2)} (Menge: ${item.quantity})`)
-                .join("\n")}
-
 Gesamtbetrag: CHF ${gesamtbetrag}
 
+Produkte:
+${Object.values(groupedCart)
+                .map(item => `- ${item.produktname} (CHF ${item.price.toFixed(2)}, Menge: ${item.quantity})`)
+                .join("\n")}
+
+Zahlungsanweisungen:
 ${paymentInstructions}
 
-Viel Spass mit Ihrem Kauf!`;
+Vielen Dank für Ihre Bestellung! Bei weiteren Fragen stehen wir Ihnen gerne zur Verfügung.
 
-        // Speichern der Formulardaten in localStorage
-        fields.forEach(field => {
-            const value = document.getElementById(`settings-${field}`).value.trim();
-            if (value) {
-                localStorage.setItem(`settings-${field}`, value);
-            }
-        });
+Mit freundlichen Grüssen,  
+Ihr Photofuel.tech Team
+        `;
 
-        // Zeigen Sie die Bestellbestätigung an
-        alert(orderSummary);
+        const mailtoLink = `mailto:info@photofuel.tech?subject=Bestellung%20${orderNumber}&body=${encodeURIComponent(orderSummary)}`;
+
+        // Open the mailto link in the email client
+        window.location.href = mailtoLink;
+        localStorage.removeItem("cart");
     });
 });
