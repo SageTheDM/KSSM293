@@ -28,7 +28,7 @@ function renderFAQ(faqData) {
 // Funktion, um die Antwort ein- oder auszublenden
 function toggleAnswer(index) {
     const allAnswers = document.querySelectorAll(".faq-answer");
-    allAnswers.forEach((el, i) => {
+    allAnswers.forEach((el) => {
         el.classList.remove("open"); // Alle Antworten schliessen
     });
 
