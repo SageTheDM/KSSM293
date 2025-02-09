@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Photofuel - Store</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <script src="scripts/footer.js" defer></script>
     <script src="scripts/script.js" defer></script>
     <script src="scripts/dropdown.js" defer></script>
     <script src="scripts/filter.js" defer></script>
     <script src="scripts/map.js" defer></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   </head>
   <body>
     <header-component></header-component>
@@ -133,6 +135,11 @@
 
         <div id="map-container">
           <h2>Unsere Lage:</h2>
+          <label for="location-select">Standort auswählen:</label>
+            <select id="location-select">
+              <option value="hauptsitz">Hauptsitz</option>
+              <option value="nebensitz">Nebensitz</option>
+            </select>
           <input id="search-box" type="text" placeholder="Ort suchen...">
           <div id="map"></div>
           <button id="open-in-open-street-map">In Google Maps öffnen</button>
