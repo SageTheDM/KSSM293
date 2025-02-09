@@ -21,11 +21,11 @@ document.addEventListener("DOMContentLoaded", function () {
     // Speichert die aktuellen Werte im LocalStorage
     function saveSettings() {
         fields.forEach(field => {
-            const input = document.getElementById(`${field}`);
+            const input = document.getElementById(field);
             if (input) {
                 const value = input.value.trim();
                 if (value) {
-                    localStorage.setItem(`${field}`, value); // Save field value individually
+                    localStorage.setItem(field, value); // Save field value individually
                 }
             }
         });
