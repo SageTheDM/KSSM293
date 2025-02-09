@@ -1,6 +1,6 @@
 // Event Listener für Kategorieauswahl und Filteranwendung
-document.getElementById('category').addEventListener('change', updateFilters);
-document.getElementById('applyFilters').addEventListener('click', applyFilters);
+document.getElementById("category").addEventListener("change", updateFilters);
+document.getElementById("applyFilters").addEventListener("click", applyFilters);
 
 // Immer verfügbare Basisfilter
 const baseFilters = `
@@ -14,14 +14,14 @@ const baseFilters = `
 
 // Funktion zur Aktualisierung der dynamischen Filter basierend auf der Kategorie
 function updateFilters() {
-    const category = document.getElementById('category').value;
-    const filterContainer = document.getElementById('dynamic-filters');
-    filterContainer.innerHTML = baseFilters;
+  const category = document.getElementById("category").value;
+  const filterContainer = document.getElementById("dynamic-filters");
+  filterContainer.innerHTML = baseFilters;
 
-    let categoryFilters = '';
-    switch (category) {
-        case 'Kameras':
-            categoryFilters = `
+  let categoryFilters = "";
+  switch (category) {
+    case "Kameras":
+      categoryFilters = `
                 <label for="min-resolution">Min. Auflösung (MP):</label>
                 <input type="number" id="min-resolution" placeholder="z.B. 24" />
                 <label for="sensor">Sensorgrösse:</label>
@@ -42,10 +42,10 @@ function updateFilters() {
                 <label for="max-weight">Max. Gewicht (g):</label>
                 <input type="number" id="max-weight" placeholder="Max Gewicht" />
             `;
-            break;
+      break;
 
-        case 'Objektive':
-            categoryFilters = `
+    case "Objektive":
+      categoryFilters = `
                 <label for="focal-length">Brennweite:</label>
                 <input type="text" id="focal-length" placeholder="z.B. 24-70mm" />
                 <label for="max-aperture">Maximale Blende:</label>
@@ -55,10 +55,10 @@ function updateFilters() {
                 <label for="compatibility">Kompatibilität:</label>
                 <input type="text" id="compatibility" placeholder="z.B. Sony E-Mount" />
             `;
-            break;
+      break;
 
-        case 'Drohnen':
-            categoryFilters = `
+    case "Drohnen":
+      categoryFilters = `
                 <label for="flight-time">Min. Flugzeit (Minuten):</label>
                 <input type="number" id="flight-time" placeholder="z.B. 20" />
                 <label for="range">Min. Reichweite (km):</label>
@@ -68,112 +68,152 @@ function updateFilters() {
                 <label for="features">Features:</label>
                 <input type="text" id="features" placeholder="z.B. Hinderniserkennung" />
             `;
-            break;
-        default:
-            console.log("no filter found: " + category);
-            break;
-    }
+      break;
+    default:
+      console.log("no filter found: " + category);
+      break;
+  }
 
-    filterContainer.innerHTML += categoryFilters;
+  filterContainer.innerHTML += categoryFilters;
 }
 
 // Funktion zur Anwendung der Filter
 function applyFilters() {
-    const category = document.getElementById('category').value;
-    const minPrice = parseFloat(document.getElementById('min-price')?.value) || 0;
-    const maxPrice = parseFloat(document.getElementById('max-price')?.value) || Infinity;
-    const brand = document.getElementById('brand')?.value.toLowerCase() || '';
+  const category = document.getElementById("category").value;
+  const minPrice = parseFloat(document.getElementById("min-price")?.value) || 0;
+  const maxPrice =
+    parseFloat(document.getElementById("max-price")?.value) || Infinity;
+  const brand = document.getElementById("brand")?.value.toLowerCase() || "";
 
-    fetch('json/inventory.json')
-        .then(response => response.json())
-        .then(products => {
-            let filteredProducts = products.filter(product => {
-                const isCategoryMatch = category === 'all' || product.kategorie === category;
-                const isPriceMatch = product.preis >= minPrice && product.preis <= maxPrice;
-                const isBrandMatch = !brand || product.name.toLowerCase().includes(brand); // Marke im Namen suchen
+  fetch("json/inventory.json")
+    .then((response) => response.json())
+    .then((products) => {
+      let filteredProducts = products.filter((product) => {
+        const isCategoryMatch =
+          category === "all" || product.kategorie === category;
+        const isPriceMatch =
+          product.preis >= minPrice && product.preis <= maxPrice;
+        const isBrandMatch =
+          !brand || product.produktname.toLowerCase().includes(brand); // Marke im Namen suchen
 
-                let isProductMatch = true;
-                if (category === 'Kameras') {
-                    const minResolution = parseFloat(document.getElementById('min-resolution')?.value) || 0;
-                    const sensor = document.getElementById('sensor')?.value || 'all';
-                    const videoResolution = document.getElementById('video-resolution')?.value || 'all';
-                    const isoRange = document.getElementById('iso-range')?.value || '';
-                    const maxWeight = parseFloat(document.getElementById('max-weight')?.value) || Infinity;
+        let isProductMatch = true;
+        if (category === "Kameras") {
+          const minResolution =
+            parseFloat(document.getElementById("min-resolution")?.value) || 0;
+          const sensor = document.getElementById("sensor")?.value || "all";
+          const videoResolution =
+            document.getElementById("video-resolution")?.value || "all";
+          const isoRange = document.getElementById("iso-range")?.value || "";
+          const maxWeight =
+            parseFloat(document.getElementById("max-weight")?.value) ||
+            Infinity;
 
-                    if (minResolution > 0) {
-                        isProductMatch = isProductMatch && parseFloat(product.TechnischeDaten?.sensor?.split(' ')[0]) >= minResolution;
-                    }
-                    if (sensor !== 'all') {
-                        isProductMatch = isProductMatch && product.TechnischeDaten?.sensor?.includes(sensor);
-                    }
-                    if (videoResolution !== 'all') {
-                        isProductMatch = isProductMatch && product.TechnischeDaten?.video?.includes(videoResolution);
-                    }
-                    if (isoRange && !product.TechnischeDaten?.iso_bereich?.includes(isoRange)) {
-                        isProductMatch = false;
-                    }
-                    if (maxWeight !== Infinity && product.TechnischeDaten?.gewicht > maxWeight) {
-                        isProductMatch = false;
-                    }
-                }
+          if (minResolution > 0) {
+            isProductMatch =
+              isProductMatch &&
+              parseFloat(product.TechnischeDaten?.sensor?.split(" ")[0]) >=
+                minResolution;
+          }
+          if (sensor !== "all") {
+            isProductMatch =
+              isProductMatch &&
+              product.TechnischeDaten?.sensor?.includes(sensor);
+          }
+          if (videoResolution !== "all") {
+            isProductMatch =
+              isProductMatch &&
+              product.TechnischeDaten?.video?.includes(videoResolution);
+          }
+          if (
+            isoRange &&
+            !product.TechnischeDaten?.iso_bereich?.includes(isoRange)
+          ) {
+            isProductMatch = false;
+          }
+          if (
+            maxWeight !== Infinity &&
+            product.TechnischeDaten?.gewicht > maxWeight
+          ) {
+            isProductMatch = false;
+          }
+        }
 
-                if (category === 'Objektive') {
-                    const focalLength = document.getElementById('focal-length')?.value || '';
-                    const maxAperture = document.getElementById('max-aperture')?.value || '';
-                    const filterSize = parseFloat(document.getElementById('filter-size')?.value) || 0;
-                    const compatibility = document.getElementById('compatibility')?.value || '';
+        if (category === "Objektive") {
+          const focalLength =
+            document.getElementById("focal-length")?.value || "";
+          const maxAperture =
+            document.getElementById("max-aperture")?.value || "";
+          const filterSize =
+            parseFloat(document.getElementById("filter-size")?.value) || 0;
+          const compatibility =
+            document.getElementById("compatibility")?.value || "";
 
-                    isProductMatch =
-                        (!focalLength || product.TechnischeDaten?.brennweite?.includes(focalLength)) &&
-                        (!maxAperture || product.TechnischeDaten?.blende === maxAperture) &&
-                        (!filterSize || product.TechnischeDaten?.filterdurchmesser === `${filterSize}mm`) &&
-                        (!compatibility || product.TechnischeDaten?.kompatibilität?.includes(compatibility));
-                }
+          isProductMatch =
+            (!focalLength ||
+              product.TechnischeDaten?.brennweite?.includes(focalLength)) &&
+            (!maxAperture || product.TechnischeDaten?.blende === maxAperture) &&
+            (!filterSize ||
+              product.TechnischeDaten?.filterdurchmesser ===
+                `${filterSize}mm`) &&
+            (!compatibility ||
+              product.TechnischeDaten?.kompatibilität?.includes(compatibility));
+        }
 
-                if (category === 'Drohnen') {
-                    const flightTime = parseFloat(document.getElementById('flight-time')?.value) || 0;
-                    const range = parseFloat(document.getElementById('range')?.value) || 0;
-                    const cameraResolution = document.getElementById('camera-resolution')?.value || '';
-                    const features = document.getElementById('features')?.value.toLowerCase() || '';
+        if (category === "Drohnen") {
+          const flightTime =
+            parseFloat(document.getElementById("flight-time")?.value) || 0;
+          const range =
+            parseFloat(document.getElementById("range")?.value) || 0;
+          const cameraResolution =
+            document.getElementById("camera-resolution")?.value || "";
+          const features =
+            document.getElementById("features")?.value.toLowerCase() || "";
 
-                    isProductMatch =
-                        (flightTime === 0 || product.TechnischeDaten?.flugzeit >= flightTime) &&
-                        (range === 0 || product.TechnischeDaten?.reichweite >= range) &&
-                        (!cameraResolution || product.TechnischeDaten?.kamera?.includes(cameraResolution)) &&
-                        (!features || Object.values(product.TechnischeDaten).some(val => val.toLowerCase().includes(features)));
-                }
+          isProductMatch =
+            (flightTime === 0 ||
+              product.TechnischeDaten?.flugzeit >= flightTime) &&
+            (range === 0 || product.TechnischeDaten?.reichweite >= range) &&
+            (!cameraResolution ||
+              product.TechnischeDaten?.kamera?.includes(cameraResolution)) &&
+            (!features ||
+              Object.values(product.TechnischeDaten).some((val) =>
+                val.toLowerCase().includes(features)
+              ));
+        }
 
-                return isCategoryMatch && isPriceMatch && isBrandMatch && isProductMatch;
-            });
+        return (
+          isCategoryMatch && isPriceMatch && isBrandMatch && isProductMatch
+        );
+      });
 
-            renderProducts(filteredProducts);
-        })
-        .catch(error => {
-            console.error('Fehler beim Filtern:', error);
-        });
+      renderProducts(filteredProducts);
+    })
+    .catch((error) => {
+      console.error("Fehler beim Filtern:", error);
+    });
 }
 
 // Funktion zum Anzeigen der gefilterten Produkte
 function renderProducts(products) {
-    const container = document.getElementById('card-container');
-    container.innerHTML = ''; // Vorherige Karten löschen
+  const container = document.getElementById("card-container");
+  container.innerHTML = ""; // Vorherige Karten löschen
 
-    if (products.length === 0) {
-        container.innerHTML = '<p>Keine Produkte gefunden.</p>';
-        return;
-    }
+  if (products.length === 0) {
+    container.innerHTML = "<p>Keine Produkte gefunden.</p>";
+    return;
+  }
 
-    products.forEach(product => {
-        createCard(
-            product.produktname,
-            product.beschreibung,
-            product.bild,
-            product.preis,
-            product.kategorie,
-            product.lagerbestand,
-            product.bewertung,
-            product.bewertungen,
-            product.TechnischeDaten
-        );
-    });
+  products.forEach((product) => {
+    createCard(
+      product.produktname,
+      product.beschreibung,
+      product.bild,
+      product.preis,
+      product.kategorie,
+      product.lagerbestand,
+      product.bewertung,
+      product.bewertungen,
+      product.TechnischeDaten
+    );
+  });
 }
