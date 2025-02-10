@@ -1,17 +1,27 @@
 document.addEventListener("DOMContentLoaded", () => {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
-    const gesamtbetrag = localStorage.getItem("gesamtbetrag") || "0.00";
+    const totalAmount = localStorage.getItem("gesamtbetrag") || "0.00";
     const invoiceContainer = document.getElementById("invoice");
+
+    // Vorherige Formulardaten laden
+    document.getElementById("firstname").value = localStorage.getItem("firstname") || "";
+    document.getElementById("lastname").value = localStorage.getItem("lastname") || "";
+    document.getElementById("email").value = localStorage.getItem("email") || "";
+    document.getElementById("phone").value = localStorage.getItem("phone") || "";
+    document.getElementById("street").value = localStorage.getItem("street") || "";
+    document.getElementById("number").value = localStorage.getItem("number") || "";
+    document.getElementById("zipcode").value = localStorage.getItem("zipcode") || "";
+    document.getElementById("city").value = localStorage.getItem("city") || "";
 
     // Gruppierung der Produkte im Warenkorb
     function groupCartItems(cart) {
-        return cart.reduce((acc, item) => {
+        return cart.reduce((groupedItems, item) => {
             const key = item.produktname;
-            if (!acc[key]) {
-                acc[key] = { ...item, quantity: 0 };
+            if (!groupedItems[key]) {
+                groupedItems[key] = { ...item, quantity: 0 };
             }
-            acc[key].quantity += item.quantity || 1;
-            return acc;
+            groupedItems[key].quantity += item.quantity || 1;
+            return groupedItems;
         }, {});
     }
 
@@ -33,88 +43,50 @@ document.addEventListener("DOMContentLoaded", () => {
                 </li>
             `;
         });
-        invoiceText += `</ul><p><strong>Gesamtbetrag: CHF ${gesamtbetrag}</strong></p>`;
+        invoiceText += `</ul><p><strong>Gesamtbetrag: CHF ${totalAmount}</strong></p>`;
         invoiceContainer.innerHTML = invoiceText;
     }
 
     // Faktura anzeigen
     generateInvoice();
 
-    // Wenn Bar/Kreditkarte ausgewählt wird, automatisch Abholung auswählen und Lieferung deaktivieren
-    document.querySelectorAll('input[name="payment-method"]').forEach(paymentOption => {
-        paymentOption.addEventListener("change", () => {
-            const deliveryOption = document.querySelector('input[name="delivery-option"][value="Abholung"]');
-            const deliveryOptionRadio = document.querySelector('input[name="delivery-option"][value="Lieferung"]');
-            if (paymentOption.value === "Bar/Kreditkarte") {
-                if (deliveryOption) deliveryOption.checked = true;
-                if (deliveryOptionRadio) deliveryOptionRadio.disabled = true;
-            } else {
-                if (deliveryOptionRadio) deliveryOptionRadio.disabled = false;
-            }
-        });
-    });
-
     // Bestellformular-Absenden
     document.getElementById("submit-order").addEventListener("click", () => {
         const firstName = document.getElementById("firstname").value.trim();
         const lastName = document.getElementById("lastname").value.trim();
         const email = document.getElementById("email").value.trim();
-        const deliveryOption = document.querySelector('input[name="delivery-option"]:checked')?.value;
-        const paymentMethod = document.querySelector('input[name="payment-method"]:checked')?.value;
+        const phone = document.getElementById("phone").value.trim();
+        const street = document.getElementById("street").value.trim();
+        const number = document.getElementById("number").value.trim();
+        const zipcode = document.getElementById("zipcode").value.trim();
+        const city = document.getElementById("city").value.trim();
         const orderNumber = Math.floor(10000 + Math.random() * 90000);
 
-        const anrede = document.querySelector('input[name="anrede"]:checked')?.value || "";
-        const customAnrede = document.getElementById("custom-anrede").value.trim();
-        const fullAnrede = customAnrede || anrede;
-
         // Überprüfung, ob alle Felder ausgefüllt sind
-        if (!firstName || !lastName || !email || !deliveryOption || !paymentMethod) {
+        if (!firstName || !lastName || !email || !phone || !street || !number || !zipcode || !city) {
             alert("Bitte füllen Sie alle Felder aus.");
             return;
         }
 
         const groupedCart = groupCartItems(cart);
 
-        // Payment instructions based on the selected method
-        let paymentInstructions = "";
-        switch (paymentMethod) {
-            case "TWINT":
-                paymentInstructions = `
-Bitte begleichen Sie den Betrag von CHF ${gesamtbetrag} via TWINT an die folgende Nummer:
-+41 76 306 72 03`;
-                break;
-            case "Bar/Kreditkarte":
-                paymentInstructions = `
-Bitte stellen Sie sicher, dass der Betrag von CHF ${gesamtbetrag} bei der Abholung in bar oder per Kreditkarte beglichen werden kann.`;
-                break;
-            case "Rechnung":
-                paymentInstructions = `
-Sie erhalten eine Rechnung mit 30 Tagen Zahlfrist. Wir gewähren 1% Skonto, wenn die Zahlung innerhalb von 3 Tagen erfolgt.`;
-                break;
-            default:
-                paymentInstructions = "Keine spezifischen Zahlungsanweisungen verfügbar.";
-        }
-
         const orderSummary = `
-Guten Tag ${fullAnrede} ${firstName} ${lastName},
+Guten Tag ${firstName} ${lastName},
 
 Vielen Dank für Ihre Bestellung bei Photofuel.tech! Hier sind die Details Ihrer Bestellung:
 
 Bestellnummer: ${orderNumber}
-Name: ${fullAnrede} ${firstName} ${lastName}
+Name: ${firstName} ${lastName}
 E-Mail: ${email}
-Lieferoption: ${deliveryOption}
-Zahlungsmethode: ${paymentMethod}
+Telefonnummer: ${phone}
+Adresse: ${street} ${number}, ${zipcode} ${city}
 
-Gesamtbetrag: CHF ${gesamtbetrag}
+Gesamtbetrag: CHF ${totalAmount}
 
 Produkte:
 ${Object.values(groupedCart)
                 .map(item => `- ${item.produktname} (CHF ${item.price.toFixed(2)}, Menge: ${item.quantity})`)
                 .join("\n")}
-
-Zahlungsanweisungen:
-${paymentInstructions}
 
 Vielen Dank für Ihre Bestellung! Bei weiteren Fragen stehen wir Ihnen gerne zur Verfügung.
 
@@ -122,17 +94,27 @@ Mit freundlichen Grüssen,
 Ihr Photofuel.tech Team
         `;
 
-        const mailtoLink = `mailto:info@photofuel.tech?subject=Bestellung%20${orderNumber}&body=${encodeURIComponent(orderSummary)}`;
+        const mailtoLink = `mailto:${email};%20info@photofuel.tech?subject=Bestellung%20${orderNumber}&body=${encodeURIComponent(orderSummary)}`;
 
-        // Open the mailto link in the email client
         window.location.href = mailtoLink;
         localStorage.removeItem("cart");
         alert("Bestellung wurde erfolgreich abgeschlossen");
 
-        // Delay redirect to allow mailto to process
+        // Nach Bestellung fragen, ob Daten gespeichert werden sollen
+        if (confirm("Möchten Sie Ihre Daten für zukünftige Bestellungen speichern?")) {
+            localStorage.setItem("firstname", firstName);
+            localStorage.setItem("lastname", lastName);
+            localStorage.setItem("email", email);
+            localStorage.setItem("phone", phone);
+            localStorage.setItem("street", street);
+            localStorage.setItem("number", number);
+            localStorage.setItem("zipcode", zipcode);
+            localStorage.setItem("city", city);
+            localStorage.setItem("autofillEnabled", "true");
+        }
+
         setTimeout(() => {
             window.location.href = "index.html";
         }, 1000);
-
     });
 });
