@@ -60,10 +60,12 @@ document.addEventListener("DOMContentLoaded", () => {
         const number = document.getElementById("number").value.trim();
         const zipcode = document.getElementById("zipcode").value.trim();
         const city = document.getElementById("city").value.trim();
+        const paymentMethod = document.querySelector('input[name="payment-method"]:checked')?.value;
+        const deliveryOption = document.querySelector('input[name="delivery-option"]:checked')?.value;
         const orderNumber = Math.floor(10000 + Math.random() * 90000);
 
         // Überprüfung, ob alle Felder ausgefüllt sind
-        if (!firstName || !lastName || !email || !phone || !street || !number || !zipcode || !city) {
+        if (!firstName || !lastName || !email || !phone || !street || !number || !zipcode || !city || !paymentMethod || !deliveryOption) {
             alert("Bitte füllen Sie alle Felder aus.");
             return;
         }
@@ -80,6 +82,8 @@ Name: ${firstName} ${lastName}
 E-Mail: ${email}
 Telefonnummer: ${phone}
 Adresse: ${street} ${number}, ${zipcode} ${city}
+Lieferoption: ${deliveryOption}
+Zahlungsmethode: ${paymentMethod}
 
 Gesamtbetrag: CHF ${totalAmount}
 
@@ -94,7 +98,7 @@ Mit freundlichen Grüssen,
 Ihr Photofuel.tech Team
         `;
 
-        const mailtoLink = `mailto:${email};%20info@photofuel.tech?subject=Bestellung%20${orderNumber}&body=${encodeURIComponent(orderSummary)}`;
+        const mailtoLink = `mailto:${email}?subject=Bestellung%20${orderNumber}&body=${encodeURIComponent(orderSummary)}`;
 
         window.location.href = mailtoLink;
         localStorage.removeItem("cart");
