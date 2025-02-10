@@ -7,43 +7,48 @@
     <link rel="stylesheet" href="styles.css" />
     <script src="scripts/footer.js" defer></script>
     <script src="scripts/script.js" defer></script>
-    <script src="scripts/dropdown.js"></script>
+    <script src="scripts/dropdown.js" defer></script>
+    <script src="scripts/settings.js" defer></script>
   </head>
   <body>
     <header-component></header-component>
     <main>
       <section id="settings">
-        <h1>Personen bezogene Einstellungen</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
-          accusantium possimus fuga maxime nisi architecto, ipsum cupiditate
-          quisquam optio hic explicabo sunt eius sequi quas vitae magnam non
-          obcaecati dignissimos.
-        </p>
+        <h1>Personenbezogene Einstellungen</h1>
 
-        <h1>Vorgefertigte Einstellungen</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
-          accusantium possimus fuga maxime nisi architecto, ipsum cupiditate
-          quisquam optio hic explicabo sunt eius sequi quas vitae magnam non
-          obcaecati dignissimos.
-        </p>
+        <label>
+          <input type="checkbox" id="autofill-settings" />
+          Checkout-Formular automatisch ausfüllen
+        </label>
 
-        <h1>Simple Einstellungen</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
-          accusantium possimus fuga maxime nisi architecto, ipsum cupiditate
-          quisquam optio hic explicabo sunt eius sequi quas vitae magnam non
-          obcaecati dignissimos.
-        </p>
+        <div id="settings-form">
+          <label for="settings-firstname">Vorname:</label>
+          <input type="text" id="settings-firstname" />
 
-        <h1>Manuelle Einstellungen</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
-          accusantium possimus fuga maxime nisi architecto, ipsum cupiditate
-          quisquam optio hic explicabo sunt eius sequi quas vitae magnam non
-          obcaecati dignissimos.
-        </p>
+          <label for="settings-lastname">Nachname:</label>
+          <input type="text" id="settings-lastname" />
+
+          <label for="settings-email">E-Mail:</label>
+          <input type="email" id="settings-email" />
+
+          <label for="settings-phone">Telefonnummer:</label>
+          <input type="tel" id="settings-phone" />
+
+          <label for="settings-street">Strasse:</label>
+          <input type="text" id="settings-street" />
+
+          <label for="settings-number">Hausnummer:</label>
+          <input type="text" id="settings-number" />
+
+          <label for="settings-zipcode">PLZ:</label>
+          <input type="text" id="settings-zipcode" />
+
+          <label for="settings-city">Ort:</label>
+          <input type="text" id="settings-city" />
+
+          <button id="save-settings">Speichern</button>
+          <button id="clear-settings">Zurücksetzen</button>
+        </div>
       </section>
     </main>
     <footer-component></footer-component>

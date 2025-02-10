@@ -103,7 +103,12 @@
       <!-- FAQ Section -->
       <section id="faq">
         <h2>Häufig gestellte Fragen</h2>
-        <input type="text" id="search" placeholder="Frage suchen..." onkeyup="filterFAQ()">
+        <input
+          type="text"
+          id="search"
+          placeholder="Frage suchen..."
+          onkeyup="filterFAQ()"
+        />
         <div id="faq-display"></div>
       </section>
 
@@ -124,13 +129,15 @@
         <div id="map-container">
           <h2>Unsere Lage:</h2>
           <label for="location-select">Standort auswählen:</label>
-            <select id="location-select">
-              <option value="hauptsitz">Hauptsitz</option>
-              <option value="nebensitz">Nebensitz</option>
-            </select>
-          <input id="search-box" type="text" placeholder="Ort suchen...">
+          <select id="location-select">
+            <option value="hauptsitz">Hauptsitz</option>
+            <option value="nebensitz">Nebensitz</option>
+          </select>
+          <input id="search-box" type="text" placeholder="Ort suchen..." />
           <div id="map"></div>
-          <button id="open-in-open-street-map">In Google Maps öffnen</button>
+          <button id="open-in-open-street-map">
+            In OpenStreetMap Maps öffnen
+          </button>
         </div>
       </section>
 
