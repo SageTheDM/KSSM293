@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
             itemElement.className = 'cart-item';
 
             const itemImage = document.createElement('img');
-            itemImage.src = item.image || "";
+            itemImage.src = "images/" + item.image || "";
             itemImage.alt = item.produktname || "Item";
             itemImage.className = 'cart-item-image';
 
