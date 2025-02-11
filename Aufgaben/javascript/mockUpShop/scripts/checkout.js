@@ -52,6 +52,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Bestellformular-Absenden
     document.getElementById("submit-order").addEventListener("click", () => {
+        const prefixName = (() => {
+            const selectedAnrede = document.querySelector('input[name="anrede"]:checked').value;
+
+            if (selectedAnrede === "Andere") {
+                const customAnrede = document.getElementById("custom-anrede").value.trim();
+                return customAnrede || "Andere"; // Return custom value or "Andere" if nothing is entered
+            }
+
+            // Ensure it's either Herr or Frau
+            return selectedAnrede === "Herr" || selectedAnrede === "Frau" ? selectedAnrede : "Andere";
+        })();
         const firstName = document.getElementById("firstname").value.trim();
         const lastName = document.getElementById("lastname").value.trim();
         const email = document.getElementById("email").value.trim();
@@ -66,14 +77,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Überprüfung, ob alle Felder ausgefüllt sind
         if (!firstName || !lastName || !email || !phone || !street || !number || !zipcode || !city || !paymentMethod || !deliveryOption) {
-            alert("Bitte füllen Sie alle Felder aus.");
+            showPopup("Bitte füllen Sie alle Felder aus.");
             return;
         }
 
         const groupedCart = groupCartItems(cart);
 
         const orderSummary = `
-Guten Tag ${firstName} ${lastName},
+Guten Tag ${prefixName} ${firstName} ${lastName},
 
 Vielen Dank für Ihre Bestellung bei Photofuel.tech! Hier sind die Details Ihrer Bestellung:
 
@@ -102,7 +113,7 @@ Ihr Photofuel.tech Team
 
         window.location.href = mailtoLink;
         localStorage.removeItem("cart");
-        alert("Bestellung wurde erfolgreich abgeschlossen");
+        showPopup("Bestellung wurde erfolgreich abgeschlossen");
 
         // Nach Bestellung fragen, ob Daten gespeichert werden sollen
         if (confirm("Möchten Sie Ihre Daten für zukünftige Bestellungen speichern?")) {
@@ -115,6 +126,8 @@ Ihr Photofuel.tech Team
             localStorage.setItem("zipcode", zipcode);
             localStorage.setItem("city", city);
             localStorage.setItem("autofillEnabled", "true");
+
+            showPopup("Daten wurden gespeichert")
         }
 
         setTimeout(() => {

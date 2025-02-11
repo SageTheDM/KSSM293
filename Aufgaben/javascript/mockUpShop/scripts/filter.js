@@ -187,7 +187,7 @@ function applyFilters() {
       });
 
       renderProducts(filteredProducts);
-      alert("Filter wurden geladen");
+      showPopup("Filter wurden geladen");
     })
     .catch((error) => {
       console.error("Fehler beim Filtern:", error);

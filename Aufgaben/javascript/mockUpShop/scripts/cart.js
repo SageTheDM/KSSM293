@@ -74,11 +74,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to remove an item
     function removeItem(itemName) {
-        cart = cart.filter(item => item.produktname !== itemName);
-        localStorage.setItem('cart', JSON.stringify(cart));
-        console.log("Item removed, new cart:", cart);
-        renderCart();
-        updateTotalPrice();
+        const confirmation = window.confirm(`Möchten Sie das Produkt "${itemName}" wirklich aus dem Warenkorb entfernen?`);
+        if (confirmation) {
+            cart = cart.filter(item => item.produktname !== itemName);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            console.log("Artikel entfernt, neuer Warenkorb:", cart);
+            renderCart();
+            updateTotalPrice();
+            showPopup(`${itemName} wurde aus dem Warenkorb entfernt`);
+        } else {
+            console.log("Entfernung des Artikels abgebrochen.");
+        }
     }
 
     // Handle checkout process

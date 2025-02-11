@@ -25,7 +25,7 @@ class Header extends HTMLElement {
           <li><a href="index.html#faq">Häufig gestellte Fragen</a></li>
           <li><a href="index.html#about-us">Über uns</a></li>
           <li><a href="index.html#impressum">Impressum</a></li>
-           <li><a href="index.html#danke">Danksagung</a></li>
+          <li><a href="index.html#danke">Danksagung</a></li>
           <li><a href="settings.html">Lokale Einstellungen</a></li>
         </ul>
       </div>
@@ -35,7 +35,7 @@ class Header extends HTMLElement {
 
 customElements.define('header-component', Header);
 
-// Funktion, um JSON zu laden und Karten zu erstellen
+// Function to load JSON and create cards
 async function loadCards() {
   try {
     const response = await fetch('json/inventory.json');
@@ -52,7 +52,7 @@ async function loadCards() {
         item.lagerbestand,
         item.bewertung,
         item.bewertungen,
-        item.TechnischeDaten // <-- Ensure this is passed
+        item.TechnischeDaten // Ensure this is passed
       );
     });
 
@@ -61,17 +61,18 @@ async function loadCards() {
   }
 }
 
-// Funktion zum Erstellen einer einzelnen Karte
+// Function to create a single card
 function createCard(produktname, description, image, price, category, stock, rating, reviews, technicalData) {
   const card = document.createElement('div');
   card.className = 'card';
 
   const img = document.createElement('img');
-  img.src = "images/" + image || 'images/fallback-product.jpg'; // Setzt ein Fallback-Bild, falls kein Bild vorhanden ist
+  // If an image is provided, use it; otherwise use a fallback
+  img.src = image ? "images/" + image : 'images/fallback-product.jpg';
   img.alt = produktname;
   img.className = 'card-image';
 
-  // Fallback-Bild bei Fehler laden
+  // Fallback image if an error occurs
   img.onerror = () => {
     img.src = 'images/fallback-product.jpg';
   };
@@ -139,7 +140,7 @@ function createCard(produktname, description, image, price, category, stock, rat
   detailedSection.className = 'detailed-section';
   detailedSection.style.display = 'none';
 
-  // Tabelle für technische Daten erstellen
+  // Create table for technical data
   const technicalTable = document.createElement('table');
   technicalTable.className = 'technical-table';
 
@@ -167,32 +168,32 @@ function createCard(produktname, description, image, price, category, stock, rat
 
   detailedSection.appendChild(technicalTable);
 
-  // Schliessen-Button hinzufügen
+  // Add close button to detailed section
   const closeButton = document.createElement('button');
   closeButton.textContent = 'Schliessen';
   closeButton.className = 'close-button';
   detailedSection.appendChild(closeButton);
 
-  // Event Listener für den Schliessen-Button
+  // Event Listener for the close button
   closeButton.addEventListener('click', () => {
-    card.style.gridColumnEnd = ''; // Setzt das Layout zurück
-    card.style.gridRowEnd = ''; // Setzt das Layout zurück
-    detailedSection.style.display = 'none'; // Versteckt die detaillierte Ansicht
+    card.style.gridColumnEnd = ''; // Reset layout
+    card.style.gridRowEnd = ''; // Reset layout
+    detailedSection.style.display = 'none'; // Hide detailed view
   });
 
   cardContent.appendChild(detailedSection);
 
+  // Event Listener for the expand button
   expandButton.addEventListener('click', () => {
-    const cardContainer = document.getElementById('card-container');
     const cardRect = card.getBoundingClientRect();
     const availableWidth = window.innerWidth - cardRect.left - cardRect.width;
     const availableHeight = window.innerHeight - cardRect.top - cardRect.height;
 
     if (availableWidth > 500) {
-      card.style.gridColumnEnd = 'span 2'; // Vergrössert die Karte auf der X-Achse
+      card.style.gridColumnEnd = 'span 2'; // Expand along X-axis
       detailedSection.style.display = 'block';
     } else if (availableHeight > 500) {
-      card.style.gridRowEnd = 'span 2'; // Vergrössert die Karte auf der Y-Achse
+      card.style.gridRowEnd = 'span 2'; // Expand along Y-axis
       detailedSection.style.display = 'block';
     } else {
       card.style.gridColumnEnd = 'span 2';
@@ -203,12 +204,12 @@ function createCard(produktname, description, image, price, category, stock, rat
 
   card.appendChild(cardContent);
 
-  const container = document.getElementById('card-container');
+  // Use querySelector to select the container by its class
+  const container = document.querySelector('.card-container');
   container.appendChild(card);
 }
 
-
-// Funktion zum Hinzufügen eines Artikels zum Warenkorb und Aktualisieren von localStorage
+// Function to add an item to the cart and update localStorage
 function addToCart(item) {
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
   cart.push(item);
@@ -218,6 +219,11 @@ function addToCart(item) {
 
   const cartCount = document.querySelector('.cart-count');
   cartCount.textContent = cart.length;
+}
+
+// A simple showPopup function (replace with your own if needed)
+function showPopup(message) {
+  alert(message);
 }
 
 document.addEventListener('DOMContentLoaded', loadCards);

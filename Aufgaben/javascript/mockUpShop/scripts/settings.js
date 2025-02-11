@@ -18,27 +18,28 @@ document.addEventListener("DOMContentLoaded", function () {
         autofillCheckbox.checked = autofillEnabled === "true"; // Check the autofill checkbox if enabled
     }
 
+    function siteReload() {
+        setTimeout(function () {
+            window.location.reload();
+        }, 2000); // 2000 milliseconds = 2 seconds
+    }
+
     // Speichert die aktuellen Werte im LocalStorage
     function saveSettings() {
-        const userConfirmed = window.confirm("Bist du sicher, dass du die Einstellungen speichern möchtest?");
 
-        if (userConfirmed) {
-            fields.forEach(field => {
-                const input = document.getElementById(field);
-                if (input) {
-                    const value = input.value.trim();
-                    if (value) {
-                        localStorage.setItem(field, value); // Save field value individually
-                    }
+        fields.forEach(field => {
+            const input = document.getElementById(field);
+            if (input) {
+                const value = input.value.trim();
+                if (value) {
+                    localStorage.setItem(field, value); // Save field value individually
                 }
-            });
+            }
+        });
 
-            localStorage.setItem("autofillEnabled", autofillCheckbox.checked); // Save autofill setting
-            alert("Einstellungen gespeichert!");
-            window.location.reload();
-        } else {
-            console.log("Speichern abgebrochen.");
-        }
+        localStorage.setItem("autofillEnabled", autofillCheckbox.checked); // Save autofill setting
+        showPopup("Einstellungen gespeichert!");
+        siteReload();
     }
 
     // Löscht alle gespeicherten Werte
@@ -54,8 +55,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
             localStorage.removeItem("autofillEnabled"); // Remove autofill setting
             autofillCheckbox.checked = false; // Uncheck the autofill checkbox
-            alert("Einstellungen zurückgesetzt!");
-            window.location.reload();
+            showPopup("Einstellungen zurückgesetzt!");
+            siteReload();
         } else {
             console.log("Löschen abgebrochen.");
         }
