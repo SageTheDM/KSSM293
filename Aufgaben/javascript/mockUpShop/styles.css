@@ -3,8 +3,8 @@
   /* Background Colors */
   --color-background: #f4f1ea;
   --color-light-bg: #ffffff;
-  --color-dark-bg: #004e0e;
-  --color-dark-bg-transparent: #004e0e60;
+  --color-dark-bg: #026532;
+  --color-dark-bg-transparent: #026532c0;
 
   /* Text Colors */
   --color-primary-text: #2e2e2e;
@@ -19,12 +19,24 @@
   --color-card-bg: #ffffff;
   --color-card-hover-bg: #f0f0f0;
 
-  /* Font & More */
-  --box-shadow-default: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Font Settings */
   --font-family-default: "Lora", Georgia, serif;
   --font-size-default: 16px;
-  --transition-default: 0.3s;
+  --font-size-large: 1.8em;
+  --homepage-text-font-size: 2em;
+
+  /* Layout & Spacing */
   --header-height: 5em;
+  --border-radius-default: 5px;
+  --homepage-btn-border-radius: 20px;
+
+  /* Effects */
+  --box-shadow-default: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --backdrop-filter-default: blur(5px);
+  --homepage-text-shadow: var(--box-shadow-default);
+
+  /* Transitions */
+  --transition-default: 0.3s;
   --menu-animation-duration: 0.5s;
 }
 /*#endregion*/
@@ -64,7 +76,7 @@ header {
   left: 0;
   padding: 15px 20px;
   box-shadow: var(--box-shadow-default);
-  backdrop-filter: blur(5px);
+  backdrop-filter: var(--backdrop-filter-default);
   z-index: 100;
   display: flex;
   align-items: center;
@@ -97,7 +109,7 @@ header {
   background: none;
   border: none;
   color: var(--color-light-bg);
-  font-size: 1.8em;
+  font-size: var(--font-size-large);
   cursor: pointer;
   display: block;
   padding: 0;
@@ -128,7 +140,7 @@ header {
   background: none;
   border: none;
   color: var(--color-light-bg);
-  font-size: 1.8em;
+  font-size: var(--font-size-large);
   cursor: pointer;
   display: block;
   padding: 0;
@@ -159,7 +171,7 @@ header {
   text-align: center;
   color: var(--color-light-bg);
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: var(--border-radius-default);
   transition: background-color var(--transition-default);
   display: block;
 }
@@ -183,7 +195,7 @@ header {
   justify-content: center;
   text-align: center;
   font-weight: bolder;
-  font-size: large;
+  font-size: var(--font-size-large-menu);
   transition: top var(--menu-animation-duration) ease-in-out;
 }
 
@@ -210,7 +222,7 @@ header {
 .homepageBtn {
   border: 2px solid var(--color-accent);
   padding: 20px;
-  border-radius: 20px;
+  border-radius: var(--homepage-btn-border-radius);
   margin: 20px;
   text-decoration: none;
   color: var(--color-homepage-text);
@@ -232,11 +244,11 @@ header {
   height: 100vh;
   text-align: center;
   margin: auto;
-  font-size: 2em;
+  font-size: var(--homepage-text-font-size);
   width: 65%;
   border-radius: 15px;
   padding: 20px;
-  box-shadow: var(--box-shadow-default);
+  box-shadow: var(--homepage-text-shadow);
 }
 
 .text h1 {
@@ -259,15 +271,15 @@ header {
   flex-direction: column;
   gap: 15px;
   padding: 20px;
-  background-color: #fff;
-  border-radius: 10px;
+  background-color: var(--color-light-bg);
+  border-radius: var(--border-radius-default);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Labels for Filters */
 .filter-container label {
   font-size: 1.1rem;
-  color: #333;
+  color: var(--color-primary-text);
   font-weight: 600;
 }
 
@@ -277,11 +289,11 @@ header {
 .filter-container input[type="text"] {
   padding: 10px;
   font-size: 1rem;
-  color: #555;
+  color: var(--color-secondary-text);
   background-color: #e7e7e7;
   border: 1px solid #ddd;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  border-radius: var(--border-radius-default);
+  transition: background-color var(--transition-default) ease;
   margin-bottom: 10px;
 }
 
@@ -294,7 +306,7 @@ header {
 .filter-container select:focus,
 .filter-container input[type="number"]:focus,
 .filter-container input[type="text"]:focus {
-  border-color: #009688;
+  border-color: var(--color-accent);
   outline: none;
 }
 
@@ -309,27 +321,28 @@ header {
 #applyFilters {
   padding: 12px 20px;
   font-size: 1.1rem;
-  color: white;
-  background-color: #009688;
+  color: var(--color-light-bg);
+  background-color: var(--color-accent);
   border: none;
-  border-radius: 5px;
+  border-radius: var(--border-radius-default);
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color var(--transition-default) ease;
   align-self: center;
 }
 
 #applyFilters:hover {
-  background-color: #00796b;
+  background-color: var(--color-hover);
 }
 
 /* #endregion */
-
+/* #region products */
 #products h2 {
   margin: auto;
   text-align: center;
   font-size: 3em;
   padding-top: 3em;
 }
+
 .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -340,7 +353,7 @@ header {
 
 .card {
   background-color: var(--color-card-bg);
-  border-radius: 10px;
+  border-radius: var(--border-radius-default);
   box-shadow: var(--box-shadow-default);
   overflow: hidden;
   transition: background-color var(--transition-default),
@@ -391,7 +404,7 @@ header {
   border: none;
   color: var(--color-light-bg);
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: var(--border-radius-default);
   font-size: 1em;
   cursor: pointer;
   transition: background-color var(--transition-default),
@@ -406,10 +419,9 @@ header {
   transform: scale(1.05);
 }
 
-/* New Styles for Expanding the Card in the Grid */
 .card-expanded {
-  grid-column-end: span 2; /* Horizontal Expansion */
-  grid-row-end: span 2; /* Vertical Expansion */
+  grid-column-end: span 2;
+  grid-row-end: span 2;
 }
 
 .detailed-section {
@@ -441,9 +453,11 @@ header {
 }
 
 .technical-table th {
-  background-color: #f2f2f2;
+  background-color: var(--color-light-bg);
   font-weight: bold;
 }
+
+/*#endregion*/
 /*#endregion*/
 
 /*#region About Us */
@@ -452,7 +466,7 @@ header {
   padding: 40px;
   margin-top: 6em;
   box-shadow: var(--box-shadow-default);
-  border-radius: 10px;
+  border-radius: var(--border-radius-default);
 }
 
 #about-us h2 {
@@ -468,20 +482,21 @@ header {
   line-height: 1.8;
   text-align: center;
 }
+
 /*#endregion*/
 
 /*#region FAQ */
 #faq {
-  background-color: #f9f9f9;
+  background-color: var(--color-light-bg);
   padding: 40px;
   margin-top: 6em;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  box-shadow: var(--box-shadow-default);
+  border-radius: var(--border-radius-default);
 }
 
 #faq h2 {
   font-size: 2.5em;
-  color: #333;
+  color: var(--color-primary-text);
   margin-bottom: 20px;
   text-align: center;
 }
@@ -491,42 +506,42 @@ header {
   padding: 10px;
   margin-bottom: 20px;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: var(--border-radius-default);
   font-size: 1.1em;
   transition: all 0.3s ease;
 }
 
 #search:focus {
   outline: none;
-  border-color: #007bff;
+  border-color: var(--color-dark-bg);
 }
 
 .faq-item {
   cursor: pointer;
   padding: 15px;
-  background-color: #ffffff;
+  background-color: var(--color-light-bg);
   border: 2px solid #ddd;
-  border-radius: 8px;
+  border-radius: var(--border-radius-default);
   margin-top: 10px;
   transition: all 0.3s ease;
   font-weight: bold;
-  color: #333;
+  color: var(--color-primary-text);
 }
 
 .faq-item:hover {
   background-color: #f1f1f1;
-  border-color: #007bff;
+  border-color: var(--color-dark-bg);
 }
 
 .faq-answer {
   display: none;
   padding: 15px;
-  background-color: #f9f9f9;
-  border-left: 3px solid #007bff;
+  background-color: var(--color-light-bg);
+  border-left: 3px solid var(--color-dark-bg);
   margin-top: 10px;
   font-size: 1.1em;
-  color: #555;
-  border-radius: 5px;
+  color: var(--color-secondary-text);
+  border-radius: var(--border-radius-default);
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.4s ease, transform 0.4s ease;
@@ -537,14 +552,16 @@ header {
   opacity: 1;
   transform: translateY(0);
 }
+
 /*#endregion FAQ */
 
 /*#region Impressum */
+/*#region Informations */
 #impressum {
   background-color: var(--color-light-bg);
   padding: 40px;
   box-shadow: var(--box-shadow-default);
-  border-radius: 10px;
+  border-radius: var(--border-radius-default);
   margin-top: 2em;
 }
 
@@ -572,19 +589,21 @@ address a:hover {
   color: var(--color-hover);
 }
 
+/* #endregion */
+
 /* #region maps */
 #map-container {
   margin: 20px auto;
   padding: 20px;
-  background: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: var(--color-light-bg);
+  border-radius: var(--border-radius-default);
+  box-shadow: var(--box-shadow-default);
   text-align: center;
 }
 
 #map-container h2 {
   font-size: 1.5rem;
-  color: #333;
+  color: var(--color-primary-text);
   margin-bottom: 10px;
 }
 
@@ -596,7 +615,7 @@ address a:hover {
   padding: 8px;
   margin: 10px auto;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: var(--border-radius-default);
   font-size: 1rem;
 }
 
@@ -604,13 +623,13 @@ address a:hover {
   width: 100%;
   height: 400px;
   margin: 10px 0;
-  border-radius: 4px;
+  border-radius: var(--border-radius-default);
   border: 1px solid #ddd;
   z-index: 0;
 }
 
 #open-in-open-street-map {
-  background-color: #007bff;
+  background-color: var(--color-dark-bg);
   color: white;
   cursor: pointer;
   transition: background 0.3s;
@@ -618,7 +637,7 @@ address a:hover {
 }
 
 #open-in-open-street-map:hover {
-  background-color: #0056b3;
+  background-color: #004e0e;
 }
 
 /* #endregion */
@@ -630,7 +649,7 @@ address a:hover {
   padding: 40px;
   margin-top: 6em;
   box-shadow: var(--box-shadow-default);
-  border-radius: 10px;
+  border-radius: var(--border-radius-default);
 }
 
 #danke h2,
@@ -643,28 +662,43 @@ address a:hover {
 #danke h2 {
   font-size: 2em;
 }
+
 #danke p,
 #danke ul li {
   font-size: 1.2em;
 }
+
 #danke ul {
   list-style: none;
   padding: 0;
   text-align: center;
 }
+
 #danke ul li {
   color: var(--color-primary-text);
   margin: 10px 0;
 }
+
+#danke a {
+  color: var(--color-accent);
+}
+
+#danke a:hover {
+  color: var(--color-hover);
+}
+
+#danke span {
+  font-weight: bold;
+}
+
 /*#endregion*/
 
 /*#region settings */
-
 /* Button container styles for alignment */
 #settings-form button {
   padding: 10px 20px;
   font-size: 16px;
-  border-radius: 5px;
+  border-radius: var(--border-radius-default);
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
   margin-top: 25px;
@@ -675,14 +709,14 @@ address a:hover {
   margin: auto;
   margin-top: 6em;
   padding: 2em;
-  background: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: var(--color-light-bg);
+  border-radius: var(--border-radius-default);
+  box-shadow: var(--box-shadow-default);
 }
 
 #settings h1,
 #settings h2 {
-  color: #333;
+  color: var(--color-primary-text);
   margin-bottom: 0.5em;
 }
 
@@ -699,7 +733,7 @@ address a:hover {
   padding: 0.7em;
   margin-top: 0.2em;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: var(--border-radius-default);
   font-size: 1em;
 }
 
@@ -722,7 +756,7 @@ input:disabled {
 
 #save-settings:hover {
   background-color: #45a049;
-  transform: scale(1.05); /* Slightly enlarge the button */
+  transform: scale(1.05);
 }
 
 /* Clear button specific styles */
@@ -734,7 +768,7 @@ input:disabled {
 
 #clear-settings:hover {
   background-color: #e53935;
-  transform: scale(1.05); /* Slightly enlarge the button */
+  transform: scale(1.05);
 }
 
 /*#endregion */
@@ -881,6 +915,7 @@ footer a {
 footer a:hover {
   color: var(--color-hover);
 }
+
 /*#endregion*/
 
 /*#region Cart */
@@ -993,6 +1028,7 @@ footer a:hover {
 .checkout-btn:hover {
   background-color: var(--color-hover);
 }
+
 /*#endregion*/
 
 /*#region Popup Styling */
@@ -1008,6 +1044,7 @@ footer a:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
+
 /*#endregion*/
 
 /* #region responsive design */
@@ -1017,28 +1054,37 @@ footer a:hover {
     margin-top: 0;
     position: relative;
   }
+
   .text {
-    width: 90%; /* Adjusted width for smaller screens */
-    font-size: 1.8em; /* Slightly smaller font size */
+    width: 90%;
+    font-size: 1.6em;
     padding: 15px;
     border-radius: 10px;
   }
 
   .text h1 {
-    font-size: 1.8em; /* Scaled down header font size */
+    font-size: 1.6em;
+    margin-bottom: 10px;
   }
 
   .text p {
-    font-size: 1em;
-    line-height: 1.5;
+    font-size: 1.1em;
+    line-height: 1.6;
     margin-top: 15px;
+    color: var(--color-primary-text);
   }
 
   .homepageBtn {
-    padding: 15px;
-    margin: 15px;
-    font-size: 1em; /* Reduced font size for buttons */
+    padding: 12px 25px;
+    margin: 12px;
+    font-size: 1.1em;
     border-radius: 15px;
+    transition: background-color 0.3s ease;
+  }
+
+  .homepageBtn:hover {
+    background-color: var(--color-hover);
   }
 }
+
 /* #endregion */

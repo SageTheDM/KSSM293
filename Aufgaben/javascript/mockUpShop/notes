@@ -1,7 +1,3 @@
 wHAT IS NOT WORKING YET
 
-
-1. Settings/saving of the Settings
-2. Images in the cart
-3. Loading from the localstorage in the checkout
-4. Rework css --> so everything utilises css variables
+1. Rework css --> so everything utilises css variables

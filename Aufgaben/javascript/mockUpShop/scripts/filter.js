@@ -112,7 +112,7 @@ function applyFilters() {
             isProductMatch =
               isProductMatch &&
               parseFloat(product.TechnischeDaten?.sensor?.split(" ")[0]) >=
-                minResolution;
+              minResolution;
           }
           if (sensor !== "all") {
             isProductMatch =
@@ -154,7 +154,7 @@ function applyFilters() {
             (!maxAperture || product.TechnischeDaten?.blende === maxAperture) &&
             (!filterSize ||
               product.TechnischeDaten?.filterdurchmesser ===
-                `${filterSize}mm`) &&
+              `${filterSize}mm`) &&
             (!compatibility ||
               product.TechnischeDaten?.kompatibilität?.includes(compatibility));
         }
@@ -187,6 +187,7 @@ function applyFilters() {
       });
 
       renderProducts(filteredProducts);
+      alert("Filter wurden geladen");
     })
     .catch((error) => {
       console.error("Fehler beim Filtern:", error);
