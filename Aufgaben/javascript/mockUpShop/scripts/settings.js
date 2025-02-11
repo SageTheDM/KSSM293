@@ -20,33 +20,45 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Speichert die aktuellen Werte im LocalStorage
     function saveSettings() {
-        fields.forEach(field => {
-            const input = document.getElementById(field);
-            if (input) {
-                const value = input.value.trim();
-                if (value) {
-                    localStorage.setItem(field, value); // Save field value individually
-                }
-            }
-        });
+        const userConfirmed = window.confirm("Bist du sicher, dass du die Einstellungen speichern möchtest?");
 
-        localStorage.setItem("autofillEnabled", autofillCheckbox.checked); // Save autofill setting
-        alert("Einstellungen gespeichert!");
-        window.location.reload();
+        if (userConfirmed) {
+            fields.forEach(field => {
+                const input = document.getElementById(field);
+                if (input) {
+                    const value = input.value.trim();
+                    if (value) {
+                        localStorage.setItem(field, value); // Save field value individually
+                    }
+                }
+            });
+
+            localStorage.setItem("autofillEnabled", autofillCheckbox.checked); // Save autofill setting
+            alert("Einstellungen gespeichert!");
+            window.location.reload();
+        } else {
+            console.log("Speichern abgebrochen.");
+        }
     }
 
     // Löscht alle gespeicherten Werte
     function clearSettings() {
-        fields.forEach(field => {
-            localStorage.removeItem(field); // Remove individual field from localStorage
-            const input = document.getElementById(field);
-            if (input) input.value = ""; // Clear the field
-        });
+        const userConfirmed = window.confirm("Bist du sicher, dass du alle Einstellungen löschen möchtest?");
 
-        localStorage.removeItem("autofillEnabled"); // Remove autofill setting
-        autofillCheckbox.checked = false; // Uncheck the autofill checkbox
-        alert("Einstellungen zurückgesetzt!");
-        window.location.reload();
+        if (userConfirmed) {
+            fields.forEach(field => {
+                localStorage.removeItem(field); // Remove individual field from localStorage
+                const input = document.getElementById(field);
+                if (input) input.value = ""; // Clear the field
+            });
+
+            localStorage.removeItem("autofillEnabled"); // Remove autofill setting
+            autofillCheckbox.checked = false; // Uncheck the autofill checkbox
+            alert("Einstellungen zurückgesetzt!");
+            window.location.reload();
+        } else {
+            console.log("Löschen abgebrochen.");
+        }
     }
 
     // Event Listener für Buttons

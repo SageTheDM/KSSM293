@@ -25,6 +25,7 @@ class Header extends HTMLElement {
           <li><a href="index.html#faq">Häufig gestellte Fragen</a></li>
           <li><a href="index.html#about-us">Über uns</a></li>
           <li><a href="index.html#impressum">Impressum</a></li>
+           <li><a href="index.html#danke">Danksagung</a></li>
           <li><a href="settings.html">Lokale Einstellungen</a></li>
         </ul>
       </div>
@@ -213,11 +214,7 @@ function addToCart(item) {
   cart.push(item);
   localStorage.setItem('cart', JSON.stringify(cart));
 
-  const popup = document.createElement('div');
-  popup.className = 'popup';
-  popup.textContent = `${item.produktname} wurde zum Warenkorb hinzugefügt`;
-  document.body.appendChild(popup);
-  setTimeout(() => document.body.removeChild(popup), 2000);
+  showPopup(`${item.produktname} wurde zum Warenkorb hinzugefügt`);
 
   const cartCount = document.querySelector('.cart-count');
   cartCount.textContent = cart.length;
