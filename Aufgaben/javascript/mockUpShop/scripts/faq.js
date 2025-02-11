@@ -27,13 +27,14 @@ function renderFAQ(faqData) {
 
 // Funktion, um die Antwort ein- oder auszublenden
 function toggleAnswer(index) {
-  const allAnswers = document.querySelectorAll(".faq-answer");
-  allAnswers.forEach((element) => {
-    element.classList.remove("open"); // Alle Antworten schliessen
-  });
-
   const answer = document.getElementById(`answer-${index}`);
-  answer.classList.toggle("open"); // Antwort umschalten
+  const isOpen = answer.classList.contains("open");
+
+  document.querySelectorAll(".faq-answer").forEach((el) => el.classList.remove("open"));
+
+  if (!isOpen) {
+    answer.classList.add("open");
+  }
 }
 
 // Funktion für die Suchfunktionalität
