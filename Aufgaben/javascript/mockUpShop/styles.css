@@ -962,7 +962,7 @@ footer a:hover {
   height: 80px;
   object-fit: cover;
   border-radius: 5px;
-  margin-right: 2em;
+  margin-right: 200px;
 }
 
 .cart-item .item-details {
@@ -1031,18 +1031,6 @@ footer a:hover {
   background-color: var(--color-hover);
 }
 
-.cart-item .item-details .item-description {
-  font-size: 1em;
-  color: var(--color-secondary-text);
-  margin-top: 10px;
-  line-height: 1.5;
-  text-align: justify;
-}
-
-.cart-item .item-details .item-description:hover {
-  color: var(--color-accent);
-}
-
 /*#endregion*/
 
 /*#region Popup Styling */
@@ -1076,6 +1064,10 @@ footer a:hover {
 /* #region responsive design */
 /* Responsive Styling */
 @media (max-width: 1200px) {
+  .cart-item img {
+    margin-right: 50px;
+  }
+
   .project-name {
     font-size: 1.5em;
   }
@@ -1112,75 +1104,50 @@ footer a:hover {
     transition: background-color 0.3s ease;
   }
 
-  .homepageBtn:hover {
-    background-color: var(--color-hover);
-  }
-
   .card-container {
     grid-template-columns: 1fr;
     margin-top: 3em;
-  }
-
-  .card {
-    padding: 10px;
-    grid-column: 1 / -1;
   }
 
   .card h3 {
     font-size: 1.3em;
   }
 
-  .card p {
-    font-size: 0.9em;
-  }
-
-  .card-price {
-    font-size: 1em;
-  }
-
   .technical-table th,
   .technical-table td {
     font-size: 0.8em;
-  }
-
-  .add-to-cart-button,
-  .expand-button,
-  .close-button {
-    padding: 8px 15px;
-    font-size: 0.9em;
   }
 }
 
 /* Mobile Responsive */
-@media (max-width: 768px) {
-  .card-container {
-    grid-template-columns: 1fr;
-    gap: 15px;
+@media (max-width: 800px) {
+  .cart {
+    padding: 15px;
   }
 
-  .card-image {
-    height: 150px;
+  .cart-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
-  .card h3 {
-    font-size: 1.2em;
+  .cart-item img {
+    margin-right: 0;
+    margin-bottom: 10px;
   }
 
-  .card-price {
-    font-size: 1.1em;
+  .cart-item .item-details {
+    margin-left: 0;
   }
 
-  .technical-table th,
-  .technical-table td {
-    font-size: 0.75em;
+  .cart-summary {
+    flex-direction: column;
+    text-align: center;
   }
 
-  .add-to-cart-button,
-  .expand-button,
-  .close-button {
-    padding: 6px 12px;
-    font-size: 0.8em;
+  .checkout-btn {
+    width: 100%;
+    padding: 10px;
   }
 }
-
 /* #endregion */
