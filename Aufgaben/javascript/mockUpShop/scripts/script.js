@@ -221,9 +221,4 @@ function addToCart(item) {
   cartCount.textContent = cart.length;
 }
 
-// A simple showPopup function (replace with your own if needed)
-function showPopup(message) {
-  alert(message);
-}
-
 document.addEventListener('DOMContentLoaded', loadCards);

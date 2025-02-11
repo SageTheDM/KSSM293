@@ -48,6 +48,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const itemName = document.createElement('h3');
             itemName.textContent = item.produktname;
 
+            const itemDescription = document.createElement('p');
+            itemDescription.className = 'item-description';
+            itemDescription.textContent = item.description;
+
             const itemPrice = document.createElement('p');
             itemPrice.textContent = `CHF ${item.price}`;
 
@@ -62,6 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             itemDetails.appendChild(itemName);
+            itemDetails.appendChild(itemDescription);
             itemDetails.appendChild(itemPrice);
             itemDetails.appendChild(itemQuantity);
             itemDetails.appendChild(removeButton);

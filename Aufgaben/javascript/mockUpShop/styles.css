@@ -5,6 +5,7 @@
   --color-light-bg: #ffffff;
   --color-dark-bg: #026532;
   --color-dark-bg-transparent: #026532c0;
+  --color-dark-bg-very-transparent: #026532a0;
 
   /* Text Colors */
   --color-primary-text: #2e2e2e;
@@ -961,6 +962,7 @@ footer a:hover {
   height: 80px;
   object-fit: cover;
   border-radius: 5px;
+  margin-right: 2em;
 }
 
 .cart-item .item-details {
@@ -1029,6 +1031,18 @@ footer a:hover {
   background-color: var(--color-hover);
 }
 
+.cart-item .item-details .item-description {
+  font-size: 1em;
+  color: var(--color-secondary-text);
+  margin-top: 10px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.cart-item .item-details .item-description:hover {
+  color: var(--color-accent);
+}
+
 /*#endregion*/
 
 /*#region Popup Styling */
@@ -1037,14 +1051,26 @@ footer a:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: var(--color-light-bg);
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 40vw;
+  max-width: 800px;
+  height: 30vh;
+  max-height: 600px;
+  background-color: var(--color-dark-bg-very-transparent);
+  color: var(--color-homepage-text);
+  padding: 30px;
+  border: 2px solid var(--color-accent);
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.popup p {
+  font-size: 2em;
+  font-weight: bold;
+}
 /*#endregion*/
 
 /* #region responsive design */

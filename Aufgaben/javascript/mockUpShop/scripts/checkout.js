@@ -83,16 +83,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const groupedCart = groupCartItems(cart);
 
+
+        let paymentInstructions = "";
+        switch (paymentMethod) {
+            case "TWINT":
+                paymentInstructions = `Bitte begleichen Sie den Betrag von CHF ${totalAmount} via TWINT an die folgende Nummer: +41 76 306 72 03`;
+                break;
+            case "Bar/Kreditkarte":
+                paymentInstructions = `Bitte stellen Sie sicher, dass der Betrag von CHF ${totalAmount} bei der Abholung in bar oder per Kreditkarte beglichen werden kann.`;
+                break;
+            case "Rechnung":
+                paymentInstructions = `Sie erhalten eine Rechnung mit 30 Tagen Zahlfrist. Wir gewähren 1% Skonto, wenn die Zahlung innerhalb von 3 Tagen erfolgt.`;
+                break;
+            default:
+                paymentInstructions = "Keine spezifischen Zahlungsanweisungen verfügbar.";
+        }
+
         const orderSummary = `
 Guten Tag ${prefixName} ${firstName} ${lastName},
 
 Vielen Dank für Ihre Bestellung bei Photofuel.tech! Hier sind die Details Ihrer Bestellung:
 
 Bestellnummer: ${orderNumber}
-Name: ${firstName} ${lastName}
+Name: ${prefixName} ${firstName} ${lastName}
 E-Mail: ${email}
-Telefonnummer: ${phone}
-Adresse: ${street} ${number}, ${zipcode} ${city}
 Lieferoption: ${deliveryOption}
 Zahlungsmethode: ${paymentMethod}
 
@@ -103,9 +117,12 @@ ${Object.values(groupedCart)
                 .map(item => `- ${item.produktname} (CHF ${item.price.toFixed(2)}, Menge: ${item.quantity})`)
                 .join("\n")}
 
+Zahlungsanweisungen:
+${paymentInstructions}
+
 Vielen Dank für Ihre Bestellung! Bei weiteren Fragen stehen wir Ihnen gerne zur Verfügung.
 
-Mit freundlichen Grüssen,  
+Mit freundlichen Grüßen,  
 Ihr Photofuel.tech Team
         `;
 
