@@ -173,7 +173,7 @@ header {
   flex-direction: column;
   background-color: var(--color-dark-bg-transparent);
   position: absolute;
-  top: -50vh;
+  top: -100vh;
   left: 0;
   width: 100%;
   z-index: 5;
@@ -185,6 +185,10 @@ header {
   font-weight: bolder;
   font-size: large;
   transition: top var(--menu-animation-duration) ease-in-out;
+}
+
+.menu.notActive {
+  display: none;
 }
 
 .menu.active {
