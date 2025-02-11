@@ -958,8 +958,8 @@ footer a:hover {
 }
 
 .cart-item img {
-  width: 80px;
-  height: 80px;
+  width: 160px;
+  height: 160px;
   object-fit: cover;
   border-radius: 5px;
   margin-right: 200px;
