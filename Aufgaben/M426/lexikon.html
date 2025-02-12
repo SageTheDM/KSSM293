@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modul 426 - Lexikon</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .nav-link:hover {
+        text-decoration: underline;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      main {
+        flex: 1;
+      }
+      footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body class="bg-light">
+    <header class="bg-dark text-white p-3">
+      <nav class="container">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="task.html">Task</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="learningjournal.html"
+              >Learning Journal</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="lexikon.html">Lexikon</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container mt-4">
+      <article class="card p-4">
+        <h2>Lexikon</h2>
+        <div class="accordion" id="lexikonAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingGreen">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseGreen"
+              >
+                Green (You already knew and can use/explain)
+              </button>
+            </h2>
+            <div
+              id="collapseGreen"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#lexikonAccordion"
+            >
+              <div class="accordion-body">
+                <ul>
+                  <li>
+                    Wiki(pedia) – A collaborative online encyclopedia where
+                    users can edit and contribute.
+                  </li>
+                  <li>
+                    CSS – Cascading Style Sheets, used to style HTML elements.
+                  </li>
+                  <li>
+                    HTML – HyperText Markup Language, the standard for
+                    structuring web content.
+                  </li>
+                  <li>
+                    User Generated Content – Content created by users rather
+                    than website owners.
+                  </li>
+                  <li>Google Docs – An online document editor by Google.</li>
+                  <li>
+                    PHP – A server-side scripting language for web development.
+                  </li>
+                  <li>
+                    API – Application Programming Interface, allows
+                    communication between software.
+                  </li>
+                  <li>
+                    XML – Extensible Markup Language, used for data structuring.
+                  </li>
+                  <li>
+                    Mobile Endgeräte – Mobile devices like smartphones and
+                    tablets.
+                  </li>
+                  <li>
+                    Web Services – Services that allow applications to
+                    communicate over the internet.
+                  </li>
+                  <li>
+                    Document Object Model (DOM) – A programming interface for
+                    web documents.
+                  </li>
+                  <li>
+                    JavaScript – A scripting language for interactive web
+                    applications.
+                  </li>
+                  <li>
+                    Web – The World Wide Web, a system of interconnected web
+                    pages.
+                  </li>
+                  <li>
+                    Communities – Online groups where users share interests.
+                  </li>
+                  <li>
+                    Twitter – A social media platform for short messages
+                    (tweets).
+                  </li>
+                  <li>
+                    SQL – Structured Query Language, used for database
+                    management.
+                  </li>
+                  <li>Datenbank – The German word for "database."</li>
+                  <li>
+                    JSON – JavaScript Object Notation, a lightweight data
+                    format.
+                  </li>
+                  <li>Podcast – Digital audio content distributed online.</li>
+                  <li>
+                    Repository – A storage location for code, often in version
+                    control systems.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingYellow">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseYellow"
+              >
+                Yellow (You can explain but haven't used it)
+              </button>
+            </h2>
+            <div
+              id="collapseYellow"
+              class="accordion-collapse collapse"
+              data-bs-parent="#lexikonAccordion"
+            >
+              <div class="accordion-body">
+                <ul>
+                  <li>
+                    jQuery – A JavaScript library that simplifies DOM
+                    manipulation and event handling.
+                  </li>
+                  <li>
+                    Cookies – Small pieces of data stored on a user's device by
+                    websites.
+                  </li>
+                  <li>Bootstrap – A framework for responsive web design.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingPink">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapsePink"
+              >
+                Pink (Didn't know yet)
+              </button>
+            </h2>
+            <div
+              id="collapsePink"
+              class="accordion-collapse collapse"
+              data-bs-parent="#lexikonAccordion"
+            >
+              <div class="accordion-body">
+                <ul>
+                  <li>
+                    AJAX – Asynchronous JavaScript and XML, used to update parts
+                    of a web page without reloading.
+                  </li>
+                  <li>
+                    XING – A professional networking platform, similar to
+                    LinkedIn, popular in German-speaking countries.
+                  </li>
+                  <li>Flickr – A photo-sharing website.</li>
+                  <li>
+                    Semantisches Web – "Semantic Web," a concept where web data
+                    is structured to be more understandable for machines.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+      <p>&copy; Photofuel.tech | Luca Burger</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
