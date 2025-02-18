@@ -17,7 +17,10 @@ class Header extends HTMLElement {
           <li><a href="index.html#school">Tasks from school</a></li>
           <li><a href="index.html#private">Private Code</a></li>
           <li><a href="index.html#interstellar">Interstellardevelopment</a></li>
-          <li><a href="photos.html">Photography</a></li>
+          <!--  
+            Commented it out until it is needed
+            <li><a href="photos.html">Photography</a></li>
+          -->
         </ul>
       </div>
       `;
