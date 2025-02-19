@@ -1,10 +1,8 @@
-
 document.addEventListener("DOMContentLoaded", () => {
     fetch("json/journal.json")
         .then((response) => response.json())
         .then((data) => {
-            const journalContainer =
-                document.getElementById("journalAccordion");
+            const journalContainer = document.getElementById("journalAccordion");
             journalContainer.innerHTML = "";
 
             data.lessons.forEach((lesson, index) => {
@@ -13,18 +11,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 lessonElement.innerHTML = `
                         <h2 class="accordion-header" id="heading${index}">
-                            <button class="accordion-button ${index === 0 ? "" : "collapsed"
-                    }" 
+                            <button class="accordion-button ${index === 0 ? "" : "collapsed"}" 
                                     type="button" data-bs-toggle="collapse" 
                                     data-bs-target="#collapse${index}" 
-                                    aria-expanded="${index === 0 ? "true" : "false"
-                    }" 
+                                    aria-expanded="${index === 0 ? "true" : "false"}" 
                                     aria-controls="collapse${index}">
                                 ${lesson.title}
                             </button>
                         </h2>
-                        <div id="collapse${index}" class="accordion-collapse collapse ${index === 0 ? "show" : ""
-                    }" 
+                        <div id="collapse${index}" class="accordion-collapse collapse ${index === 0 ? "show" : ""}" 
                              aria-labelledby="heading${index}" 
                              data-bs-parent="#journalAccordion">
                             <div class="accordion-body">
@@ -32,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                     ${lesson.entries
                         .map(
                             (entry) =>
-                                `<li class="journal-entry">${entry}</li>`
+                                `<li class="journal-entry"><span class="entry-title">${entry.title}</span>: ${entry.description}</li>`
                         )
                         .join("")}
                                 </ul>

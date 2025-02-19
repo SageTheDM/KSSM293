@@ -44,7 +44,7 @@ main {
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-15px);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
@@ -67,7 +67,12 @@ main {
 
 .linktree a:hover {
   background: var(--link-hover-bg-color);
-  transform: scale(1.05);
+  transform: scale(1.02);
+}
+
+.dictionary-term,
+.entry-title {
+  color: var(--primary-dark);
 }
 
 footer {
