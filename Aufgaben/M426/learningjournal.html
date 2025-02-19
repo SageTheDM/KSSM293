@@ -3,73 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Modul 426</title>
+    <title>Modul 426 - Learning Journal</title>
+    <script src="scripts/footer.js"></script>
+    <script src="scripts/header.js"></script>
     <link
       rel="stylesheet"
       href="../../node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
-    <style>
-      .nav-link:hover {
-        text-decoration: underline;
-      }
-      body {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-      }
-      main {
-        flex: 1;
-      }
-      footer {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-      }
-    </style>
+    <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body class="bg-light">
-    <header class="bg-dark text-white p-3">
-      <nav class="container">
-        <ul class="nav">
-          <li class="nav-item">
-            <a class="nav-link text-white" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="task.html">Task</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="learningjournal.html"
-              >Learning Journal</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="lexikon.html">Dictionary</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <header-content></header-content>
 
     <main class="container mt-4">
-      <article class="card p-4">
-        <h2>Lektion 1</h2>
-        <ul>
-          <li>
-            Started playing around with Bootstrap - created the website
-            framework for the Informatik Modul.
-          </li>
-          <li>Onenote - Created the OneNote file structure for the module.</li>
-          <li>
-            Lexikon - Worked through a list of words, split them into three
-            categories, and then explained the words.
-          </li>
-        </ul>
+      <article id="journal" class="journal-card">
+        <div class="accordion" id="journalAccordion">Loading...</div>
       </article>
     </main>
 
-    <footer class="bg-dark text-white text-center py-3">
-      <p>&copy; Photofuel.tech | Luca Burger</p>
-    </footer>
+    <footer-content></footer-content>
 
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/journal.js"></script>
   </body>
 </html>

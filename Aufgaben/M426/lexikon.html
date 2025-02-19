@@ -8,50 +8,12 @@
       rel="stylesheet"
       href="../../node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
-    <style>
-      .nav-link:hover {
-        text-decoration: underline;
-      }
-      body {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-      }
-      main {
-        flex: 1;
-      }
-      footer {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-      }
-      .dictionary-term {
-        font-weight: bold;
-        color: #007bff;
-      }
-    </style>
+    <script src="scripts/footer.js"></script>
+    <script src="scripts/header.js"></script>
+    <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body class="bg-light">
-    <header class="bg-dark text-white p-3">
-      <nav class="container">
-        <ul class="nav">
-          <li class="nav-item">
-            <a class="nav-link text-white" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="task.html">Task</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="learningjournal.html"
-              >Learning Journal</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="lexikon.html">Dictionary</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <header-content></header-content>
 
     <main class="container mt-4">
       <article class="card p-4">
@@ -130,9 +92,7 @@
       </article>
     </main>
 
-    <footer class="bg-dark text-white text-center py-3">
-      <p>&copy; Photofuel.tech | Luca Burger</p>
-    </footer>
+    <footer-content></footer-content>
 
     <script src="scripts/dictionary.js"></script>
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

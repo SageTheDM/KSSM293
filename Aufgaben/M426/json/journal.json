@@ -1,0 +1,21 @@
+{
+  "lessons": [
+    {
+      "title": "Lektion 1",
+      "entries": [
+        "Started playing around with Bootstrap - created the website framework for the Informatik Modul.",
+        "OneNote - Created the OneNote file structure for the module.",
+        "Lexikon - Worked through a list of words, split them into three categories, and then explained the words."
+      ]
+    },
+    {
+      "title": "Lektion 2",
+      "entries": [
+        "HTML-Entities: Unsichtbare Zeichensteuerung. HTML verwendet bestimmte Zeichen wie <, > oder & für Tags und Befehle. Damit diese Zeichen korrekt als Text erscheinen, nutzt man sogenannte HTML-Entities. < wird zu &lt; > wird zu &gt; & wird zu &amp; \" wird zu &quot; ' wird zu &apos; (nicht HTML4 kompatibel). Es gibt auch spezielle Entities wie &shy; für weiche Trennstriche oder &zwj; für Nullbreiten-Verbindungen.",
+        "Relative vs. Absolute Links. Absolute Links enthalten die komplette URL (z. B. https://example.com/page.html) und funktionieren überall. Relative Links sind kürzer (z. B. ../seite.html) und funktionieren nur innerhalb derselben Webseite. Absolut: \"https://example.com/home\" (überall gültig). Relativ: \"../home\" (nur innerhalb derselben Ordnerstruktur gültig).",
+        "CSS-Einheiten: em, vw und vh. em: Bezieht sich auf die Schriftgröße des Eltern-Elements. Kann kaskadieren, was zu unerwarteten Effekten führt. vw (Viewport Width): 1% der Breite des Browserfensters. vh (Viewport Height): 1% der Höhe des Browserfensters. Problem: Mobile Browser verändern die Höhe von 100vh, wenn die Adressleiste ein- oder ausgeblendet wird. Lösung: 100lvh verwenden, falls verfügbar.",
+        "Float - Das alte Layout-Werkzeug. Float wurde ursprünglich für Textfluss um Bilder entwickelt, aber lange für komplette Webseiten-Layouts missbraucht. Heutzutage nutzt man besser Flexbox oder Grid. float: right; lässt ein Element nach rechts fließen, der Text läuft links daneben weiter. Problem: Float-Elemente werden nicht von ihren Eltern-Containern berücksichtigt, weshalb der clearfix-Hack oder overflow: hidden; nötig war. Lösung: Stattdessen display: flex; oder display: grid; verwenden."
+      ]
+    }
+  ]
+}

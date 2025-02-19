@@ -1,0 +1,83 @@
+body { 
+    margin: 0;
+    font-family: arial, helvetica, sans-serif; 
+    font-size: 14px; 
+    background-color: #f7f7f7;
+}
+
+div#content {
+    width: 100%;
+    max-width: 970px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+	font-size: 18px; 
+} 
+
+h2 {
+	font-size: 14px; 
+}
+
+p { 
+    color: black;  
+    text-align: justify; 
+} 
+
+p.impressum { 
+	color: brown; 
+} 
+
+em { 
+	font-style: italic; 
+}
+
+strong { 
+	font-weight: bold; 
+}  
+
+blockquote { 
+	font-style: italic; 
+}
+
+a { 
+	text-decoration: none; 
+} 
+
+a:visited { 
+	text-decoration: underline;
+}
+
+a:hover { 
+	color: green; 
+}
+
+#navigation {
+    display: inline-block;
+    padding: 0;
+}
+
+#navigation a  { 
+    font-size: 14px; 
+    color: red;  
+    text-decoration: none; 
+} 
+
+#navigation a:hover {   
+    background: grey;
+}
+
+
+
+
+@media screen and (max-width:767px) {
+	
+	body{
+		font-size: 12px;
+	}
+	h1 {
+		font-size: 20px;
+	}
+	
+}
