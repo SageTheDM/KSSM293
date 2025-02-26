@@ -89,7 +89,8 @@ main {
 /* Journal Entries */
 .journal-entry {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   background: #ffffff;
   padding: 0.75rem;
   border-radius: var(--border-radius);
@@ -106,13 +107,33 @@ main {
 .entry-title {
   font-weight: bold;
   color: var(--primary-dark);
-  margin-right: 0.5rem;
+  margin-bottom: 5px;
 }
 
 .journal-entry::before {
   content: "📌";
   margin-right: 0.5rem;
   font-size: 1.2rem;
+}
+
+/* Code Box Styling */
+.code-box {
+  display: block;
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: 14px;
+  margin-top: 10px;
+  width: 100%;
+  white-space: pre-wrap; /* Ensures code wraps properly */
+  border: 1px solid #ddd;
+}
+
+code {
+  font-family: "Courier New", monospace;
+  display: block;
+  color: #333;
 }
 
 /* Cards */

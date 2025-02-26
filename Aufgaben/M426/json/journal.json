@@ -1,44 +1,68 @@
 {
   "lessons": [
     {
-      "title": "Lektion 1",
+      "title": "Lesson 1",
       "entries": [
         {
           "title": "Bootstrap Start",
-          "description": "Started playing around with Bootstrap - created the website framework for the Informatik Modul."
+          "description": "Started playing around with Bootstrap - created the website framework for the Informatics module."
         },
         {
-          "title": "OneNote Struktur",
+          "title": "OneNote Structure",
           "description": "Created the OneNote file structure for the module."
         },
         {
-          "title": "Lexikon Arbeit",
+          "title": "Glossary Work",
           "description": "Worked through a list of words, split them into three categories, and then explained the words."
         }
       ]
     },
     {
-      "title": "Lektion 2",
+      "title": "Lesson 2",
       "entries": [
         {
-          "title": "HTML-Entities",
-          "description": "Unsichtbare Zeichensteuerung. HTML verwendet bestimmte Zeichen wie <, > oder & für Tags und Befehle. Damit diese Zeichen korrekt als Text erscheinen, nutzt man sogenannte HTML-Entities. < wird zu &lt; > wird zu &gt; & wird zu &amp; \" wird zu &quot; ' wird zu &apos; (nicht HTML4 kompatibel). Es gibt auch spezielle Entities wie &shy; für weiche Trennstriche oder &zwj; für Nullbreiten-Verbindungen."
+          "title": "HTML Entities",
+          "description": "Invisible character control. HTML uses certain characters like <, >, or & for tags and commands. To make sure these characters appear correctly as text, HTML entities are used. < becomes &lt;, > becomes &gt;, & becomes &amp;, \" becomes &quot;, and ' becomes &apos; (not compatible with HTML4). There are also special entities like &shy; for soft hyphens or &zwj; for zero-width joiners."
         },
         {
           "title": "Relative vs. Absolute Links",
-          "description": "Absolute Links enthalten die komplette URL (z. B. https://example.com/page.html) und funktionieren überall. Relative Links sind kürzer (z. B. ../seite.html) und funktionieren nur innerhalb derselben Webseite. Absolut: \"https://example.com/home\" (überall gültig). Relativ: \"../home\" (nur innerhalb derselben Ordnerstruktur gültig)."
+          "description": "Absolute links contain the full URL (for example, https://example.com/page.html) and work anywhere. Relative links are shorter (for example, ../page.html) and only work within the same website. Absolute: \"https://example.com/home\" (works everywhere). Relative: \"../home\" (only works within the same folder structure)."
         },
         {
-          "title": "CSS-Einheiten",
-          "description": "em, vw und vh. em: Bezieht sich auf die Schriftgröße des Eltern-Elements. Kann kaskadieren, was zu unerwarteten Effekten führt. vw (Viewport Width): 1% der Breite des Browserfensters. vh (Viewport Height): 1% der Höhe des Browserfensters. Problem: Mobile Browser verändern die Höhe von 100vh, wenn die Adressleiste ein- oder ausgeblendet wird. Lösung: 100lvh verwenden, falls verfügbar."
+          "title": "CSS Units",
+          "description": "em, vw, and vh. em: Based on the font size of the parent element. Can cascade, which might lead to unexpected effects. vw (Viewport Width): 1% of the browser window's width. vh (Viewport Height): 1% of the browser window's height. Problem: Mobile browsers change the height of 100vh when the address bar appears or disappears. Solution: Use 100lvh if available."
         },
         {
-          "title": "Float als Layout-Werkzeug",
-          "description": "Das alte Layout-Werkzeug. Float wurde ursprünglich für Textfluss um Bilder entwickelt, aber lange für komplette Webseiten-Layouts missbraucht. Heutzutage nutzt man besser Flexbox oder Grid. float: right; lässt ein Element nach rechts fließen, der Text läuft links daneben weiter. Problem: Float-Elemente werden nicht von ihren Eltern-Containern berücksichtigt, weshalb der clearfix-Hack oder overflow: hidden; nötig war. Lösung: Stattdessen display: flex; oder display: grid; verwenden."
+          "title": "Float as a Layout Tool",
+          "description": "The old way of doing layouts. Float was originally meant for text wrapping around images but was used for full page layouts for years. Nowadays, Flexbox or Grid is the better option. float: right; makes an element float to the right, and text wraps around it on the left. Problem: Floating elements are ignored by their parent containers, so hacks like clearfix or overflow: hidden; were needed. Solution: Just use display: flex; or display: grid; instead."
         },
         {
           "title": "Task One Reflection",
-          "description": "I found the easy parts, such as most of the CSS except the centering, manageable. However, I faced challenges due to my inability to read the task properly, which led to mistakes. Centering elements became a frustrating task as I slipped into full auto mode, implementing features I didn't need. I struggled to adapt to another person's coding style and intentions, making it difficult to align my work with theirs."
+          "description": "Most of the CSS was easy, except for centering, which turned into a real challenge. My main issue was not reading the task carefully, which led to unnecessary mistakes. Centering elements became frustrating because I went into full auto mode, adding things I didn’t need. I also struggled with adapting to another person’s coding style, making it hard to match my work to theirs."
+        }
+      ]
+    },
+    {
+      "title": "Lesson 3",
+      "entries": [
+        {
+          "title": "Cloning Elements in JavaScript",
+          "description": "Today, I worked with cloneNode() for the first time. At first, it seemed simple—just make a copy of an element, and you’re done. But of course, it wasn’t that easy. I quickly realized that cloned elements don’t keep their event listeners, meaning a copied button won’t work unless I manually reattach the event. Definitely something to watch out for in the future.",
+          "code": "let originalElement = document.getElementById(\"elementToClone\");\nlet clonedElement = originalElement.cloneNode(true);\ndocument.body.appendChild(clonedElement);"
+        },
+        {
+          "title": "Legacy Async Function (Using Callbacks)",
+          "description": "I finally experienced 'callback hell' today. Before async/await, JavaScript used callbacks for asynchronous tasks. The deeper I went, the messier it got—functions inside functions inside functions. Debugging was a nightmare, and I now understand why people avoid this approach whenever possible.",
+          "code": "function fetchData(callback) {\n    let xhr = new XMLHttpRequest();\n    xhr.open(\"GET\", \"https://jsonplaceholder.typicode.com/todos/1\", true);\n    xhr.onreadystatechange = function () {\n        if (xhr.readyState === 4 && xhr.status === 200) {\n            callback(null, JSON.parse(xhr.responseText));\n        } else {\n            callback(new Error(\"Request failed\"), null);\n        }\n    };\n    xhr.send();\n}\n\nfetchData(function (error, data) {\n    if (error) {\n        console.error(\"Error:\", error);\n    } else {\n        console.log(\"Data:\", data);\n    }\n});"
+        },
+        {
+          "title": "Modern Async Function (Using async/await)",
+          "description": "After struggling with callbacks, I finally got to try async/await, and it was a huge relief. No more deeply nested functions, no more endless brackets. Just clean, readable code. I can’t imagine writing JavaScript without it now.",
+          "code": "async function fetchData() {\n    try {\n        let response = await fetch('https://jsonplaceholder.typicode.com/todos/1');\n        let data = await response.json();\n        console.log(data);\n    } catch (error) {\n        console.error('Error:', error);\n    }\n}\n\nfetchData();"
+        },
+        {
+          "title": "Key Differences",
+          "description": "Callbacks make the code harder to read and debug, while async/await keeps it clean and easy to follow. I wish I had started with async/await first. It just makes everything so much simpler."
         }
       ]
     }
