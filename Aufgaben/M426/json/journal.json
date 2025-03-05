@@ -65,6 +65,60 @@
           "description": "Callbacks make the code harder to read and debug, while async/await keeps it clean and easy to follow. I wish I had started with async/await first. It just makes everything so much simpler."
         }
       ]
+    },
+    {
+      "title": "Lesson 4",
+      "entries": [
+        {
+          "title": "Basics of PHP",
+          "description": "PHP (Hypertext Preprocessor) is a server-side scripting language used to create dynamic web pages. Unlike HTML, which is processed directly by the browser, PHP executes on the server and sends the generated output to the client. This allows for real-time content updates, data processing, and interaction with databases.\n\nPHP is embedded within HTML, meaning a single document can contain both HTML and PHP code. The server processes PHP sections and leaves HTML untouched, making PHP highly flexible for web development.",
+          "image": "images/php-visual.png"
+        },
+        {
+          "title": "Client-Server Communication",
+          "description": "When a user requests a webpage, their browser (client) sends an HTTP request to the web server. The server then determines how to handle the request:\n\n- If the requested file is a static `.html` file, it is directly sent back to the client.\n- If the file has a `.php` extension, the server invokes the PHP interpreter, which processes the PHP code and generates the appropriate output (typically HTML) to send back to the browser.\n\nPHP is executed only on the server, and the client never sees the actual PHP code—only the resulting output."
+        },
+        {
+          "title": "Structure of PHP Code",
+          "description": "A PHP script is enclosed within `<?php` and `?>` tags, which indicate the start and end of PHP code within an HTML file.",
+          "code": "<!DOCTYPE html>\n<html>\n<head>\n    <title>PHP Example</title>\n</head>\n<body>\n    <h1>Welcome to my website</h1>\n    <p>The current date is: <?php echo date('Y-m-d'); ?></p>\n</body>\n</html>"
+        },
+        {
+          "title": "Outputting Content in PHP",
+          "description": "PHP is often used to display dynamic content on web pages. The two primary ways to output text in PHP are:\n\n- `echo()` – The most common way to print output.\n- `print()` – Similar to `echo`, but returns a value (`1`), making it slightly slower.",
+          "code": "<?php\necho \"Hello, World!<br>\";\nprint \"This is a PHP script.\";\n?>"
+        },
+        {
+          "title": "Comments in PHP",
+          "description": "Comments are essential for code readability and debugging. PHP supports three types of comments:\n\n- Single-line comments (`//`)\n- Single-line comments using hash (`#`)\n- Multi-line comments (`/* ... */`)",
+          "code": "<?php\n// This is a single-line comment\n\n# This is another way to write a single-line comment\n\n/* \n   This is a multi-line comment.\n   It spans multiple lines.\n*/\n\necho \"PHP is fun!\";\n?>"
+        },
+        {
+          "title": "Data Types in PHP",
+          "description": "PHP supports several data types:\n\n- Boolean (`true` or `false`) – Used in logical operations.\n- Integer – Whole numbers (e.g., `10`, `-5`).\n- Float (Double) – Decimal numbers (e.g., `3.14`, `-0.99`).\n- String – A sequence of characters (e.g., `\"Hello, World!\"`).",
+          "code": "<?php\n$boolean = true;\n$integer = 42;\n$float = 3.1415;\n$string = \"Hello, PHP!\";\n\necho $string;  // Outputs: Hello, PHP!\n?>"
+        },
+        {
+          "title": "Variables in PHP",
+          "description": "Variables are used to store data for later use. In PHP:\n\n- A variable name starts with `$` (e.g., `$name`, `$age`).\n- Variable names cannot start with a number and cannot contain spaces.\n- PHP is case-sensitive, meaning `$Name` and `$name` are different variables.",
+          "code": "<?php\n$name = \"Alice\";\n$age = 25;\n\necho \"My name is $name and I am $age years old.\";\n?>"
+        },
+        {
+          "title": "Assigning and Manipulating Variables",
+          "description": "Variables can store and manipulate different data types. PHP allows:\n\n- Simple assignments (`=`)\n- String concatenation (`.`)\n- Arithmetic operations (`+`, `-`, `*`, `/`)",
+          "code": "<?php\n$a = 10;\n$b = 5;\n\n$sum = $a + $b;  // 15\ndifference = $a - $b;  // 5\n$product = $a * $b;  // 50\n$quotient = $a / $b;  // 2\n\necho \"Sum: $sum, Difference: $difference, Product: $product, Quotient: $quotient\";\n?>"
+        },
+        {
+          "title": "Automatic Type Conversion",
+          "description": "PHP automatically converts data types when needed, which can lead to unexpected results if not handled properly.",
+          "code": "<?php\n$sum = \"10\" + 5;  \necho $sum; // Outputs: 15\n?>"
+        },
+        {
+          "title": "Type Conversion with Concatenation",
+          "description": "PHP treats strings and numbers differently during concatenation, often leading to surprising results.",
+          "code": "<?php\n$result = \"5\" . 10;  \necho $result; // Outputs: 510\n?>"
+        }
+      ]
     }
   ]
 }

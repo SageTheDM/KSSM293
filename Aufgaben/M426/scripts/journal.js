@@ -11,27 +11,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
         lessonElement.innerHTML = `
             <h2 class="accordion-header" id="heading${index}">
-                <button class="accordion-button ${
-                  index === 0 ? "" : "collapsed"
-                }" 
+                <button class="accordion-button collapsed" 
                         type="button" data-bs-toggle="collapse" 
                         data-bs-target="#collapse${index}" 
-                        aria-expanded="${index === 0 ? "true" : "false"}" 
+                        aria-expanded="false" 
                         aria-controls="collapse${index}">
                     ${lesson.title}
                 </button>
             </h2>
-            <div id="collapse${index}" class="accordion-collapse collapse ${
-          index === 0 ? "show" : ""
-        }" 
+            <div id="collapse${index}" class="accordion-collapse collapse" 
                  aria-labelledby="heading${index}" 
                  data-bs-parent="#journalAccordion">
                 <div class="accordion-body">
                     <ul>
                         ${lesson.entries
                           .map(
-                            (entry) =>
-                              `<li class="journal-entry">
+                            (entry) => `
+                              <li class="journal-entry">
                                 <span class="entry-title">${entry.title}</span> 
                                 <p>${entry.description}</p>
                                 ${
@@ -39,6 +35,11 @@ document.addEventListener("DOMContentLoaded", () => {
                                     ? `<pre class="code-box"><code class="language-javascript">${escapeHtml(
                                         entry.code
                                       )}</code></pre>`
+                                    : ""
+                                }
+                                ${
+                                  entry.image
+                                    ? `<div class="image-container"><img src="${entry.image}" alt="${entry.title}" class="journal-image"></div>`
                                     : ""
                                 }
                               </li>`
