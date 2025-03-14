@@ -31,6 +31,24 @@ document.addEventListener("DOMContentLoaded", () => {
                                 <span class="entry-title">${entry.title}</span> 
                                 <p>${entry.description}</p>
                                 ${
+                                  entry.syntax
+                                    ? `<pre class="code-box"><code class="language-${getLanguage(
+                                        entry.syntax
+                                      )}">// Syntax\n${escapeHtml(
+                                        entry.syntax
+                                      )}</code></pre>`
+                                    : ""
+                                }
+                                ${
+                                  entry.example
+                                    ? `<pre class="code-box"><code class="language-${getLanguage(
+                                        entry.example
+                                      )}">// Example\n${escapeHtml(
+                                        entry.example
+                                      )}</code></pre>`
+                                    : ""
+                                }
+                                ${
                                   entry.code
                                     ? `<pre class="code-box"><code class="language-javascript">${escapeHtml(
                                         entry.code
@@ -68,4 +86,12 @@ function escapeHtml(str) {
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#039;");
+}
+
+// Function to determine language for code highlighting
+function getLanguage(code) {
+  if (code.startsWith("sql")) return "sql";
+  if (code.startsWith("php")) return "php";
+  if (code.startsWith("js")) return "javascript";
+  return "plaintext";
 }
