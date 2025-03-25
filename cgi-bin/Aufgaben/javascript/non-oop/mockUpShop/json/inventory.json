@@ -1,0 +1,1578 @@
+[
+  {
+    "produktname": "Fujifilm X-T4",
+    "beschreibung": "Die Fujifilm X-T4 ist eine spiegellose Kamera mit hervorragender Bildqualität, 4K-Videoaufnahmen und einer schnellen Autofokus-Leistung, ideal für Fotografen und Videografen.",
+    "bild": "fujifilm_xt4.jpg",
+    "preis": 1999.0,
+    "kategorie": "Kameras",
+    "lagerbestand": 12,
+    "bewertung": 4.8,
+    "bewertungen": 650,
+    "TechnischeDaten": {
+      "sensor": "26.1 MP APS-C X-Trans CMOS 4",
+      "prozessor": "X-Processor 4",
+      "bildstabilisierung": "5-Achsen IBIS",
+      "video": "4K bis 60 fps, Full HD bis 240 fps",
+      "sucher": "3.69M-dot OLED EVF",
+      "display": "3.0 Zoll, 1.62M-dot, schwenkbar",
+      "anschluesse": "USB-C, Mikrofon, Kopfhörer",
+      "gewicht": "607 g (mit Akku und Speicherkarte)",
+      "maximale_belichtungszeit": "15 Sekunden",
+      "iso_bereich": "160 - 12800 (erweiterbar auf 80 - 51200)"
+    }
+  },
+  {
+    "produktname": "Fujifilm X100V",
+    "beschreibung": "Die Fujifilm X100V kombiniert klassische Kameradesigns mit moderner Technologie, ideal für Street Photography mit einer erstklassigen Festbrennweite und aussergewöhnlicher Bildqualität.",
+    "bild": "fujifilm_x100v.jpg",
+    "preis": 1499.0,
+    "kategorie": "Kameras",
+    "lagerbestand": 20,
+    "bewertung": 4.7,
+    "bewertungen": 450,
+    "TechnischeDaten": {
+      "sensor": "26.1 MP APS-C X-Trans CMOS 4",
+      "prozessor": "X-Processor 4",
+      "objektiv": "23mm f/2 Festbrennweite",
+      "display": "3.0 Zoll, 1.62M-dot LCD, schwenkbar",
+      "sucher": "Hybrid-Optischer/Elektronischer Sucher",
+      "video": "4K bis 30 fps",
+      "anschluesse": "USB-C, Mikrofon",
+      "gewicht": "478 g (mit Akku und Speicherkarte)",
+      "maximale_belichtungszeit": "4 Sekunden",
+      "iso_bereich": "160 - 12800 (erweiterbar auf 80 - 51200)"
+    }
+  },
+  {
+    "produktname": "Fujifilm X-Pro3",
+    "beschreibung": "Die Fujifilm X-Pro3 ist eine spiegellose Kamera mit einem hybriden optischen/elektronischen Sucher und einer robusten Bauweise, ideal für professionelle Fotografen.",
+    "bild": "fujifilm_xpro3.jpg",
+    "preis": 2099.0,
+    "kategorie": "Kameras",
+    "lagerbestand": 8,
+    "bewertung": 4.9,
+    "bewertungen": 300,
+    "TechnischeDaten": {
+      "sensor": "26.1 MP APS-C X-Trans CMOS 4",
+      "prozessor": "X-Processor 4",
+      "bildstabilisierung": "Kein IBIS",
+      "video": "4K bis 30 fps",
+      "sucher": "Hybrid-Optischer/Elektronischer Sucher",
+      "display": "3.0 Zoll, 1.62M-dot LCD",
+      "anschluesse": "USB-C, Mikrofon",
+      "gewicht": "497 g (mit Akku und Speicherkarte)",
+      "maximale_belichtungszeit": "4 Sekunden",
+      "iso_bereich": "160 - 12800 (erweiterbar auf 80 - 51200)"
+    }
+  },
+  {
+    "produktname": "Fujifilm GFX 100S",
+    "beschreibung": "Die Fujifilm GFX 100S bietet eine unglaubliche Auflösung von 102 Megapixeln und ist damit eine der besten Mittelformatkameras für professionelle Fotografen.",
+    "bild": "fujifilm_gfx100s.jpg",
+    "preis": 6199.0,
+    "kategorie": "Kameras",
+    "lagerbestand": 5,
+    "bewertung": 5.0,
+    "bewertungen": 150,
+    "TechnischeDaten": {
+      "sensor": "102 MP Mittelformat CMOS",
+      "prozessor": "X-Processor 4",
+      "bildstabilisierung": "5-Achsen IBIS",
+      "video": "4K bis 30 fps",
+      "sucher": "5.76M-dot OLED EVF",
+      "display": "3.2 Zoll, 2.36M-dot LCD",
+      "anschluesse": "USB-C, Mikrofon, Kopfhörer, HDMI",
+      "gewicht": "1400 g (mit Akku und Speicherkarte)",
+      "maximale_belichtungszeit": "30 Minuten",
+      "iso_bereich": "100 - 12800 (erweiterbar auf 50 - 102400)"
+    }
+  },
+  {
+    "produktname": "Fujifilm X-T30",
+    "beschreibung": "Die Fujifilm X-T30 ist eine kompakte, spiegellose Kamera mit beeindruckender Bildqualität und schnellen Autofokusfunktionen, perfekt für Fotografen, die eine leistungsstarke Kamera im kompakten Format suchen.",
+    "bild": "fujifilm_xt30.jpg",
+    "preis": 1199.0,
+    "kategorie": "Kameras",
+    "lagerbestand": 30,
+    "bewertung": 4.8,
+    "bewertungen": 420,
+    "TechnischeDaten": {
+      "sensor": "26.1 MP APS-C X-Trans CMOS 4",
+      "prozessor": "X-Processor 4",
+      "bildstabilisierung": "Kein IBIS",
+      "video": "4K bis 30 fps",
+      "sucher": "2.36M-dot OLED EVF",
+      "display": "3.0 Zoll, 1.04M-dot LCD",
+      "anschluesse": "USB-C, Mikrofon",
+      "gewicht": "383 g (mit Akku und Speicherkarte)",
+      "maximale_belichtungszeit": "4 Sekunden",
+      "iso_bereich": "160 - 12800 (erweiterbar auf 80 - 51200)"
+    }
+  },
+  {
+    "produktname": "Canon EOS R5",
+    "beschreibung": "Die Canon EOS R5 ist eine spiegellose Vollformatkamera, die beeindruckende 8K-Videoaufnahmen und hervorragende Autofokusleistung bietet.",
+    "bild": "canon_eos_r5.jpg",
+    "preis": 3899.0,
+    "kategorie": "Kameras",
+    "lagerbestand": 10,
+    "bewertung": 4.9,
+    "bewertungen": 320,
+    "TechnischeDaten": {
+      "sensor": "45 MP Vollformat CMOS",
+      "prozessor": "DIGIC X",
+      "bildstabilisierung": "5-Achsen IBIS",
+      "video": "8K bis 30 fps, 4K bis 120 fps",
+      "sucher": "5.76M-dot OLED EVF",
+      "display": "3.2 Zoll, 2.1M-dot LCD, schwenkbar",
+      "anschluesse": "USB-C, HDMI, Mikrofon, Kopfhörer",
+      "gewicht": "738 g (mit Akku und Speicherkarte)",
+      "maximale_belichtungszeit": "30 Minuten",
+      "iso_bereich": "100 - 51200 (erweiterbar auf 50 - 102400)"
+    }
+  },
+  {
+    "produktname": "Sony Alpha 7R IV",
+    "beschreibung": "Die Sony Alpha 7R IV bietet eine hohe Auflösung von 61 MP und ist ideal für professionelle Fotografen, die aussergewöhnliche Detailtreue benötigen.",
+    "bild": "sony_a7r_iv.jpg",
+    "preis": 3299.0,
+    "kategorie": "Kameras",
+    "lagerbestand": 15,
+    "bewertung": 4.8,
+    "bewertungen": 480,
+    "TechnischeDaten": {
+      "sensor": "61 MP Vollformat Exmor R CMOS",
+      "prozessor": "BIONZ X",
+      "bildstabilisierung": "5-Achsen IBIS",
+      "video": "4K bis 30 fps",
+      "sucher": "5.76M-dot OLED EVF",
+      "display": "3.0 Zoll, 1.44M-dot LCD",
+      "anschluesse": "USB-C, HDMI, Mikrofon",
+      "gewicht": "665 g (mit Akku und Speicherkarte)",
+      "maximale_belichtungszeit": "30 Sekunden",
+      "iso_bereich": "100 - 32000 (erweiterbar auf 50 - 102400)"
+    }
+  },
+  {
+    "produktname": "Nikon Z9",
+    "beschreibung": "Die Nikon Z9 ist eine spiegellose Vollformatkamera mit 45,7 Megapixeln und 8K-Videoaufzeichnung, die sich perfekt für professionelle Foto- und Videografie eignet.",
+    "bild": "nikon_z9.jpg",
+    "preis": 5499.0,
+    "kategorie": "Kameras",
+    "lagerbestand": 5,
+    "bewertung": 5.0,
+    "bewertungen": 250,
+    "TechnischeDaten": {
+      "sensor": "45.7 MP Vollformat CMOS",
+      "prozessor": "Expeed 7",
+      "bildstabilisierung": "5-Achsen IBIS",
+      "video": "8K bis 30 fps, 4K bis 120 fps",
+      "sucher": "3.69M-dot OLED EVF",
+      "display": "3.2 Zoll, 2.1M-dot LCD",
+      "anschluesse": "USB-C, HDMI, Mikrofon, Kopfhörer",
+      "gewicht": "1340 g (mit Akku und Speicherkarte)",
+      "maximale_belichtungszeit": "30 Minuten",
+      "iso_bereich": "64 - 25600 (erweiterbar auf 32 - 102400)"
+    }
+  },
+  {
+    "produktname": "Olympus OM-D E-M1 Mark III",
+    "beschreibung": "Die Olympus OM-D E-M1 Mark III ist eine spiegellose Kamera mit einem Mikrofon-Vollformat-Sensor und 4K-Videoaufnahme, ideal für Outdoor-Fotografen.",
+    "bild": "olympus_omd_em1_mark_iii.jpg",
+    "preis": 1799.0,
+    "kategorie": "Kameras",
+    "lagerbestand": 20,
+    "bewertung": 4.7,
+    "bewertungen": 300,
+    "TechnischeDaten": {
+      "sensor": "20.4 MP Mikro 4/3",
+      "prozessor": "TruePic IX",
+      "bildstabilisierung": "5-Achsen IBIS",
+      "video": "4K bis 30 fps",
+      "sucher": "2.36M-dot OLED EVF",
+      "display": "3.0 Zoll, 1.04M-dot LCD",
+      "anschluesse": "USB-C, Mikrofon, HDMI",
+      "gewicht": "500 g (mit Akku und Speicherkarte)",
+      "maximale_belichtungszeit": "60 Sekunden",
+      "iso_bereich": "200 - 25600"
+    }
+  },
+  {
+    "produktname": "Sigma 24-70mm f/2.8 DG DN Art",
+    "beschreibung": "Ein hochwertiges Standard-Zoom-Objektiv für spiegellose Vollformatkameras, ideal für Porträts und Landschaftsaufnahmen.",
+    "bild": "sigma_24_70mm.jpg",
+    "preis": 1199.0,
+    "kategorie": "Objektive",
+    "lagerbestand": 25,
+    "bewertung": 4.9,
+    "bewertungen": 200,
+    "TechnischeDaten": {
+      "brennweite": "24-70mm",
+      "blende": "f/2.8",
+      "filterdurchmesser": "82mm",
+      "gewicht": "835 g",
+      "kompatibilität": "Sony E-Mount, Leica L-Mount"
+    }
+  },
+  {
+    "produktname": "SanDisk Extreme PRO 128GB SDXC",
+    "beschreibung": "Eine Hochleistungs-Speicherkarte mit schnellen Schreibgeschwindigkeiten, ideal für 4K-Videos und Serienaufnahmen.",
+    "bild": "sandisk_extreme_pro_128gb.jpg",
+    "preis": 39.99,
+    "kategorie": "Speicherkarten",
+    "lagerbestand": 100,
+    "bewertung": 4.8,
+    "bewertungen": 1500,
+    "TechnischeDaten": {
+      "speicherkapazität": "128GB",
+      "geschwindigkeit": "170MB/s",
+      "formfaktor": "SDXC",
+      "kompatibilität": "UHS-I, UHS-II Geräte"
+    }
+  },
+  {
+    "produktname": "DJI Mini 3 Pro",
+    "beschreibung": "Eine ultrakompakte Drohne mit fortschrittlichen Funktionen wie 4K-Video und Hinderniserkennung, ideal für Einsteiger und Profis.",
+    "bild": "dji_mini_3_pro.jpg",
+    "preis": 749.0,
+    "kategorie": "Drohnen",
+    "lagerbestand": 15,
+    "bewertung": 4.9,
+    "bewertungen": 850,
+    "TechnischeDaten": {
+      "kamera": "4K, 48 MP",
+      "flugzeit": "34 Minuten",
+      "reichweite": "12 km",
+      "gewicht": "249 g",
+      "features": "Hinderniserkennung, ActiveTrack, Hyperlapse"
+    }
+  },
+  {
+    "produktname": "Manfrotto Befree Advanced Aluminium",
+    "beschreibung": "Ein kompaktes und leichtes Reisestativ mit Kugelkopf, ideal für Fotografen unterwegs.",
+    "bild": "manfrotto_befree_advanced.jpg",
+    "preis": 189.0,
+    "kategorie": "Stative",
+    "lagerbestand": 30,
+    "bewertung": 4.7,
+    "bewertungen": 600,
+    "TechnischeDaten": {
+      "material": "Aluminium",
+      "maximale_hoehe": "150 cm",
+      "traglast": "8 kg",
+      "gewicht": "1.49 kg",
+      "beinklemmen": "Flip-Locks"
+    }
+  },
+  {
+    "produktname": "Zhiyun Weebill 3",
+    "beschreibung": "Ein leistungsstarker und kompakter Gimbal für spiegellose Kameras, bietet butterweiche Stabilisierung und ergonomisches Design.",
+    "bild": "zhiyun_weebill_3.jpg",
+    "preis": 369.0,
+    "kategorie": "Gimbals",
+    "lagerbestand": 20,
+    "bewertung": 4.8,
+    "bewertungen": 250,
+    "TechnischeDaten": {
+      "traglast": "3 kg",
+      "gewicht": "1.1 kg",
+      "akku": "21 Stunden Betriebszeit",
+      "modi": "Pan Follow, Lock, POV, Vortex"
+    }
+  },
+  {
+    "produktname": "Godox SL60W",
+    "beschreibung": "Ein leistungsstarkes LED-Dauerlicht mit hoher Farbgenauigkeit, ideal für Video- und Studioaufnahmen.",
+    "bild": "godox_sl60w.jpg",
+    "preis": 129.0,
+    "kategorie": "Studio-Beleuchtung",
+    "lagerbestand": 50,
+    "bewertung": 4.7,
+    "bewertungen": 400,
+    "TechnischeDaten": {
+      "leistung": "60W",
+      "farbtemperatur": "5600K",
+      "cri": "96+",
+      "gewicht": "1.61 kg",
+      "stromversorgung": "AC 100-240V"
+    }
+  },
+  {
+    "produktname": "Lowepro ProTactic 450 AW II",
+    "beschreibung": "Ein professioneller Kamera-Rucksack mit anpassbaren Innenfächern und Allwetterschutz, ideal für Fotografen auf Reisen.",
+    "bild": "lowepro_protactic_450_aw_ii.jpg",
+    "preis": 199.0,
+    "kategorie": "Kamerataschen",
+    "lagerbestand": 35,
+    "bewertung": 4.8,
+    "bewertungen": 300,
+    "TechnischeDaten": {
+      "kapazität": "1-2 Kameras, 6 Objektive, Zubehör",
+      "material": "Nylon",
+      "abmessungen": "30 x 18 x 50 cm",
+      "gewicht": "2.5 kg",
+      "features": "Allwetterschutz, Modularität"
+    }
+  },
+  {
+    "produktname": "Rode VideoMic NTG",
+    "beschreibung": "Ein vielseitiges Richtmikrofon mit Broadcast-Qualität, ideal für Vlogging und Filmemacher.",
+    "bild": "rode_videomic_ntg.jpg",
+    "preis": 249.0,
+    "kategorie": "Audio-Equipment",
+    "lagerbestand": 40,
+    "bewertung": 4.9,
+    "bewertungen": 500,
+    "TechnischeDaten": {
+      "typ": "Richtmikrofon",
+      "frequenzbereich": "20Hz - 20kHz",
+      "gewicht": "94 g",
+      "anschlüsse": "3.5mm, USB-C",
+      "stromversorgung": "integrierter Akku"
+    }
+  },
+  {
+    "produktname": "GoPro HERO 11 Black",
+    "beschreibung": "Eine robuste Action-Kamera mit 5.3K-Video, HyperSmooth 5.0 und wasserdichtem Design, perfekt für Abenteuerliebhaber.",
+    "bild": "gopro_hero_11_black.jpg",
+    "preis": 499.99,
+    "kategorie": "Action-Kameras",
+    "lagerbestand": 30,
+    "bewertung": 4.8,
+    "bewertungen": 2200,
+    "TechnischeDaten": {
+      "auflösung": "27 MP",
+      "video": "5.3K bei 60 fps",
+      "bildstabilisierung": "HyperSmooth 5.0",
+      "wasserdicht": "Bis zu 10 Meter",
+      "gewicht": "153 g",
+      "akkulaufzeit": "2 Stunden"
+    }
+  },
+  {
+    "produktname": "Canon RF 70-200mm f/2.8L IS USM",
+    "beschreibung": "Ein leistungsstarkes Telezoomobjektiv mit Bildstabilisierung, ideal für Sport- und Tierfotografie.",
+    "bild": "canon_rf_70_200mm.jpg",
+    "preis": 2799.0,
+    "kategorie": "Objektive",
+    "lagerbestand": 10,
+    "bewertung": 5.0,
+    "bewertungen": 320,
+    "TechnischeDaten": {
+      "brennweite": "70-200mm",
+      "blende": "f/2.8",
+      "filterdurchmesser": "77mm",
+      "gewicht": "1070 g",
+      "kompatibilität": "Canon RF Mount"
+    }
+  },
+  {
+    "produktname": "DJI RS 3 Pro",
+    "beschreibung": "Ein professioneller 3-Achsen-Gimbal für Kameras, der aussergewöhnliche Stabilität und Kontrolle bietet.",
+    "bild": "dji_rs3_pro.jpg",
+    "preis": 869.0,
+    "kategorie": "Stabilisatoren",
+    "lagerbestand": 18,
+    "bewertung": 4.9,
+    "bewertungen": 600,
+    "TechnischeDaten": {
+      "lastgewicht": "Bis zu 4.5 kg",
+      "akkulaufzeit": "12 Stunden",
+      "gewicht": "1230 g",
+      "features": "ActiveTrack, RavenEye Übertragung",
+      "kompatibilität": "Spiegellose und DSLR-Kameras"
+    }
+  },
+  {
+    "produktname": "Godox AD200Pro Blitzgerät",
+    "beschreibung": "Ein tragbares Blitzgerät mit leistungsstarker Beleuchtung und vielseitigen Einsatzmöglichkeiten, ideal für Studio- und Outdoor-Fotografie.",
+    "bild": "godox_ad200pro.jpg",
+    "preis": 349.0,
+    "kategorie": "Blitzgeräte",
+    "lagerbestand": 30,
+    "bewertung": 4.7,
+    "bewertungen": 320,
+    "TechnischeDaten": {
+      "leistung": "200Ws",
+      "farben": "5600K ±200K",
+      "akku": "Lithium-Ionen, 2900mAh",
+      "aufladezeit": "0.01-1.8 Sekunden",
+      "gewicht": "560 g"
+    }
+  },
+  {
+    "produktname": "Peak Design Everyday Backpack 20L",
+    "beschreibung": "Ein stilvoller und funktionaler Kamerarucksack mit flexiblen Fächern, perfekt für Fotografen unterwegs.",
+    "bild": "peak_design_backpack_20l.jpg",
+    "preis": 279.95,
+    "kategorie": "Rucksäcke",
+    "lagerbestand": 50,
+    "bewertung": 4.9,
+    "bewertungen": 450,
+    "TechnischeDaten": {
+      "kapazität": "20L",
+      "material": "Recyceltes Nylon",
+      "gewicht": "1.5 kg",
+      "kompatibilität": "Laptop bis 15 Zoll",
+      "wetterbeständigkeit": "Ja"
+    }
+  },
+  {
+    "produktname": "Adobe Creative Cloud Jahreslizenz",
+    "beschreibung": "Eine umfassende Sammlung kreativer Software-Tools für Fotografen, Designer und Videobearbeiter.",
+    "bild": "adobe_creative_cloud.jpg",
+    "preis": 599.0,
+    "kategorie": "Software",
+    "lagerbestand": 1000,
+    "bewertung": 4.6,
+    "bewertungen": 2200,
+    "TechnischeDaten": {
+      "lizenzdauer": "12 Monate",
+      "plattformen": "Windows, macOS",
+      "programme": "Photoshop, Lightroom, Premiere Pro, uvm.",
+      "cloudspeicher": "100 GB"
+    }
+  },
+  {
+    "produktname": "Canon EOS R8 Kamera",
+    "beschreibung": "Eine spiegellose Vollformatkamera mit beeindruckender Bildqualität und 4K-Videoaufnahmen.",
+    "bild": "canon_eos_r8.jpg",
+    "preis": 1799.0,
+    "kategorie": "Kameras",
+    "lagerbestand": 20,
+    "bewertung": 4.7,
+    "bewertungen": 410,
+    "TechnischeDaten": {
+      "sensor": "Vollformat CMOS",
+      "auflösung": "24.2 MP",
+      "iso_bereich": "100-102400",
+      "gewicht": "461 g",
+      "video": "4K 60fps"
+    }
+  },
+  {
+    "produktname": "Sony FE 24-70mm f/2.8 GM II Objektiv",
+    "beschreibung": "Ein professionelles Standardzoom-Objektiv für Sony E-Mount-Kameras.",
+    "bild": "sony_fe_24_70mm.jpg",
+    "preis": 2299.0,
+    "kategorie": "Objektive",
+    "lagerbestand": 15,
+    "bewertung": 4.9,
+    "bewertungen": 300,
+    "TechnischeDaten": {
+      "brennweite": "24-70 mm",
+      "öffnung": "f/2.8",
+      "gewicht": "695 g",
+      "kompatibilität": "Sony E-Mount",
+      "vergütung": "Nano AR II"
+    }
+  },
+  {
+    "produktname": "Fujifilm Instax Mini 12",
+    "beschreibung": "Eine stylische Sofortbildkamera für kreative Fotografie.",
+    "bild": "fujifilm_instax_mini_12.jpg",
+    "preis": 89.99,
+    "kategorie": "Kameras",
+    "lagerbestand": 80,
+    "bewertung": 4.6,
+    "bewertungen": 890,
+    "TechnischeDaten": {
+      "bildformat": "62 x 46 mm",
+      "gewicht": "306 g",
+      "batterien": "2x AA",
+      "features": "Selfie-Modus, Nahaufnahmen"
+    }
+  },
+  {
+    "produktname": "Neewer 660 LED Videolicht",
+    "beschreibung": "Professionelles LED-Licht für Videoaufnahmen mit einstellbarer Farbtemperatur.",
+    "bild": "neewer_660_led.jpg",
+    "preis": 89.99,
+    "kategorie": "Beleuchtung",
+    "lagerbestand": 45,
+    "bewertung": 4.5,
+    "bewertungen": 640,
+    "TechnischeDaten": {
+      "farbtemperatur": "3200K-5600K",
+      "leistung": "40W",
+      "gewicht": "1.5 kg",
+      "stromversorgung": "Netzteil oder Akku"
+    }
+  },
+  {
+    "produktname": "Aputure Amaran 100d",
+    "beschreibung": "Ein kompaktes und leistungsstarkes Tageslicht-LED-Licht für Videografie.",
+    "bild": "aputure_amaran_100d.jpg",
+    "preis": 199.0,
+    "kategorie": "Beleuchtung",
+    "lagerbestand": 20,
+    "bewertung": 4.9,
+    "bewertungen": 390,
+    "TechnischeDaten": {
+      "leistung": "100W",
+      "farbtemperatur": "5600K",
+      "gewicht": "1.4 kg",
+      "stromversorgung": "Netzteil"
+    }
+  },
+  {
+    "produktname": "BenQ PD3220U Monitor",
+    "beschreibung": "Ein 32-Zoll-4K-UHD-Monitor mit HDR für präzise Farbgenauigkeit und Designer-Workflows.",
+    "bild": "benq_pd3220u.jpg",
+    "preis": 1099.0,
+    "kategorie": "Monitore",
+    "lagerbestand": 12,
+    "bewertung": 4.7,
+    "bewertungen": 280,
+    "TechnischeDaten": {
+      "auflösung": "3840 x 2160",
+      "bildwiederholrate": "60 Hz",
+      "helligkeit": "350 nits",
+      "anschlüsse": "HDMI, DisplayPort, USB-C"
+    }
+  },
+  {
+    "produktname": "Logitech MX Keys Mini",
+    "beschreibung": "Eine kompakte kabellose Tastatur für kreative Profis mit hervorragendem Tippgefühl.",
+    "bild": "logitech_mx_keys_mini.jpg",
+    "preis": 99.99,
+    "kategorie": "Tastaturen",
+    "lagerbestand": 60,
+    "bewertung": 4.6,
+    "bewertungen": 1400,
+    "TechnischeDaten": {
+      "verbindung": "Bluetooth, USB-C",
+      "beleuchtung": "Hintergrundbeleuchtung",
+      "akkulaufzeit": "10 Tage",
+      "gewicht": "506 g"
+    }
+  },
+  {
+    "produktname": "DJI Air 3 Drohne",
+    "beschreibung": "Eine kompakte Drohne mit Dual-Kamera-System und beeindruckender Flugleistung.",
+    "bild": "dji_air_3.jpg",
+    "preis": 1199.0,
+    "kategorie": "Drohnen",
+    "lagerbestand": 25,
+    "bewertung": 4.8,
+    "bewertungen": 520,
+    "TechnischeDaten": {
+      "flugzeit": "46 Minuten",
+      "reichweite": "10 km",
+      "sensoren": "Hinderniserkennung",
+      "kamera": "48MP, 4K HDR"
+    }
+  },
+  {
+    "produktname": "Panasonic Lumix GH6",
+    "beschreibung": "Eine spiegellose Kamera für Videofilmer und Fotografen mit fortschrittlicher Bildstabilisierung und 5.7K-Videoaufnahme.",
+    "bild": "panasonic_lumix_gh6.jpg",
+    "preis": 2199.0,
+    "kategorie": "Kameras",
+    "lagerbestand": 10,
+    "bewertung": 4.7,
+    "bewertungen": 300,
+    "TechnischeDaten": {
+      "sensor": "25.2 MP Micro Four Thirds",
+      "prozessor": "Venus Engine",
+      "bildstabilisierung": "5-Achsen Dual IS",
+      "video": "5.7K bis 60 fps",
+      "sucher": "3.68M-dot OLED EVF",
+      "display": "3.0 Zoll, schwenkbar",
+      "anschlüsse": "USB-C, HDMI, Mikrofon, Kopfhörer",
+      "gewicht": "823 g",
+      "iso_bereich": "100 - 25600"
+    }
+  },
+  {
+    "produktname": "Sigma 85mm f/1.4 DG DN Art",
+    "beschreibung": "Ein lichtstarkes Porträtobjektiv mit hervorragender Schärfe und Bokeh, kompatibel mit spiegellosen Vollformatkameras.",
+    "bild": "sigma_85mm.jpg",
+    "preis": 1199.0,
+    "kategorie": "Objektive",
+    "lagerbestand": 15,
+    "bewertung": 4.9,
+    "bewertungen": 180,
+    "TechnischeDaten": {
+      "brennweite": "85mm",
+      "blende": "f/1.4",
+      "gewicht": "630 g",
+      "filterdurchmesser": "77mm",
+      "kompatibilität": "Sony E-Mount, Leica L-Mount"
+    }
+  },
+  {
+    "produktname": "Aputure Light Dome II",
+    "beschreibung": "Ein professioneller Softbox-Diffusor für Video- und Studioaufnahmen mit gleichmässigem Licht.",
+    "bild": "aputure_light_dome_ii.jpg",
+    "preis": 179.0,
+    "kategorie": "Studio-Beleuchtung",
+    "lagerbestand": 20,
+    "bewertung": 4.8,
+    "bewertungen": 260,
+    "TechnischeDaten": {
+      "durchmesser": "89 cm",
+      "gewicht": "2.1 kg",
+      "material": "Stoff, Metall",
+      "kompatibilität": "Bowens Mount",
+      "features": "Schnellaufbau-Design"
+    }
+  },
+  {
+    "produktname": "Sony FX3 Cinema Line",
+    "beschreibung": "Eine kompakte und professionelle Videokamera aus der Cinema Line mit 4K-Aufnahme und erweiterter Dynamik.",
+    "bild": "sony_fx3.jpg",
+    "preis": 3899.0,
+    "kategorie": "Kameras",
+    "lagerbestand": 8,
+    "bewertung": 4.9,
+    "bewertungen": 150,
+    "TechnischeDaten": {
+      "sensor": "10.2 MP Vollformat",
+      "prozessor": "BIONZ XR",
+      "video": "4K bis 120 fps",
+      "anschlüsse": "HDMI, USB-C, Mikrofon, Kopfhörer",
+      "gewicht": "715 g",
+      "iso_bereich": "80 - 409600"
+    }
+  },
+  {
+    "produktname": "Leica Q2",
+    "beschreibung": "Eine hochwertige kompakte Kamera mit einem Full-Frame-Sensor und einem festen 28mm f/1.7 Objektiv, ideal für Street Photography.",
+    "bild": "leica_q2.jpg",
+    "preis": 4799.0,
+    "kategorie": "Kameras",
+    "lagerbestand": 5,
+    "bewertung": 4.8,
+    "bewertungen": 200,
+    "TechnischeDaten": {
+      "sensor": "47.3 MP Full-Frame CMOS",
+      "prozessor": "Bionz X",
+      "bildstabilisierung": "Kein IBIS",
+      "video": "4K bis 30 fps",
+      "sucher": "3.68M-dot OLED EVF",
+      "display": "3.0 Zoll, 1.04M-dot LCD",
+      "anschlüsse": "USB-C",
+      "gewicht": "734 g",
+      "iso_bereich": "50 - 50000"
+    }
+  },
+  {
+    "produktname": "Tamron 28-75mm f/2.8 Di III VXD",
+    "beschreibung": "Ein kompaktes und lichtstarkes Zoom-Objektiv für spiegellose Kameras mit Sony E-Mount, ideal für Landschafts- und Porträtfotografie.",
+    "bild": "tamron_28_75mm.jpg",
+    "preis": 879.0,
+    "kategorie": "Objektive",
+    "lagerbestand": 22,
+    "bewertung": 4.7,
+    "bewertungen": 220,
+    "TechnischeDaten": {
+      "brennweite": "28-75mm",
+      "blende": "f/2.8",
+      "gewicht": "550 g",
+      "filterdurchmesser": "67mm",
+      "kompatibilität": "Sony E-Mount"
+    }
+  },
+  {
+    "produktname": "GoPro HERO 11 Black Creator Edition",
+    "beschreibung": "Ein Set mit der HERO 11 Black, das zusätzliches Zubehör für professionelle Content-Erstellung umfasst, inklusive eines Gimbals und Mikrofon.",
+    "bild": "gopro_hero_11_creator_edition.jpg",
+    "preis": 649.99,
+    "kategorie": "Action-Kameras",
+    "lagerbestand": 18,
+    "bewertung": 4.9,
+    "bewertungen": 1200,
+    "TechnischeDaten": {
+      "auflösung": "27 MP",
+      "video": "5.3K bei 60 fps",
+      "bildstabilisierung": "HyperSmooth 5.0",
+      "wasserdicht": "Bis zu 10 Meter",
+      "gewicht": "153 g",
+      "akkulaufzeit": "2 Stunden",
+      "features": "Creator Kit, Mikrofon, Gimbal"
+    }
+  },
+  {
+    "produktname": "Profoto B10 Plus",
+    "beschreibung": "Ein tragbarer Studio-Blitz mit hoher Lichtleistung und kompaktem Design, ideal für professionelle Fotografen unterwegs.",
+    "bild": "profoto_b10_plus.jpg",
+    "preis": 2499.0,
+    "kategorie": "Blitzgeräte",
+    "lagerbestand": 8,
+    "bewertung": 4.9,
+    "bewertungen": 180,
+    "TechnischeDaten": {
+      "leistung": "500Ws",
+      "lichtquelle": "LED, Blitz",
+      "akku": "Lithium-Ionen, 2.5 Stunden Ladezeit",
+      "gewicht": "2.5 kg",
+      "features": "Bluetooth, AirTTL"
+    }
+  },
+  {
+    "produktname": "DJI Mavic 3",
+    "beschreibung": "Die DJI Mavic 3 bietet beeindruckende 5.1K-Videografie und eine exzellente Kameraleistung mit einer 4/3 CMOS Hasselblad-Kamera.",
+    "bild": "dji_mavic_3.jpg",
+    "preis": 2399.0,
+    "kategorie": "Drohnen",
+    "lagerbestand": 12,
+    "bewertung": 5.0,
+    "bewertungen": 900,
+    "TechnischeDaten": {
+      "flugzeit": "46 Minuten",
+      "reichweite": "15 km",
+      "kamera": "20 MP, 5.1K Video",
+      "sensoren": "Hinderniserkennung",
+      "gewicht": "895 g",
+      "features": "Omnidirektionale Hinderniserkennung, Hyperlapse"
+    }
+  },
+  {
+    "produktname": "Canon EOS-1D X Mark III",
+    "beschreibung": "Die Canon EOS-1D X Mark III ist eine professionelle Spiegelreflexkamera mit unglaublicher Geschwindigkeit und Bildqualität, ideal für Sport- und Actionfotografie.",
+    "bild": "canon_eos_1d_x_mark_iii.jpg",
+    "preis": 6499.0,
+    "kategorie": "Kameras",
+    "lagerbestand": 5,
+    "bewertung": 5.0,
+    "bewertungen": 450,
+    "TechnischeDaten": {
+      "sensor": "20.1 MP Vollformat CMOS",
+      "prozessor": "DIGIC X",
+      "bildstabilisierung": "Kein IBIS",
+      "video": "5.5K bis 60 fps, 4K bis 120 fps",
+      "sucher": "0.5in 3.69M-dot OLED EVF",
+      "display": "3.2 Zoll, 2.1M-dot LCD",
+      "anschlüsse": "USB-C, HDMI, Mikrofon, Kopfhörer",
+      "gewicht": "1440 g",
+      "iso_bereich": "100 - 102400"
+    }
+  },
+  {
+    "produktname": "Sony FX6",
+    "beschreibung": "Die Sony FX6 ist eine kompakte Cine-Kamera mit einem Full-Frame-Sensor und einer aussergewöhnlichen 4K-Videoleistung.",
+    "bild": "sony_fx6.jpg",
+    "preis": 5999.0,
+    "kategorie": "Kameras",
+    "lagerbestand": 7,
+    "bewertung": 4.9,
+    "bewertungen": 200,
+    "TechnischeDaten": {
+      "sensor": "10.2 MP Vollformat Exmor R CMOS",
+      "prozessor": "BIONZ XR",
+      "video": "4K bis 120 fps, 1080p bis 240 fps",
+      "anschlüsse": "USB-C, HDMI, Mikrofon, Kopfhörer",
+      "gewicht": "890 g",
+      "iso_bereich": "50 - 409600"
+    }
+  },
+  {
+    "produktname": "Benro TMA38CL Mach3 Stativ",
+    "beschreibung": "Ein robustes Carbonstativ mit 3 Beinsegmenten und einer Traglast von bis zu 18 kg, ideal für professionelle Fotografen.",
+    "bild": "benro_tma38cl.jpg",
+    "preis": 299.0,
+    "kategorie": "Stative",
+    "lagerbestand": 18,
+    "bewertung": 4.7,
+    "bewertungen": 250,
+    "TechnischeDaten": {
+      "material": "Carbon",
+      "maximale_hoehe": "168 cm",
+      "traglast": "18 kg",
+      "gewicht": "1.8 kg",
+      "beinklemmen": "Dreh-Locks"
+    }
+  },
+  {
+    "produktname": "Elgato Stream Deck XL",
+    "beschreibung": "Ein hochwertiges Steuergerät mit 32 programmierbaren Tasten, perfekt für Streamer und Content-Creator.",
+    "bild": "elgato_stream_deck_xl.jpg",
+    "preis": 249.99,
+    "kategorie": "Zubehör",
+    "lagerbestand": 40,
+    "bewertung": 4.9,
+    "bewertungen": 300,
+    "TechnischeDaten": {
+      "tasten": "32 LCD-Tasten",
+      "anschlüsse": "USB-C",
+      "kompatibilität": "Windows, macOS",
+      "features": "Anpassbare Tasten, Touchscreen"
+    }
+  },
+  {
+    "produktname": "Atomos Ninja V",
+    "beschreibung": "Ein portabler 5-Zoll 4K HDR-Monitor und Recorder, ideal für Profis, die in 4K filmen und ihre Aufnahmen direkt aufnehmen möchten.",
+    "bild": "atomos_ninja_v.jpg",
+    "preis": 595.0,
+    "kategorie": "Zubehör",
+    "lagerbestand": 10,
+    "bewertung": 4.8,
+    "bewertungen": 150,
+    "TechnischeDaten": {
+      "monitor": "5 Zoll, 1000 Nits",
+      "video": "4K bis 60 fps, 1080p bis 240 fps",
+      "anschlüsse": "HDMI",
+      "features": "ProRes, DNxHR, HDR Unterstützung"
+    }
+  },
+  {
+    "produktname": "Blackmagic Design Pocket Cinema Camera 6K Pro",
+    "beschreibung": "Eine kompakte professionelle Kamera mit 6K-Auflösung und integriertem ND-Filter, ideal für Filmemacher, die auf der Suche nach einer kostengünstigen Cinema-Kamera sind.",
+    "bild": "blackmagic_pocket_cinema_6k_pro.jpg",
+    "preis": 2299.0,
+    "kategorie": "Kameras",
+    "lagerbestand": 6,
+    "bewertung": 4.8,
+    "bewertungen": 150,
+    "TechnischeDaten": {
+      "sensor": "Super 35mm",
+      "video": "6K bis 50 fps, 4K bis 120 fps",
+      "anschlüsse": "USB-C, HDMI, Mikrofon, Kopfhörer",
+      "gewicht": "1.5 kg",
+      "iso_bereich": "200 - 25600"
+    }
+  },
+  {
+    "produktname": "Fujifilm GFX 50S II",
+    "beschreibung": "Die Fujifilm GFX 50S II ist eine professionelle Mittelformatkamera mit 51,4 Megapixeln und hervorragender Bildqualität für anspruchsvolle Fotografen.",
+    "bild": "fujifilm_gfx_50s_ii.jpg",
+    "preis": 3999.0,
+    "kategorie": "Kameras",
+    "lagerbestand": 5,
+    "bewertung": 4.8,
+    "bewertungen": 180,
+    "TechnischeDaten": {
+      "sensor": "51.4 MP Mittelformat CMOS",
+      "prozessor": "X-Processor 4",
+      "bildstabilisierung": "5-Achsen IBIS",
+      "video": "4K bis 30 fps",
+      "sucher": "3.69M-dot OLED EVF",
+      "display": "3.2 Zoll, 2.36M-dot LCD",
+      "anschlüsse": "USB-C, HDMI",
+      "gewicht": "1400 g",
+      "iso_bereich": "100 - 12800"
+    }
+  },
+  {
+    "produktname": "Nikon Z 70-200mm f/2.8 VR S",
+    "beschreibung": "Ein professionelles Telezoom-Objektiv mit hervorragender Bildstabilisierung und schneller Autofokusleistung, ideal für Sport- und Tierfotografie.",
+    "bild": "nikon_z_70_200mm.jpg",
+    "preis": 2599.0,
+    "kategorie": "Objektive",
+    "lagerbestand": 10,
+    "bewertung": 4.9,
+    "bewertungen": 150,
+    "TechnischeDaten": {
+      "brennweite": "70-200mm",
+      "blende": "f/2.8",
+      "filterdurchmesser": "77mm",
+      "gewicht": "1.35 kg",
+      "kompatibilität": "Nikon Z-Mount"
+    }
+  },
+  {
+    "produktname": "DJI FPV Combo",
+    "beschreibung": "Eine Drohne für FPV-Flüge (First Person View) mit einer Kamera in 4K und einer Geschwindigkeit von bis zu 140 km/h, ideal für aufregende Luftaufnahmen.",
+    "bild": "dji_fpv_combo.jpg",
+    "preis": 1299.0,
+    "kategorie": "Drohnen",
+    "lagerbestand": 15,
+    "bewertung": 4.8,
+    "bewertungen": 550,
+    "TechnischeDaten": {
+      "kamera": "4K, 60fps",
+      "flugzeit": "20 Minuten",
+      "reichweite": "10 km",
+      "gewicht": "795 g",
+      "features": "Hinderniserkennung, FPV-Brille"
+    }
+  },
+  {
+    "produktname": "Eizo ColorEdge CG319X Monitor",
+    "beschreibung": "Ein hochwertiger 31,1 Zoll Monitor mit 4K-Auflösung und exzellenter Farbgenauigkeit, ideal für professionelle Bildbearbeitung und Farbkorrekturen.",
+    "bild": "eizo_coloredge_cg319x.jpg",
+    "preis": 4999.0,
+    "kategorie": "Monitore",
+    "lagerbestand": 3,
+    "bewertung": 5.0,
+    "bewertungen": 80,
+    "TechnischeDaten": {
+      "auflösung": "4096 x 2160",
+      "bildwiederholrate": "60 Hz",
+      "helligkeit": "350 nits",
+      "anschlüsse": "DisplayPort, HDMI, USB-C",
+      "features": "Hardware-Kalibrierung, Adobe RGB"
+    }
+  },
+  {
+    "produktname": "Panasonic Lumix S5",
+    "beschreibung": "Die Panasonic Lumix S5 ist eine spiegellose Vollformatkamera mit 4K-Videoaufnahme und einem kompakten Design, ideal für Vlogger und Content Creator.",
+    "bild": "panasonic_lumix_s5.jpg",
+    "preis": 1999.0,
+    "kategorie": "Kameras",
+    "lagerbestand": 12,
+    "bewertung": 4.7,
+    "bewertungen": 320,
+    "TechnischeDaten": {
+      "sensor": "24.2 MP Vollformat CMOS",
+      "prozessor": "Venus Engine",
+      "bildstabilisierung": "5-Achsen IBIS",
+      "video": "4K bis 60 fps",
+      "sucher": "2.36M-dot OLED EVF",
+      "display": "3.0 Zoll, schwenkbar",
+      "anschlüsse": "USB-C, HDMI, Mikrofon",
+      "gewicht": "714 g",
+      "iso_bereich": "100 - 51200"
+    }
+  },
+  {
+    "produktname": "Sony A7 IV",
+    "beschreibung": "Die Sony A7 IV ist eine spiegellose Vollformatkamera mit einer herausragenden Kombination aus Fotografie und Videografie-Funktionen.",
+    "bild": "sony_a7_iv.jpg",
+    "preis": 2499.0,
+    "kategorie": "Kameras",
+    "lagerbestand": 10,
+    "bewertung": 4.9,
+    "bewertungen": 500,
+    "TechnischeDaten": {
+      "sensor": "33 MP Vollformat CMOS",
+      "prozessor": "BIONZ XR",
+      "bildstabilisierung": "5-Achsen IBIS",
+      "video": "4K bis 60 fps",
+      "sucher": "3.69M-dot OLED EVF",
+      "display": "3.0 Zoll, schwenkbar",
+      "anschlüsse": "USB-C, HDMI, Mikrofon, Kopfhörer",
+      "gewicht": "659 g",
+      "iso_bereich": "100 - 51200"
+    }
+  },
+  {
+    "produktname": "Canon RF 50mm f/1.2L USM",
+    "beschreibung": "Ein hochauflösendes und lichtstarkes Standardobjektiv, ideal für Porträts und Low-Light-Aufnahmen.",
+    "bild": "canon_rf_50mm.jpg",
+    "preis": 2299.0,
+    "kategorie": "Objektive",
+    "lagerbestand": 12,
+    "bewertung": 5.0,
+    "bewertungen": 200,
+    "TechnischeDaten": {
+      "brennweite": "50mm",
+      "blende": "f/1.2",
+      "filterdurchmesser": "77mm",
+      "gewicht": "950 g",
+      "kompatibilität": "Canon RF Mount"
+    }
+  },
+  {
+    "produktname": "DJI Mavic Air 2",
+    "beschreibung": "Eine kompakte Drohne mit 4K-Videoaufnahme, 34 Minuten Flugzeit und beeindruckender Kameraqualität.",
+    "bild": "dji_mavic_air_2.jpg",
+    "preis": 799.0,
+    "kategorie": "Drohnen",
+    "lagerbestand": 15,
+    "bewertung": 4.8,
+    "bewertungen": 700,
+    "TechnischeDaten": {
+      "kamera": "48 MP, 4K Video",
+      "flugzeit": "34 Minuten",
+      "reichweite": "10 km",
+      "gewicht": "570 g",
+      "features": "Hinderniserkennung, ActiveTrack"
+    }
+  },
+  {
+    "produktname": "Fujifilm Instax Mini 90",
+    "beschreibung": "Eine Sofortbildkamera im Retro-Stil mit modernen Funktionen, ideal für kreative Fotografie und Sofortdrucke.",
+    "bild": "fujifilm_instax_mini_90.jpg",
+    "preis": 139.99,
+    "kategorie": "Kameras",
+    "lagerbestand": 30,
+    "bewertung": 4.7,
+    "bewertungen": 450,
+    "TechnischeDaten": {
+      "bildformat": "62 x 46 mm",
+      "gewicht": "296 g",
+      "batterien": "2x CR2",
+      "features": "Selfie-Modus, Makro-Modus"
+    }
+  },
+  {
+    "produktname": "Sigma 12-24mm f/4 DG HSM Art",
+    "beschreibung": "Ein Ultraweitwinkel-Zoomobjektiv mit hervorragender Bildqualität und aussergewöhnlicher Leistung bei schwachem Licht.",
+    "bild": "sigma_12_24mm.jpg",
+    "preis": 1499.0,
+    "kategorie": "Objektive",
+    "lagerbestand": 10,
+    "bewertung": 4.8,
+    "bewertungen": 150,
+    "TechnischeDaten": {
+      "brennweite": "12-24mm",
+      "blende": "f/4",
+      "filterdurchmesser": "95mm",
+      "gewicht": "1.1 kg",
+      "kompatibilität": "Canon EF, Nikon F"
+    }
+  },
+  {
+    "produktname": "Rode Wireless GO II",
+    "beschreibung": "Ein kabelloses Mikrofon-System, das eine hervorragende Audioqualität und Flexibilität für Videoproduktionen bietet.",
+    "bild": "rode_wireless_go_ii.jpg",
+    "preis": 299.0,
+    "kategorie": "Audio-Equipment",
+    "lagerbestand": 25,
+    "bewertung": 4.9,
+    "bewertungen": 600,
+    "TechnischeDaten": {
+      "typ": "Kabelloses Mikrofon",
+      "reichweite": "200 m",
+      "frequenzbereich": "20 Hz - 20 kHz",
+      "gewicht": "31 g pro Empfänger",
+      "anschlüsse": "3.5mm, USB-C"
+    }
+  },
+  {
+    "produktname": "Zhiyun Crane 3S",
+    "beschreibung": "Ein leistungsstarker 3-Achsen-Gimbal für professionelle Kameras mit hoher Traglast und stabiler Aufnahme.",
+    "bild": "zhiyun_crane_3s.jpg",
+    "preis": 999.0,
+    "kategorie": "Gimbals",
+    "lagerbestand": 10,
+    "bewertung": 4.8,
+    "bewertungen": 180,
+    "TechnischeDaten": {
+      "traglast": "6.5 kg",
+      "gewicht": "2.5 kg",
+      "akku": "12 Stunden Betriebszeit",
+      "features": "High-Precision, Follow Focus"
+    }
+  },
+  {
+    "produktname": "Manfrotto MT055CXPRO4",
+    "beschreibung": "Ein leichtes Carbonstativ mit einer maximalen Traglast von 9 kg und einer Höhe von bis zu 170 cm.",
+    "bild": "manfrotto_mt055cxpro4.jpg",
+    "preis": 429.0,
+    "kategorie": "Stative",
+    "lagerbestand": 12,
+    "bewertung": 4.7,
+    "bewertungen": 150,
+    "TechnischeDaten": {
+      "material": "Carbon",
+      "maximale_hoehe": "170 cm",
+      "traglast": "9 kg",
+      "gewicht": "2.0 kg",
+      "beinklemmen": "Dreh-Locks"
+    }
+  },
+  {
+    "produktname": "GoPro HERO 10 Black",
+    "beschreibung": "Eine robuste Action-Kamera mit 5.3K-Videofunktion, HyperSmooth 4.0 und einem wasserdichten Design.",
+    "bild": "gopro_hero_10_black.jpg",
+    "preis": 499.0,
+    "kategorie": "Action-Kameras",
+    "lagerbestand": 20,
+    "bewertung": 4.8,
+    "bewertungen": 2200,
+    "TechnischeDaten": {
+      "auflösung": "23 MP",
+      "video": "5.3K bis 60 fps",
+      "bildstabilisierung": "HyperSmooth 4.0",
+      "wasserdicht": "Bis zu 10 Meter",
+      "gewicht": "153 g",
+      "akkulaufzeit": "2 Stunden"
+    }
+  },
+  {
+    "produktname": "Peak Design Slide Camera Strap",
+    "beschreibung": "Ein komfortabler Kameragurt mit schneller Anpassung und hoher Tragfähigkeit für professionelle Fotografen.",
+    "bild": "peak_design_slide_camera_strap.jpg",
+    "preis": 59.99,
+    "kategorie": "Zubehör",
+    "lagerbestand": 50,
+    "bewertung": 4.9,
+    "bewertungen": 300,
+    "TechnischeDaten": {
+      "material": "Nylon, Aluminium",
+      "maximale_tragkraft": "90 kg",
+      "länge": "57-183 cm",
+      "features": "Schnellverschluss, ergonomisch"
+    }
+  },
+  {
+    "produktname": "DJI Ronin 4D",
+    "beschreibung": "Ein innovativer 4D-Gimbal für professionelle Filmproduktionen mit integrierter 3D-Vision-Technologie und einem leistungsstarken Kamera-Setup.",
+    "bild": "dji_ronin_4d.jpg",
+    "preis": 8999.0,
+    "kategorie": "Stabilisatoren",
+    "lagerbestand": 3,
+    "bewertung": 4.9,
+    "bewertungen": 120,
+    "TechnischeDaten": {
+      "traglast": "10 kg",
+      "gewicht": "4.5 kg",
+      "akku": "12 Stunden Betriebszeit",
+      "features": "3D-Vision, LiDAR"
+    }
+  },
+  {
+    "produktname": "Panasonic Lumix GH5",
+    "beschreibung": "Eine spiegellose Kamera mit 4K-Videoaufnahme und hervorragender Autofokusleistung, ideal für Vlogger und Content-Creator.",
+    "bild": "panasonic_lumix_gh5.jpg",
+    "preis": 1399.0,
+    "kategorie": "Kameras",
+    "lagerbestand": 8,
+    "bewertung": 4.7,
+    "bewertungen": 300,
+    "TechnischeDaten": {
+      "sensor": "20.3 MP Micro Four Thirds",
+      "prozessor": "Venus Engine",
+      "bildstabilisierung": "5-Achsen IBIS",
+      "video": "4K bis 60 fps",
+      "sucher": "2.36M-dot OLED EVF",
+      "display": "3.2 Zoll, schwenkbar",
+      "anschlüsse": "USB-C, HDMI, Mikrofon",
+      "gewicht": "725 g",
+      "iso_bereich": "100 - 25600"
+    }
+  },
+  {
+    "produktname": "Peak Design Everyday Backpack 30L",
+    "beschreibung": "Ein funktionaler und stilvoller Rucksack mit viel Stauraum, ideal für Fotografen und Reisende.",
+    "bild": "peak_design_backpack_30l.jpg",
+    "preis": 289.95,
+    "kategorie": "Rucksäcke",
+    "lagerbestand": 40,
+    "bewertung": 4.9,
+    "bewertungen": 350,
+    "TechnischeDaten": {
+      "kapazität": "30L",
+      "material": "Recyceltes Nylon",
+      "gewicht": "1.7 kg",
+      "kompatibilität": "Laptop bis 17 Zoll",
+      "wetterbeständigkeit": "Ja"
+    }
+  },
+  {
+    "produktname": "Sony A1",
+    "beschreibung": "Die Sony A1 ist eine Spitzenkamera für Profis, die 50.1 MP mit 8K-Video und aussergewöhnlicher Geschwindigkeit kombiniert.",
+    "bild": "sony_a1.jpg",
+    "preis": 6499.0,
+    "kategorie": "Kameras",
+    "lagerbestand": 5,
+    "bewertung": 5.0,
+    "bewertungen": 300,
+    "TechnischeDaten": {
+      "sensor": "50.1 MP Vollformat Exmor RS CMOS",
+      "prozessor": "BIONZ XR",
+      "bildstabilisierung": "5-Achsen IBIS",
+      "video": "8K bis 30 fps, 4K bis 120 fps",
+      "sucher": "9.44M-dot OLED EVF",
+      "display": "3.0 Zoll, 1.44M-dot LCD",
+      "anschlüsse": "USB-C, HDMI, Mikrofon, Kopfhörer",
+      "gewicht": "737 g",
+      "iso_bereich": "100 - 102400"
+    }
+  },
+  {
+    "produktname": "Nikon Z 50",
+    "beschreibung": "Eine kompakte spiegellose Kamera mit 20.9 MP und 4K-Videoaufnahme für Einsteiger und Vlogger.",
+    "bild": "nikon_z_50.jpg",
+    "preis": 859.0,
+    "kategorie": "Kameras",
+    "lagerbestand": 10,
+    "bewertung": 4.8,
+    "bewertungen": 350,
+    "TechnischeDaten": {
+      "sensor": "20.9 MP APS-C CMOS",
+      "prozessor": "EXPEED 6",
+      "bildstabilisierung": "Kein IBIS",
+      "video": "4K bis 30 fps",
+      "sucher": "2.36M-dot OLED EVF",
+      "display": "3.2 Zoll, 1.04M-dot LCD",
+      "anschlüsse": "USB-C, Mikrofon",
+      "gewicht": "395 g",
+      "iso_bereich": "100 - 51200"
+    }
+  },
+  {
+    "produktname": "Fujifilm X-T200",
+    "beschreibung": "Eine leichte und kompakte spiegellose Kamera mit 24.2 MP und 4K-Videoaufnahme, perfekt für Anfänger.",
+    "bild": "fujifilm_xt200.jpg",
+    "preis": 699.0,
+    "kategorie": "Kameras",
+    "lagerbestand": 25,
+    "bewertung": 4.6,
+    "bewertungen": 250,
+    "TechnischeDaten": {
+      "sensor": "24.2 MP APS-C CMOS",
+      "prozessor": "X-Processor 4",
+      "bildstabilisierung": "Kein IBIS",
+      "video": "4K bis 30 fps",
+      "sucher": "2.36M-dot OLED EVF",
+      "display": "3.5 Zoll, 1.04M-dot LCD, schwenkbar",
+      "anschlüsse": "USB-C, Mikrofon",
+      "gewicht": "370 g",
+      "iso_bereich": "200 - 12800"
+    }
+  },
+  {
+    "produktname": "Olympus OM-D E-M5 Mark III",
+    "beschreibung": "Eine kompakte spiegellose Kamera mit 20.4 MP und 4K-Videoaufnahme, perfekt für Fotografen, die viel unterwegs sind.",
+    "bild": "olympus_omd_em5_mark_iii.jpg",
+    "preis": 1199.0,
+    "kategorie": "Kameras",
+    "lagerbestand": 10,
+    "bewertung": 4.7,
+    "bewertungen": 300,
+    "TechnischeDaten": {
+      "sensor": "20.4 MP Micro Four Thirds",
+      "prozessor": "TruePic VIII",
+      "bildstabilisierung": "5-Achsen IBIS",
+      "video": "4K bis 30 fps",
+      "sucher": "2.36M-dot OLED EVF",
+      "display": "3.0 Zoll, 1.04M-dot LCD",
+      "anschlüsse": "USB-C, HDMI, Mikrofon",
+      "gewicht": "414 g",
+      "iso_bereich": "200 - 25600"
+    }
+  },
+  {
+    "produktname": "GoPro HERO 9 Black",
+    "beschreibung": "Eine robuste Action-Kamera mit 5K-Videoaufnahme und HyperSmooth 3.0 Bildstabilisierung, perfekt für Abenteueraufnahmen.",
+    "bild": "gopro_hero_9_black.jpg",
+    "preis": 399.0,
+    "kategorie": "Action-Kameras",
+    "lagerbestand": 20,
+    "bewertung": 4.7,
+    "bewertungen": 1500,
+    "TechnischeDaten": {
+      "auflösung": "20 MP",
+      "video": "5K bei 30 fps",
+      "bildstabilisierung": "HyperSmooth 3.0",
+      "wasserdicht": "Bis zu 10 Meter",
+      "gewicht": "158 g",
+      "akkulaufzeit": "2 Stunden"
+    }
+  },
+  {
+    "produktname": "Benro Gimbal 3X Pro",
+    "beschreibung": "Ein leichter und leistungsstarker 3-Achsen-Gimbal für Handys und leichte Kameras, ideal für Vlogger.",
+    "bild": "benro_gimbal_3x_pro.jpg",
+    "preis": 349.0,
+    "kategorie": "Gimbals",
+    "lagerbestand": 15,
+    "bewertung": 4.7,
+    "bewertungen": 250,
+    "TechnischeDaten": {
+      "traglast": "2.5 kg",
+      "gewicht": "1.2 kg",
+      "akku": "12 Stunden Betriebszeit",
+      "features": "Vibrationsdämpfung, 3-Achsen Stabilisierung"
+    }
+  },
+  {
+    "produktname": "Atomos Shogun 7",
+    "beschreibung": "Ein 7-Zoll-Monitor und Recorder mit 4K HDR und Dolby Vision, ideal für Film- und Videoaufnahmen.",
+    "bild": "atomos_shogun_7.jpg",
+    "preis": 1699.0,
+    "kategorie": "Zubehör",
+    "lagerbestand": 8,
+    "bewertung": 4.8,
+    "bewertungen": 150,
+    "TechnischeDaten": {
+      "monitor": "7 Zoll, 1000 Nits",
+      "video": "4K bis 60 fps",
+      "anschlüsse": "HDMI, SDI, USB-C",
+      "features": "HDR, Dolby Vision"
+    }
+  },
+  {
+    "produktname": "Sigma 24-70mm f/2.8 DG DN Art",
+    "beschreibung": "Ein lichtstarkes Standard-Zoomobjektiv für spiegellose Vollformatkameras, ideal für alle Arten von Fotografie.",
+    "bild": "sigma_24_70mm_f28.jpg",
+    "preis": 1299.0,
+    "kategorie": "Objektive",
+    "lagerbestand": 20,
+    "bewertung": 4.9,
+    "bewertungen": 300,
+    "TechnischeDaten": {
+      "brennweite": "24-70mm",
+      "blende": "f/2.8",
+      "filterdurchmesser": "82mm",
+      "gewicht": "1.1 kg",
+      "kompatibilität": "Sony E-Mount, Leica L-Mount"
+    }
+  },
+  {
+    "produktname": "Peak Design Travel Tripod",
+    "beschreibung": "Ein extrem kompaktes und leichtes Stativ, das perfekt für Reisefotografen ist, mit hochwertiger Verarbeitung und einfacher Handhabung.",
+    "bild": "peak_design_travel_tripod.jpg",
+    "preis": 349.95,
+    "kategorie": "Stative",
+    "lagerbestand": 15,
+    "bewertung": 4.8,
+    "bewertungen": 200,
+    "TechnischeDaten": {
+      "material": "Aluminium, Carbon",
+      "maximale_hoehe": "152 cm",
+      "traglast": "9 kg",
+      "gewicht": "1.4 kg",
+      "beinklemmen": "Dreh-Locks"
+    }
+  },
+  {
+    "produktname": "Fujifilm XF 16-80mm f/4 R OIS WR",
+    "beschreibung": "Ein vielseitiges Standard-Zoom-Objektiv mit 5-fach-Zoom und Bildstabilisierung, ideal für Reisen und Alltagsfotografie.",
+    "bild": "fujifilm_xf_16_80mm.jpg",
+    "preis": 799.0,
+    "kategorie": "Objektive",
+    "lagerbestand": 18,
+    "bewertung": 4.7,
+    "bewertungen": 220,
+    "TechnischeDaten": {
+      "brennweite": "16-80mm",
+      "blende": "f/4",
+      "filterdurchmesser": "72mm",
+      "gewicht": "440 g",
+      "kompatibilität": "Fujifilm X-Mount"
+    }
+  },
+  {
+    "produktname": "Fujifilm XF 56mm f/1.2 R",
+    "beschreibung": "Ein lichtstarkes Porträt-Objektiv mit hervorragender Hintergrundunschärfe, ideal für Porträtfotografie.",
+    "bild": "fujifilm_xf_56mm.jpg",
+    "preis": 999.0,
+    "kategorie": "Objektive",
+    "lagerbestand": 12,
+    "bewertung": 4.9,
+    "bewertungen": 180,
+    "TechnischeDaten": {
+      "brennweite": "56mm",
+      "blende": "f/1.2",
+      "filterdurchmesser": "62mm",
+      "gewicht": "405 g",
+      "kompatibilität": "Fujifilm X-Mount"
+    }
+  },
+  {
+    "produktname": "Fujifilm XF 18-135mm f/3.5-5.6 R LM OIS WR",
+    "beschreibung": "Ein All-in-One-Zoom-Objektiv mit grossem Brennweitenbereich und Wetterfestigkeit, ideal für vielseitige Aufnahmesituationen.",
+    "bild": "fujifilm_xf_18_135mm.jpg",
+    "preis": 899.0,
+    "kategorie": "Objektive",
+    "lagerbestand": 20,
+    "bewertung": 4.6,
+    "bewertungen": 160,
+    "TechnischeDaten": {
+      "brennweite": "18-135mm",
+      "blende": "f/3.5-5.6",
+      "filterdurchmesser": "67mm",
+      "gewicht": "490 g",
+      "kompatibilität": "Fujifilm X-Mount"
+    }
+  },
+  {
+    "produktname": "Fujifilm XF 35mm f/1.4 R",
+    "beschreibung": "Ein klassisches Standard-Objektiv mit hoher Lichtstärke, ideal für Porträts und Alltagsfotografie.",
+    "bild": "fujifilm_xf_35mm.jpg",
+    "preis": 599.0,
+    "kategorie": "Objektive",
+    "lagerbestand": 25,
+    "bewertung": 4.8,
+    "bewertungen": 210,
+    "TechnischeDaten": {
+      "brennweite": "35mm",
+      "blende": "f/1.4",
+      "filterdurchmesser": "52mm",
+      "gewicht": "187 g",
+      "kompatibilität": "Fujifilm X-Mount"
+    }
+  },
+  {
+    "produktname": "Fujifilm XF 100-400mm f/4.5-5.6 R LM OIS WR",
+    "beschreibung": "Ein Super-Telezoom-Objektiv mit leistungsstarker Bildstabilisierung, ideal für Sport- und Tierfotografie.",
+    "bild": "fujifilm_xf_100_400mm.jpg",
+    "preis": 1899.0,
+    "kategorie": "Objektive",
+    "lagerbestand": 5,
+    "bewertung": 4.9,
+    "bewertungen": 130,
+    "TechnischeDaten": {
+      "brennweite": "100-400mm",
+      "blende": "f/4.5-5.6",
+      "filterdurchmesser": "77mm",
+      "gewicht": "1375 g",
+      "kompatibilität": "Fujifilm X-Mount"
+    }
+  },
+  {
+    "produktname": "SanDisk Ultra SDHC 16GB",
+    "beschreibung": "Eine zuverlässige SD-Karte für alltägliche Fotos und Videos in Full HD.",
+    "bild": "sandisk_ultra_16gb.jpg",
+    "preis": 9.99,
+    "kategorie": "Speicherkarten",
+    "lagerbestand": 60,
+    "bewertung": 4.6,
+    "bewertungen": 450,
+    "TechnischeDaten": {
+      "kapazität": "16GB",
+      "lesegeschwindigkeit": "80 MB/s",
+      "schreibgeschwindigkeit": "30 MB/s",
+      "klasse": "UHS-I U1",
+      "typ": "SDHC"
+    }
+  },
+  {
+    "produktname": "Kingston Canvas Select Plus SDHC 32GB",
+    "beschreibung": "Eine erschwingliche Speicherkarte für kompakte Kameras und Camcorder.",
+    "bild": "kingston_canvas_32gb.jpg",
+    "preis": 12.99,
+    "kategorie": "Speicherkarten",
+    "lagerbestand": 55,
+    "bewertung": 4.7,
+    "bewertungen": 320,
+    "TechnischeDaten": {
+      "kapazität": "32GB",
+      "lesegeschwindigkeit": "100 MB/s",
+      "schreibgeschwindigkeit": "45 MB/s",
+      "klasse": "UHS-I U1 V10",
+      "typ": "SDHC"
+    }
+  },
+  {
+    "produktname": "Lexar Professional 1000x SDXC 64GB",
+    "beschreibung": "Eine schnelle SD-Karte mit UHS-II für hochauflösende Fotos und Videos.",
+    "bild": "lexar_professional_64gb.jpg",
+    "preis": 24.99,
+    "kategorie": "Speicherkarten",
+    "lagerbestand": 40,
+    "bewertung": 4.8,
+    "bewertungen": 210,
+    "TechnischeDaten": {
+      "kapazität": "64GB",
+      "lesegeschwindigkeit": "150 MB/s",
+      "schreibgeschwindigkeit": "80 MB/s",
+      "klasse": "UHS-II U3 V60",
+      "typ": "SDXC"
+    }
+  },
+  {
+    "produktname": "Transcend 300S SDXC 128GB",
+    "beschreibung": "Eine zuverlässige und schnelle SD-Karte für 4K-Videoaufnahmen.",
+    "bild": "transcend_300s_128gb.jpg",
+    "preis": 29.99,
+    "kategorie": "Speicherkarten",
+    "lagerbestand": 35,
+    "bewertung": 4.7,
+    "bewertungen": 280,
+    "TechnischeDaten": {
+      "kapazität": "128GB",
+      "lesegeschwindigkeit": "95 MB/s",
+      "schreibgeschwindigkeit": "45 MB/s",
+      "klasse": "UHS-I U3 V30",
+      "typ": "SDXC"
+    }
+  },
+  {
+    "produktname": "Sony Tough SF-G128 SDXC 128GB",
+    "beschreibung": "Eine extrem robuste und schnelle Speicherkarte für Profis.",
+    "bild": "sony_tough_128gb.jpg",
+    "preis": 129.99,
+    "kategorie": "Speicherkarten",
+    "lagerbestand": 15,
+    "bewertung": 4.9,
+    "bewertungen": 150,
+    "TechnischeDaten": {
+      "kapazität": "128GB",
+      "lesegeschwindigkeit": "300 MB/s",
+      "schreibgeschwindigkeit": "299 MB/s",
+      "klasse": "UHS-II U3 V90",
+      "typ": "SDXC"
+    }
+  },
+  {
+    "produktname": "Samsung EVO Plus microSDXC 256GB",
+    "beschreibung": "Eine schnelle und zuverlässige microSD-Karte für Smartphones, Drohnen und Kameras.",
+    "bild": "samsung_evo_plus_256gb.jpg",
+    "preis": 34.99,
+    "kategorie": "Speicherkarten",
+    "lagerbestand": 40,
+    "bewertung": 4.8,
+    "bewertungen": 600,
+    "TechnischeDaten": {
+      "kapazität": "256GB",
+      "lesegeschwindigkeit": "130 MB/s",
+      "schreibgeschwindigkeit": "90 MB/s",
+      "klasse": "UHS-I U3 A2 V30",
+      "typ": "microSDXC"
+    }
+  },
+  {
+    "produktname": "Delkin Devices Power CFexpress 128GB",
+    "beschreibung": "Eine professionelle CFexpress-Karte mit extrem hoher Geschwindigkeit für hochauflösende Videos und RAW-Fotografie.",
+    "bild": "delkin_power_cfexpress_128gb.jpg",
+    "preis": 199.99,
+    "kategorie": "Speicherkarten",
+    "lagerbestand": 20,
+    "bewertung": 4.9,
+    "bewertungen": 90,
+    "TechnischeDaten": {
+      "kapazität": "128GB",
+      "lesegeschwindigkeit": "1730 MB/s",
+      "schreibgeschwindigkeit": "1540 MB/s",
+      "klasse": "CFexpress Typ B",
+      "typ": "CFexpress"
+    }
+  },
+  {
+    "produktname": "ProGrade Digital SDXC 256GB",
+    "beschreibung": "Eine professionelle SD-Karte für 4K- und 8K-Videoaufnahmen mit extrem hohen Schreibgeschwindigkeiten.",
+    "bild": "prograde_digital_256gb.jpg",
+    "preis": 179.99,
+    "kategorie": "Speicherkarten",
+    "lagerbestand": 10,
+    "bewertung": 4.9,
+    "bewertungen": 130,
+    "TechnischeDaten": {
+      "kapazität": "256GB",
+      "lesegeschwindigkeit": "250 MB/s",
+      "schreibgeschwindigkeit": "200 MB/s",
+      "klasse": "UHS-II U3 V90",
+      "typ": "SDXC"
+    }
+  },
+  {
+    "produktname": "Angelbird AV PRO microSD 128GB",
+    "beschreibung": "Eine leistungsstarke microSD-Karte für Drohnen, Actioncams und 6K-Videoaufnahmen.",
+    "bild": "angelbird_avpro_128gb.jpg",
+    "preis": 99.99,
+    "kategorie": "Speicherkarten",
+    "lagerbestand": 25,
+    "bewertung": 4.8,
+    "bewertungen": 80,
+    "TechnischeDaten": {
+      "kapazität": "128GB",
+      "lesegeschwindigkeit": "280 MB/s",
+      "schreibgeschwindigkeit": "160 MB/s",
+      "klasse": "UHS-II V60",
+      "typ": "microSDXC"
+    }
+  },
+  {
+    "produktname": "PNY Elite Performance SDXC 64GB",
+    "beschreibung": "Eine schnelle und zuverlässige Speicherkarte für professionelle Foto- und Videoaufnahmen.",
+    "bild": "pny_elite_performance_64gb.jpg",
+    "preis": 19.99,
+    "kategorie": "Speicherkarten",
+    "lagerbestand": 30,
+    "bewertung": 4.7,
+    "bewertungen": 200,
+    "TechnischeDaten": {
+      "kapazität": "64GB",
+      "lesegeschwindigkeit": "95 MB/s",
+      "schreibgeschwindigkeit": "60 MB/s",
+      "klasse": "UHS-I U3",
+      "typ": "SDXC"
+    }
+  }
+]

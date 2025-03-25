@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Rubik Scribble', system-ui, cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+div {
+    width: 80%;
+    box-shadow: black 0 0 15px;
+}
+
+main{
+    display: flex;
+
+}
+
+header{
+    background-color: #261822;
+    padding: 1em;
+}
+
+nav{
+    background-color: #411005;
+    padding: 1em;
+}
+
+aside{
+    background-color: #731630;
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navinfo{
+    display: none;
+}
+
+article{
+    background-color: #cc1e3c;
+    flex: 6;
+    padding: 1em;
+}
+
+footer{
+    background-color: #261822;
+    padding: 1em;
+}
+
+a.navi{
+    color: white;
+    font-size: 2em;
+    width: 100%;
+    text-align: center;
+}
+
+a.navi:link{
+    color: white;
+}
+
+a.navi:visited{
+    color: white;
+}
+
+a.navi:hover{
+    color: white;
+    text-decoration: none;
+    background-color: #cc1e2c;
+
+}
+
+a.navi:hover i {
+    display: none;
+}
+
+a.navi:hover .navinfo{
+    display: contents;
+    text-align: center;
+}

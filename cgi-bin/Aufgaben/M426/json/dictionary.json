@@ -1,0 +1,110 @@
+{
+  "known_words": [
+    {
+      "term": "Wiki(pedia)",
+      "definition": "A collaborative online encyclopedia where users can edit and contribute."
+    },
+    {
+      "term": "CSS",
+      "definition": "Cascading Style Sheets, used to style HTML elements."
+    },
+    {
+      "term": "HTML",
+      "definition": "HyperText Markup Language, the standard for structuring web content."
+    },
+    {
+      "term": "User Generated Content",
+      "definition": "Content created by users rather than website owners."
+    },
+    {
+      "term": "Google Docs",
+      "definition": "An online document editor by Google."
+    },
+    {
+      "term": "PHP",
+      "definition": "A server-side scripting language for web development."
+    },
+    {
+      "term": "API",
+      "definition": "Application Programming Interface, allows communication between software."
+    },
+    {
+      "term": "XML",
+      "definition": "Extensible Markup Language, used for data structuring."
+    },
+    {
+      "term": "Mobile Endger\u00e4te",
+      "definition": "Mobile devices like smartphones and tablets."
+    },
+    {
+      "term": "Web Services",
+      "definition": "Services that allow applications to communicate over the internet."
+    },
+    {
+      "term": "Document Object Model (DOM)",
+      "definition": "A programming interface for web documents."
+    },
+    {
+      "term": "JavaScript",
+      "definition": "A scripting language for interactive web applications."
+    },
+    {
+      "term": "Web",
+      "definition": "The World Wide Web, a system of interconnected web pages."
+    },
+    {
+      "term": "Communities",
+      "definition": "Online groups where users share interests."
+    },
+    {
+      "term": "Twitter",
+      "definition": "A social media platform for short messages (tweets)."
+    },
+    {
+      "term": "SQL",
+      "definition": "Structured Query Language, used for database management."
+    },
+    { "term": "Datenbank", "definition": "The German word for 'database.'" },
+    {
+      "term": "JSON",
+      "definition": "JavaScript Object Notation, a lightweight data format."
+    },
+    {
+      "term": "Podcast",
+      "definition": "Digital audio content distributed online."
+    },
+    {
+      "term": "Repository",
+      "definition": "A storage location for code, often in version control systems."
+    },
+    { "term": "Flickr", "definition": "A photo-sharing website." }
+  ],
+  "known_but_not_used": [
+    {
+      "term": "jQuery",
+      "definition": "A JavaScript library that simplifies DOM manipulation and event handling."
+    },
+    {
+      "term": "Cookies",
+      "definition": "Small pieces of data stored on a user's device by websites."
+    },
+    {
+      "term": "Bootstrap",
+      "definition": "A framework for responsive web design."
+    }
+  ],
+  "unknown_words": [
+    {
+      "term": "AJAX",
+      "definition": "Asynchronous JavaScript and XML, used to update parts of a web page without reloading."
+    },
+    {
+      "term": "XING",
+      "definition": "A professional networking platform, similar to LinkedIn, popular in German-speaking countries."
+    },
+    {
+      "term": "Semantisches Web",
+      "definition": "'Semantic Web,' a concept where web data is structured to be more understandable for machines."
+    }
+  ]
+}

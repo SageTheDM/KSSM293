@@ -1,0 +1,310 @@
+This is kryptographie.info, produced by makeinfo version 7.1.1 from
+test.texi.
+
+1 Thema 2: Kryptographie
+========================
+
+1.1 2.1 Einführung
+------------------
+
+   • Bedrohungen:
+        • Lesen
+        • Verändern
+        • Vortäuschen (falscher Partner)
+
+   • Dienste:
+        • Vertraulichkeit: Niemand kann die Informationen lesen.
+        • Integrität: Niemand kann die Informationen unbemerkt
+          verändern.
+        • Authentizität: Bestätigung, wer auf der anderen Seite ist bzw.
+          wer die Informationen verfasst hat.
+        • Nicht-Abstreitbarkeit: Alle können überprüfen, wer die
+          Informationen verfasst hat.
+
+   • Angriffe auf Schlüssel:
+        • Ciphertext-only: Immer möglich.
+        • Known-plaintext: Teile des Klartextes sind bekannt.
+        • Chosen-plaintext: Angreifer wählt Klartext und erhält den
+          entsprechenden Ciphertext.
+        • Chosen-ciphertext: Angreifer wählt Ciphertext und erhält den
+          entsprechenden Klartext.
+
+   • Angriffe auf Verfahren:
+        • Vertiefte mathematische Analyse.
+
+   • Kerckhoffs’sches Prinzip:
+        • Auguste Kerckhoffs, 1883.  Verfahren sollten auch dann sicher
+          sein, wenn sie in die Hände des Gegners fallen.
+
+   • Ableitung:
+        • Der (geheime) Schlüssel muss geschützt werden, nicht das
+          Verfahren.
+
+1.2 2.2 Historische Verfahren
+-----------------------------
+
+   • Skytale:
+        • Die älteste Form der Verschlüsselung.
+        • Ursprünglich in Sparta, 5.  Jahrhundert v.  Chr.
+        • Schlüssel: Dicke des Stabes.
+        • Brechen: Brute-Force: Verschiedene Abstände/Stabdicken
+          ausprobieren.
+        • Schwäche: Der Schlüssel hat zu wenige Möglichkeiten.
+
+   • Cäsar:
+        • Buchstaben werden um eine bestimmte Anzahl von Positionen
+          verschoben.
+        • Beispiel: k=3 ⇒ A→D, B→E, C→F, ...  X→A, Y→B, Z→C.
+        • Brechen: Brute-Force: maximal 26 Möglichkeiten.
+        • Schwäche: Der Schlüssel hat zu wenige Möglichkeiten.
+
+   • Vigenère (Mittelalter):
+        • Ähnlich wie das Cäsar-Verfahren, aber mit mehreren Schlüsseln
+          (Schlüsselwort).
+        • Jeder n-te Buchstabe wird mit dem gleichen Abstand verschoben.
+   • Vigenère Brechen bei bekannter Schlüssellänge N:
+        • Text in n Teile aufteilen (jeder n-te Buchstabe).
+        • Für jeden Teil: häufigster Buchstabe ermitteln, sollte "E"
+          sein.  Schlüssel gebrochen.
+
+   • Vigenère Brechen bei unbekannter Schlüssellänge N:
+        • Alle Schlüssellängen durchprobieren.
+        • "Autokorrelation" liefert die Schlüssellänge.
+
+     Beispiel:
+     O   1   P
+     M   2   O
+     N   3   Q
+     I   1   J
+     A   2   C
+
+1.3 Vernam, 1917 (One-Time Pad):
+--------------------------------
+
+   • Jedes Bit wird per XOR mit dem Schlüssel verknüpft.
+   • Perfekte Sicherheit: Eine Verschlüsselung ist perfekt sicher, wenn
+     die Wahrscheinlichkeit für eine Klartext-0 genau 0.5 ist.
+   • Vernam ist perfekt sicher, wenn:
+        • der Schlüssel echt zufällig ist,
+        • der Schlüssel nur einmal verwendet wird,
+        • der Schlüssel genauso lang ist wie die Nachricht selbst ->
+          unpraktisch.
+
+1.4 Chiffriermaschinen: Beispiel Enigma
+---------------------------------------
+
+   • Prinzip:
+        • Mechanische Maschine
+
+   • Schlüsselraum:
+        • 2 * 10^23, entspricht 77 Bit Sicherheit
+
+   • Aufgabe 2.1:
+        • Angenommen, wir könnten 1'000'000 Schlüssel pro Sekunde
+          testen.  Wie lange würde ein Brute-Force-Angriff maximal
+          dauern?
+
+   • Schwächen:
+        • c_i ungleich t_i für alle i
+        • Klartextbuchstaben werden nicht in sich selbst verschlüsselt.
+        • Kleine statistische Auffälligkeit in Abweichung von
+          scheinbarem Zufall
+        • Angriffsmöglichkeit
+
+   • Gebrochen durch:
+        • Alan Turing (Turing-Bombe, Operation Bletchley-Park)
+
+   • Fazit:
+        • Sich nicht einfach in Sicherheit wiegen.
+        • Keine statistischen Schwächen
+
+1.5 2.3 Blockverschlüsseler
+---------------------------
+
+   • Prinzip:
+
+        • Klartext wird in Blöcke unterteilt, z.B. 128-Bit-Blöcke.
+          Jeder Block wird in einer Operation E (encrypt) und einem
+          Schlüssel k verschlüsselt.  Mit D (decrypt) und k wird
+          entschlüsselt.
+               Klartext (plaintext)        p1        p2         p3     ...    pn
+                                            |        |          |              |
+                                          k>E      k>E        k>E            k>E
+                                            |        |          |              |
+                                           c1        c2         c3     ...    cn
+
+               Entschlüsseln:
+                                            c1       c2         c3     ...    cn
+                                            |        |          |              |
+                                          k>D      k>D        k>D            k>D
+                                            |        |          |              |
+                                           p1        p2         p3     ...    pn
+
+   • Veraltetes DES (Data Encryption Standard)
+
+        • Schlüsselgröße: 56 Bit -> gebrochen.
+        • Blockgröße: 64 Bit -> unsicher.
+
+        • Standard aus den 70er-Jahren, entwickelt in den USA im Auftrag
+          der NSA (National Security Agency).
+        • Designziel: Schnell in Hardware, langsam in Software (HW/SW).
+        • Idee: aus dem Kalten Krieg -> wurde wie ein Rüstungsgut
+          behandelt und benötigte eine Exportlizenz.
+
+   • Triple-DES
+
+        • Triple-DES (macht DES sicherer...).
+        • Warum EDE und nicht EEE? - Triple-DES kann auch Single-DES,
+          wenn k1=k2.
+        • Warum Triple und nicht Doppel-DES - Meet-in-the-Middle-Angriff
+          mit Aufwand 2⁵⁷.
+
+                          m_i
+               	    |
+                          k1>E
+               	    |
+                          k2>D
+               	    |
+                           k1>E
+               	    |
+                          c_i
+
+             • Vorwärts: Mit allen möglichen k1 wird E_k1(p) berechnet
+               und in DB gespeichert.
+             • Rückwärts: Mit allen möglichen k2 wird E_k2(c) berechnet
+               und in der DB gesucht.
+             • Aufwand: 2⁵⁶ + 2⁵⁶ = 2⁵⁷ Aufwand.
+             • -> Double DES würde nur 57 Bit Sicherheit liefern, statt
+               112 Bits!
+        • Warum zwei und nicht drei Schlüssel?
+             • Sicherheit ist ca.  2¹¹²+2⁵⁶ bei drei Schlüsseln.
+               Praktisch kein Gewinn durch den dritten Schlüssel.
+             • (Fünf wären noch sicherer) - dies wurde in der Praxis
+               jedoch nicht umgesetzt.
+
+        • AES (Advanced Encryption Standard)
+        • ...  heutiger Standard seit 2001.
+
+             • Öffentlicher Wettbewerb 1997, gewonnen von Daemen und
+               Rijmen mit Rijndael.
+             • -> schafft Vertrauen in AES.
+             • Schlüsselgröße wählbar: 128, 192, 256 Bit.
+             • Designziel: schnell in Software.
+
+             • Kein praktischer Angriff möglich, bester theoretischer
+               Angriff mit Aufwand 2¹²⁶.
+
+1.6 ÜBUNGEN VON TEAMS
+---------------------
+
+  1. Verschlüssle den Text "OMNIAGALLA" mit dem Cäsar-Verfahren und dem
+     Schlüssel k=3.
+
+        • Ergebnis: RPQLDJDOOD
+
+  2. Folgender Text ist mit dem Cäsar-Verfahren verschlüsselt.  Breche
+     den Text!  Welcher Schlüssel wurde verwendet?
+
+        • Verschlüsselter Text: NXYJNSKFHMeZGWJHMJS
+        • Klartext: ISTEINFACHzUBRECHEN
+        • Schlüssel: k=5
+
+  3. Folgender Text ist mit Vigenère mit dem Schlüssel "KEY"
+     verschlüsselt.  Entschlüssele den Text!
+
+        • Verschlüsselter Text: LIQCIPKPQMECCEP
+        • Klartext: BESERALSCESAR
+        • Schlüssel: KEY
+
+  4. Übung 2: Blockverschlüssler
+
+     Wie lange dauert es maximal, einen DES-Schlüssel durch
+     Known-Plaintext-Brute-Force-Angriff zu brechen, wenn:
+
+        • a) Ein Spezialcomputer zur Verfügung steht, der 100x100
+          DES-Chips enthält, die je 10^9 Verschlüsselungen je Sekunde
+          durchführen könnten?
+
+             • Schlüsselraum für DES: 2^56 mögliche Schlüssel.
+             • Geschwindigkeit des Computers: 100 * 100 * 10^9 = 10^13
+               Schlüssel pro Sekunde.
+             • Maximale Zeit für Brute-Force-Angriff: 2^56 / 10^13 ≈
+               7200 Sekunden ≈ 120 Minuten -> 2 Stunden.
+
+        • b) Wie lange würde der gleiche Angriff für Triple-DES mit
+          Zweifachschlüssel benötigen?
+
+             • Schlüsselraum für Triple-DES (Zweifachschlüssel): 2^112
+               mögliche Schlüssel.
+             • Geschwindigkeit des Computers: 10^13 Schlüssel pro
+               Sekunde.
+             • Maximale Zeit für Brute-Force-Angriff: 2^112 / 10^13 ≈
+               5.7 x 10^22 Sekunden.
+             • Umgerechnet: ca.  16.5 x 10^12 Jahre (16'500'000'000'000
+               Jahre).
+
+        • c) Wie lange würde der Angriff auf AES-128, AES-192 oder
+          AES-256 dauern?
+
+             • AES-128: Schlüsselraum von 2^128.
+             • AES-192: Schlüsselraum von 2^192.
+             • AES-256: Schlüsselraum von 2^256.
+             • Geschwindigkeit des Computers: 10^11 Schlüssel pro
+               Sekunde.
+             • Maximale Zeit für Brute-Force:
+                  • AES-128: 2^128 / 10^11 ≈ 10^27 Sekunden ≈ 10^18
+                    Jahre.
+                  • AES-192: 2^192 / 10^11 ≈ 2 x 10^37 Jahre.
+                  • AES-256: 2^256 / 10^11 ≈ 3.7 x 10^56 Jahre.
+
+
+
+   • ============================
+   • General Information
+   • ============================
+
+
+2 Generating Info Files
+=======================
+
+For generating an Info file from a Texinfo source file, use the
+following command:
+
+makeinfo yourfile.texi
+
+   This will produce a file named ‘yourfile.info’.
+
+3 Generating PDF Files
+======================
+
+To convert a Texinfo file to PDF format, use the command:
+
+texi2pdf yourfile.texi
+
+   The output will be a PDF file named ‘yourfile.pdf’.
+
+4 Generating HTML Files
+=======================
+
+To convert a Texinfo file to HTML format, use the following command:
+
+makeinfo --html yourfile.texi
+
+   This command will generate a directory named ‘yourfile’ containing
+the HTML files.
+
+
+   • ============================
+   • Thank you for reading!
+   • ============================
+
+
+
+Tag Table:
+
+End Tag Table
+
+
+Local Variables:
+coding: utf-8
+End:

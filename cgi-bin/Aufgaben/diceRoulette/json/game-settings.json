@@ -1,0 +1,33 @@
+{
+  "numPlayers": "4",
+  "players": [
+    {
+      "name": "expert-bot-v3",
+      "color": "#1a5fb4",
+      "isBot": true,
+      "botDifficulty": "expert",
+      "customSettings": null
+    },
+    {
+      "name": "medium-bot-v3",
+      "color": "#26a269",
+      "isBot": true,
+      "botDifficulty": "medium",
+      "customSettings": null
+    },
+    {
+      "name": "hard-bot-v3",
+      "color": "#e5a50a",
+      "isBot": true,
+      "botDifficulty": "hard",
+      "customSettings": null
+    },
+    {
+      "name": "easy-bot-v3",
+      "color": "#c64600",
+      "isBot": true,
+      "botDifficulty": "easy",
+      "customSettings": null
+    }
+  ]
+}

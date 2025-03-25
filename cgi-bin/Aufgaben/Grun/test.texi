@@ -1,0 +1,758 @@
+\input test   @c -*- texinfo -*-
+@setfilename kryptographie.info
+@title Kryptographie
+@titlepage
+@end titlepage
+
+@section Thema 2: Kryptographie
+
+@subsection 2.1 Einführung
+
+@itemize
+
+@item Bedrohungen:
+    @itemize
+    @item Lesen
+    @item Verändern
+    @item Vortäuschen (falscher Partner)
+    @end itemize
+
+@item Dienste:
+    @itemize
+    @item Vertraulichkeit: Niemand kann die Informationen lesen.
+    @item Integrität: Niemand kann die Informationen unbemerkt verändern.
+    @item Authentizität: Bestätigung, wer auf der anderen Seite ist bzw. wer die Informationen verfasst hat.
+    @item Nicht-Abstreitbarkeit: Alle können überprüfen, wer die Informationen verfasst hat.
+    @end itemize
+
+@item Angriffe auf Schlüssel:
+    @itemize
+    @item Ciphertext-only: Immer möglich.
+    @item Known-plaintext: Teile des Klartextes sind bekannt.
+    @item Chosen-plaintext: Angreifer wählt Klartext und erhält den entsprechenden Ciphertext.
+    @item Chosen-ciphertext: Angreifer wählt Ciphertext und erhält den entsprechenden Klartext.
+    @end itemize
+
+@item Angriffe auf Verfahren:
+    @itemize
+    @item Vertiefte mathematische Analyse.
+    @end itemize
+
+@item Kerckhoffs’sches Prinzip:
+    @itemize
+    @item Auguste Kerckhoffs, 1883. Verfahren sollten auch dann sicher sein, wenn sie in die Hände des Gegners fallen.
+    @end itemize
+
+@item Ableitung:
+    @itemize
+    @item Der (geheime) Schlüssel muss geschützt werden, nicht das Verfahren.
+    @end itemize
+
+@end itemize
+
+@subsection 2.2 Historische Verfahren
+
+@itemize
+@item Skytale:
+    @itemize
+    @item Die älteste Form der Verschlüsselung.
+    @item Ursprünglich in Sparta, 5. Jahrhundert v. Chr.
+    @item Schlüssel: Dicke des Stabes.
+    @item Brechen: Brute-Force: Verschiedene Abstände/Stabdicken ausprobieren.
+    @item Schwäche: Der Schlüssel hat zu wenige Möglichkeiten.
+    @end itemize
+
+@item Cäsar:
+    @itemize
+    @item Buchstaben werden um eine bestimmte Anzahl von Positionen verschoben.
+    @item Beispiel: k=3 ⇒ A→D, B→E, C→F, ... X→A, Y→B, Z→C.
+    @item Brechen: Brute-Force: maximal 26 Möglichkeiten.
+    @item Schwäche: Der Schlüssel hat zu wenige Möglichkeiten.
+    @end itemize
+
+@item Vigenère (Mittelalter):
+    @itemize
+    @item Ähnlich wie das Cäsar-Verfahren, aber mit mehreren Schlüsseln (Schlüsselwort).
+    @item Jeder n-te Buchstabe wird mit dem gleichen Abstand verschoben.
+    @end itemize
+@item Vigenère Brechen bei bekannter Schlüssellänge N:
+    @itemize
+    @item Text in n Teile aufteilen (jeder n-te Buchstabe).
+    @item Für jeden Teil: häufigster Buchstabe ermitteln, sollte "E" sein. Schlüssel gebrochen.
+    @end itemize
+
+@item Vigenère Brechen bei unbekannter Schlüssellänge N:
+    @itemize
+    @item Alle Schlüssellängen durchprobieren.
+    @item "Autokorrelation" liefert die Schlüssellänge.
+    @end itemize
+@end itemize
+
+@example
+Beispiel:
+O   1   P
+M   2   O
+N   3   Q
+I   1   J
+A   2   C
+@end example
+
+@subsection Vernam, 1917 (One-Time Pad):
+@itemize 
+    @item Jedes Bit wird per XOR mit dem Schlüssel verknüpft.
+    @item Perfekte Sicherheit: Eine Verschlüsselung ist perfekt sicher, wenn die Wahrscheinlichkeit für eine Klartext-0 genau 0.5 ist.
+    @item Vernam ist perfekt sicher, wenn:
+    @itemize
+        @item der Schlüssel echt zufällig ist,
+        @item der Schlüssel nur einmal verwendet wird,
+        @item der Schlüssel genauso lang ist wie die Nachricht selbst --> unpraktisch.
+    @end itemize
+@end itemize
+
+@subsection Chiffriermaschinen: Beispiel Enigma
+
+@itemize
+    @item Prinzip:
+        @itemize
+        @item Mechanische Maschine
+        @end itemize
+
+    @item Schlüsselraum:
+        @itemize
+        @item 2 * 10^23, entspricht 77 Bit Sicherheit
+        @end itemize
+
+    @item Aufgabe 2.1:
+        @itemize
+        @item Angenommen, wir könnten 1'000'000 Schlüssel pro Sekunde testen. Wie lange würde ein Brute-Force-Angriff maximal dauern?
+        @end itemize
+
+    @item Schwächen:
+        @itemize
+        @item c_i ungleich t_i für alle i
+        @item Klartextbuchstaben werden nicht in sich selbst verschlüsselt.
+        @item Kleine statistische Auffälligkeit in Abweichung von scheinbarem Zufall
+        @item Angriffsmöglichkeit
+        @end itemize
+
+    @item Gebrochen durch:
+        @itemize
+        @item Alan Turing (Turing-Bombe, Operation Bletchley-Park)
+        @end itemize
+
+    @item Fazit:
+        @itemize
+        @item Sich nicht einfach in Sicherheit wiegen.
+        @item Keine statistischen Schwächen
+        @end itemize
+@end itemize
+
+
+@subsection 2.3 Blockverschlüsseler
+
+@itemize
+
+    @item Prinzip:https://duckduckgo.com/?t=ffab1
+
+    @itemize 
+        @item Klartext wird in Blöcke unterteilt, z.B. 128-Bit-Blöcke. Jeder Block wird in einer Operation E (encrypt) und einem Schlüssel k verschlüsselt.
+        Mit D (decrypt) und k wird entschlüsselt.
+        @example
+Klartext (plaintext)        p1        p2         p3     ...    pn
+                             |        |          |              |
+                           k>E      k>E        k>E            k>E
+                             |        |          |              |
+                            c1        c2         c3     ...    cn
+ 
+Entschlüsseln:
+                             c1       c2         c3     ...    cn
+                             |        |          |              |
+                           k>D      k>D        k>D            k>D
+                             |        |          |              |
+                            p1        p2         p3     ...    pn
+        @end example
+    @end itemize
+
+    @item Veraltetes DES (Data Encryption Standard)
+    @itemize 
+
+        @item Schlüsselgrösse: 56 Bit --> gebrochen.
+        @item Blockgrösse: 64 Bit --> unsicher.
+
+        @item Standard aus den 70er-Jahren, entwickelt in den USA im Auftrag der NSA (National Security Agency).
+        @item Designziel: Schnell in Hardware, langsam in Software (HW/SW).
+        @item Idee: aus dem Kalten Krieg --> wurde wie ein Rüstungsgut behandelt und benötigte eine Exportlizenz.
+    @end itemize
+    
+    @item Triple-DES
+
+    @itemize 
+        @item Triple-DES (macht DES sicherer...).
+        @item Warum EDE und nicht EEE? - Triple-DES kann auch Single-DES, wenn k1=k2.
+        @item Warum Triple und nicht Doppel-DES - Meet-in-the-Middle-Angriff mit Aufwand 2⁵⁷.
+        
+        @example
+           m_i
+	    |
+           k1>E
+	    |
+           k2>D
+	    |
+            k1>E
+	    |
+           c_i
+        @end example
+
+        @itemize 
+            @item Vorwärts: Mit allen möglichen k1 wird E_k1(p) berechnet und in DB gespeichert.
+            @item Rückwärts: Mit allen möglichen k2 wird E_k2(c) berechnet und in der DB gesucht.
+            @item Aufwand: 2⁵⁶ + 2⁵⁶ = 2⁵⁷ Aufwand.
+            @item --> Double DES würde nur 57 Bit Sicherheit liefern, statt 112 Bits!
+        @end itemize
+        @item Warum zwei und nicht drei Schlüssel?
+        @itemize
+            @item Sicherheit ist ca. 2¹¹²+2⁵⁶ bei drei Schlüsseln. Praktisch kein Gewinn durch den dritten Schlüssel.
+            @item (Fünf wären noch sicherer) - dies wurde in der Praxis jedoch nicht umgesetzt.
+        @end itemize
+
+        @item AES (Advanced Encryption Standard) 
+        @item ... heutiger Standard seit 2001.
+
+        @itemize 
+            @item Öffentlicher Wettbewerb 1997, gewonnen von Daemen und Rijmen mit Rijndael.
+            @item --> schafft Vertrauen in AES.
+            @item Schlüsselgrösse wählbar: 128, 192, 256 Bit.
+            @item Designziel: schnell in Software.
+
+            @item Kein praktischer Angriff möglich, bester theoretischer Angriff mit Aufwand 2¹²⁶.
+
+        @end itemize
+
+    @end itemize
+
+    @item Verschlüsselungsmodi:  
+        ECB (Electronic Codebook Mode)
+
+@end itemize
+
+@subsection Kryptographische Hashfunktionen
+
+@itemize
+  @item Definition  
+    Eine Hashfunktion bildet einen Text beliebiger Grösse eindeutig auf einen Wert fixer Grösse ab.  
+
+  @item Beispiel:  
+  Die 8-Bit-ASCII-Werte eines Textes werden mit XOR verknüpft.  
+  @math{\rightarrow} Eingabe beliebig gross, Resultat immer 8 Bit gross.
+
+  @example
+    H = 0100 1000  
+    A = 0100 0001  
+    L = 0100 1100  
+    L = 0100 1100  
+    O = 0100 1111  
+    -------------
+        0100 0110 = h("HALLO")
+  @end example
+
+  @item Kryptographische Hashfunktion
+    Eine kryptographische Hashfunktion (Einweg-Hashfunktion) erfüllt folgende Bedingungen:  
+    @enumerate
+      @item Es ist praktisch unmöglich, zu einem Hashwert einen passenden Text zu finden.
+      @item Es ist praktisch unmöglich, zwei Texte mit gleichem Hashwert zu finden (starke Kollisionsresistenz).
+    @end enumerate
+
+  @item Aufgabe:  
+    Finde passende Texte zum Hashwert von @math{h("HALLO") = 0100 0110}.  
+
+  Lösung:  
+  @example
+    h("F") = h("FFF") = h("FAA") = h("AFA") = h("HAO") = etc.
+  @end example
+
+  @item Aufgabe:  
+    Finde Texte mit gleichem Hashwert, ohne den Hashwert zu berechnen (Hashfunktion wie oben).  
+
+  Lösung:  
+  @example
+    h("GRUN") = h("NURG") = h("UNRG") = h("XGRUNX") = h("GRUNROLFROLF")
+  @end example
+
+  @item Warum ist Bedingung 2 wichtig? Reicht Bedingung 1 nicht aus?
+    @itemize 
+    @item Geburtstagsparadox: Die Wahrscheinlichkeit, dass in einer Gruppe zwei Leute denselben Geburtstag haben, wird unterschätzt.  
+    
+    @item Finden sich zwei gleiche Hashwerte, ist die Funktion unbrauchbar.  
+
+    @item Wenn eine Hashfunktion nicht stark kollisionsresistent ist, können viele Varianten zweier Texte erzeugt werden.  
+    @end itemize
+@end itemize
+
+@subsection Dedizierte Hashfunktionen (ohne Schlüssel)
+
+Es gibt Hashfunktionen, die die Einweg-Eigenschaften erfüllen.  
+Bisher wurden keine praktischen Verfahren für Kollisionen in diesen Funktionen gefunden.
+
+@itemize
+  @item Die wichtigsten Standards:
+  @itemize
+    @item SHA-2: @code{SHA-256}, @code{SHA-512} (Secure Hash Algorithm, Standard).
+    @item SHA-3: Standard seit 2015 (nach öffentlichem Wettbewerb).
+  @end itemize
+
+  @item Nicht gebrochen: 
+    @itemize
+      @item @code{RIPEMD-160}.
+    @end itemize
+
+  @item Gebrochen:
+    @itemize
+      @item @code{MD2}, @code{MD4}, @code{MD5} (Message Digest).
+      @item @code{SHA-1}.
+    @end itemize
+@end itemize
+
+@subsection Hashfunktionen mit Schlüsseln
+
+Hashfunktionen mit Schlüsseln erzeugen MAC (Message Authentication Code): 
+@strong{Authentizität und Integrität}.
+
+@example
+CBC-MAC
+@end example
+@itemize
+  @item Erzeugung:
+    Mit einem geheimen Schlüssel @code{k} wird die CBC (Cipher Block Chaining) berechnet und @emph{nur der letzte Block} behalten.
+    @itemize
+      @item Vollständigkeit abhängig vom Schlüssel und der Nachricht.
+      @item Ohne Schlüssel sind keine Kollisionen möglich.
+    @end itemize
+  @item Verifikation:
+    Der Empfänger (z. B. Bob) berechnet ebenfalls den CBC-MAC und vergleicht ihn mit dem zugesandten MAC.
+@end itemize
+
+@strong{Wichtig:} Für Verschlüsselung und MAC-Verfahren sollten unterschiedliche sichere Schlüssel verwendet werden.
+
+@subsection Schlüsselbasierte Hashfunktionen aus schlüssellosen Varianten
+
+@itemize
+  @item @strong{Variante 1:} Schlüssel @code{k} ebenfalls hashen
+  @itemize
+    @item Gegeben: Schlüssel @code{k} und Text @code{M}.
+    @item Vorgehen: Schlüssel und Nachricht miteinander verketten und hashen: @code{h(k | M)}.
+    @item Eigenschaften:
+    @itemize
+      @item Ohne Kenntnis von @code{k} keine Kollision möglich.
+      @item Der Schlüssel @code{k} kann nicht aus dem Hashwert berechnet werden (kein Zurückrechnen möglich).
+    @end itemize
+  @end itemize
+
+  @item @strong{Variante 2:} HMAC (Hash-based Message Authentication Code) gem. de-facto-Standard
+  @itemize
+    @item Blockgrösse entspricht der verwendeten Hashfunktion.
+    @item Verwendung von @code{ipad} und @code{opad} (Konstanten), um sicherzustellen, dass der Schlüssel nicht zweimal identisch verarbeitet wird.
+  @end itemize
+@end itemize
+
+@subsection ÜBUNGEN VON TEAMS
+
+@enumerate
+@item Verschlüssle den Text "OMNIAGALLA" mit dem Cäsar-Verfahren und dem Schlüssel k=3.
+  @itemize
+    @item Ergebnis: RPQLDJDOOD
+  @end itemize
+
+@item Folgender Text ist mit dem Cäsar-Verfahren verschlüsselt. Breche den Text! Welcher Schlüssel wurde verwendet?
+  @itemize
+    @item Verschlüsselter Text: NXYJNSKFHMeZGWJHMJS
+    @item Klartext: ISTEINFACHzUBRECHEN
+    @item Schlüssel: k=5
+  @end itemize
+
+@item Folgender Text ist mit Vigenère mit dem Schlüssel "KEY" verschlüsselt. Entschlüssele den Text! 
+  @itemize
+    @item Verschlüsselter Text: LIQCIPKPQMECCEP
+    @item Klartext: BESERALSCESAR
+    @item Schlüssel: KEY
+  @end itemize
+
+@item Übung 2: Blockverschlüssler
+
+Wie lange dauert es maximal, einen DES-Schlüssel durch Known-Plaintext-Brute-Force-Angriff zu brechen, wenn:
+  @itemize
+    @item a) Ein Spezialcomputer zur Verfügung steht, der 100x100 DES-Chips enthält, die je 10^9 Verschlüsselungen je Sekunde durchführen könnten?
+      @itemize
+        @item Schlüsselraum für DES: 2^56 mögliche Schlüssel.
+        @item Geschwindigkeit des Computers: 100 * 100 * 10^9 = 10^13 Schlüssel pro Sekunde.
+        @item Maximale Zeit für Brute-Force-Angriff: 2^56 / 10^13 ≈ 7200 Sekunden ≈ 120 Minuten --> 2 Stunden.
+      @end itemize
+
+    @item b) Wie lange würde der gleiche Angriff für Triple-DES mit Zweifachschlüssel benötigen?
+      @itemize
+        @item Schlüsselraum für Triple-DES (Zweifachschlüssel): 2^112 mögliche Schlüssel.
+        @item Geschwindigkeit des Computers: 10^13 Schlüssel pro Sekunde.
+        @item Maximale Zeit für Brute-Force-Angriff: 2^112 / 10^13 ≈ 5.7 x 10^22 Sekunden.
+        @item Umgerechnet: ca. 16.5 x 10^12 Jahre (16'500'000'000'000 Jahre).
+      @end itemize
+
+    @item c) Wie lange würde der Angriff auf AES-128, AES-192 oder AES-256 dauern?
+      @itemize
+        @item AES-128: Schlüsselraum von 2^128.
+        @item AES-192: Schlüsselraum von 2^192.
+        @item AES-256: Schlüsselraum von 2^256.
+        @item Geschwindigkeit des Computers: 10^11 Schlüssel pro Sekunde.
+        @item Maximale Zeit für Brute-Force:
+          @itemize
+            @item AES-128: 2^128 / 10^11 ≈ 10^27 Sekunden ≈ 10^18 Jahre.
+            @item AES-192: 2^192 / 10^11 ≈ 2 x 10^37 Jahre.
+            @item AES-256: 2^256 / 10^11 ≈ 3.7 x 10^56 Jahre.
+          @end itemize
+      @end itemize
+  @end itemize
+
+@item Übung 3: CBC-MAC und Hashwert
+
+@enumerate
+  @item Erstelle eine Tabelle mit dem CBC-MAC mit AES-256 des Textes «MAC schützt die Integrität» und den Schlüsseln:
+    @itemize
+      @item a) Alle Bits sind 0: CBC-MAC = `c8d19704a9cf2e7b8bda96c06a07abf8`
+      @item b) Alle Bits sind 1: CBC-MAC = `df3e4c80d53557098876b31b19be8f63`
+      @item c) 0101.......0101: CBC-MAC = `43a205a07e51fef839531bf1a053da56`
+    @end itemize
+
+  @item Füge der Tabelle oben die Hashwerte des leicht abgeänderten Textes «MAC schützt die Integrität» hinzu.
+    @itemize
+      @item a) Alle Bits sind 0: CBC-MAC = `784a0b160a9d85c118c6e21764fcf60d`
+      @item b) Alle Bits sind 1: CBC-MAC = `54b35e24e0e0d21fa9c68a3f3faadba4`
+      @item c) 0101.......0101: CBC-MAC = `8f6f2a37c6c2c98fc2789072b1390ba9`
+    @end itemize
+
+  @item Erstelle eine Tabelle mit den Hashwerten des Textes «Ich kenne die Hashverfahren» und den folgenden Verfahren: SHA-1, SHA-256, SHA-512, RIPEMD-160.
+    @table @asis
+    @item SHA-1 @t{3a5ad0be8425d4d8f7d2d3ff3d38b1cf3cc9d137}
+    @item SHA-256 @t{29d4a4d1979a0be000a89d9b9e6b1bdbf815a1c4901d6b5c50e69771e6ed70e4}
+    @item SHA-512 @t{4b7fbdc89f1d7a13e6b25f45198a0dff657cb88e36f433ce5d342e2db95a31e77d7f74c3cf2b0e0c28332b8f915b1852f3dfd4b62ba8b02b227413a3db9a46a6}
+    @item RIPEMD-160 @t{de2fb98d073c5a93e490ffb5be65e74f9b7d4243}
+    @end table
+
+  @item Gegeben ist ein Hashwert h(m) von 64 Bit Länge. Wie lange dauert es im Mittel, bis durch Probieren ein zugehöriges m gefunden wird, wenn pro Sekunde 240 (ca. 10^12 = 1 Bio.) Werte berechnet und verglichen werden können?
+    @item Antwort: Bei einem 64-Bit Hashwert gibt es 2^64 mögliche Werte. Bei 240 Berechnungen pro Sekunde dauert es im Mittel:
+    @item Zeit = 2^64 / 240 ≈ 7.3 × 10^16 Sekunden.
+    Das entspricht etwa 185 tage.
+
+  @item Wie lange dauert es bei einem 128-Bit Hashwert, wenn im Mittel ca. 2^(n/2) Berechnungen benötigt werden, um eine Kollision zu finden?
+    @itemize
+      @item a) Wie lange würde der Angriff benötigen bei 128-Bit-Hashwert und 240 Operationen pro Sekunde?
+        @item Antwort: Zeit = 2^64 / 240 ≈ 7.5 × 10^16 Sekunden.
+        Das entspricht etwa 2,4 Milliarden Jahren.
+      @item b) Wie lange bei 192-Bit langem Hashwert?
+        @item  Antwort: Zeit = 2^96 / 240 ≈ 3.3 × 10^26 Sekunden.
+        Das entspricht vielen Milliarden Jahren.
+    @end itemize
+
+  @item Kann eine Hashfunktion mit einer Hashwertlänge von 16 eine kryptographische Hashfunktion sein?
+    @item Antwort: Nein, eine 16-Bit-Hashfunktion kann keine sichere kryptographische Hashfunktion sein. Sie bietet nur 65,536 mögliche Werte (2^16), was eine Kollision bereits nach wenigen Berechnungen wahrscheinlich macht. Eine kryptographische Hashfunktion sollte mindestens 128 Bits lang sein, besser 256 Bits, um eine angemessene Sicherheit zu gewährleisten.
+@end enumerate
+
+@item Übung 4: End-User Guidelines and Information
+
+@enumerate
+  @item Warum die digitale Signatur überprüfen?
+  @item Antwort: Die Überprüfung der digitalen Signatur stellt sicher, dass die heruntergeladene Datei nicht manipuliert wurde und tatsächlich von den Entwicklern von VeraCrypt stammt. Dies schützt vor potenziellen Angriffen, bei denen schadhafte Software als legitimes Programm getarnt wird.
+
+  @item Benchmark-Test Ergebnisse (Speed):
+  @item Frage: Wie schnell ist dein Rechner bei Verschlüsselung und Hashing?
+  @item Antwort:
+    @itemize
+      @item Verschlüsselung (AES): 628 MiB/s
+      @item Hashing (SHA-512): 8.4 GiB/s
+      @item Der schnellste Algorithmus für Hashing ist SHA-512.
+    @end itemize
+
+  @item Was bedeutet Portable-Mode?
+  @item Antwort: Der Portable-Mode erlaubt es, VeraCrypt ohne Installation direkt von einem USB-Stick oder einer anderen tragbaren Quelle auszuführen.
+    @itemize
+      @item Vorteil: Keine Systemänderung nötig.
+      @item Nachteil: Benötigt Administratorrechte, um Laufwerke zu mounten.
+    @end itemize
+
+  @item Was ist die VeraCrypt Rescue Disc?
+  @item Antwort: Eine Rescue Disc wird bei der Verschlüsselung eines kompletten Laufwerks erstellt. Sie dient dazu, im Falle von Boot-Problemen oder beschädigten Header-Daten die Laufwerksverschlüsselung zu reparieren oder zu entschlüsseln.
+    @itemize
+      @item Vorteil: Rettung verschlüsselter Daten bei Problemen.
+      @item Nachteil: Zusätzlicher Verwaltungsaufwand (Disc muss sicher aufbewahrt werden).
+    @end itemize
+
+  @item Wie ist ein sicherer Backup vorzunehmen?
+  @item Antwort: Ein sicheres Backup sollte verschlüsselt erfolgen, idealerweise mit einem zweiten unabhängigen Schlüssel. Der Backup-Datenträger sollte offline aufbewahrt werden (z. B. in einem Tresor).
+
+  @item Welche zwei Möglichkeiten gibt es, ein Laufwerk über ein Netzwerk zu teilen?
+  @item Antwort:
+    @itemize
+      @item Methode 1: VeraCrypt-Container in Netzwerkfreigabe ablegen.
+        @item Vorteil: Einfach einzurichten.
+        @item Nachteil: Langsam bei vielen gleichzeitigen Zugriffen.
+      @item Methode 2: iSCSI-Server verwenden und verschlüsseltes Laufwerk darüber einbinden.
+        @item Vorteil: Schnellere Zugriffe und höhere Flexibilität.
+        @item Nachteil: Komplexere Konfiguration.
+    @end itemize
+
+  @item Wie funktioniert das Entschlüsseln eines Laufwerks?
+  @item Antwort: Das Laufwerk wird über den VeraCrypt-Treiber entschlüsselt. Der Benutzer muss das Passwort (und ggf. Schlüsseldateien) eingeben. Der Treiber entschlüsselt die Daten in Echtzeit beim Zugriff und verschlüsselt sie beim Schreiben.
+@end enumerate
+
+@item Technical Details
+
+@enumerate
+  @item Wie ist das Laufwerk gesichert (Algorithmen, Modi)?
+  @item Antwort:
+    @itemize
+      @item Verschlüsselungsalgorithmus: AES (Advanced Encryption Standard)
+      @item Hashing: SHA-512
+      @item Modus: XTS
+    @end itemize
+
+  @item Was ist PBKDF2 PRF?
+  @item Antwort: PBKDF2 (Password-Based Key Derivation Function 2) ist ein Algorithmus, der aus einem Passwort und einem Salt kryptografische Schlüssel ableitet.
+    @itemize
+      @item Verwendung in VeraCrypt: Erhöht die Sicherheit, indem es das Passwort gegen brute-force Angriffe schützt, da Schlüsselableitung zeitintensiv ist.
+    @end itemize
+
+  @item Wie geht VeraCrypt mit unverschlüsselten Daten im RAM um?
+  @item Antwort: VeraCrypt verschlüsselt keine Daten im RAM, da dies die Performance erheblich beeinflussen würde. Es minimiert jedoch die Zeit, in der Schlüssel im RAM ungeschützt sind, indem es Schlüssel schnell löscht, wenn sie nicht benötigt werden.
+    @itemize
+      @item Grenzen: RAM bleibt angreifbar, insbesondere bei einem Kaltstartangriff.
+    @end itemize
+
+  @item Schützt VeraCrypt die Datenintegrität?
+  @item Antwort: Nein, VeraCrypt schützt die Datenintegrität nicht. Es schützt nur die Vertraulichkeit der Daten. Datenkorruption durch Hardwarefehler oder Malware wird nicht erkannt.
+
+  @item Warum verwendet VeraCrypt den XTS-Modus anstelle von CBC?
+  @item Antwort: Der XTS-Modus (XOR Encrypt XOR Tweakable Block Cipher) wurde entwickelt, um besser
+@end enumerate
+@end enumerate
+
+@subsection Owasp sponsors
+@enumerate
+
+@item OWASP
+  @itemize 
+    @item Finde zuerst heraus, wer die OWASP ist und wer die OWASP unterstützt.
+    @item Antwort:
+    @item Corporate Supporter:
+      @itemize
+        @item Atlassian
+        @item automattic
+        @item Crowdstrike/Bionic
+        @item Bloomberg
+        @item Fortify
+        @item root
+        @item salesforce
+        @item tenable
+        @item wallarm
+        @item appdome
+        @item arnica
+        @item Backslash
+        @item blend-ed
+        @item Checkmarx
+        @item equixly
+        @item Guardsquare
+        @item invicti
+        @item Promon
+        @item SailPoint
+        @item Scitum
+        @item ThreatModeler
+        @item Zinad
+        @item Zimperium
+        @item aikido
+        @item Apiiro
+        @item Aprroach Cyber
+        @item ArmorCode
+        @item BLST/Panen138
+        @item Check Point
+        @item Cryptosoft
+        @item Cybozu
+        @item Cydrill
+        @item deepfactor
+        @item DefectDojo
+        @item digital.ai
+        @item eShard
+        @item GitGuardian
+        @item GuidePoint
+        @item Heeler
+        @item Hitachi
+        @item impart
+        @item IrusRisk
+        @item Jit
+        @item miteinander
+        @item nedap
+        @item NowSecure
+        @item OccamSec
+        @item Phoenix Security
+        @item Pynt
+        @item Rakuten
+        @item RAxis
+        @item Red Hat
+        @item Riscosity
+        @item SCSK
+        @item SDS
+        @item SKUDONET
+        @item Salt
+        @item Security Journey
+        @item Synopsys
+        @item Team Secure
+        @item ThreatSpike
+        @item Traefik Labs
+        @item and many more...
+        @item https://owasp.org/supporters/list
+      @end itemize
+  @end itemize
+
+@end enumerate
+
+@subsection A08 - Software- und Datenintegritätsfehler
+
+@enumerate
+  @item A08:2021 – Software- und Datenintegritätsfehler (OWASP Top 10)
+
+  @item Beschreibung
+
+  Software- und Datenintegritätsfehler beziehen sich auf Situationen, in denen Systeme auf nicht vertrauenswürdige Datenquellen angewiesen sind oder es an ausreichenden Schutzmaßnahmen für die Integrität kritischer Daten mangelt. Diese Kategorie umfasst:
+
+  @itemize
+    @item Schwachstellen in der Lieferkette: Ausnutzung unsicherer Softwareentwicklungs- oder Integrationsprozesse.
+    @item Unsichere Aktualisierungsmechanismen: Nicht authentifizierte oder nicht verifizierte Updates für Software, Bibliotheken oder Konfigurationsdateien.
+  @end itemize
+
+  @item Hauptsächliche Risiken
+
+  @itemize
+    @item Manipulation von Software-Builds oder Daten: Angreifer können Daten oder Code manipulieren, um Schwachstellen einzufügen oder sensible Informationen zu stehlen.
+    @item Kompromittierte Umgebungen in CI/CD-Pipelines: Ein Angreifer, der Zugang zu einer CI/CD-Pipeline erhält, kann bösartigen Code einschleusen oder Konfigurationen ändern.
+    @item Nicht vertrauenswürdige Abhängigkeiten: Wenn Softwarekomponenten, einschließlich Drittanbieterbibliotheken oder Pakete, nicht ordnungsgemäß geprüft werden, können Angreifer diese als Einstiegspunkte für Schwachstellen ausnutzen.
+  @end itemize
+
+  @item Präventionsmethoden
+
+  @itemize
+    @item Integritätsprüfung: Authentizität von Software, Updates und Abhängigkeiten stets mithilfe von kryptografischen Signaturen oder Prüfsummen überprüfen.
+    @item Zugriffskontrolle: Absicherung der Build- und Bereitstellungspipelines durch starke Authentifizierungs- und Autorisierungsmechanismen.
+    @item Sicherer Softwareentwicklungslebenszyklus: Sicherheitsprüfungen und -validierungen in jeder Phase der Softwareentwicklung implementieren, einschließlich Code-Reviews und automatisierter Scans.
+    @item Datenintegritätsprüfungen: Mechanismen zur Datenvalidierung nutzen, um die Integrität von Daten, insbesondere während der Deserialisierung oder bei Softwareupdates, sicherzustellen.
+  @end itemize
+
+  @item Codecov-Sicherheitsvorfall (bezogen auf A08)
+
+  @item Vorfallübersicht
+
+  Der Codecov-Sicherheitsvorfall ist ein prominentes Beispiel für einen Datenintegritätsfehler im Kontext der CI/CD-Pipeline-Sicherheit:
+
+  Das Codecov Bash Uploader-Skript wurde von einer Drittpartei kompromittiert, die einen unsicheren Prozess zur Erstellung von Docker-Images nutzte. Dadurch konnte der Angreifer das Uploader-Skript zwischen dem 31. Januar und dem 1. April 2021 verändern und sensible Umgebungsvariablen aus den CI-Systemen der Nutzer exfiltrieren.
+
+  @itemize
+    @item Bösartiger Code: Das geänderte Bash-Skript verwendete einen curl-Befehl, um Umgebungsvariablen, einschließlich Anmeldedaten, Token und anderer sensibler Daten, an einen bösartigen Server zu senden.
+    @item Betroffene Bereiche:
+    @itemize
+      @item Git-Remote-Informationen und Umgebungsvariablen in CI-Pipelines wurden offengelegt.
+      @item Das bösartige Skript wurde in verschiedenen CI-Systemen angewendet, einschließlich GitHub Actions, CircleCI und Bitrise.
+    @end itemize
+  @end itemize
+
+  @item Empfehlungen für betroffene Nutzer
+
+  @item Sofortmaßnahmen
+  @itemize
+    @item Anmeldedaten, Token und Schlüssel neu ausstellen.
+    @item Veraltete Bash-Uploader-Skripte ersetzen.
+    @item Sicherstellen, dass die Konfigurationen der CI/CD-Pipelines sicher sind.
+  @end itemize
+
+  @item Prävention und Abmilderung
+  @itemize
+    @item Aktualisieren und Sichern von Drittanbieter-Tools oder Skripten.
+    @item Regelmäßige Überprüfung der Pipeline-Konfiguration und der Softwareabhängigkeiten auf Integrität.
+    @item Prüfsummen oder kryptografische Signaturen für hochgeladene oder geteilte Skripte verwenden, um unbefugte Änderungen zu verhindern.
+  @end itemize
+
+  @item Deserialisierungs-Cheat-Sheet (OWASP)
+
+  @item Übersicht
+
+  Deserialisierungsprobleme treten auf, wenn nicht vertrauenswürdige Daten ohne angemessene Validierung deserialisiert werden. Angreifer können diese Schwachstellen ausnutzen, um bösartige Objekte oder Daten in eine Anwendung einzuschleusen und so möglicherweise deren Sicherheit zu gefährden.
+
+  @item Mögliche Risiken
+
+  @itemize
+    @item Bösartige Payloads: Die Deserialisierung von Daten aus nicht vertrauenswürdigen Quellen kann Angreifern ermöglichen, beliebigen Code auszuführen, was die Anwendung und die zugrunde liegende Infrastruktur gefährden kann.
+    @item Datenmanipulation: Ein Angreifer kann serialisierte Daten manipulieren, was die Integrität und Funktionalität der Anwendung beeinträchtigt.
+  @end itemize
+
+  @item Leitfaden für sichere Deserialisierung
+
+  @itemize
+    @item Eingabevalidierung: Eingaben stets validieren und bereinigen, bevor sie deserialisiert werden.
+    @item Objektintegrität: Kryptografische Signaturen verwenden, um sicherzustellen, dass die serialisierten Objekte nicht verändert wurden.
+    @item Sichere Bibliotheken verwenden: Bibliotheken und Frameworks bevorzugen, die die Deserialisierung automatisch sicher handhaben.
+    @item Deserialisierung einschränken: Daten aus nicht vertrauenswürdigen Quellen vermeiden oder zumindest beschränken, welche Objekttypen deserialisiert werden können.
+  @end itemize
+
+  @item Fazit
+
+  Die Kategorie A08:2021 – Software- und Datenintegritätsfehler zeigt die wachsenden Risiken auf, die mit der Wahrung der Integrität von Software und Daten, insbesondere in modernen CI/CD-Pipelines, verbunden sind. Der Codecov-Vorfall demonstriert, wie Schwachstellen in CI/CD-Prozessen ausgenutzt werden können, um sensible Daten zu exfiltrieren und die Systemintegrität zu gefährden.
+
+  Beste Praktiken zur Risikominderung umfassen:
+
+  @itemize
+    @item Sichere Entwicklungspraktiken, wie sichere Code-Reviews und automatisierte Scans, einsetzen.
+    @item Integritätsprüfungen (wie kryptografische Signaturen und Prüfsummen) für Software und Daten verwenden, um die Authentizität sicherzustellen.
+    @item Externe Abhängigkeiten prüfen und verifizieren.
+    @item Eingaben vor der Deserialisierung validieren und kryptografische Methoden zur Sicherung serialisierter Daten einsetzen, um potenzielle Angriffe zu verhindern.
+  @end itemize
+
+  Durch die Umsetzung dieser Sicherheitspraktiken können Organisationen das Risiko von Software- und Datenintegritätsfehlern erheblich verringern und so die allgemeine Systemsicherheit verbessern.
+@end enumerate
+
+@sp 2    @comment Add extra space between sections
+
+
+@itemize
+  @item ============================
+  @item  General Information
+  @item ============================
+@end itemize
+
+@sp 1    @comment Add a little extra space for visual clarity
+
+@section Generating Info Files
+
+For generating an Info file from a Texinfo source file, use the following command:
+
+@code{makeinfo yourfile.texi}
+
+This will produce a file named @file{yourfile.info}.
+
+@section Generating PDF Files
+
+To convert a Texinfo file to PDF format, use the command:
+
+@code{texi2pdf yourfile.texi}
+
+The output will be a PDF file named @file{yourfile.pdf}.
+
+@section Generating HTML Files
+
+To convert a Texinfo file to HTML format, use the following command:
+
+@code{makeinfo --html yourfile.texi}
+
+This command will generate a directory named @file{yourfile} containing the HTML files.
+
+@sp 1    @comment Add some space before ending the section
+
+@itemize
+  @item ============================
+  @item       Thank you for reading!
+  @item ============================
+@end itemize
+
+@bye

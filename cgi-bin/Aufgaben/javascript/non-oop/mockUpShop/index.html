@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photofuel - Store</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="scripts/footer.js" defer></script>
+    <script src="scripts/dropdown.js" defer></script>
+    <script src="scripts/filter.js" defer></script>
+    <script src="scripts/map.js" defer></script>
+    <script src="scripts/faq.js" defer></script>
+    <script src="scripts/showPopUp.js" defer></script>
+    <script src="scripts/script.js" defer></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon_io/site.webmanifest" />
+  </head>
+  <body>
+    <header-component></header-component>
+    <main>
+      <section class="homepage" id="home">
+        <div class="content flex">
+          <div class="text">
+            <h1 class="gradient title">Willkommen bei Photofuel</h1>
+            <p>
+              Ihr zuverlässiger Partner für alles rund um Fotografie,
+              Kameraausstattung und massgeschneiderte Beratung
+            </p>
+            <a href="#products" class="homepageBtn">Unsere Produkte</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="products" class="products-section">
+        <h2>Unsere Produkte</h2>
+
+        <div class="filter-container">
+          <!-- Kategorie -->
+          <label for="category">Kategorie:</label>
+          <select id="category" onchange="updateFilters()">
+            <option value="all">Alle</option>
+            <option value="Kameras">Kameras</option>
+            <option value="Objektive">Objektive</option>
+            <option value="Speicherkarten">Speicherkarten</option>
+            <option value="Drohnen">Drohnen</option>
+            <option value="Stative">Stative</option>
+            <option value="Gimbals">Gimbals</option>
+            <option value="Studio-Beleuchtung">Studio-Beleuchtung</option>
+            <option value="Kamerataschen">Kamerataschen</option>
+            <option value="Audio-Equipment">Audio-Equipment</option>
+            <option value="Action-Kameras">Action-Kameras</option>
+            <option value="Blitzgeräte">Blitzgeräte</option>
+            <option value="Rucksäcke">Rucksäcke</option>
+            <option value="Software">Software</option>
+            <option value="Monitore">Monitore</option>
+            <option value="Tastaturen">Tastaturen</option>
+            <option value="Zubehör">Zubehör</option>
+          </select>
+
+          <!-- Dynamische Filteroptionen -->
+          <div id="dynamic-filters"></div>
+
+          <button id="applyFilters">Filter anwenden</button>
+        </div>
+
+        <div id="card-container" class="card-container"></div>
+      </section>
+
+      <!-- About Us Section -->
+      <section id="about-us">
+        <h2>Über uns</h2>
+        <p>
+          Photofuel ist ein führendes Unternehmen in der Fotografiebranche, das
+          sich auf hochwertige Kameraausstattung und professionellen Service
+          spezialisiert hat. Mit jahrelanger Erfahrung bieten wir eine breite
+          Palette an Produkten, die sowohl den Bedürfnissen von Hobbyfotografen
+          als auch von Profis gerecht werden. Wir verstehen die Anforderungen
+          der Fotografie und arbeiten eng mit unseren Kunden zusammen, um die
+          bestmögliche Ausrüstung und Unterstützung zu gewährleisten.
+        </p>
+        <p>
+          Unsere Philosophie basiert auf der Kombination von technischer
+          Expertise und kreativem Denken. Wir bieten nicht nur Produkte, sondern
+          auch massgeschneiderte Beratung, um sicherzustellen, dass Sie genau
+          die richtigen Werkzeuge für Ihre kreativen Projekte auswählen. Unser
+          Team besteht aus erfahrenen Fachleuten, die Ihre individuellen
+          Anforderungen verstehen und Sie auf Ihrem fotografischen Weg
+          begleiten.
+        </p>
+        <p>
+          Ob Sie nun auf der Suche nach der neuesten Kamera, Objektiven, Zubehör
+          oder exklusiven Softwarelösungen sind, wir haben alles, was Sie
+          brauchen, um Ihre Fotos auf das nächste Level zu bringen. Zudem bieten
+          wir regelmässig Workshops und Schulungen an, um Sie mit den neuesten
+          Entwicklungen und Techniken in der Fotografie vertraut zu machen.
+        </p>
+        <p>
+          Photofuel ist mehr als nur ein Geschäft – wir sind Ihr Partner in der
+          Welt der Fotografie. Lassen Sie uns gemeinsam Ihre Visionen
+          verwirklichen und unvergessliche Momente festhalten.
+        </p>
+      </section>
+
+      <!-- FAQ Section -->
+      <section id="faq">
+        <h2>Häufig gestellte Fragen</h2>
+        <input
+          type="text"
+          id="search"
+          placeholder="Frage suchen..."
+          onkeyup="filterFAQ()"
+        />
+        <div id="faq-display"></div>
+      </section>
+
+      <!-- Impressum Section -->
+      <section id="impressum">
+        <h2>Impressum</h2>
+        <address>
+          Photofuel.tech<br />
+          Kantonsschule Sargans <br />
+          Pizolstrasse 14<br />
+          7320 Sargans<br />
+          Schweiz<br />
+          E-Mail: <a href="mailto:info@photofuel.tech">info@photofuel.tech</a
+          ><br />
+          Telefon: <a href="tel:+41441234567">+41 44 123 45 67</a>
+        </address>
+
+        <div id="map-container">
+          <h2>Unsere Lage:</h2>
+          <label for="location-select">Standort auswählen:</label>
+          <select id="location-select">
+            <option value="hauptsitz">Hauptsitz</option>
+            <option value="nebensitz">Nebensitz</option>
+          </select>
+          <input id="search-box" type="text" placeholder="Ort suchen..." />
+          <div id="map"></div>
+          <button id="open-in-open-street-map">
+            In OpenStreetMap Maps öffnen
+          </button>
+        </div>
+      </section>
+
+      <!-- Danksagung Section -->
+      <section id="danke">
+        <h2>Danksagung</h2>
+        <p>
+          Ein herzlicher Dank geht an alle untenstehenden Anbieter, die uns mit
+          Fotos und Produktinformationen unterstützt haben.
+        </p>
+        <ul>
+          <li>
+            <span>Digitec</span> – Für die Bereitstellung der
+            Produktinformationen und Preisrichtwerte.
+            <a
+              href="https://www.digitec.ch/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Digitec Website</a
+            >
+          </li>
+          <li>
+            <span>Pexels</span> – Für die genialen Fotos.
+            <a
+              href="https://www.pexels.com/de-de/foto/natur-baume-wildnis-holz-17479925/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Pexels Foto</a
+            >
+          </li>
+          <li>
+            <span>Fontawesome</span> – Für die Icons.
+            <a
+              href="https://fontawesome.com/search?q=trolley&o=r"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Fontawesome Icons</a
+            >
+          </li>
+          <h2>Haftungsausschluss für Produktbilder</h2>
+          <p>
+            Die auf dieser Webseite verwendeten Produktbilder dienen
+            ausschliesslich zu Illustrationszwecken. Wir halten kein
+            Urheberrecht an diesen Fotos, da es sich um eine Schulwebseite
+            handelt. Falls Sie ein Bild entdecken, das Ihnen gehört,
+            kontaktieren Sie uns bitte unter
+            <a href="mailto:info@photofuel.tech">info@photofuel.tech</a>, und
+            wir werden es umgehend entfernen.
+          </p>
+        </ul>
+      </section>
+    </main>
+    <footer-component></footer-component>
+  </body>
+</html>

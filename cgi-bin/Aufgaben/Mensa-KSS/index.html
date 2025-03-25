@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KSS Mensa</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script src="https://kit.fontawesome.com/18ba2e6d37.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar container flex">
+            <img src="images/Logo-SG.png" alt="Logo" class="imgLogo">
+            <h2 class="logo"><a href="#">KSS | Mensa</a></h2>
+            <input type="checkbox" id="menu-toggler">
+            <label for="menu-toggler" id="hamburger-btn"><i class="fas fa-bars"></i></label>
+            <ul class="nav-links flex">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Angebot</a></li>
+                <li><a href="#marketing">Öffnungszeiten und Menüs</a></li>
+                <li><a href="#contact">Contact us</a></li>
+                <li><a href="#about">About us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="homepage" id="home">
+        <div class="content flex">
+            <div class="text">
+                <h1>Welcome to KSS Mensa</h1>
+                <p>Ihre Lösung des Vertrauens für qualitativ gutes und günstiges Essen, mit einer angenehmen atmosphäre und freundlichem Personal</p>
+            </div>
+            <a href="#services">Angebot</a>
+        </div>
+    </section>
+
+    <section class="werbung">
+        <div class="container">
+            <h1>Aktueller Flyer</h1>
+            <br><br>
+            <center><img src="images/flyer.png" alt="werbung" class="flyer"></center>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Unser Angebot</h2>
+                <p>Die Fotos dienen als Beispiele und können von den tatsächlichen Menüs abweichen. Wir empfehlen vor dem Besuch die aktuelle Wochenkarte anzuschauen.</p>
+            </div>
+            <ul class="cards flex">
+                <li class="card">
+                    <img src="images/vegan.jpg" alt="Vegan Menu">
+                    <h3>Vegan</h3>
+                    <ul>
+                        <li>Vorspeise: Leicht, Salate, Bruschetta</li>
+                        <li>Hauptgang: Pflanzliche Proteine, Gemüse, Getreide</li>
+                        <li>Zutaten: Tofu, Tempeh, Quinoa, saisonales Gemüse, Vollkornprodukte, Kräuter</li>
+                    </ul>
+                </li>
+                <li class="card">
+                    <img src="images/vegetarisch.jpg" alt="Vegetarisch Menu">
+                    <h3>Vegetarisch</h3>
+                    <ul>
+                        <li>Vorspeise: Salate, Suppen, Quiches</li>
+                        <li>Hauptgang: Gemüsereich, Käse, Eier, Nudeln, Reis, Risotto</li>
+                        <li>Zutaten: Gemüse, verschiedene Käsesorten, Nudeln, Reis, Pilze</li>
+                    </ul>
+                </li>
+                <li class="card">
+                    <img src="images/nicht_vegetarisch.jpg" alt="Nicht-Vegetarisch Menu">
+                    <h3>Nicht-vegetarisch</h3>
+                    <ul>
+                        <li>Vorspeise: Fleischhaltig, Salate, Suppen</li>
+                        <li>Hauptgang: Fleischgerichte, Burger, Steaks, Beilagen</li>
+                        <li>Zutaten: Hühnchen, Rind, Schwein, Kartoffeln, Gemüse, Burgerbrötchen, Saucen</li>
+                    </ul>
+                </li>
+                <li class="card">
+                    <img src="images/salat-büffet.JPG" alt="Salat Büffet">
+                    <h3>Salat büffet</h3>
+                    <ul>
+                        <li>Zutaten: Diverse Salatzutaten und entweder italienische oder französische Sosse</li>
+                    </ul>
+                </li>
+                <li class="card">
+                    <img src="images/Kiosk.JPG" alt="Kiosk">
+                    <h3>Kiosk</h3>
+                    <ul>
+                        <li>Kleine Snacks und Getränke zu unterschiedlichen Preisen</li>
+                    </ul>
+                </li>
+                <li class="card">
+                    <img src="images/MENU03-2.png" alt="kaffeautomat">
+                    <h3>Kaffeautomat</h3>
+                    <ul>
+                        <li>Heisse Getränke zu unterschiedlichen Preisen</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="price-list" id="price-list">
+        <div class="container">
+            <h2>Preisliste</h2>
+            <div class="price-table">
+                
+                <div class="row header">
+                    <div class="cell">Artikel</div>
+                    <div class="cell">Preis (CHF)</div>
+                </div>
+                <div class="row">
+                    <div class="cell">Pommes Frites</div>
+                    <div class="cell">6.00</div>
+                </div>
+                <div class="row">
+                    <div class="cell">Pommes Frites mit Nuggets (Chicken)</div>
+                    <div class="cell">9.50</div>
+                </div>
+                <div class="row">
+                    <div class="cell">Pommes Frites mit Nuggets (Tofu)</div>
+                    <div class="cell">9.00</div>
+                </div>
+                <div class="row">
+                    <div class="cell">Tagessuppe</div>
+                    <div class="cell">2.50</div>
+                </div>
+                <div class="row">
+                    <div class="cell">Birchermüesli</div>
+                    <div class="cell">5.50</div>
+                </div>
+                <div class="row">
+                    <div class="cell">Früchtebecher</div>
+                    <div class="cell">4.50</div>
+                </div>
+                <div class="row">
+                    <div class="cell">Verschiedene Snacks</div>
+                    <div class="cell">6.00</div>
+                </div>
+                <div class="row">
+                    <div class="cell">Salatbüffet</div>
+                    <div class="cell">6.00</div>
+                </div>
+                <div class="row">
+                    <div class="cell">Kaffee</div>
+                    <div class="cell">2.00</div>
+                </div>
+                <div class="row">
+                    <div class="cell">Softgetränke</div>
+                    <div class="cell">2.00</div>
+                </div>
+            </div>
+            <div class="price-table">
+                <div class="row header">
+                    <div class="cell">Preise Menüs</div>
+                    <div class="cell">Vegan</div>
+                    <div class="cell">Vegetarisch</div>
+                    <div class="cell">Nicht-vegi</div>
+                </div>
+                <div class="row">
+                    <div class="cell">Schüler</div>
+                    <div class="cell">8.00</div>
+                    <div class="cell">8.50</div>
+                    <div class="cell">9.50</div>
+                </div>
+                <div class="row">
+                    <div class="cell">Lehrer</div>
+                    <div class="cell">10.00</div>
+                    <div class="cell">10.50</div>
+                    <div class="cell">11.50</div>
+                </div>
+                <div class="row">
+                    <div class="cell">Externe</div>
+                    <div class="cell">13.00</div>
+                    <div class="cell">13.50</div>
+                    <div class="cell">14.50</div>
+                </div>
+                <div class="row">
+                    <div class="cell">Zum mitnehmen</div>
+                    <div class="cell">+ 0.75</div>
+                    <div class="cell">+ 0.75</div>
+                    <div class="cell">+ 0.75</div>
+                </div>
+            </div>
+            <p>Preise an Thementagen können etwas höher sein.</p>
+            <p>Menükarte Schüler (11 Menüs) Vegan -> CHF 80, Vegetarisch -> CHF 85, Nicht-vegetarisch -> CHF 95</p>
+            <p>Getränkepass --> CHF 25</p>
+            <p>Thementage zählen nicht zur Menükarte und müssen somit einzeln gezahlt werden.</p>
+        </div>
+    </section>
+
+    <section class="marketing" id="marketing">
+        <div class="container">
+            <h1>Zeitpläne</h1>
+            <h2>
+                <center>
+                    <br>
+                    11:00 – 14:00 Öffnungszeiten Küche <br>
+                    07:00 – 17:00 Öffnungszeiten Mensa <br>
+                    08:30 – 10:00 Znünibuffet <br>
+                    08:00 – 15:30 Kiosk <br>
+                    <br>
+                </center>
+            </h2>
+            <h1>Wochenplan</h1>
+            <img src="images/Menueplan.png" alt="Wochenplan">
+            <figure>
+                <h1>Spezialtage</h1>
+                <img src="images/sushi-friday.png" alt="sushi-friday">
+                <figcaption>Beispiel für einen Spezialtag</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container contact">
+            <h1>Kontaktformular</h1>
+            <br>
+            <form onsubmit="return submitForm()">
+                <label for="fname"><p>Vorname</p></label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+
+                <label for="lname"><p>Nachname</p></label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+
+                <label for="email"><p>Deine Email</p></label>
+                <input type="email" id="email" name="email" placeholder="example@example.com" required>
+
+                <label for="problem"><p>Problem oder Vorschlag</p></label>
+                <input type="text" id="problem" name="problem" placeholder="Website doesn't load.." required>
+
+                <label for="subject"><p>Subject</p></label>
+                <input type="text" id="subject" name="subject"
+                    placeholder="I was viewing the pictures.." required>
+
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Unser Team</h2>
+            </div>
+            <div class="cards flex">
+                <div class="card">
+                    <img src="images/camera/Ahmed.JPG" alt="Ahmed">
+                    <h3>Ahmed</h3>
+                    <p>
+                        Ahmed: <br> Unsere Marketing-Experte <br> er ist für die Zusammenstellung unseres Menüplanes <br> und unseres Werbematerial zuständig
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="images/camera/yasin.jpeg" alt="Yasin">
+                    <h3>Yasin</h3>
+                    <p>
+                        Yasin: <br> Unser Manager <br> er koordiniert unser Team und übernimmt die Setzung von Deadlines
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="images/camera/Andor.JPG" alt="Andor">
+                    <h3>Andor</h3>
+                    <p>
+                        Andor: <br> Unser Designer & Qualitsmanagment<br> er ist dafür zuständig das Design und die Aufstellung <br> der Mensa zu überarbeiten <br> und die Webseite auf den Inhalt <br> und rechtschreibung zu überprüfen
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="images/camera/Luca.JPG" alt="Ahmed">
+                    <h3>Luca</h3>
+                    <p>
+                        Luca: <br> Unser Sortimententwickler und Webdesigner <br> er hat diese Webseite gebaut <br> und ist für das Design und die Wartung zuständig.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://www.fsf.org/videos/escape-to-freedom/" class="tux"><img src="images/tux.jpg" alt="tux" class="tux"></a>
+
+    <footer class="footer">
+        <div class="container">
+            <span>&copy; 2024 KSS Mensa. Alle Rechte vorbehalten.</span>
+        </div>
+    </footer>
+
+    <script src="../Photofuel/srccripts.js"></script>
+</body>
+
+</html>

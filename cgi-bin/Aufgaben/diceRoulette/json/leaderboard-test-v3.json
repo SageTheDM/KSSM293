@@ -1,0 +1,5342 @@
+[
+  {
+    "name": "expert-bot-v3",
+    "score": 100,
+    "turns": 15,
+    "date": "2025-03-20T07:35:46.853Z",
+    "turnHistory": [
+      {
+        "rollTotal": 14,
+        "newTotal": 14
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 17
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 21
+      },
+      {
+        "rollTotal": 11,
+        "newTotal": 32
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 34
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 42
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 50
+      },
+      {
+        "rollTotal": 6,
+        "busted": true
+      },
+      {
+        "rollTotal": 4,
+        "busted": true
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 56
+      },
+      {
+        "rollTotal": 16,
+        "newTotal": 72
+      },
+      {
+        "rollTotal": 6,
+        "busted": true
+      },
+      {
+        "rollTotal": 13,
+        "newTotal": 85
+      },
+      {
+        "rollTotal": 5,
+        "busted": true
+      },
+      {
+        "rollTotal": 15,
+        "newTotal": 100
+      }
+    ],
+    "stats": {
+      "name": "expert-bot-v3",
+      "total": 100,
+      "winCount": 1,
+      "totalTurns": 15,
+      "bustRate": "26.7%",
+      "avgScorePerTurn": "8.1"
+    }
+  },
+  {
+    "name": "expert-bot-v3",
+    "score": 104,
+    "turns": 12,
+    "date": "2025-03-20T07:35:37.171Z",
+    "turnHistory": [
+      {
+        "rollTotal": 22,
+        "newTotal": 22
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 26
+      },
+      {
+        "rollTotal": 15,
+        "newTotal": 41
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 46
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 51
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 60
+      },
+      {
+        "rollTotal": 16,
+        "busted": true
+      },
+      {
+        "rollTotal": 15,
+        "newTotal": 75
+      },
+      {
+        "rollTotal": 11,
+        "newTotal": 86
+      },
+      {
+        "rollTotal": 18,
+        "newTotal": 104
+      }
+    ],
+    "stats": {
+      "name": "expert-bot-v3",
+      "total": 104,
+      "winCount": 1,
+      "totalTurns": 12,
+      "bustRate": "25.0%",
+      "avgScorePerTurn": "10.0"
+    }
+  },
+  {
+    "name": "medium-bot-v3",
+    "score": 101,
+    "turns": 12,
+    "date": "2025-03-20T07:35:53.505Z",
+    "turnHistory": [
+      {
+        "rollTotal": 3,
+        "newTotal": 3
+      },
+      {
+        "rollTotal": 7,
+        "newTotal": 10
+      },
+      {
+        "rollTotal": 12,
+        "newTotal": 22
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 31
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 34
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 36
+      },
+      {
+        "rollTotal": 21,
+        "newTotal": 57
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 62
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 66
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 75
+      },
+      {
+        "rollTotal": 23,
+        "newTotal": 98
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 101
+      }
+    ],
+    "stats": {
+      "name": "medium-bot-v3",
+      "total": 101,
+      "winCount": 1,
+      "totalTurns": 12,
+      "bustRate": "0.0%",
+      "avgScorePerTurn": "8.4"
+    }
+  },
+  {
+    "name": "medium-bot-v3",
+    "score": 101,
+    "turns": 11,
+    "date": "2025-03-20T07:35:47.558Z",
+    "turnHistory": [
+      {
+        "rollTotal": 6,
+        "newTotal": 6
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 8
+      },
+      {
+        "rollTotal": 21,
+        "newTotal": 29
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 39
+      },
+      {
+        "rollTotal": 22,
+        "newTotal": 61
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 67
+      },
+      {
+        "rollTotal": 13,
+        "newTotal": 80
+      },
+      {
+        "rollTotal": 13,
+        "newTotal": 93
+      },
+      {
+        "rollTotal": 3,
+        "busted": true
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 101
+      }
+    ],
+    "stats": {
+      "name": "medium-bot-v3",
+      "total": 101,
+      "winCount": 1,
+      "totalTurns": 11,
+      "bustRate": "18.2%",
+      "avgScorePerTurn": "9.5"
+    }
+  },
+  {
+    "name": "medium-bot-v3",
+    "score": 100,
+    "turns": 13,
+    "date": "2025-03-20T07:35:45.259Z",
+    "turnHistory": [
+      {
+        "rollTotal": 4,
+        "newTotal": 4
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 8
+      },
+      {
+        "rollTotal": 12,
+        "newTotal": 20
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 25
+      },
+      {
+        "rollTotal": 25,
+        "newTotal": 50
+      },
+      {
+        "rollTotal": 21,
+        "newTotal": 71
+      },
+      {
+        "rollTotal": 7,
+        "newTotal": 78
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 80
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 88
+      },
+      {
+        "rollTotal": 6,
+        "busted": true
+      },
+      {
+        "rollTotal": 7,
+        "newTotal": 95
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 100
+      }
+    ],
+    "stats": {
+      "name": "medium-bot-v3",
+      "total": 100,
+      "winCount": 1,
+      "totalTurns": 13,
+      "bustRate": "15.4%",
+      "avgScorePerTurn": "8.2"
+    }
+  },
+  {
+    "name": "easy-bot-v3",
+    "score": 101,
+    "turns": 14,
+    "date": "2025-03-20T07:35:45.258Z",
+    "turnHistory": [
+      {
+        "rollTotal": 5,
+        "busted": true
+      },
+      {
+        "rollTotal": 15,
+        "busted": true
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 6
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 10
+      },
+      {
+        "rollTotal": 13,
+        "busted": true
+      },
+      {
+        "rollTotal": 26,
+        "newTotal": 36
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 41
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 49
+      },
+      {
+        "rollTotal": 6,
+        "busted": true
+      },
+      {
+        "rollTotal": 8,
+        "busted": true
+      },
+      {
+        "rollTotal": 8,
+        "busted": true
+      },
+      {
+        "rollTotal": 20,
+        "busted": true
+      },
+      {
+        "rollTotal": 28,
+        "newTotal": 77
+      },
+      {
+        "rollTotal": 24,
+        "newTotal": 101
+      }
+    ],
+    "stats": {
+      "name": "easy-bot-v3",
+      "total": 101,
+      "winCount": 1,
+      "totalTurns": 14,
+      "bustRate": "50.0%",
+      "avgScorePerTurn": "12.6"
+    }
+  },
+  {
+    "name": "expert-bot-v3",
+    "score": 100,
+    "turns": 14,
+    "date": "2025-03-20T07:36:29.767Z",
+    "turnHistory": [
+      {
+        "rollTotal": 4,
+        "busted": true
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 8
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 14,
+        "busted": true
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 12
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 20,
+        "newTotal": 32
+      },
+      {
+        "rollTotal": 6,
+        "busted": true
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 40
+      },
+      {
+        "rollTotal": 18,
+        "newTotal": 58
+      },
+      {
+        "rollTotal": 21,
+        "newTotal": 79
+      },
+      {
+        "rollTotal": 6,
+        "busted": true
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 82
+      },
+      {
+        "rollTotal": 18,
+        "newTotal": 100
+      }
+    ],
+    "stats": {
+      "name": "expert-bot-v3",
+      "total": 100,
+      "winCount": 1,
+      "totalTurns": 14,
+      "bustRate": "42.9%",
+      "avgScorePerTurn": "9.3"
+    }
+  },
+  {
+    "name": "easy-bot-v3",
+    "score": 101,
+    "turns": 7,
+    "date": "2025-03-20T07:35:23.569Z",
+    "turnHistory": [
+      {
+        "rollTotal": 20,
+        "newTotal": 20
+      },
+      {
+        "rollTotal": 24,
+        "newTotal": 44
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 49
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 55
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 61
+      },
+      {
+        "rollTotal": 23,
+        "newTotal": 84
+      },
+      {
+        "rollTotal": 17,
+        "newTotal": 101
+      }
+    ],
+    "stats": {
+      "name": "easy-bot-v3",
+      "total": 101,
+      "winCount": 1,
+      "totalTurns": 7,
+      "bustRate": "0.0%",
+      "avgScorePerTurn": "14.4"
+    }
+  },
+  {
+    "name": "easy-bot-v3",
+    "score": 101,
+    "turns": 15,
+    "date": "2025-03-20T07:35:20.565Z",
+    "turnHistory": [
+      {
+        "rollTotal": 6,
+        "busted": true
+      },
+      {
+        "rollTotal": 12,
+        "busted": true
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 8
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 11
+      },
+      {
+        "rollTotal": 6,
+        "busted": true
+      },
+      {
+        "rollTotal": 23,
+        "newTotal": 34
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 39
+      },
+      {
+        "rollTotal": 22,
+        "newTotal": 61
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 69
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 71
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 11,
+        "newTotal": 82
+      },
+      {
+        "rollTotal": 5,
+        "busted": true
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 85
+      },
+      {
+        "rollTotal": 16,
+        "newTotal": 101
+      }
+    ],
+    "stats": {
+      "name": "easy-bot-v3",
+      "total": 101,
+      "winCount": 1,
+      "totalTurns": 15,
+      "bustRate": "33.3%",
+      "avgScorePerTurn": "8.7"
+    }
+  },
+  {
+    "name": "expert-bot-v3",
+    "score": 103,
+    "turns": 10,
+    "date": "2025-03-20T07:35:43.558Z",
+    "turnHistory": [
+      {
+        "rollTotal": 6,
+        "newTotal": 6
+      },
+      {
+        "rollTotal": 20,
+        "newTotal": 26
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 31
+      },
+      {
+        "rollTotal": 7,
+        "newTotal": 38
+      },
+      {
+        "rollTotal": 21,
+        "newTotal": 59
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 69
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 78
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 87
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 93
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 103
+      }
+    ],
+    "stats": {
+      "name": "expert-bot-v3",
+      "total": 103,
+      "winCount": 1,
+      "totalTurns": 10,
+      "bustRate": "0.0%",
+      "avgScorePerTurn": "10.3"
+    }
+  },
+  {
+    "name": "medium-bot-v3",
+    "score": 104,
+    "turns": 12,
+    "date": "2025-03-20T07:36:16.265Z",
+    "turnHistory": [
+      {
+        "rollTotal": 8,
+        "busted": true
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 4
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 12
+      },
+      {
+        "rollTotal": 12,
+        "newTotal": 24
+      },
+      {
+        "rollTotal": 2,
+        "busted": true
+      },
+      {
+        "rollTotal": 18,
+        "busted": true
+      },
+      {
+        "rollTotal": 26,
+        "newTotal": 50
+      },
+      {
+        "rollTotal": 21,
+        "newTotal": 71
+      },
+      {
+        "rollTotal": 14,
+        "newTotal": 85
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 87
+      },
+      {
+        "rollTotal": 11,
+        "newTotal": 98
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 104
+      }
+    ],
+    "stats": {
+      "name": "medium-bot-v3",
+      "total": 104,
+      "winCount": 1,
+      "totalTurns": 12,
+      "bustRate": "25.0%",
+      "avgScorePerTurn": "11.0"
+    }
+  },
+  {
+    "name": "easy-bot-v3",
+    "score": 101,
+    "turns": 13,
+    "date": "2025-03-20T07:36:35.962Z",
+    "turnHistory": [
+      {
+        "rollTotal": 12,
+        "newTotal": 12
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 17
+      },
+      {
+        "rollTotal": 21,
+        "newTotal": 38
+      },
+      {
+        "rollTotal": 13,
+        "busted": true
+      },
+      {
+        "rollTotal": 7,
+        "newTotal": 45
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 53
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 59
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 69
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 73
+      },
+      {
+        "rollTotal": 5,
+        "busted": true
+      },
+      {
+        "rollTotal": 2,
+        "busted": true
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 78
+      },
+      {
+        "rollTotal": 23,
+        "newTotal": 101
+      }
+    ],
+    "stats": {
+      "name": "easy-bot-v3",
+      "total": 101,
+      "winCount": 1,
+      "totalTurns": 13,
+      "bustRate": "23.1%",
+      "avgScorePerTurn": "9.3"
+    }
+  },
+  {
+    "name": "hard-bot-v3",
+    "score": 103,
+    "turns": 13,
+    "date": "2025-03-20T07:36:15.282Z",
+    "turnHistory": [
+      {
+        "rollTotal": 8,
+        "busted": true
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 4
+      },
+      {
+        "rollTotal": 22,
+        "newTotal": 26
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 36
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 41
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 51
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 56
+      },
+      {
+        "rollTotal": 13,
+        "newTotal": 69
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 79
+      },
+      {
+        "rollTotal": 13,
+        "newTotal": 92
+      },
+      {
+        "rollTotal": 11,
+        "newTotal": 103
+      }
+    ],
+    "stats": {
+      "name": "hard-bot-v3",
+      "total": 103,
+      "winCount": 1,
+      "totalTurns": 13,
+      "bustRate": "23.1%",
+      "avgScorePerTurn": "8.5"
+    }
+  },
+  {
+    "name": "expert-bot-v3",
+    "score": 101,
+    "turns": 15,
+    "date": "2025-03-20T07:36:49.733Z",
+    "turnHistory": [
+      {
+        "rollTotal": 13,
+        "newTotal": 13
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 8,
+        "busted": true
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 23
+      },
+      {
+        "rollTotal": 7,
+        "newTotal": 30
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 38
+      },
+      {
+        "rollTotal": 5,
+        "busted": true
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 47
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 21,
+        "newTotal": 68
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 72
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 77
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 83
+      },
+      {
+        "rollTotal": 18,
+        "newTotal": 101
+      }
+    ],
+    "stats": {
+      "name": "expert-bot-v3",
+      "total": 101,
+      "winCount": 1,
+      "totalTurns": 15,
+      "bustRate": "33.3%",
+      "avgScorePerTurn": "7.6"
+    }
+  },
+  {
+    "name": "expert-bot-v3",
+    "score": 100,
+    "turns": 14,
+    "date": "2025-03-20T07:36:50.515Z",
+    "turnHistory": [
+      {
+        "rollTotal": 5,
+        "newTotal": 5
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 13,
+        "busted": true
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 19,
+        "busted": true
+      },
+      {
+        "rollTotal": 14,
+        "newTotal": 19
+      },
+      {
+        "rollTotal": 12,
+        "newTotal": 31
+      },
+      {
+        "rollTotal": 26,
+        "newTotal": 57
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 8,
+        "busted": true
+      },
+      {
+        "rollTotal": 14,
+        "newTotal": 71
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 13,
+        "newTotal": 84
+      },
+      {
+        "rollTotal": 16,
+        "newTotal": 100
+      }
+    ],
+    "stats": {
+      "name": "expert-bot-v3",
+      "total": 100,
+      "winCount": 1,
+      "totalTurns": 14,
+      "bustRate": "50.0%",
+      "avgScorePerTurn": "10.0"
+    }
+  },
+  {
+    "name": "expert-bot-v3",
+    "score": 100,
+    "turns": 16,
+    "date": "2025-03-20T07:37:10.763Z",
+    "turnHistory": [
+      {
+        "rollTotal": 4,
+        "newTotal": 4
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 10
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 15
+      },
+      {
+        "rollTotal": 15,
+        "busted": true
+      },
+      {
+        "rollTotal": 17,
+        "newTotal": 32
+      },
+      {
+        "rollTotal": 3,
+        "busted": true
+      },
+      {
+        "rollTotal": 22,
+        "newTotal": 54
+      },
+      {
+        "rollTotal": 5,
+        "busted": true
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 60
+      },
+      {
+        "rollTotal": 5,
+        "busted": true
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 12,
+        "newTotal": 72
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 81
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 89
+      },
+      {
+        "rollTotal": 11,
+        "newTotal": 100
+      }
+    ],
+    "stats": {
+      "name": "expert-bot-v3",
+      "total": 100,
+      "winCount": 1,
+      "totalTurns": 16,
+      "bustRate": "37.5%",
+      "avgScorePerTurn": "8.0"
+    }
+  },
+  {
+    "name": "easy-bot-v3",
+    "score": 101,
+    "turns": 14,
+    "date": "2025-03-20T07:39:46.811Z",
+    "turnHistory": [
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 7,
+        "newTotal": 7
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 16
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 15,
+        "newTotal": 31
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 37
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 41
+      },
+      {
+        "rollTotal": 20,
+        "newTotal": 61
+      },
+      {
+        "rollTotal": 11,
+        "newTotal": 72
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 75
+      },
+      {
+        "rollTotal": 12,
+        "newTotal": 87
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 92
+      },
+      {
+        "rollTotal": 7,
+        "busted": true
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 101
+      }
+    ],
+    "stats": {
+      "name": "easy-bot-v3",
+      "total": 101,
+      "winCount": 2,
+      "totalTurns": 14,
+      "bustRate": "21.4%",
+      "avgScorePerTurn": "7.7"
+    }
+  },
+  {
+    "name": "expert-bot-v3",
+    "score": 102,
+    "turns": 11,
+    "date": "2025-03-20T07:39:18.568Z",
+    "turnHistory": [
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 8
+      },
+      {
+        "rollTotal": 2,
+        "busted": true
+      },
+      {
+        "rollTotal": 14,
+        "newTotal": 22
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 27
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 31
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 36
+      },
+      {
+        "rollTotal": 21,
+        "newTotal": 57
+      },
+      {
+        "rollTotal": 13,
+        "newTotal": 70
+      },
+      {
+        "rollTotal": 11,
+        "newTotal": 81
+      },
+      {
+        "rollTotal": 21,
+        "newTotal": 102
+      }
+    ],
+    "stats": {
+      "name": "expert-bot-v3",
+      "total": 102,
+      "winCount": 2,
+      "totalTurns": 11,
+      "bustRate": "18.2%",
+      "avgScorePerTurn": "9.5"
+    }
+  },
+  {
+    "name": "hard-bot-v3",
+    "score": 100,
+    "turns": 10,
+    "date": "2025-03-20T07:39:33.984Z",
+    "turnHistory": [
+      {
+        "rollTotal": 4,
+        "newTotal": 4
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 9
+      },
+      {
+        "rollTotal": 15,
+        "newTotal": 24
+      },
+      {
+        "rollTotal": 19,
+        "busted": true
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 30
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 39
+      },
+      {
+        "rollTotal": 22,
+        "newTotal": 61
+      },
+      {
+        "rollTotal": 2,
+        "busted": true
+      },
+      {
+        "rollTotal": 22,
+        "newTotal": 83
+      },
+      {
+        "rollTotal": 17,
+        "newTotal": 100
+      }
+    ],
+    "stats": {
+      "name": "hard-bot-v3",
+      "total": 100,
+      "winCount": 1,
+      "totalTurns": 10,
+      "bustRate": "20.0%",
+      "avgScorePerTurn": "12.1"
+    }
+  },
+  {
+    "name": "medium-bot-v3",
+    "score": 100,
+    "turns": 10,
+    "date": "2025-03-20T07:39:25.138Z",
+    "turnHistory": [
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 5
+      },
+      {
+        "rollTotal": 23,
+        "newTotal": 28
+      },
+      {
+        "rollTotal": 20,
+        "newTotal": 48
+      },
+      {
+        "rollTotal": 21,
+        "newTotal": 69
+      },
+      {
+        "rollTotal": 3,
+        "busted": true
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 73
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 76
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 81
+      },
+      {
+        "rollTotal": 19,
+        "newTotal": 100
+      }
+    ],
+    "stats": {
+      "name": "medium-bot-v3",
+      "total": 100,
+      "winCount": 1,
+      "totalTurns": 10,
+      "bustRate": "20.0%",
+      "avgScorePerTurn": "10.3"
+    }
+  },
+  {
+    "name": "medium-bot-v3",
+    "score": 105,
+    "turns": 14,
+    "date": "2025-03-20T07:40:12.031Z",
+    "turnHistory": [
+      {
+        "rollTotal": 16,
+        "newTotal": 16
+      },
+      {
+        "rollTotal": 4,
+        "busted": true
+      },
+      {
+        "rollTotal": 7,
+        "newTotal": 23
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 25
+      },
+      {
+        "rollTotal": 13,
+        "newTotal": 38
+      },
+      {
+        "rollTotal": 20,
+        "newTotal": 58
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 60
+      },
+      {
+        "rollTotal": 12,
+        "newTotal": 72
+      },
+      {
+        "rollTotal": 10,
+        "busted": true
+      },
+      {
+        "rollTotal": 11,
+        "newTotal": 83
+      },
+      {
+        "rollTotal": 5,
+        "busted": true
+      },
+      {
+        "rollTotal": 2,
+        "busted": true
+      },
+      {
+        "rollTotal": 16,
+        "newTotal": 99
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 105
+      }
+    ],
+    "stats": {
+      "name": "medium-bot-v3",
+      "total": 105,
+      "winCount": 2,
+      "totalTurns": 14,
+      "bustRate": "28.6%",
+      "avgScorePerTurn": "9.0"
+    }
+  },
+  {
+    "name": "expert-bot-v3",
+    "score": 102,
+    "turns": 11,
+    "date": "2025-03-20T07:39:26.699Z",
+    "turnHistory": [
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 16,
+        "busted": true
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 4
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 11,
+        "newTotal": 15
+      },
+      {
+        "rollTotal": 11,
+        "busted": true
+      },
+      {
+        "rollTotal": 25,
+        "newTotal": 40
+      },
+      {
+        "rollTotal": 11,
+        "newTotal": 51
+      },
+      {
+        "rollTotal": 23,
+        "newTotal": 74
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 80
+      },
+      {
+        "rollTotal": 22,
+        "newTotal": 102
+      }
+    ],
+    "stats": {
+      "name": "expert-bot-v3",
+      "total": 102,
+      "winCount": 2,
+      "totalTurns": 11,
+      "bustRate": "36.4%",
+      "avgScorePerTurn": "11.7"
+    }
+  },
+  {
+    "name": "easy-bot-v3",
+    "score": 101,
+    "turns": 13,
+    "date": "2025-03-20T07:39:21.824Z",
+    "turnHistory": [
+      {
+        "rollTotal": 22,
+        "newTotal": 22
+      },
+      {
+        "rollTotal": 11,
+        "newTotal": 33
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 15,
+        "newTotal": 48
+      },
+      {
+        "rollTotal": 21,
+        "newTotal": 69
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 73
+      },
+      {
+        "rollTotal": 5,
+        "busted": true
+      },
+      {
+        "rollTotal": 14,
+        "busted": true
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 76
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 20,
+        "newTotal": 96
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 101
+      }
+    ],
+    "stats": {
+      "name": "easy-bot-v3",
+      "total": 101,
+      "winCount": 1,
+      "totalTurns": 13,
+      "bustRate": "38.5%",
+      "avgScorePerTurn": "9.2"
+    }
+  },
+  {
+    "name": "easy-bot-v3",
+    "score": 100,
+    "turns": 12,
+    "date": "2025-03-20T07:39:13.818Z",
+    "turnHistory": [
+      {
+        "rollTotal": 10,
+        "newTotal": 10
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 18
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 26
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 32
+      },
+      {
+        "rollTotal": 11,
+        "newTotal": 43
+      },
+      {
+        "rollTotal": 10,
+        "busted": true
+      },
+      {
+        "rollTotal": 21,
+        "newTotal": 64
+      },
+      {
+        "rollTotal": 5,
+        "busted": true
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 27,
+        "newTotal": 91
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 100
+      }
+    ],
+    "stats": {
+      "name": "easy-bot-v3",
+      "total": 100,
+      "winCount": 2,
+      "totalTurns": 12,
+      "bustRate": "33.3%",
+      "avgScorePerTurn": "9.6"
+    }
+  },
+  {
+    "name": "medium-bot-v3",
+    "score": 100,
+    "turns": 13,
+    "date": "2025-03-20T07:39:11.510Z",
+    "turnHistory": [
+      {
+        "rollTotal": 2,
+        "newTotal": 2
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 7
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 13
+      },
+      {
+        "rollTotal": 13,
+        "busted": true
+      },
+      {
+        "rollTotal": 21,
+        "newTotal": 34
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 43
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 46
+      },
+      {
+        "rollTotal": 16,
+        "newTotal": 62
+      },
+      {
+        "rollTotal": 19,
+        "newTotal": 81
+      },
+      {
+        "rollTotal": 14,
+        "newTotal": 95
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 100
+      }
+    ],
+    "stats": {
+      "name": "medium-bot-v3",
+      "total": 100,
+      "winCount": 2,
+      "totalTurns": 13,
+      "bustRate": "23.1%",
+      "avgScorePerTurn": "8.7"
+    }
+  },
+  {
+    "name": "easy-bot-v3",
+    "score": 101,
+    "turns": 14,
+    "date": "2025-03-20T07:40:06.301Z",
+    "turnHistory": [
+      {
+        "rollTotal": 10,
+        "newTotal": 10
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 15
+      },
+      {
+        "rollTotal": 5,
+        "busted": true
+      },
+      {
+        "rollTotal": 17,
+        "newTotal": 32
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 42
+      },
+      {
+        "rollTotal": 12,
+        "newTotal": 54
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 59
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 69
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 78
+      },
+      {
+        "rollTotal": 6,
+        "busted": true
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 86
+      },
+      {
+        "rollTotal": 15,
+        "newTotal": 101
+      }
+    ],
+    "stats": {
+      "name": "easy-bot-v3",
+      "total": 101,
+      "winCount": 1,
+      "totalTurns": 14,
+      "bustRate": "28.6%",
+      "avgScorePerTurn": "8.0"
+    }
+  },
+  {
+    "name": "medium-bot-v3",
+    "score": 105,
+    "turns": 11,
+    "date": "2025-03-20T07:39:56.951Z",
+    "turnHistory": [
+      {
+        "rollTotal": 21,
+        "newTotal": 21
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 29
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 37
+      },
+      {
+        "rollTotal": 18,
+        "newTotal": 55
+      },
+      {
+        "rollTotal": 24,
+        "newTotal": 79
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 84
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 87
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 92
+      },
+      {
+        "rollTotal": 5,
+        "busted": true
+      },
+      {
+        "rollTotal": 2,
+        "busted": true
+      },
+      {
+        "rollTotal": 13,
+        "newTotal": 105
+      }
+    ],
+    "stats": {
+      "name": "medium-bot-v3",
+      "total": 105,
+      "winCount": 1,
+      "totalTurns": 11,
+      "bustRate": "18.2%",
+      "avgScorePerTurn": "10.2"
+    }
+  },
+  {
+    "name": "easy-bot-v3",
+    "score": 100,
+    "turns": 11,
+    "date": "2025-03-20T07:39:38.827Z",
+    "turnHistory": [
+      {
+        "rollTotal": 21,
+        "newTotal": 21
+      },
+      {
+        "rollTotal": 16,
+        "busted": true
+      },
+      {
+        "rollTotal": 14,
+        "newTotal": 35
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 38
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 44
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 53
+      },
+      {
+        "rollTotal": 14,
+        "newTotal": 67
+      },
+      {
+        "rollTotal": 8,
+        "busted": true
+      },
+      {
+        "rollTotal": 12,
+        "newTotal": 79
+      },
+      {
+        "rollTotal": 14,
+        "newTotal": 93
+      },
+      {
+        "rollTotal": 7,
+        "newTotal": 100
+      }
+    ],
+    "stats": {
+      "name": "easy-bot-v3",
+      "total": 100,
+      "winCount": 1,
+      "totalTurns": 11,
+      "bustRate": "18.2%",
+      "avgScorePerTurn": "11.3"
+    }
+  },
+  {
+    "name": "hard-bot-v3",
+    "score": 100,
+    "turns": 13,
+    "date": "2025-03-20T07:40:39.050Z",
+    "turnHistory": [
+      {
+        "rollTotal": 5,
+        "newTotal": 5
+      },
+      {
+        "rollTotal": 9,
+        "busted": true
+      },
+      {
+        "rollTotal": 22,
+        "newTotal": 27
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 29
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 31
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 36
+      },
+      {
+        "rollTotal": 19,
+        "newTotal": 55
+      },
+      {
+        "rollTotal": 21,
+        "newTotal": 76
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 15,
+        "busted": true
+      },
+      {
+        "rollTotal": 20,
+        "newTotal": 96
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 100
+      }
+    ],
+    "stats": {
+      "name": "hard-bot-v3",
+      "total": 100,
+      "winCount": 2,
+      "totalTurns": 13,
+      "bustRate": "30.8%",
+      "avgScorePerTurn": "9.5"
+    }
+  },
+  {
+    "name": "easy-bot-v3",
+    "score": 102,
+    "turns": 14,
+    "date": "2025-03-20T07:40:16.989Z",
+    "turnHistory": [
+      {
+        "rollTotal": 6,
+        "newTotal": 6
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 16
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 22
+      },
+      {
+        "rollTotal": 11,
+        "busted": true
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 25
+      },
+      {
+        "rollTotal": 24,
+        "newTotal": 49
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 21,
+        "newTotal": 70
+      },
+      {
+        "rollTotal": 17,
+        "busted": true
+      },
+      {
+        "rollTotal": 11,
+        "newTotal": 81
+      },
+      {
+        "rollTotal": 7,
+        "newTotal": 88
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 14,
+        "newTotal": 102
+      }
+    ],
+    "stats": {
+      "name": "easy-bot-v3",
+      "total": 102,
+      "winCount": 1,
+      "totalTurns": 14,
+      "bustRate": "35.7%",
+      "avgScorePerTurn": "9.3"
+    }
+  },
+  {
+    "name": "expert-bot-v3",
+    "score": 100,
+    "turns": 11,
+    "date": "2025-03-20T07:40:31.398Z",
+    "turnHistory": [
+      {
+        "rollTotal": 17,
+        "newTotal": 17
+      },
+      {
+        "rollTotal": 16,
+        "newTotal": 33
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 43
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 51
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 55
+      },
+      {
+        "rollTotal": 23,
+        "newTotal": 78
+      },
+      {
+        "rollTotal": 13,
+        "newTotal": 91
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 94
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 100
+      }
+    ],
+    "stats": {
+      "name": "expert-bot-v3",
+      "total": 100,
+      "winCount": 2,
+      "totalTurns": 11,
+      "bustRate": "18.2%",
+      "avgScorePerTurn": "9.1"
+    }
+  },
+  {
+    "name": "easy-bot-v3",
+    "score": 100,
+    "turns": 11,
+    "date": "2025-03-20T07:39:01.932Z",
+    "turnHistory": [
+      {
+        "rollTotal": 17,
+        "newTotal": 17
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 19
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 24
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 29
+      },
+      {
+        "rollTotal": 11,
+        "newTotal": 40
+      },
+      {
+        "rollTotal": 14,
+        "busted": true
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 48
+      },
+      {
+        "rollTotal": 20,
+        "newTotal": 68
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 73
+      },
+      {
+        "rollTotal": 21,
+        "newTotal": 94
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 100
+      }
+    ],
+    "stats": {
+      "name": "easy-bot-v3",
+      "total": 100,
+      "winCount": 2,
+      "totalTurns": 11,
+      "bustRate": "9.1%",
+      "avgScorePerTurn": "10.4"
+    }
+  },
+  {
+    "name": "easy-bot-v3",
+    "score": 101,
+    "turns": 14,
+    "date": "2025-03-20T07:43:51.579Z",
+    "turnHistory": [
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 7,
+        "newTotal": 7
+      },
+      {
+        "rollTotal": 12,
+        "newTotal": 19
+      },
+      {
+        "rollTotal": 14,
+        "newTotal": 33
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 36
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 42
+      },
+      {
+        "rollTotal": 16,
+        "newTotal": 58
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 66
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 75
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 81
+      },
+      {
+        "rollTotal": 14,
+        "newTotal": 95
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 101
+      }
+    ],
+    "stats": {
+      "name": "easy-bot-v3",
+      "total": 101,
+      "winCount": 2,
+      "totalTurns": 14,
+      "bustRate": "21.4%",
+      "avgScorePerTurn": "7.2"
+    }
+  },
+  {
+    "name": "medium-bot-v3",
+    "score": 103,
+    "turns": 12,
+    "date": "2025-03-20T07:43:40.574Z",
+    "turnHistory": [
+      {
+        "rollTotal": 9,
+        "busted": true
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 22,
+        "newTotal": 22
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 24
+      },
+      {
+        "rollTotal": 14,
+        "busted": true
+      },
+      {
+        "rollTotal": 26,
+        "newTotal": 50
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 60
+      },
+      {
+        "rollTotal": 6,
+        "busted": true
+      },
+      {
+        "rollTotal": 18,
+        "newTotal": 78
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 84
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 94
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 103
+      }
+    ],
+    "stats": {
+      "name": "medium-bot-v3",
+      "total": 103,
+      "winCount": 1,
+      "totalTurns": 12,
+      "bustRate": "33.3%",
+      "avgScorePerTurn": "11.0"
+    }
+  },
+  {
+    "name": "easy-bot-v3",
+    "score": 102,
+    "turns": 12,
+    "date": "2025-03-20T07:43:52.482Z",
+    "turnHistory": [
+      {
+        "rollTotal": 13,
+        "newTotal": 13
+      },
+      {
+        "rollTotal": 22,
+        "newTotal": 35
+      },
+      {
+        "rollTotal": 2,
+        "busted": true
+      },
+      {
+        "rollTotal": 15,
+        "busted": true
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 37
+      },
+      {
+        "rollTotal": 11,
+        "newTotal": 48
+      },
+      {
+        "rollTotal": 25,
+        "newTotal": 73
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 76
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 79
+      },
+      {
+        "rollTotal": 16,
+        "newTotal": 95
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 99
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 102
+      }
+    ],
+    "stats": {
+      "name": "easy-bot-v3",
+      "total": 102,
+      "winCount": 1,
+      "totalTurns": 12,
+      "bustRate": "16.7%",
+      "avgScorePerTurn": "9.9"
+    }
+  },
+  {
+    "name": "hard-bot-v3",
+    "score": 100,
+    "turns": 12,
+    "date": "2025-03-20T07:43:44.474Z",
+    "turnHistory": [
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 8
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 14
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 20
+      },
+      {
+        "rollTotal": 12,
+        "busted": true
+      },
+      {
+        "rollTotal": 22,
+        "newTotal": 42
+      },
+      {
+        "rollTotal": 7,
+        "newTotal": 49
+      },
+      {
+        "rollTotal": 3,
+        "busted": true
+      },
+      {
+        "rollTotal": 22,
+        "newTotal": 71
+      },
+      {
+        "rollTotal": 5,
+        "busted": true
+      },
+      {
+        "rollTotal": 13,
+        "newTotal": 84
+      },
+      {
+        "rollTotal": 16,
+        "newTotal": 100
+      }
+    ],
+    "stats": {
+      "name": "hard-bot-v3",
+      "total": 100,
+      "winCount": 1,
+      "totalTurns": 12,
+      "bustRate": "33.3%",
+      "avgScorePerTurn": "10.0"
+    }
+  },
+  {
+    "name": "expert-bot-v3",
+    "score": 103,
+    "turns": 13,
+    "date": "2025-03-20T07:44:01.679Z",
+    "turnHistory": [
+      {
+        "rollTotal": 10,
+        "newTotal": 10
+      },
+      {
+        "rollTotal": 8,
+        "busted": true
+      },
+      {
+        "rollTotal": 23,
+        "newTotal": 33
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 39
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 49
+      },
+      {
+        "rollTotal": 4,
+        "busted": true
+      },
+      {
+        "rollTotal": 16,
+        "newTotal": 65
+      },
+      {
+        "rollTotal": 13,
+        "busted": true
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 70
+      },
+      {
+        "rollTotal": 11,
+        "newTotal": 81
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 91
+      },
+      {
+        "rollTotal": 12,
+        "newTotal": 103
+      }
+    ],
+    "stats": {
+      "name": "expert-bot-v3",
+      "total": 103,
+      "winCount": 1,
+      "totalTurns": 13,
+      "bustRate": "30.8%",
+      "avgScorePerTurn": "9.8"
+    }
+  },
+  {
+    "name": "medium-bot-v3",
+    "score": 103,
+    "turns": 14,
+    "date": "2025-03-20T07:43:56.208Z",
+    "turnHistory": [
+      {
+        "rollTotal": 22,
+        "newTotal": 22
+      },
+      {
+        "rollTotal": 15,
+        "newTotal": 37
+      },
+      {
+        "rollTotal": 6,
+        "busted": true
+      },
+      {
+        "rollTotal": 20,
+        "newTotal": 57
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 63
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 67
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 76
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 11,
+        "newTotal": 87
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 95
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 98
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 103
+      }
+    ],
+    "stats": {
+      "name": "medium-bot-v3",
+      "total": 103,
+      "winCount": 2,
+      "totalTurns": 14,
+      "bustRate": "28.6%",
+      "avgScorePerTurn": "7.8"
+    }
+  },
+  {
+    "name": "easy-bot-v3",
+    "score": 100,
+    "turns": 11,
+    "date": "2025-03-20T07:43:55.474Z",
+    "turnHistory": [
+      {
+        "rollTotal": 11,
+        "newTotal": 11
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 17
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 22
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 31
+      },
+      {
+        "rollTotal": 23,
+        "newTotal": 54
+      },
+      {
+        "rollTotal": 15,
+        "busted": true
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 57
+      },
+      {
+        "rollTotal": 7,
+        "newTotal": 64
+      },
+      {
+        "rollTotal": 17,
+        "newTotal": 81
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 84
+      },
+      {
+        "rollTotal": 16,
+        "newTotal": 100
+      }
+    ],
+    "stats": {
+      "name": "easy-bot-v3",
+      "total": 100,
+      "winCount": 2,
+      "totalTurns": 11,
+      "bustRate": "9.1%",
+      "avgScorePerTurn": "10.5"
+    }
+  },
+  {
+    "name": "hard-bot-v3",
+    "score": 101,
+    "turns": 9,
+    "date": "2025-03-20T07:43:36.214Z",
+    "turnHistory": [
+      {
+        "rollTotal": 12,
+        "newTotal": 12
+      },
+      {
+        "rollTotal": 20,
+        "newTotal": 32
+      },
+      {
+        "rollTotal": 11,
+        "newTotal": 43
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 47
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 25,
+        "newTotal": 72
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 80
+      },
+      {
+        "rollTotal": 21,
+        "newTotal": 101
+      }
+    ],
+    "stats": {
+      "name": "hard-bot-v3",
+      "total": 101,
+      "winCount": 1,
+      "totalTurns": 9,
+      "bustRate": "22.2%",
+      "avgScorePerTurn": "11.2"
+    }
+  },
+  {
+    "name": "medium-bot-v3",
+    "score": 102,
+    "turns": 8,
+    "date": "2025-03-20T07:43:14.143Z",
+    "turnHistory": [
+      {
+        "rollTotal": 8,
+        "newTotal": 8
+      },
+      {
+        "rollTotal": 20,
+        "newTotal": 28
+      },
+      {
+        "rollTotal": 23,
+        "newTotal": 51
+      },
+      {
+        "rollTotal": 13,
+        "newTotal": 64
+      },
+      {
+        "rollTotal": 14,
+        "newTotal": 78
+      },
+      {
+        "rollTotal": 12,
+        "newTotal": 90
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 98
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 102
+      }
+    ],
+    "stats": {
+      "name": "medium-bot-v3",
+      "total": 102,
+      "winCount": 1,
+      "totalTurns": 8,
+      "bustRate": "0.0%",
+      "avgScorePerTurn": "12.8"
+    }
+  },
+  {
+    "name": "medium-bot-v3",
+    "score": 101,
+    "turns": 16,
+    "date": "2025-03-20T07:44:18.537Z",
+    "turnHistory": [
+      {
+        "rollTotal": 10,
+        "newTotal": 10
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 14
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 22
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 26
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 29
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 31
+      },
+      {
+        "rollTotal": 7,
+        "newTotal": 38
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 48
+      },
+      {
+        "rollTotal": 12,
+        "busted": true
+      },
+      {
+        "rollTotal": 15,
+        "newTotal": 63
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 73
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 82
+      },
+      {
+        "rollTotal": 17,
+        "newTotal": 99
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 101
+      }
+    ],
+    "stats": {
+      "name": "medium-bot-v3",
+      "total": 101,
+      "winCount": 2,
+      "totalTurns": 16,
+      "bustRate": "18.8%",
+      "avgScorePerTurn": "7.1"
+    }
+  },
+  {
+    "name": "medium-bot-v3",
+    "score": 103,
+    "turns": 16,
+    "date": "2025-03-20T07:44:14.459Z",
+    "turnHistory": [
+      {
+        "rollTotal": 6,
+        "newTotal": 6
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 11
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 16
+      },
+      {
+        "rollTotal": 14,
+        "busted": true
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 19
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 19,
+        "busted": true
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 28
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 33
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 39
+      },
+      {
+        "rollTotal": 20,
+        "newTotal": 59
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 64
+      },
+      {
+        "rollTotal": 15,
+        "newTotal": 79
+      },
+      {
+        "rollTotal": 6,
+        "busted": true
+      },
+      {
+        "rollTotal": 20,
+        "newTotal": 99
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 103
+      }
+    ],
+    "stats": {
+      "name": "medium-bot-v3",
+      "total": 103,
+      "winCount": 3,
+      "totalTurns": 16,
+      "bustRate": "25.0%",
+      "avgScorePerTurn": "8.9"
+    }
+  },
+  {
+    "name": "expert-bot-v3",
+    "score": 100,
+    "turns": 12,
+    "date": "2025-03-20T07:43:38.573Z",
+    "turnHistory": [
+      {
+        "rollTotal": 10,
+        "newTotal": 10
+      },
+      {
+        "rollTotal": 12,
+        "newTotal": 22
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 25
+      },
+      {
+        "rollTotal": 18,
+        "newTotal": 43
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 53
+      },
+      {
+        "rollTotal": 21,
+        "newTotal": 74
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 77
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 80
+      },
+      {
+        "rollTotal": 11,
+        "busted": true
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 84
+      },
+      {
+        "rollTotal": 11,
+        "newTotal": 95
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 100
+      }
+    ],
+    "stats": {
+      "name": "expert-bot-v3",
+      "total": 100,
+      "winCount": 2,
+      "totalTurns": 12,
+      "bustRate": "8.3%",
+      "avgScorePerTurn": "9.3"
+    }
+  },
+  {
+    "name": "expert-bot-v3",
+    "score": 100,
+    "turns": 11,
+    "date": "2025-03-20T07:43:34.553Z",
+    "turnHistory": [
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 12,
+        "newTotal": 12
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 15
+      },
+      {
+        "rollTotal": 2,
+        "busted": true
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 25
+      },
+      {
+        "rollTotal": 17,
+        "busted": true
+      },
+      {
+        "rollTotal": 28,
+        "newTotal": 53
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 58
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 66
+      },
+      {
+        "rollTotal": 14,
+        "newTotal": 80
+      },
+      {
+        "rollTotal": 20,
+        "newTotal": 100
+      }
+    ],
+    "stats": {
+      "name": "expert-bot-v3",
+      "total": 100,
+      "winCount": 3,
+      "totalTurns": 11,
+      "bustRate": "27.3%",
+      "avgScorePerTurn": "10.8"
+    }
+  },
+  {
+    "name": "easy-bot-v3",
+    "score": 100,
+    "turns": 14,
+    "date": "2025-03-20T07:44:14.638Z",
+    "turnHistory": [
+      {
+        "rollTotal": 11,
+        "newTotal": 11
+      },
+      {
+        "rollTotal": 17,
+        "newTotal": 28
+      },
+      {
+        "rollTotal": 10,
+        "busted": true
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 33
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 39
+      },
+      {
+        "rollTotal": 24,
+        "newTotal": 63
+      },
+      {
+        "rollTotal": 11,
+        "newTotal": 74
+      },
+      {
+        "rollTotal": 5,
+        "busted": true
+      },
+      {
+        "rollTotal": 3,
+        "busted": true
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 84
+      },
+      {
+        "rollTotal": 16,
+        "newTotal": 100
+      }
+    ],
+    "stats": {
+      "name": "easy-bot-v3",
+      "total": 100,
+      "winCount": 3,
+      "totalTurns": 14,
+      "bustRate": "42.9%",
+      "avgScorePerTurn": "8.4"
+    }
+  },
+  {
+    "name": "easy-bot-v3",
+    "score": 102,
+    "turns": 15,
+    "date": "2025-03-20T07:44:29.466Z",
+    "turnHistory": [
+      {
+        "rollTotal": 6,
+        "newTotal": 6
+      },
+      {
+        "rollTotal": 5,
+        "busted": true
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 3,
+        "busted": true
+      },
+      {
+        "rollTotal": 11,
+        "busted": true
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 10
+      },
+      {
+        "rollTotal": 20,
+        "newTotal": 30
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 39
+      },
+      {
+        "rollTotal": 2,
+        "busted": true
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 47
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 50
+      },
+      {
+        "rollTotal": 25,
+        "newTotal": 75
+      },
+      {
+        "rollTotal": 16,
+        "newTotal": 91
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 97
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 102
+      }
+    ],
+    "stats": {
+      "name": "easy-bot-v3",
+      "total": 102,
+      "winCount": 1,
+      "totalTurns": 15,
+      "bustRate": "33.3%",
+      "avgScorePerTurn": "8.2"
+    }
+  },
+  {
+    "name": "expert-bot-v3",
+    "score": 104,
+    "turns": 14,
+    "date": "2025-03-20T07:44:14.272Z",
+    "turnHistory": [
+      {
+        "rollTotal": 14,
+        "newTotal": 14
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 5,
+        "busted": true
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 16
+      },
+      {
+        "rollTotal": 12,
+        "newTotal": 28
+      },
+      {
+        "rollTotal": 20,
+        "newTotal": 48
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 54
+      },
+      {
+        "rollTotal": 3,
+        "busted": true
+      },
+      {
+        "rollTotal": 4,
+        "busted": true
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 64
+      },
+      {
+        "rollTotal": 21,
+        "newTotal": 85
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 91
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 96
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 104
+      }
+    ],
+    "stats": {
+      "name": "expert-bot-v3",
+      "total": 104,
+      "winCount": 2,
+      "totalTurns": 14,
+      "bustRate": "28.6%",
+      "avgScorePerTurn": "8.3"
+    }
+  },
+  {
+    "name": "medium-bot-v3",
+    "score": 101,
+    "turns": 10,
+    "date": "2025-03-20T07:47:25.910Z",
+    "turnHistory": [
+      {
+        "rollTotal": 18,
+        "newTotal": 18
+      },
+      {
+        "rollTotal": 24,
+        "newTotal": 42
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 52
+      },
+      {
+        "rollTotal": 18,
+        "newTotal": 70
+      },
+      {
+        "rollTotal": 5,
+        "busted": true
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 76
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 82
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 85
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 90
+      },
+      {
+        "rollTotal": 11,
+        "newTotal": 101
+      }
+    ],
+    "stats": {
+      "name": "medium-bot-v3",
+      "total": 101,
+      "winCount": 1,
+      "totalTurns": 10,
+      "bustRate": "10.0%",
+      "avgScorePerTurn": "10.6"
+    }
+  },
+  {
+    "name": "hard-bot-v3",
+    "score": 102,
+    "turns": 12,
+    "date": "2025-03-20T07:47:13.583Z",
+    "turnHistory": [
+      {
+        "rollTotal": 5,
+        "newTotal": 5
+      },
+      {
+        "rollTotal": 15,
+        "newTotal": 20
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 22
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 24
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 30
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 34
+      },
+      {
+        "rollTotal": 6,
+        "busted": true
+      },
+      {
+        "rollTotal": 26,
+        "newTotal": 60
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 70
+      },
+      {
+        "rollTotal": 20,
+        "newTotal": 90
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 98
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 102
+      }
+    ],
+    "stats": {
+      "name": "hard-bot-v3",
+      "total": 102,
+      "winCount": 1,
+      "totalTurns": 12,
+      "bustRate": "8.3%",
+      "avgScorePerTurn": "9.0"
+    }
+  },
+  {
+    "name": "hard-bot-v3",
+    "score": 101,
+    "turns": 10,
+    "date": "2025-03-20T07:46:51.360Z",
+    "turnHistory": [
+      {
+        "rollTotal": 2,
+        "busted": true
+      },
+      {
+        "rollTotal": 15,
+        "newTotal": 15
+      },
+      {
+        "rollTotal": 14,
+        "newTotal": 29
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 33
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 36
+      },
+      {
+        "rollTotal": 20,
+        "newTotal": 56
+      },
+      {
+        "rollTotal": 20,
+        "newTotal": 76
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 22,
+        "newTotal": 98
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 101
+      }
+    ],
+    "stats": {
+      "name": "hard-bot-v3",
+      "total": 101,
+      "winCount": 3,
+      "totalTurns": 10,
+      "bustRate": "20.0%",
+      "avgScorePerTurn": "10.3"
+    }
+  },
+  {
+    "name": "hard-bot-v3",
+    "score": 102,
+    "turns": 19,
+    "date": "2025-03-20T07:49:17.589Z",
+    "turnHistory": [
+      {
+        "rollTotal": 3,
+        "newTotal": 3
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 9
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 12
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 21
+      },
+      {
+        "rollTotal": 9,
+        "busted": true
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 9,
+        "busted": true
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 29
+      },
+      {
+        "rollTotal": 5,
+        "busted": true
+      },
+      {
+        "rollTotal": 17,
+        "busted": true
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 33
+      },
+      {
+        "rollTotal": 16,
+        "busted": true
+      },
+      {
+        "rollTotal": 11,
+        "newTotal": 44
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 49
+      },
+      {
+        "rollTotal": 14,
+        "newTotal": 63
+      },
+      {
+        "rollTotal": 12,
+        "newTotal": 75
+      },
+      {
+        "rollTotal": 16,
+        "newTotal": 91
+      },
+      {
+        "rollTotal": 7,
+        "newTotal": 98
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 102
+      }
+    ],
+    "stats": {
+      "name": "hard-bot-v3",
+      "total": 102,
+      "winCount": 1,
+      "totalTurns": 19,
+      "bustRate": "31.6%",
+      "avgScorePerTurn": "8.3"
+    }
+  },
+  {
+    "name": "medium-bot-v3",
+    "score": 100,
+    "turns": 11,
+    "date": "2025-03-20T07:48:08.097Z",
+    "turnHistory": [
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 2
+      },
+      {
+        "rollTotal": 16,
+        "newTotal": 18
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 21
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 26
+      },
+      {
+        "rollTotal": 19,
+        "newTotal": 45
+      },
+      {
+        "rollTotal": 24,
+        "newTotal": 69
+      },
+      {
+        "rollTotal": 21,
+        "newTotal": 90
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 100
+      }
+    ],
+    "stats": {
+      "name": "medium-bot-v3",
+      "total": 100,
+      "winCount": 1,
+      "totalTurns": 11,
+      "bustRate": "27.3%",
+      "avgScorePerTurn": "9.1"
+    }
+  },
+  {
+    "name": "hard-bot-v3",
+    "score": 100,
+    "turns": 13,
+    "date": "2025-03-20T07:49:08.712Z",
+    "turnHistory": [
+      {
+        "rollTotal": 4,
+        "newTotal": 4
+      },
+      {
+        "rollTotal": 11,
+        "newTotal": 15
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 23
+      },
+      {
+        "rollTotal": 19,
+        "busted": true
+      },
+      {
+        "rollTotal": 18,
+        "busted": true
+      },
+      {
+        "rollTotal": 28,
+        "newTotal": 51
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 5,
+        "busted": true
+      },
+      {
+        "rollTotal": 4,
+        "busted": true
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 57
+      },
+      {
+        "rollTotal": 21,
+        "newTotal": 78
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 82
+      },
+      {
+        "rollTotal": 18,
+        "newTotal": 100
+      }
+    ],
+    "stats": {
+      "name": "hard-bot-v3",
+      "total": 100,
+      "winCount": 1,
+      "totalTurns": 13,
+      "bustRate": "38.5%",
+      "avgScorePerTurn": "11.2"
+    }
+  },
+  {
+    "name": "hard-bot-v3",
+    "score": 100,
+    "turns": 14,
+    "date": "2025-03-20T07:48:16.649Z",
+    "turnHistory": [
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 14,
+        "newTotal": 14
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 18
+      },
+      {
+        "rollTotal": 20,
+        "newTotal": 38
+      },
+      {
+        "rollTotal": 9,
+        "busted": true
+      },
+      {
+        "rollTotal": 23,
+        "newTotal": 61
+      },
+      {
+        "rollTotal": 6,
+        "busted": true
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 63
+      },
+      {
+        "rollTotal": 16,
+        "newTotal": 79
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 84
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 86
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 91
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 97
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 100
+      }
+    ],
+    "stats": {
+      "name": "hard-bot-v3",
+      "total": 100,
+      "winCount": 1,
+      "totalTurns": 14,
+      "bustRate": "21.4%",
+      "avgScorePerTurn": "8.2"
+    }
+  },
+  {
+    "name": "easy-bot-v3",
+    "score": 102,
+    "turns": 15,
+    "date": "2025-03-20T07:48:13.368Z",
+    "turnHistory": [
+      {
+        "rollTotal": 9,
+        "newTotal": 9
+      },
+      {
+        "rollTotal": 21,
+        "newTotal": 30
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 33
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 35
+      },
+      {
+        "rollTotal": 20,
+        "newTotal": 55
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 65
+      },
+      {
+        "rollTotal": 3,
+        "busted": true
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 74
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 78
+      },
+      {
+        "rollTotal": 9,
+        "busted": true
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 80
+      },
+      {
+        "rollTotal": 6,
+        "busted": true
+      },
+      {
+        "rollTotal": 12,
+        "newTotal": 92
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 98
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 102
+      }
+    ],
+    "stats": {
+      "name": "easy-bot-v3",
+      "total": 102,
+      "winCount": 1,
+      "totalTurns": 15,
+      "bustRate": "20.0%",
+      "avgScorePerTurn": "8.0"
+    }
+  },
+  {
+    "name": "hard-bot-v3",
+    "score": 100,
+    "turns": 18,
+    "date": "2025-03-20T07:49:26.688Z",
+    "turnHistory": [
+      {
+        "rollTotal": 5,
+        "busted": true
+      },
+      {
+        "rollTotal": 24,
+        "newTotal": 24
+      },
+      {
+        "rollTotal": 11,
+        "newTotal": 35
+      },
+      {
+        "rollTotal": 12,
+        "busted": true
+      },
+      {
+        "rollTotal": 2,
+        "busted": true
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 44
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 48
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 54
+      },
+      {
+        "rollTotal": 5,
+        "busted": true
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 57
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 59
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 65
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 14,
+        "newTotal": 79
+      },
+      {
+        "rollTotal": 21,
+        "newTotal": 100
+      }
+    ],
+    "stats": {
+      "name": "hard-bot-v3",
+      "total": 100,
+      "winCount": 2,
+      "totalTurns": 18,
+      "bustRate": "44.4%",
+      "avgScorePerTurn": "6.9"
+    }
+  },
+  {
+    "name": "easy-bot-v3",
+    "score": 103,
+    "turns": 15,
+    "date": "2025-03-20T07:48:31.398Z",
+    "turnHistory": [
+      {
+        "rollTotal": 11,
+        "newTotal": 11
+      },
+      {
+        "rollTotal": 14,
+        "newTotal": 25
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 28
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 36
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 41
+      },
+      {
+        "rollTotal": 18,
+        "busted": true
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 47
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 57
+      },
+      {
+        "rollTotal": 16,
+        "newTotal": 73
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 79
+      },
+      {
+        "rollTotal": 20,
+        "newTotal": 99
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 103
+      }
+    ],
+    "stats": {
+      "name": "easy-bot-v3",
+      "total": 103,
+      "winCount": 3,
+      "totalTurns": 15,
+      "bustRate": "26.7%",
+      "avgScorePerTurn": "8.1"
+    }
+  },
+  {
+    "name": "medium-bot-v3",
+    "score": 100,
+    "turns": 15,
+    "date": "2025-03-20T07:48:11.206Z",
+    "turnHistory": [
+      {
+        "rollTotal": 15,
+        "newTotal": 15
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 20
+      },
+      {
+        "rollTotal": 5,
+        "busted": true
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 13,
+        "newTotal": 33
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 35
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 41
+      },
+      {
+        "rollTotal": 6,
+        "busted": true
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 43
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 47
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 49
+      },
+      {
+        "rollTotal": 6,
+        "busted": true
+      },
+      {
+        "rollTotal": 26,
+        "newTotal": 75
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 85
+      },
+      {
+        "rollTotal": 15,
+        "newTotal": 100
+      }
+    ],
+    "stats": {
+      "name": "medium-bot-v3",
+      "total": 100,
+      "winCount": 2,
+      "totalTurns": 15,
+      "bustRate": "26.7%",
+      "avgScorePerTurn": "7.8"
+    }
+  },
+  {
+    "name": "expert-bot-v3",
+    "score": 101,
+    "turns": 10,
+    "date": "2025-03-20T07:47:59.953Z",
+    "turnHistory": [
+      {
+        "rollTotal": 14,
+        "newTotal": 14
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 23
+      },
+      {
+        "rollTotal": 18,
+        "busted": true
+      },
+      {
+        "rollTotal": 26,
+        "newTotal": 49
+      },
+      {
+        "rollTotal": 21,
+        "newTotal": 70
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 11,
+        "newTotal": 81
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 91
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 101
+      }
+    ],
+    "stats": {
+      "name": "expert-bot-v3",
+      "total": 101,
+      "winCount": 1,
+      "totalTurns": 10,
+      "bustRate": "30.0%",
+      "avgScorePerTurn": "11.9"
+    }
+  },
+  {
+    "name": "expert-bot-v3",
+    "score": 101,
+    "turns": 13,
+    "date": "2025-03-20T07:48:11.589Z",
+    "turnHistory": [
+      {
+        "rollTotal": 14,
+        "newTotal": 14
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 18
+      },
+      {
+        "rollTotal": 22,
+        "newTotal": 40
+      },
+      {
+        "rollTotal": 14,
+        "newTotal": 54
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 64
+      },
+      {
+        "rollTotal": 14,
+        "newTotal": 78
+      },
+      {
+        "rollTotal": 7,
+        "newTotal": 85
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 89
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 95
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 101
+      }
+    ],
+    "stats": {
+      "name": "expert-bot-v3",
+      "total": 101,
+      "winCount": 1,
+      "totalTurns": 13,
+      "bustRate": "23.1%",
+      "avgScorePerTurn": "7.8"
+    }
+  },
+  {
+    "name": "hard-bot-v3",
+    "score": 100,
+    "turns": 12,
+    "date": "2025-03-20T07:47:50.173Z",
+    "turnHistory": [
+      {
+        "rollTotal": 15,
+        "newTotal": 15
+      },
+      {
+        "rollTotal": 5,
+        "busted": true
+      },
+      {
+        "rollTotal": 7,
+        "newTotal": 22
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 26
+      },
+      {
+        "rollTotal": 18,
+        "busted": true
+      },
+      {
+        "rollTotal": 21,
+        "newTotal": 47
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 22,
+        "newTotal": 69
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 78
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 86
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 95
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 100
+      }
+    ],
+    "stats": {
+      "name": "hard-bot-v3",
+      "total": 100,
+      "winCount": 1,
+      "totalTurns": 12,
+      "bustRate": "25.0%",
+      "avgScorePerTurn": "10.3"
+    }
+  },
+  {
+    "name": "easy-bot-v3",
+    "score": 105,
+    "turns": 11,
+    "date": "2025-03-20T07:47:44.355Z",
+    "turnHistory": [
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 7,
+        "newTotal": 7
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 16
+      },
+      {
+        "rollTotal": 23,
+        "newTotal": 39
+      },
+      {
+        "rollTotal": 16,
+        "newTotal": 55
+      },
+      {
+        "rollTotal": 14,
+        "newTotal": 69
+      },
+      {
+        "rollTotal": 7,
+        "newTotal": 76
+      },
+      {
+        "rollTotal": 11,
+        "newTotal": 87
+      },
+      {
+        "rollTotal": 12,
+        "newTotal": 99
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 105
+      }
+    ],
+    "stats": {
+      "name": "easy-bot-v3",
+      "total": 105,
+      "winCount": 2,
+      "totalTurns": 11,
+      "bustRate": "18.2%",
+      "avgScorePerTurn": "9.5"
+    }
+  },
+  {
+    "name": "easy-bot-v3",
+    "score": 104,
+    "turns": 13,
+    "date": "2025-03-20T07:48:11.363Z",
+    "turnHistory": [
+      {
+        "rollTotal": 2,
+        "newTotal": 2
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 11,
+        "busted": true
+      },
+      {
+        "rollTotal": 14,
+        "busted": true
+      },
+      {
+        "rollTotal": 3,
+        "busted": true
+      },
+      {
+        "rollTotal": 14,
+        "newTotal": 16
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 20
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 26
+      },
+      {
+        "rollTotal": 22,
+        "newTotal": 48
+      },
+      {
+        "rollTotal": 11,
+        "newTotal": 59
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 64
+      },
+      {
+        "rollTotal": 20,
+        "newTotal": 84
+      },
+      {
+        "rollTotal": 20,
+        "newTotal": 104
+      }
+    ],
+    "stats": {
+      "name": "easy-bot-v3",
+      "total": 104,
+      "winCount": 2,
+      "totalTurns": 13,
+      "bustRate": "30.8%",
+      "avgScorePerTurn": "10.2"
+    }
+  },
+  {
+    "name": "medium-bot-v3",
+    "score": 100,
+    "turns": 18,
+    "date": "2025-03-20T07:53:54.878Z",
+    "turnHistory": [
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 5
+      },
+      {
+        "rollTotal": 15,
+        "newTotal": 20
+      },
+      {
+        "rollTotal": 24,
+        "newTotal": 44
+      },
+      {
+        "rollTotal": 19,
+        "busted": true
+      },
+      {
+        "rollTotal": 5,
+        "busted": true
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 53
+      },
+      {
+        "rollTotal": 3,
+        "busted": true
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 56
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 3,
+        "busted": true
+      },
+      {
+        "rollTotal": 7,
+        "busted": true
+      },
+      {
+        "rollTotal": 3,
+        "busted": true
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 20,
+        "newTotal": 76
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 16,
+        "newTotal": 92
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 100
+      }
+    ],
+    "stats": {
+      "name": "medium-bot-v3",
+      "total": 100,
+      "winCount": 1,
+      "totalTurns": 18,
+      "bustRate": "55.6%",
+      "avgScorePerTurn": "7.8"
+    }
+  },
+  {
+    "name": "easy-bot-v3",
+    "score": 101,
+    "turns": 15,
+    "date": "2025-03-20T07:53:23.717Z",
+    "turnHistory": [
+      {
+        "rollTotal": 6,
+        "newTotal": 6
+      },
+      {
+        "rollTotal": 20,
+        "newTotal": 26
+      },
+      {
+        "rollTotal": 9,
+        "busted": true
+      },
+      {
+        "rollTotal": 8,
+        "busted": true
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 32
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 37
+      },
+      {
+        "rollTotal": 8,
+        "busted": true
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 46
+      },
+      {
+        "rollTotal": 20,
+        "newTotal": 66
+      },
+      {
+        "rollTotal": 2,
+        "busted": true
+      },
+      {
+        "rollTotal": 16,
+        "busted": true
+      },
+      {
+        "rollTotal": 22,
+        "newTotal": 88
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 90
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 96
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 101
+      }
+    ],
+    "stats": {
+      "name": "easy-bot-v3",
+      "total": 101,
+      "winCount": 2,
+      "totalTurns": 15,
+      "bustRate": "33.3%",
+      "avgScorePerTurn": "9.6"
+    }
+  },
+  {
+    "name": "medium-bot-v3",
+    "score": 105,
+    "turns": 11,
+    "date": "2025-03-20T07:52:57.574Z",
+    "turnHistory": [
+      {
+        "rollTotal": 17,
+        "newTotal": 17
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 20
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 18,
+        "newTotal": 38
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 41
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 22,
+        "newTotal": 63
+      },
+      {
+        "rollTotal": 16,
+        "newTotal": 79
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 87
+      },
+      {
+        "rollTotal": 18,
+        "newTotal": 105
+      }
+    ],
+    "stats": {
+      "name": "medium-bot-v3",
+      "total": 105,
+      "winCount": 1,
+      "totalTurns": 11,
+      "bustRate": "27.3%",
+      "avgScorePerTurn": "9.5"
+    }
+  },
+  {
+    "name": "medium-bot-v3",
+    "score": 105,
+    "turns": 12,
+    "date": "2025-03-20T07:53:33.251Z",
+    "turnHistory": [
+      {
+        "rollTotal": 4,
+        "busted": true
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 4
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 7
+      },
+      {
+        "rollTotal": 22,
+        "newTotal": 29
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 35
+      },
+      {
+        "rollTotal": 13,
+        "newTotal": 48
+      },
+      {
+        "rollTotal": 7,
+        "busted": true
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 58
+      },
+      {
+        "rollTotal": 7,
+        "newTotal": 65
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 67
+      },
+      {
+        "rollTotal": 23,
+        "newTotal": 90
+      },
+      {
+        "rollTotal": 15,
+        "newTotal": 105
+      }
+    ],
+    "stats": {
+      "name": "medium-bot-v3",
+      "total": 105,
+      "winCount": 3,
+      "totalTurns": 12,
+      "bustRate": "16.7%",
+      "avgScorePerTurn": "9.7"
+    }
+  },
+  {
+    "name": "hard-bot-v3",
+    "score": 102,
+    "turns": 13,
+    "date": "2025-03-20T07:54:00.593Z",
+    "turnHistory": [
+      {
+        "rollTotal": 3,
+        "newTotal": 3
+      },
+      {
+        "rollTotal": 3,
+        "busted": true
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 7,
+        "newTotal": 10
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 18
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 26
+      },
+      {
+        "rollTotal": 23,
+        "newTotal": 49
+      },
+      {
+        "rollTotal": 7,
+        "newTotal": 56
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 60
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 65
+      },
+      {
+        "rollTotal": 21,
+        "newTotal": 86
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 92
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 102
+      }
+    ],
+    "stats": {
+      "name": "hard-bot-v3",
+      "total": 102,
+      "winCount": 2,
+      "totalTurns": 13,
+      "bustRate": "15.4%",
+      "avgScorePerTurn": "8.1"
+    }
+  },
+  {
+    "name": "easy-bot-v3",
+    "score": 102,
+    "turns": 13,
+    "date": "2025-03-20T07:53:34.071Z",
+    "turnHistory": [
+      {
+        "rollTotal": 7,
+        "newTotal": 7
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 11
+      },
+      {
+        "rollTotal": 20,
+        "newTotal": 31
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 37
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 43
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 53
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 57
+      },
+      {
+        "rollTotal": 3,
+        "busted": true
+      },
+      {
+        "rollTotal": 14,
+        "newTotal": 71
+      },
+      {
+        "rollTotal": 7,
+        "newTotal": 78
+      },
+      {
+        "rollTotal": 7,
+        "newTotal": 85
+      },
+      {
+        "rollTotal": 8,
+        "busted": true
+      },
+      {
+        "rollTotal": 17,
+        "newTotal": 102
+      }
+    ],
+    "stats": {
+      "name": "easy-bot-v3",
+      "total": 102,
+      "winCount": 1,
+      "totalTurns": 13,
+      "bustRate": "15.4%",
+      "avgScorePerTurn": "8.7"
+    }
+  },
+  {
+    "name": "expert-bot-v3",
+    "score": 104,
+    "turns": 12,
+    "date": "2025-03-20T07:52:53.972Z",
+    "turnHistory": [
+      {
+        "rollTotal": 2,
+        "newTotal": 2
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 5
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 10
+      },
+      {
+        "rollTotal": 11,
+        "newTotal": 21
+      },
+      {
+        "rollTotal": 15,
+        "newTotal": 36
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 46
+      },
+      {
+        "rollTotal": 6,
+        "busted": true
+      },
+      {
+        "rollTotal": 20,
+        "newTotal": 66
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 72
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 75
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 81
+      },
+      {
+        "rollTotal": 23,
+        "newTotal": 104
+      }
+    ],
+    "stats": {
+      "name": "expert-bot-v3",
+      "total": 104,
+      "winCount": 3,
+      "totalTurns": 12,
+      "bustRate": "8.3%",
+      "avgScorePerTurn": "9.2"
+    }
+  },
+  {
+    "name": "easy-bot-v3",
+    "score": 103,
+    "turns": 11,
+    "date": "2025-03-20T07:52:34.875Z",
+    "turnHistory": [
+      {
+        "rollTotal": 3,
+        "newTotal": 3
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 5
+      },
+      {
+        "rollTotal": 23,
+        "newTotal": 28
+      },
+      {
+        "rollTotal": 19,
+        "busted": true
+      },
+      {
+        "rollTotal": 25,
+        "newTotal": 53
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 63
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 71
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 77
+      },
+      {
+        "rollTotal": 15,
+        "newTotal": 92
+      },
+      {
+        "rollTotal": 11,
+        "newTotal": 103
+      }
+    ],
+    "stats": {
+      "name": "easy-bot-v3",
+      "total": 103,
+      "winCount": 3,
+      "totalTurns": 11,
+      "bustRate": "18.2%",
+      "avgScorePerTurn": "11.1"
+    }
+  },
+  {
+    "name": "medium-bot-v3",
+    "score": 103,
+    "turns": 15,
+    "date": "2025-03-20T07:53:21.751Z",
+    "turnHistory": [
+      {
+        "rollTotal": 6,
+        "busted": true
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 9
+      },
+      {
+        "rollTotal": 2,
+        "busted": true
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 17
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 25
+      },
+      {
+        "rollTotal": 8,
+        "busted": true
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 21,
+        "newTotal": 46
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 54
+      },
+      {
+        "rollTotal": 21,
+        "newTotal": 75
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 20,
+        "newTotal": 95
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 103
+      }
+    ],
+    "stats": {
+      "name": "medium-bot-v3",
+      "total": 103,
+      "winCount": 2,
+      "totalTurns": 15,
+      "bustRate": "46.7%",
+      "avgScorePerTurn": "7.9"
+    }
+  },
+  {
+    "name": "medium-bot-v3",
+    "score": 103,
+    "turns": 10,
+    "date": "2025-03-20T07:52:33.540Z",
+    "turnHistory": [
+      {
+        "rollTotal": 4,
+        "busted": true
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 6
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 11
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 19
+      },
+      {
+        "rollTotal": 22,
+        "newTotal": 41
+      },
+      {
+        "rollTotal": 14,
+        "newTotal": 55
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 24,
+        "newTotal": 79
+      },
+      {
+        "rollTotal": 12,
+        "newTotal": 91
+      },
+      {
+        "rollTotal": 12,
+        "newTotal": 103
+      }
+    ],
+    "stats": {
+      "name": "medium-bot-v3",
+      "total": 103,
+      "winCount": 2,
+      "totalTurns": 10,
+      "bustRate": "20.0%",
+      "avgScorePerTurn": "10.7"
+    }
+  },
+  {
+    "name": "expert-bot-v3",
+    "score": 101,
+    "turns": 13,
+    "date": "2025-03-20T07:51:10.133Z",
+    "turnHistory": [
+      {
+        "rollTotal": 2,
+        "busted": true
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 5
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 7
+      },
+      {
+        "rollTotal": 21,
+        "newTotal": 28
+      },
+      {
+        "rollTotal": 5,
+        "busted": true
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 34
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 21,
+        "newTotal": 55
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 63
+      },
+      {
+        "rollTotal": 19,
+        "newTotal": 82
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 14,
+        "newTotal": 96
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 101
+      }
+    ],
+    "stats": {
+      "name": "expert-bot-v3",
+      "total": 101,
+      "winCount": 2,
+      "totalTurns": 13,
+      "bustRate": "30.8%",
+      "avgScorePerTurn": "8.3"
+    }
+  },
+  {
+    "name": "hard-bot-v3",
+    "score": 100,
+    "turns": 12,
+    "date": "2025-03-20T07:52:56.571Z",
+    "turnHistory": [
+      {
+        "rollTotal": 10,
+        "newTotal": 10
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 20
+      },
+      {
+        "rollTotal": 18,
+        "busted": true
+      },
+      {
+        "rollTotal": 19,
+        "busted": true
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 25
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 35
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 41
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 50
+      },
+      {
+        "rollTotal": 25,
+        "newTotal": 75
+      },
+      {
+        "rollTotal": 20,
+        "newTotal": 95
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 100
+      }
+    ],
+    "stats": {
+      "name": "hard-bot-v3",
+      "total": 100,
+      "winCount": 2,
+      "totalTurns": 12,
+      "bustRate": "25.0%",
+      "avgScorePerTurn": "11.4"
+    }
+  },
+  {
+    "name": "easy-bot-v3",
+    "score": 101,
+    "turns": 11,
+    "date": "2025-03-20T07:52:43.545Z",
+    "turnHistory": [
+      {
+        "rollTotal": 22,
+        "newTotal": 22
+      },
+      {
+        "rollTotal": 7,
+        "busted": true
+      },
+      {
+        "rollTotal": 21,
+        "newTotal": 43
+      },
+      {
+        "rollTotal": 6,
+        "busted": true
+      },
+      {
+        "rollTotal": 24,
+        "newTotal": 67
+      },
+      {
+        "rollTotal": 15,
+        "newTotal": 82
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 87
+      },
+      {
+        "rollTotal": 7,
+        "busted": true
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 90
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 99
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 101
+      }
+    ],
+    "stats": {
+      "name": "easy-bot-v3",
+      "total": 101,
+      "winCount": 3,
+      "totalTurns": 11,
+      "bustRate": "27.3%",
+      "avgScorePerTurn": "11.0"
+    }
+  },
+  {
+    "name": "expert-bot-v3",
+    "score": 101,
+    "turns": 13,
+    "date": "2025-03-20T07:53:19.107Z",
+    "turnHistory": [
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 5,
+        "busted": true
+      },
+      {
+        "rollTotal": 4,
+        "busted": true
+      },
+      {
+        "rollTotal": 7,
+        "newTotal": 7
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 9
+      },
+      {
+        "rollTotal": 7,
+        "busted": true
+      },
+      {
+        "rollTotal": 26,
+        "newTotal": 35
+      },
+      {
+        "rollTotal": 19,
+        "newTotal": 54
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 57
+      },
+      {
+        "rollTotal": 23,
+        "newTotal": 80
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 86
+      },
+      {
+        "rollTotal": 15,
+        "newTotal": 101
+      }
+    ],
+    "stats": {
+      "name": "expert-bot-v3",
+      "total": 101,
+      "winCount": 1,
+      "totalTurns": 13,
+      "bustRate": "38.5%",
+      "avgScorePerTurn": "9.0"
+    }
+  },
+  {
+    "name": "hard-bot-v3",
+    "score": 101,
+    "turns": 12,
+    "date": "2025-03-20T07:52:58.992Z",
+    "turnHistory": [
+      {
+        "rollTotal": 23,
+        "newTotal": 23
+      },
+      {
+        "rollTotal": 3,
+        "busted": true
+      },
+      {
+        "rollTotal": 11,
+        "newTotal": 34
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 36
+      },
+      {
+        "rollTotal": 12,
+        "newTotal": 48
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 53
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 57
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 18,
+        "newTotal": 75
+      },
+      {
+        "rollTotal": 14,
+        "newTotal": 89
+      },
+      {
+        "rollTotal": 12,
+        "newTotal": 101
+      }
+    ],
+    "stats": {
+      "name": "hard-bot-v3",
+      "total": 101,
+      "winCount": 1,
+      "totalTurns": 12,
+      "bustRate": "25.0%",
+      "avgScorePerTurn": "8.7"
+    }
+  },
+  {
+    "name": "easy-bot-v3",
+    "score": 100,
+    "turns": 11,
+    "date": "2025-03-20T07:52:48.953Z",
+    "turnHistory": [
+      {
+        "rollTotal": 4,
+        "newTotal": 4
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 22,
+        "newTotal": 26
+      },
+      {
+        "rollTotal": 4,
+        "busted": true
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 31
+      },
+      {
+        "rollTotal": 14,
+        "busted": true
+      },
+      {
+        "rollTotal": 24,
+        "newTotal": 55
+      },
+      {
+        "rollTotal": 7,
+        "busted": true
+      },
+      {
+        "rollTotal": 15,
+        "newTotal": 70
+      },
+      {
+        "rollTotal": 20,
+        "newTotal": 90
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 100
+      }
+    ],
+    "stats": {
+      "name": "easy-bot-v3",
+      "total": 100,
+      "winCount": 1,
+      "totalTurns": 11,
+      "bustRate": "36.4%",
+      "avgScorePerTurn": "11.4"
+    }
+  }
+]

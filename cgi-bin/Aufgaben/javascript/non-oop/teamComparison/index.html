@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gymnastics Team Results</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Gymnastics Team Results</h1>
+    <h2>Enter Team Names and Scores</h2>
+
+    <form id="scoreForm">
+        <div>
+            <label for="team1Name">Team 1 Name:</label><br>
+            <input type="text" id="team1Name" placeholder="Enter team 1 name"><br>
+            <label for="team1Scores">Team 1 Scores (comma-separated):</label><br>
+            <input type="text" id="team1Scores" placeholder="e.g., 44, 23, 71">
+        </div>
+        <div>
+            <label for="team2Name">Team 2 Name:</label><br>
+            <input type="text" id="team2Name" placeholder="Enter team 2 name"><br>
+            <label for="team2Scores">Team 2 Scores (comma-separated):</label><br>
+            <input type="text" id="team2Scores" placeholder="e.g., 65, 54, 49">
+        </div>
+        <button type="button" onclick="processScores()">Submit Scores</button>
+    </form>
+
+    <div id="resultsContainer">
+        <h2>Results</h2>
+        <p id="winnerMessage"></p>
+        <div id="graphContainer" style="display: flex; justify-content: space-around; margin-top: 20px;"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

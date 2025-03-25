@@ -1,0 +1,1426 @@
+[
+  {
+    "name": "Hans",
+    "score": 101,
+    "turns": 19,
+    "date": "2025-03-11T20:37:04.304Z",
+    "turnHistory": [
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 2
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 11
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 15
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 19
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 25
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 29
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 32
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 42
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 47
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 51
+      },
+      {
+        "rollTotal": 16,
+        "newTotal": 67
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 70
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 74
+      },
+      {
+        "rollTotal": 14,
+        "newTotal": 88
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 98
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 101
+      }
+    ],
+    "stats": {
+      "name": "Hans",
+      "total": 101,
+      "winCount": 1,
+      "totalTurns": 19,
+      "bustRate": "15.8%",
+      "avgScorePerTurn": "5.3"
+    }
+  },
+  {
+    "name": "Berthold",
+    "score": 103,
+    "turns": 24,
+    "date": "2025-03-11T20:39:22.852Z",
+    "turnHistory": [
+      {
+        "rollTotal": 4,
+        "newTotal": 4
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 10
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 13
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 17
+      },
+      {
+        "rollTotal": 7,
+        "newTotal": 24
+      },
+      {
+        "rollTotal": 7,
+        "newTotal": 31
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 33
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 37
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 42
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 50
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 56
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 58
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 61
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 66
+      },
+      {
+        "rollTotal": 7,
+        "newTotal": 73
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 79
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 81
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 85
+      },
+      {
+        "rollTotal": 18,
+        "newTotal": 103
+      }
+    ],
+    "stats": {
+      "name": "Berthold",
+      "total": 103,
+      "winCount": 1,
+      "totalTurns": 24,
+      "bustRate": "20.8%",
+      "avgScorePerTurn": "4.3"
+    }
+  },
+  {
+    "name": "zz",
+    "score": 100,
+    "turns": 23,
+    "date": "2025-03-12T08:44:47.819Z",
+    "turnHistory": [
+      {
+        "rollTotal": 4,
+        "newTotal": 4
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 10
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 12
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 20
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 28
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 32
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 34
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 39
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 42
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 47
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 51
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 54
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 60
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 68
+      },
+      {
+        "rollTotal": 13,
+        "newTotal": 81
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 84
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 89
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 94
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 100
+      }
+    ],
+    "stats": {
+      "name": "zz",
+      "total": 100,
+      "winCount": 1,
+      "totalTurns": 23,
+      "bustRate": "17.4%",
+      "avgScorePerTurn": "4.3"
+    }
+  },
+  {
+    "name": "zzze",
+    "score": 102,
+    "turns": 20,
+    "date": "2025-03-12T08:49:51.525Z",
+    "turnHistory": [
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 4
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 13
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 18
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 26
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 31
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 33
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 35
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 41
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 44
+      },
+      {
+        "rollTotal": 7,
+        "newTotal": 51
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 53
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 62
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 71
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 81
+      },
+      {
+        "rollTotal": 15,
+        "newTotal": 96
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 102
+      }
+    ],
+    "stats": {
+      "name": "zzze",
+      "total": 102,
+      "winCount": 1,
+      "totalTurns": 20,
+      "bustRate": "20.0%",
+      "avgScorePerTurn": "5.1"
+    }
+  },
+  {
+    "name": "zz",
+    "score": 104,
+    "turns": 18,
+    "date": "2025-03-12T08:52:21.986Z",
+    "turnHistory": [
+      {
+        "rollTotal": 8,
+        "newTotal": 8
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 13
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 19
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 22
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 26
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 29
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 32
+      },
+      {
+        "rollTotal": 8,
+        "busted": true
+      },
+      {
+        "rollTotal": 13,
+        "newTotal": 45
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 47
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 51
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 61
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 69
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 74
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 78
+      },
+      {
+        "rollTotal": 11,
+        "newTotal": 89
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 99
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 104
+      }
+    ],
+    "stats": {
+      "name": "zz",
+      "total": 104,
+      "winCount": 1,
+      "totalTurns": 18,
+      "bustRate": "5.6%",
+      "avgScorePerTurn": "6.2"
+    }
+  },
+  {
+    "name": "zzze",
+    "score": 102,
+    "turns": 22,
+    "date": "2025-03-12T08:58:35.070Z",
+    "turnHistory": [
+      {
+        "rollTotal": 6,
+        "newTotal": 6
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 15
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 20
+      },
+      {
+        "rollTotal": 4,
+        "busted": true
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 23
+      },
+      {
+        "rollTotal": 12,
+        "newTotal": 35
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 39
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 43
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 45
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 47
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 51
+      },
+      {
+        "rollTotal": 5,
+        "busted": true
+      },
+      {
+        "rollTotal": 14,
+        "newTotal": 65
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 71
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 73
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 82
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 92
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 97
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 102
+      }
+    ],
+    "stats": {
+      "name": "zzze",
+      "total": 102,
+      "winCount": 1,
+      "totalTurns": 22,
+      "bustRate": "22.7%",
+      "avgScorePerTurn": "5.0"
+    }
+  },
+  {
+    "name": "zz",
+    "score": 100,
+    "turns": 24,
+    "date": "2025-03-12T09:01:03.023Z",
+    "turnHistory": [
+      {
+        "rollTotal": 2,
+        "newTotal": 2
+      },
+      {
+        "rollTotal": 12,
+        "newTotal": 14
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 16
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 25
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 29
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 35
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 39
+      },
+      {
+        "rollTotal": 7,
+        "newTotal": 46
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 51
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 59
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 61
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 66
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 68
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 74
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 79
+      },
+      {
+        "rollTotal": 10,
+        "busted": true
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 85
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 89
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 95
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 98
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 100
+      }
+    ],
+    "stats": {
+      "name": "zz",
+      "total": 100,
+      "winCount": 1,
+      "totalTurns": 24,
+      "bustRate": "16.7%",
+      "avgScorePerTurn": "4.6"
+    }
+  },
+  {
+    "name": "zz",
+    "score": 100,
+    "turns": 24,
+    "date": "2025-03-12T09:05:44.193Z",
+    "turnHistory": [
+      {
+        "rollTotal": 8,
+        "newTotal": 8
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 12
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 3,
+        "busted": true
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 17
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 23
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 26
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 28
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 34
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 40
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 48
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 52
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 60
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 63
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 68
+      },
+      {
+        "rollTotal": 11,
+        "busted": true
+      },
+      {
+        "rollTotal": 2,
+        "busted": true
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 72
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 77
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 85
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 94
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 100
+      }
+    ],
+    "stats": {
+      "name": "zz",
+      "total": 100,
+      "winCount": 2,
+      "totalTurns": 24,
+      "bustRate": "25.0%",
+      "avgScorePerTurn": "4.8"
+    }
+  },
+  {
+    "name": "zz",
+    "score": 101,
+    "turns": 21,
+    "date": "2025-03-12T09:13:39.738Z",
+    "turnHistory": [
+      {
+        "rollTotal": 5,
+        "newTotal": 5
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 13
+      },
+      {
+        "rollTotal": 3,
+        "busted": true
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 19
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 23
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 25
+      },
+      {
+        "rollTotal": 7,
+        "newTotal": 32
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 37
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 40
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 46
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 50
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 52
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 58
+      },
+      {
+        "rollTotal": 13,
+        "newTotal": 71
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 74
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 82
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 84
+      },
+      {
+        "rollTotal": 11,
+        "newTotal": 95
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 101
+      }
+    ],
+    "stats": {
+      "name": "zz",
+      "total": 101,
+      "winCount": 1,
+      "totalTurns": 21,
+      "bustRate": "14.3%",
+      "avgScorePerTurn": "5.0"
+    }
+  },
+  {
+    "name": "qqqq",
+    "score": 101,
+    "turns": 22,
+    "date": "2025-03-12T09:18:33.316Z",
+    "turnHistory": [
+      {
+        "rollTotal": 2,
+        "newTotal": 2
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 5
+      },
+      {
+        "rollTotal": 13,
+        "newTotal": 18
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 24
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 27
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 31
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 36
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 44
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 49
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 55
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 60
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 63
+      },
+      {
+        "rollTotal": 7,
+        "newTotal": 70
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 72
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 6,
+        "busted": true
+      },
+      {
+        "rollTotal": 13,
+        "newTotal": 85
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 88
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 96
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 101
+      }
+    ],
+    "stats": {
+      "name": "qqqq",
+      "total": 101,
+      "winCount": 1,
+      "totalTurns": 22,
+      "bustRate": "18.2%",
+      "avgScorePerTurn": "4.9"
+    }
+  },
+  {
+    "name": "zzze",
+    "score": 104,
+    "turns": 23,
+    "date": "2025-03-12T09:22:10.648Z",
+    "turnHistory": [
+      {
+        "rollTotal": 6,
+        "newTotal": 6
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 12
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 21
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 25
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 28
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 36
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 38
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 41
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 46
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 52
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 58
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 63
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 68
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 77
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 79
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 85
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 89
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 94
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 104
+      }
+    ],
+    "stats": {
+      "name": "zzze",
+      "total": 104,
+      "winCount": 1,
+      "totalTurns": 23,
+      "bustRate": "17.4%",
+      "avgScorePerTurn": "4.5"
+    }
+  },
+  {
+    "name": "zz",
+    "score": 104,
+    "turns": 19,
+    "date": "2025-03-12T09:26:58.079Z",
+    "turnHistory": [
+      {
+        "rollTotal": 3,
+        "newTotal": 3
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 6
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 8
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 10
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 13
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 15
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 21,
+        "newTotal": 36
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 46
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 48
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 57
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 11,
+        "busted": true
+      },
+      {
+        "rollTotal": 14,
+        "newTotal": 71
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 12,
+        "newTotal": 83
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 91
+      },
+      {
+        "rollTotal": 13,
+        "newTotal": 104
+      }
+    ],
+    "stats": {
+      "name": "zz",
+      "total": 104,
+      "winCount": 1,
+      "totalTurns": 19,
+      "bustRate": "26.3%",
+      "avgScorePerTurn": "6.1"
+    }
+  },
+  {
+    "name": "zzze",
+    "score": 101,
+    "turns": 22,
+    "date": "2025-03-12T09:21:38.500Z",
+    "turnHistory": [
+      {
+        "rollTotal": 8,
+        "newTotal": 8
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 12
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 15
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 19
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 3,
+        "busted": true
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 24
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 34
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 38
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 40
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 46
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 11,
+        "newTotal": 57
+      },
+      {
+        "rollTotal": 3,
+        "newTotal": 60
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 66
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 72
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 78
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 83
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 89
+      },
+      {
+        "rollTotal": 12,
+        "newTotal": 101
+      }
+    ],
+    "stats": {
+      "name": "zzze",
+      "total": 101,
+      "winCount": 1,
+      "totalTurns": 22,
+      "bustRate": "22.7%",
+      "avgScorePerTurn": "4.7"
+    }
+  },
+  {
+    "name": "zz",
+    "score": 100,
+    "turns": 19,
+    "date": "2025-03-12T09:31:37.945Z",
+    "turnHistory": [
+      {
+        "rollTotal": 3,
+        "newTotal": 3
+      },
+      {
+        "rollTotal": 11,
+        "newTotal": 14
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 18
+      },
+      {
+        "rollTotal": 0,
+        "busted": true
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 20
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 24
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 28
+      },
+      {
+        "rollTotal": 2,
+        "newTotal": 30
+      },
+      {
+        "rollTotal": 6,
+        "newTotal": 36
+      },
+      {
+        "rollTotal": 8,
+        "newTotal": 44
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 53
+      },
+      {
+        "rollTotal": 4,
+        "newTotal": 57
+      },
+      {
+        "rollTotal": 9,
+        "busted": true
+      },
+      {
+        "rollTotal": 8,
+        "busted": true
+      },
+      {
+        "rollTotal": 9,
+        "newTotal": 66
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 71
+      },
+      {
+        "rollTotal": 5,
+        "newTotal": 76
+      },
+      {
+        "rollTotal": 14,
+        "newTotal": 90
+      },
+      {
+        "rollTotal": 10,
+        "newTotal": 100
+      }
+    ],
+    "stats": {
+      "name": "zz",
+      "total": 100,
+      "winCount": 2,
+      "totalTurns": 19,
+      "bustRate": "15.8%",
+      "avgScorePerTurn": "6.2"
+    }
+  }
+]

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script src="scripts/buttons.js" defer></script>
+    <script src="scripts/settings.js" defer></script>
+    <script src="scripts/player.js" defer></script>
+    <script src="scripts/bot.js" defer></script>
+    <script src="scripts/dice.js" defer></script>
+    <script src="scripts/game.js" defer></script>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <title>Dice Game</title>
+  </head>
+  <body>
+    <main>
+      <div id="explanation">
+        <h2>Dice Poker - Game Rules</h2>
+        <p>
+          Dice Poker is a local multi-player game where players take turns
+          rolling a die. The goal is to reach 100 points before the opponent.
+        </p>
+
+        <h3>How to Play:</h3>
+        <ul>
+          <li>Players take turns rolling the die.</li>
+          <li>
+            A player can roll multiple times in a turn. The sum of all rolls in
+            the turn is added to their total score when they decide to "hold".
+          </li>
+          <li>
+            If a player rolls a "1", they lose all points from that turn and
+            their turn ends immediately.
+          </li>
+          <li>The first player to reach 100 points wins.</li>
+          <li>The winner is visually highlighted.</li>
+          <li>A "New Game" button resets the game.</li>
+          <li>The active player is visually indicated.</li>
+          <li>The second player can be replaced by a bot.</li>
+        </ul>
+
+        <h3>Bot Behavior:</h3>
+        <ul>
+          <li>The bot rolls the die randomly.</li>
+          <li>
+            The bot’s decisions (e.g., "Rolling again" or "Holding") are
+            displayed as text before execution.
+          </li>
+        </ul>
+
+        <button id="start-explanation">Play</button>
+        <a target="_blank" class="leaderboard-btn" href="leaderboard.html"
+          >Go to the Leaderboard!</a
+        >
+      </div>
+      <div id="settings">
+        <h2>Game Settings</h2>
+
+        <div class="player-count-container">
+          <label class="player-count-title" for="num-players"
+            >Number of Players:
+          </label>
+          <div class="player-count-controls">
+            <button id="decrease-players">−</button>
+            <span id="num-players-value">4</span>
+            <button id="increase-players">+</button>
+          </div>
+        </div>
+
+        <div id="player-settings"></div>
+
+        <button id="start-new-game">Start New Game</button>
+        <button id="end-game">End Game</button>
+        <button id="save-settings">Save Settings</button>
+        <button id="upload-settings">Upload Settings</button>
+      </div>
+
+      <div id="game"></div>
+      <div id="dice-container">
+        <div id="dice" class="dice">If you see this something is wrong</div>
+      </div>
+    </main>
+  </body>
+</html>

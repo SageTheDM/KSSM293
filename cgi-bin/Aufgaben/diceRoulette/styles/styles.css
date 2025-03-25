@@ -1,0 +1,1009 @@
+/* #region CSS Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* #endregion */
+
+/* #region Variables */
+:root {
+  /* Primary & Secondary Colors */
+  --primary-color: #4caf50;
+  --primary-color-dark: #388e3c;
+  --primary-color-darker: #2e7d32;
+  --primary-color-light: #81c784;
+  --secondary-color: #f4f4f4;
+  --secondary-color-hover: #e9e9e9;
+
+  /* Text Colors */
+  --text-color: #333;
+  --text-color-light: #444;
+  --text-color-lighter: #495057;
+  --text-color-dim: #6c757d;
+  --white-color: white;
+  --black-color: black;
+  --red-color: #e74c3c;
+
+  /* Background Colors */
+  --background-color: white;
+  --grey-bg-light: #f8f9fa;
+  --grey-bg: #f2f2f2;
+  --grey-bg-medium: #e9ecef;
+  --transparent-bg: transparent;
+  --modal-overlay-bg: rgba(0, 0, 0, 0.75);
+  --hover-bg-color: #e7f1ff;
+  --input-bg: white;
+
+  /* Shadow Colors */
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --shadow-color-strong: rgba(0, 0, 0, 0.2);
+  --shadow-color-stronger: rgba(0, 0, 0, 0.3);
+  --shadow-color-medium: rgba(0, 0, 0, 0.15);
+  --shadow-color-light: rgba(0, 0, 0, 0.05);
+  --text-shadow-color: rgba(0, 0, 0, 0.3);
+  --text-shadow-strong: rgba(0, 0, 0, 0.6);
+  --dice-shadow-red: rgba(255, 0, 0, 0.7);
+  --dice-shadow-green: rgba(0, 255, 0, 0.7);
+
+  /* Border Styles */
+  --border-color: #e0e0e0;
+  --border-color-light: #dee2e6;
+  --border-radius: 8px;
+  --border-radius-large: 12px;
+  --border-radius-larger: 16px;
+  --border-radius-circle: 50%;
+  --border-radius-pill: 20px;
+  --border-radius-button: 25px;
+
+  /* Gradient Colors */
+  --gradient-bg-color-one: #81c784;
+  --gradient-bg-color-two: #4caf50;
+  --gradient-bg-color-three: #388e3c;
+  --gradient-bg-color-four: #1b5e20;
+  --gradient-card-color-one: #4caf50;
+  --gradient-card-color-two: #ffcc00;
+  --gradient-card-color-three: #f4f4f4;
+  --gradient-card-color-four: #333;
+
+  /* Special Colors */
+  --highlight-color: #ffcc00;
+  --stats-gradient-start: #3498db;
+  --stats-gradient-end: #2c3e50;
+  --stats-gradient-bar-end: #2980b9;
+  --white-opacity-half: rgba(255, 255, 255, 0.5);
+}
+/* #endregion */
+
+/* #region Global Styles */
+body {
+  height: 100vh;
+  background: linear-gradient(
+    to bottom right,
+    var(--gradient-bg-color-one),
+    var(--gradient-bg-color-two),
+    var(--gradient-bg-color-three),
+    var(--gradient-bg-color-four)
+  );
+  font-family: "Arial", sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+/* #endregion */
+
+/* #region Buttons & Interactive Elements */
+.leaderboard-btn,
+#start-explanation {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  font-size: 1.2em;
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s, transform 0.2s;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.leaderboard-btn:hover,
+#start-explanation:hover {
+  background-color: var(--primary-color-darker);
+}
+
+.leaderboard-btn:active,
+#start-explanation:active {
+  transform: scale(0.95);
+}
+
+.card-button {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+  grid-template-rows: repeat(3, auto); /* 3 rows */
+  gap: 5px;
+  width: 100%;
+  margin-top: auto; /* Push to bottom */
+}
+
+.card-button button {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border: none;
+  padding: 8px 20px;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  transition: background 0.3s, transform 0.2s;
+  font-size: 1rem;
+  min-width: 100px;
+}
+
+.card-button button:hover {
+  background-color: var(--highlight-color);
+  transform: scale(1.005);
+}
+
+.card-button button:active {
+  transform: scale(0.95);
+}
+
+#hold-button,
+#roll-button {
+  grid-column: span 2;
+}
+
+#decrease-players,
+#increase-players {
+  font-size: 2em;
+  font-weight: bold;
+  color: var(--primary-color);
+  background-color: var(--white-color);
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  padding: 12px 18px;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  margin: 5px 0; /* Added margin top and bottom */
+}
+
+#decrease-players:hover,
+#increase-players:hover {
+  background-color: var(--hover-bg-color);
+  transform: scale(1.15);
+}
+
+#decrease-players:active,
+#increase-players:active {
+  transform: scale(0.95);
+}
+
+.nav-button {
+  background-color: var(--grey-bg-light);
+  border: 1px solid var(--border-color-light);
+  color: var(--text-color-lighter);
+  padding: 8px 14px;
+  border-radius: var(--border-radius-pill);
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-button:hover {
+  background-color: var(--grey-bg-medium);
+  transform: translateY(-2px);
+}
+
+.stats-close-button {
+  padding: 10px 24px;
+  background-color: var(--player-color, var(--stats-gradient-start));
+  color: var(--white-color);
+  border: none;
+  border-radius: var(--border-radius-button);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+  box-shadow: 0 2px 5px var(--shadow-color-strong);
+  margin-top: 12px;
+  min-width: 120px;
+}
+
+.stats-close-button:hover {
+  background-color: var(--stats-gradient-bar-end);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px var(--shadow-color-strong);
+}
+
+.stats-close-button:active {
+  transform: translateY(0);
+}
+
+.stats-header button {
+  background: var(--transparent-bg);
+  border: none;
+  color: var(--white-color);
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  opacity: 0.8;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.stats-header button:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+#settings button {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  font-size: 1.2em;
+  padding: 12px 18px;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  width: 100%;
+  text-align: center;
+  margin: 5px 0; /* Added margin top and bottom */
+}
+
+#settings button:hover {
+  background-color: var(--primary-color-darker);
+}
+
+#settings button:active {
+  transform: scale(0.98);
+}
+/* #endregion */
+
+/* #region Game Layout */
+#game {
+  display: none; /* Initially hidden, shown dynamically */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  height: 100vh;
+  margin: auto;
+}
+
+/* Player grid */
+.player-grid {
+  display: grid;
+  width: 100%;
+  gap: 5vh;
+}
+
+/* Layout for 2 players */
+#game[data-players="2"] .player-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Layout for 3 players */
+#game[data-players="3"] .player-grid {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+/* Make last player span two columns in 3-player mode */
+#game[data-players="3"] .player-grid .player-card:nth-child(3) {
+  grid-column: span 2;
+}
+
+/* Layout for 4 players */
+#game[data-players="4"] .player-grid {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+/* #endregion */
+
+/* #region Player Cards */
+.player-card {
+  background: linear-gradient(
+    145deg,
+    var(--gradient-card-color-one),
+    var(--gradient-card-color-two),
+    var(--gradient-card-color-three),
+    var(--gradient-card-color-four)
+  );
+  padding: 35px;
+  border: 1px solid var(--shadow-color);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 8px var(--shadow-color);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 45vw;
+  height: 45vh;
+  color: var(--white-color);
+  position: relative;
+  justify-content: space-between;
+}
+
+/* Hover effect */
+.player-card.active {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px var(--shadow-color);
+}
+
+/* Player info section at the top */
+.player-card .player-info {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.player-card h3 {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  color: var(--white-color);
+}
+
+.player-card .player-info p {
+  font-size: 0.9em;
+  margin-top: 5px;
+  text-align: center;
+  color: var(--white-color);
+  margin-bottom: 10px;
+}
+/* #endregion */
+
+/* #region Explanation Section */
+#explanation {
+  background: var(--background-color);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 8px var(--shadow-color);
+  padding: 20px;
+  max-width: 600px;
+  margin: 20px;
+}
+
+#explanation h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+#explanation h3 {
+  font-size: 1.5em;
+  margin: 15px 0;
+  color: var(--primary-color);
+}
+
+#explanation p {
+  margin-bottom: 15px;
+  color: var(--text-color);
+}
+
+#explanation ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+#explanation li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 15px;
+  color: var(--text-color);
+}
+/* #endregion */
+
+/* #region Settings Panel */
+#settings {
+  background: var(--background-color);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px var(--shadow-color-stronger);
+  padding: 30px;
+  max-width: 95vw; /* Increase width to take more space on PC */
+  margin: 30px auto;
+  height: 90vh;
+  width: 95vw;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+#settings h2 {
+  font-size: 2.4em;
+  margin-bottom: 5px;
+  color: var(--primary-color);
+  text-align: center;
+  font-weight: 600;
+}
+
+#settings label {
+  display: block;
+  margin: 12px 0 6px;
+  font-size: 1.1em;
+  color: var(--text-color);
+  text-align: center;
+}
+
+#settings input[type="number"],
+#settings input[type="text"],
+#settings input[type="color"],
+#settings select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--shadow-color);
+  border-radius: var(--border-radius);
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  font-size: 1em;
+  margin-bottom: 20px;
+  transition: border 0.3s ease;
+  text-align: center;
+}
+
+#settings input[type="number"]:focus,
+#settings input[type="text"]:focus,
+#settings input[type="color"]:focus,
+#settings select:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+#settings input[type="range"] {
+  width: 100%;
+  height: 10px;
+  background: var(--secondary-color);
+  border-radius: var(--border-radius);
+  outline: none;
+  transition: background 0.3s ease;
+}
+
+#settings input[type="range"]:focus {
+  background: var(--secondary-color-hover);
+}
+
+/* FLEXBOX LAYOUT FOR PLAYER SETTINGS */
+#player-settings {
+  display: flex;
+  flex-wrap: wrap; /* Ensures cards go to the next row if there's not enough space */
+  justify-content: center; /* Center-align cards */
+  align-items: flex-start; /* Aligns all cards at the top */
+  gap: 20px; /* Adds spacing between the cards */
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Player Settings Cards */
+.player-settings {
+  display: flex;
+  flex-direction: column; /* Keeps content vertically stacked */
+  align-items: center; /* Changed to center for better alignment */
+  justify-content: flex-start;
+  flex: 1 1 calc(33.33% - 20px); /* Distributes items evenly (for 3 players per row) */
+  min-width: 280px; /* Prevents them from getting too small */
+  max-width: 320px; /* Controls maximum width */
+  padding: 15px;
+  border: 1px solid var(--shadow-color);
+  border-radius: var(--border-radius);
+  background: var(--secondary-color);
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+}
+
+/* Optional hover effect */
+.player-settings:hover {
+  background: var(--secondary-color-hover);
+}
+
+.player-settings label {
+  display: inline-block;
+  margin-bottom: 5px;
+  text-align: center;
+  width: 100%;
+}
+
+.player-settings input,
+.player-settings select {
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+}
+
+/* Ensure the checkbox stays aligned at the top */
+.player-settings .bot-settings {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the checkbox and label */
+  gap: 8px;
+  width: 100%;
+}
+
+.player-count-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px;
+  background: var(--grey-bg-light);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 10px var(--shadow-color);
+  text-align: center;
+}
+
+#num-players-value {
+  font-size: 2em;
+  font-weight: bold;
+  color: var(--primary-color);
+  padding: 10px 25px;
+  border: 3px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  background-color: var(--input-bg);
+  text-align: center;
+  width: 70px;
+  transition: all 0.3s ease;
+}
+
+#num-players-value:hover {
+  background-color: var(--hover-bg-color);
+  transform: scale(1.1);
+}
+/* #endregion */
+
+/* #region Dice Styles */
+#dice-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 100; /* Added z-index to ensure it appears above other elements */
+  display: none;
+}
+
+.dice {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    145deg,
+    var(--white-color),
+    var(--secondary-color)
+  );
+  border: 5px solid var(--black-color);
+  border-radius: var(--border-radius-larger);
+  box-shadow: inset 5px 5px 10px var(--shadow-color-medium),
+    inset -5px -5px 10px rgba(255, 255, 255, 0.7),
+    4px 4px 15px var(--shadow-color-stronger);
+  position: relative;
+  pointer-events: auto;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease-in-out;
+}
+
+/* Dots */
+.dot {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: var(--black-color);
+  border-radius: var(--border-radius-circle);
+  transform: translate(-50%, -50%);
+}
+
+/* Rolling animation */
+.rolling {
+  animation: roll 0.6s ease-out forwards;
+}
+
+@keyframes roll {
+  0% {
+    transform: rotateX(0) rotateY(0);
+  }
+  25% {
+    transform: rotateX(180deg) rotateY(90deg);
+  }
+  50% {
+    transform: rotateX(360deg) rotateY(180deg);
+  }
+  75% {
+    transform: rotateX(540deg) rotateY(270deg);
+  }
+  100% {
+    transform: rotateX(720deg) rotateY(360deg);
+  }
+}
+
+/* Special glow effects for 1 and 6 */
+.dice[data-value="1"] {
+  box-shadow: 0 0 30px var(--dice-shadow-red);
+}
+
+.dice[data-value="6"] {
+  box-shadow: 0 0 30px var(--dice-shadow-green);
+}
+/* #endregion */
+
+/* #region Inactive Player States */
+/* Greyed-out inactive players */
+.player-card.greyed-out {
+  opacity: 0.5; /* Makes the player appear dimmer */
+  pointer-events: none; /* Prevents interaction with greyed-out players */
+}
+
+/* Optionally, make inactive players' text less visible */
+.player-card.greyed-out h3,
+.player-card.greyed-out p {
+  color: var(--white-opacity-half); /* Dim text for greyed-out players */
+}
+/* #endregion */
+
+/* #region Stats Modal */
+/* Player Statistics Styling */
+.stats-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--modal-overlay-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(3px);
+  animation: fadeIn 0.3s ease;
+}
+
+.stats-container {
+  background: var(--white-color);
+  border-radius: var(--border-radius-large);
+  box-shadow: 0 8px 30px var(--shadow-color-stronger);
+  width: 90%;
+  max-width: 520px;
+  overflow: hidden;
+  animation: slideIn 0.3s ease;
+  transform: translateY(0);
+}
+
+.stats-header {
+  padding: 18px 24px;
+  background: linear-gradient(
+    135deg,
+    var(--player-color, var(--stats-gradient-start)),
+    var(--stats-gradient-end)
+  );
+  color: var(--white-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.stats-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 4px var(--text-shadow-color);
+}
+
+.stats-content {
+  padding: 24px;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.stats-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+.stats-row:last-child {
+  border-bottom: none;
+}
+
+.stats-label {
+  font-weight: 600;
+  color: var(--text-color-light);
+  font-size: 1.05rem;
+}
+
+.stats-value {
+  color: var(--text-color);
+  font-size: 1.1rem;
+  font-weight: 500;
+  background: var(--grey-bg-light);
+  padding: 6px 12px;
+  border-radius: var(--border-radius-pill);
+  min-width: 80px;
+  text-align: center;
+}
+
+.stats-chart {
+  margin-top: 24px;
+  padding: 18px;
+  background-color: var(--grey-bg-light);
+  border-radius: var(--border-radius);
+  box-shadow: inset 0 2px 4px var(--shadow-color-light);
+}
+
+.stats-chart-title {
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+}
+
+.stats-chart-title::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 18px;
+  background-color: var(--player-color, var(--stats-gradient-start));
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+.stats-bar-container {
+  height: 22px;
+  background-color: var(--grey-bg-medium);
+  border-radius: var(--border-radius-large);
+  overflow: hidden;
+  margin-bottom: 8px;
+  position: relative;
+  box-shadow: inset 0 2px 3px var(--shadow-color-light);
+}
+
+.stats-bar {
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    var(--player-color, var(--stats-gradient-start)),
+    var(--stats-gradient-bar-end)
+  );
+  border-radius: var(--border-radius-large);
+  transition: width 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow: 0 2px 4px var(--shadow-color-strong);
+}
+
+.stats-bar-label {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  color: var(--white-color);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-shadow: 0 0 3px var(--text-shadow-strong);
+  z-index: 1;
+}
+
+/* Stats navigation */
+.stats-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.position-indicator {
+  font-size: 0.9rem;
+  color: var(--text-color-dim);
+  background-color: var(--grey-bg-light);
+  padding: 5px 10px;
+  border-radius: var(--border-radius-large);
+  border: 1px solid var(--border-color-light);
+}
+
+.stats-footer {
+  padding: 18px 24px;
+  background-color: var(--grey-bg-light);
+  border-top: 1px solid var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* #endregion */
+
+/* #region Turn History Table */
+/* Turn history table styling */
+.turn-history-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 18px;
+  font-size: 0.95rem;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 2px 6px var(--shadow-color);
+}
+
+.turn-history-table th,
+.turn-history-table td {
+  border: 1px solid var(--border-color);
+  padding: 10px 12px;
+  text-align: center;
+}
+
+.turn-history-table th {
+  background-color: var(--grey-bg);
+  font-weight: 600;
+  color: var(--text-color-light);
+  position: sticky;
+  top: 0;
+}
+
+.turn-history-table tr:nth-child(even) {
+  background-color: var(--grey-bg-light);
+}
+
+.turn-history-table tr:hover {
+  background-color: var(--hover-bg-color);
+}
+
+.turn-history-table .busted {
+  color: var(--red-color);
+  font-weight: bold;
+  position: relative;
+}
+
+.turn-history-table .busted::after {
+  content: "💥";
+  font-size: 0.8rem;
+  margin-left: 5px;
+  position: absolute;
+}
+/* #endregion */
+
+/* #region Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* #endregion */
+
+/* #region Responsive Design */
+@media (max-width: 1000px) {
+  .stats-container {
+    width: 95%;
+    max-height: 85vh;
+  }
+
+  .stats-header h3 {
+    font-size: 1.3rem;
+  }
+
+  .stats-content {
+    padding: 16px;
+  }
+
+  .nav-button {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+
+  /* Hide greyed-out cards on mobile */
+  .player-card.greyed-out {
+    display: none;
+  }
+
+  /* Player grid adjustments for mobile */
+  .player-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    height: 100vh;
+  }
+
+  /* Active card takes full screen on mobile */
+  .player-card.active {
+    min-height: 100vh;
+    min-width: 100vw;
+    border-radius: 0;
+    padding: 20px;
+    justify-content: space-between;
+    transform: none; /* Remove scale transform on mobile */
+    box-shadow: none;
+  }
+
+  /* Ensure player info stays at the top */
+  .player-card .player-info {
+    width: 100%;
+    text-align: center;
+  }
+
+  .player-card h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+
+  .player-card .player-info p {
+    font-size: 1.2em;
+  }
+
+  /* Buttons stick to the bottom */
+  .card-button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: auto; /* Push buttons to the bottom */
+    padding-bottom: 20px; /* Add space at bottom */
+    width: 100%;
+  }
+
+  .card-button button {
+    flex: 1 1 45%; /* Responsive button size */
+    max-width: 150px;
+    padding: 15px; /* Larger touch targets */
+    font-size: 1.1rem;
+  }
+
+  /* Make "Hold" and "Roll" buttons span full width */
+  #hold-button,
+  #roll-button {
+    flex: 1 1 100%;
+    max-width: 300px;
+  }
+
+  #player-settings {
+    justify-content: center; /* Stack the cards centrally */
+  }
+
+  .player-settings {
+    flex: 1 1 calc(50% - 20px); /* 2 per row on tablets */
+  }
+
+  @media (max-width: 800px) {
+    .player-settings {
+      flex: 1 1 100%; /* Full width on smaller screens */
+    }
+  }
+}
+/* #endregion */

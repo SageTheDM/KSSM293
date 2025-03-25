@@ -1,0 +1,191 @@
+{
+  "lessons": [
+    {
+      "title": "Lesson 1 - Dictionary",
+      "entries": [
+        {
+          "title": "Bootstrap Start",
+          "description": "Started playing around with Bootstrap - created the website framework for the Informatics module."
+        },
+        {
+          "title": "OneNote Structure",
+          "description": "Created the OneNote file structure for the module."
+        },
+        {
+          "title": "Glossary Work",
+          "description": "Worked through a list of words, split them into three categories, and then explained the words."
+        }
+      ]
+    },
+    {
+      "title": "Lesson 2 - HTML & CSS",
+      "entries": [
+        {
+          "title": "HTML Entities",
+          "description": "Invisible character control. HTML uses certain characters like <, >, or & for tags and commands. To make sure these characters appear correctly as text, HTML entities are used. < becomes &lt;, > becomes &gt;, & becomes &amp;, \" becomes &quot;, and ' becomes &apos; (not compatible with HTML4). There are also special entities like &shy; for soft hyphens or &zwj; for zero-width joiners."
+        },
+        {
+          "title": "Relative vs. Absolute Links",
+          "description": "Absolute links contain the full URL (for example, https://example.com/page.html) and work anywhere. Relative links are shorter (for example, ../page.html) and only work within the same website. Absolute: \"https://example.com/home\" (works everywhere). Relative: \"../home\" (only works within the same folder structure)."
+        },
+        {
+          "title": "CSS Units",
+          "description": "em, vw, and vh. em: Based on the font size of the parent element. Can cascade, which might lead to unexpected effects. vw (Viewport Width): 1% of the browser window's width. vh (Viewport Height): 1% of the browser window's height. Problem: Mobile browsers change the height of 100vh when the address bar appears or disappears. Solution: Use 100lvh if available."
+        },
+        {
+          "title": "Float as a Layout Tool",
+          "description": "The old way of doing layouts. Float was originally meant for text wrapping around images but was used for full page layouts for years. Nowadays, Flexbox or Grid is the better option. float: right; makes an element float to the right, and text wraps around it on the left. Problem: Floating elements are ignored by their parent containers, so hacks like clearfix or overflow: hidden; were needed. Solution: Just use display: flex; or display: grid; instead."
+        },
+        {
+          "title": "Task One Reflection",
+          "description": "Most of the CSS was easy, except for centering, which turned into a real challenge. My main issue was not reading the task carefully, which led to unnecessary mistakes. Centering elements became frustrating because I went into full auto mode, adding things I didn’t need. I also struggled with adapting to another person’s coding style, making it hard to match my work to theirs."
+        }
+      ]
+    },
+    {
+      "title": "Lesson 3 - Javascript",
+      "entries": [
+        {
+          "title": "Cloning Elements in JavaScript",
+          "description": "Today, I worked with cloneNode() for the first time. At first, it seemed simple—just make a copy of an element, and you’re done. But of course, it wasn’t that easy. I quickly realized that cloned elements don’t keep their event listeners, meaning a copied button won’t work unless I manually reattach the event. Definitely something to watch out for in the future.",
+          "code": "let originalElement = document.getElementById(\"elementToClone\");\nlet clonedElement = originalElement.cloneNode(true);\ndocument.body.appendChild(clonedElement);"
+        },
+        {
+          "title": "Legacy Async Function (Using Callbacks)",
+          "description": "I finally experienced 'callback hell' today. Before async/await, JavaScript used callbacks for asynchronous tasks. The deeper I went, the messier it got—functions inside functions inside functions. Debugging was a nightmare, and I now understand why people avoid this approach whenever possible.",
+          "code": "function fetchData(callback) {\n    let xhr = new XMLHttpRequest();\n    xhr.open(\"GET\", \"https://jsonplaceholder.typicode.com/todos/1\", true);\n    xhr.onreadystatechange = function () {\n        if (xhr.readyState === 4 && xhr.status === 200) {\n            callback(null, JSON.parse(xhr.responseText));\n        } else {\n            callback(new Error(\"Request failed\"), null);\n        }\n    };\n    xhr.send();\n}\n\nfetchData(function (error, data) {\n    if (error) {\n        console.error(\"Error:\", error);\n    } else {\n        console.log(\"Data:\", data);\n    }\n});"
+        },
+        {
+          "title": "Modern Async Function (Using async/await)",
+          "description": "After struggling with callbacks, I finally got to try async/await, and it was a huge relief. No more deeply nested functions, no more endless brackets. Just clean, readable code. I can’t imagine writing JavaScript without it now.",
+          "code": "async function fetchData() {\n    try {\n        let response = await fetch('https://jsonplaceholder.typicode.com/todos/1');\n        let data = await response.json();\n        console.log(data);\n    } catch (error) {\n        console.error('Error:', error);\n    }\n}\n\nfetchData();"
+        },
+        {
+          "title": "Key Differences",
+          "description": "Callbacks make the code harder to read and debug, while async/await keeps it clean and easy to follow. I wish I had started with async/await first. It just makes everything so much simpler."
+        }
+      ]
+    },
+    {
+      "title": "Lesson 4 - PHP",
+      "entries": [
+        {
+          "title": "Basics of PHP",
+          "description": "PHP (Hypertext Preprocessor) is a server-side scripting language used to create dynamic web pages. Unlike HTML, which is processed directly by the browser, PHP executes on the server and sends the generated output to the client. This allows for real-time content updates, data processing, and interaction with databases.\n\nPHP is embedded within HTML, meaning a single document can contain both HTML and PHP code. The server processes PHP sections and leaves HTML untouched, making PHP highly flexible for web development.",
+          "image": "images/php-visual.png"
+        },
+        {
+          "title": "Client-Server Communication",
+          "description": "When a user requests a webpage, their browser (client) sends an HTTP request to the web server. The server then determines how to handle the request:\n\n- If the requested file is a static `.html` file, it is directly sent back to the client.\n- If the file has a `.php` extension, the server invokes the PHP interpreter, which processes the PHP code and generates the appropriate output (typically HTML) to send back to the browser.\n\nPHP is executed only on the server, and the client never sees the actual PHP code—only the resulting output."
+        },
+        {
+          "title": "Structure of PHP Code",
+          "description": "A PHP script is enclosed within `<?php` and `?>` tags, which indicate the start and end of PHP code within an HTML file.",
+          "code": "<!DOCTYPE html>\n<html>\n<head>\n    <title>PHP Example</title>\n</head>\n<body>\n    <h1>Welcome to my website</h1>\n    <p>The current date is: <?php echo date('Y-m-d'); ?></p>\n</body>\n</html>"
+        },
+        {
+          "title": "Outputting Content in PHP",
+          "description": "PHP is often used to display dynamic content on web pages. The two primary ways to output text in PHP are:\n\n- `echo()` – The most common way to print output.\n- `print()` – Similar to `echo`, but returns a value (`1`), making it slightly slower.",
+          "code": "<?php\necho \"Hello, World!<br>\";\nprint \"This is a PHP script.\";\n?>"
+        },
+        {
+          "title": "Comments in PHP",
+          "description": "Comments are essential for code readability and debugging. PHP supports three types of comments:\n\n- Single-line comments (`//`)\n- Single-line comments using hash (`#`)\n- Multi-line comments (`/* ... */`)",
+          "code": "<?php\n// This is a single-line comment\n\n# This is another way to write a single-line comment\n\n/* \n   This is a multi-line comment.\n   It spans multiple lines.\n*/\n\necho \"PHP is fun!\";\n?>"
+        },
+        {
+          "title": "Data Types in PHP",
+          "description": "PHP supports several data types:\n\n- Boolean (`true` or `false`) – Used in logical operations.\n- Integer – Whole numbers (e.g., `10`, `-5`).\n- Float (Double) – Decimal numbers (e.g., `3.14`, `-0.99`).\n- String – A sequence of characters (e.g., `\"Hello, World!\"`).",
+          "code": "<?php\n$boolean = true;\n$integer = 42;\n$float = 3.1415;\n$string = \"Hello, PHP!\";\n\necho $string;  // Outputs: Hello, PHP!\n?>"
+        },
+        {
+          "title": "Variables in PHP",
+          "description": "Variables are used to store data for later use. In PHP:\n\n- A variable name starts with `$` (e.g., `$name`, `$age`).\n- Variable names cannot start with a number and cannot contain spaces.\n- PHP is case-sensitive, meaning `$Name` and `$name` are different variables.",
+          "code": "<?php\n$name = \"Alice\";\n$age = 25;\n\necho \"My name is $name and I am $age years old.\";\n?>"
+        },
+        {
+          "title": "Assigning and Manipulating Variables",
+          "description": "Variables can store and manipulate different data types. PHP allows:\n\n- Simple assignments (`=`)\n- String concatenation (`.`)\n- Arithmetic operations (`+`, `-`, `*`, `/`)",
+          "code": "<?php\n$a = 10;\n$b = 5;\n\n$sum = $a + $b;  // 15\ndifference = $a - $b;  // 5\n$product = $a * $b;  // 50\n$quotient = $a / $b;  // 2\n\necho \"Sum: $sum, Difference: $difference, Product: $product, Quotient: $quotient\";\n?>"
+        },
+        {
+          "title": "Automatic Type Conversion",
+          "description": "PHP automatically converts data types when needed, which can lead to unexpected results if not handled properly.",
+          "code": "<?php\n$sum = \"10\" + 5;  \necho $sum; // Outputs: 15\n?>"
+        },
+        {
+          "title": "Type Conversion with Concatenation",
+          "description": "PHP treats strings and numbers differently during concatenation, often leading to surprising results.",
+          "code": "<?php\n$result = \"5\" . 10;  \necho $result; // Outputs: 510\n?>"
+        }
+      ]
+    },
+    {
+      "title": "Lesson 5 - SQL",
+      "entries": [
+        {
+          "title": "Introduction to SQL",
+          "description": "SQL (Structured Query Language) is a language used for managing and querying relational databases. It allows users to create, modify, and retrieve data efficiently."
+        },
+        {
+          "title": "SQL SELECT Statement",
+          "description": "The SQL SELECT statement is used to retrieve data from a database table. It allows filtering, sorting, and joining multiple tables.",
+          "syntax": "sql\nSELECT column1, column2 FROM table_name WHERE condition;\n",
+          "example": "sql\nSELECT lastname, salary FROM employees WHERE department = 'Sales';\n"
+        },
+        {
+          "title": "SQL DISTINCT Statement",
+          "description": "The DISTINCT keyword ensures that duplicate values in a column are removed from the query results.",
+          "syntax": "sql\nSELECT DISTINCT column_name FROM table_name;\n",
+          "example": "sql\nSELECT DISTINCT brand FROM cars;\n"
+        },
+        {
+          "title": "SQL WHERE Clause",
+          "description": "The WHERE clause filters records based on a specified condition.",
+          "syntax": "sql\nSELECT column1, column2 FROM table_name WHERE condition;\n",
+          "example": "sql\nSELECT lastname, salary FROM employees WHERE salary > 3000;\n"
+        },
+        {
+          "title": "SQL AND & OR Operators",
+          "description": "The AND and OR operators combine multiple conditions in a WHERE clause.",
+          "syntax": "sql\nSELECT column1, column2 FROM table_name WHERE condition1 AND condition2;\nSELECT column1, column2 FROM table_name WHERE condition1 OR condition2;\n",
+          "example": "sql\nSELECT lastname, salary FROM employees WHERE department = 'HR' AND salary > 2000;\nSELECT lastname, salary FROM employees WHERE department = 'IT' OR department = 'Sales';\n"
+        },
+        {
+          "title": "SQL COUNT Function",
+          "entries": [
+            {
+              "title": "Description",
+              "description": "The COUNT function returns the number of rows that match a specified condition."
+            },
+            {
+              "title": "Syntax",
+              "syntax": "SELECT COUNT(column_name) FROM table_name WHERE condition;"
+            },
+            {
+              "title": "Example",
+              "example": "SELECT COUNT(*) FROM employees WHERE department = 'Sales';"
+            }
+          ]
+        },
+        {
+          "title": "SQL JOIN Clause",
+          "entries": [
+            {
+              "title": "Description",
+              "description": "The JOIN clause combines rows from two or more tables based on a related column between them."
+            },
+            {
+              "title": "Syntax",
+              "syntax": "SELECT table1.column1, table2.column2 FROM table1 JOIN table2 ON table1.common_column = table2.common_column;"
+            },
+            {
+              "title": "Example",
+              "example": "SELECT employees.name, departments.department_name FROM employees JOIN departments ON employees.department_id = departments.department_id;"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

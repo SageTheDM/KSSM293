@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Tip Calculator</h1>
+    <div>
+        <label for="bills">Enter Bill Amounts (separate by commas):</label>
+        <input type="text" id="bills" placeholder="e.g. 125, 555, 44">
+    </div>
+    <div>
+        <label for="low">Enter the Low Range:</label>
+        <input type="number" id="low" value="50">
+    </div>
+    <div>
+        <label for="high">Enter the High Range:</label>
+        <input type="number" id="high" value="300">
+    </div>
+    <div>
+        <label for="tipInRange">Enter the Tip Percentage for Bills in Range:</label>
+        <input type="number" id="tipInRange" value="15">
+    </div>
+    <div>
+        <label for="otherTip">Enter the Tip Percentage for Other Bills:</label>
+        <input type="number" id="otherTip" value="20">
+    </div>
+    <div>
+        <label for="currencySymbol">Enter Currency Symbol:</label>
+        <input type="text" id="currencySymbol" value="$">
+    </div>
+    <button onclick="generateBills()">Calculate Tips</button>
+
+    <div id="billContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

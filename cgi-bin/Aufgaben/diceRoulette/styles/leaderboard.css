@@ -1,0 +1,374 @@
+/* #region variables */
+:root {
+  --primary-color: #4caf50;
+  --secondary-color: #f4f4f4;
+  --text-color: #333;
+  --background-color: rgba(255, 255, 255, 0.9);
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --highlight-color: #ffcc00;
+  --border-radius: 12px;
+  --glass-bg: rgba(255, 255, 255, 0.2);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --gradient-bg-color-one: #81c784;
+  --gradient-bg-color-two: #4caf50;
+  --gradient-bg-color-three: #388e3c;
+  --gradient-bg-color-four: #1b5e20;
+  --gradient-card-color-one: rgba(76, 175, 80, 0.8);
+  --gradient-card-color-two: rgba(255, 204, 0, 0.8);
+  --gradient-card-color-three: rgba(244, 244, 244, 0.8);
+  --gradient-card-color-four: rgba(51, 51, 51, 0.8);
+  --top-player-gradient: linear-gradient(135deg, #4caf50, #81c784);
+  --average-player-gradient: linear-gradient(135deg, #ffcc00, #ff9800);
+  --lower-player-gradient: linear-gradient(135deg, #ff5722, #f44336);
+}
+/* #endregion */
+
+/* #region global-styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(
+    to bottom right,
+    var(--gradient-bg-color-one),
+    var(--gradient-bg-color-two),
+    var(--gradient-bg-color-three),
+    var(--gradient-bg-color-four)
+  );
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+/* #endregion */
+
+/* #region leaderboard-styles */
+#leaderboard {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  padding: 25px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 800px;
+  text-align: center;
+  height: 90vh;
+  overflow-y: scroll;
+}
+
+#leaderboard h1 {
+  color: var(--text-color);
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+/* Ensure both elements have the same styling */
+.filter-option {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-option label {
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.filter-option select {
+  padding: 10px;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--primary-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: "Poppins", sans-serif;
+}
+
+/* Remove margin from the last child to align with the other */
+#view-options select,
+#filter-options select {
+  margin-bottom: 0;
+}
+
+#filter,
+#view-selecter {
+  padding: 10px;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--primary-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: "Poppins", sans-serif;
+}
+
+#apply-filter {
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--border-radius);
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+#leaderboard-table th,
+#leaderboard-table td {
+  padding: 15px;
+  text-align: center;
+}
+
+#leaderboard-table th {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  font-weight: 600;
+}
+
+#leaderboard-table td {
+  border-bottom: 1px solid var(--secondary-color);
+  color: var(--text-color);
+}
+
+#leaderboard-table tr {
+  transition: all 0.3s ease;
+}
+
+/* Gradient Rows Based on Performance */
+#leaderboard-table tr.top-player {
+  background: var(--top-player-gradient);
+  color: white;
+}
+
+#leaderboard-table tr.average-player {
+  background: var(--average-player-gradient);
+  color: white;
+}
+
+#leaderboard-table tr.lower-player {
+  background: var(--lower-player-gradient);
+  color: white;
+}
+
+/* Modern and Stylish btn */
+.back-link,
+#download-leaderboard,
+#upload-leaderboard {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+  padding: 12px 24px;
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  border: 2px solid transparent;
+}
+
+.back-link:hover,
+#download-leaderboard:hover,
+#upload-leaderboard:hover {
+  background-color: var(--gradient-bg-color-three);
+  color: var(--background-color);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  border-color: var(--primary-color);
+}
+
+.back-link:active,
+#download-leaderboard:active,
+#upload-leaderboard:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  margin: 10% auto;
+  padding: 25px;
+  border-radius: var(--border-radius);
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  color: var(--text-color);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.close {
+  color: var(--text-color);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: var(--primary-color);
+}
+
+#modal-title {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+#modal-body {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+#modal-body p {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+#modal-body h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+#modal-body ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#modal-body ul li {
+  background-color: var(--background-color);
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: var(--text-color);
+  transition: transform 0.2s ease;
+}
+
+/* Bust Rate Chart Styles */
+.bust-rate-chart {
+  width: 100%;
+  height: 200px; /* Fixed height for the chart container */
+  margin-top: 20px;
+  padding: 10px;
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  overflow-x: auto; /* Enable horizontal scrolling */
+  overflow-y: hidden; /* Disable vertical scrolling */
+}
+
+.chart-wrapper {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  height: 100%;
+  min-width: max-content; /* Ensure the wrapper is wide enough for all bars */
+}
+
+.bar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.bar {
+  width: 30px;
+  background-color: #ff5722; /* Red color for busts */
+  transition: height 0.3s ease;
+  border-radius: 4px 4px 0 0;
+}
+
+.bar-label {
+  margin-top: 5px;
+  font-size: 12px;
+  color: var(--text-color);
+}
+
+/* Navigation Buttons */
+.stats-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.nav-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--border-radius);
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-button:hover {
+  background-color: var(--gradient-bg-color-three);
+  transform: translateY(-2px);
+}
+
+.position-indicator {
+  font-size: 16px;
+  color: var(--text-color);
+}
+/* #endregion */

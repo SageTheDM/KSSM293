@@ -1,0 +1,65 @@
+/* Grid Layout */
+.grid-wrapper {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+/* Person Card Styling */
+.grid-wrapper .person {
+    background-color: #666;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 18px;
+    color: #fff;
+    opacity: 0.5; /* Default for inactive entries */
+}
+
+.grid-wrapper .person.active {
+    opacity: 1; /* Highlight active entries */
+}
+
+/* Image Styling */
+.grid-wrapper img {
+    max-width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Name and Age Styling */
+.grid-wrapper h3 {
+    font-size: 32px;
+    margin: 10px 0;
+}
+
+/* Subtitle Styling */
+.grid-wrapper h4 {
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+/* Eye Color Indicator */
+.grid-wrapper .eyeColor span {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 100% 0px;
+    transform: rotate(45deg);
+}
+
+/* Eye Color Variants */
+.grid-wrapper .eyeColor .blue {
+    background-color: #2632BD;
+}
+
+.grid-wrapper .eyeColor .brown {
+    background-color: #70412D;
+}
+
+.grid-wrapper .eyeColor .green {
+    background-color: #2A7B34;
+}

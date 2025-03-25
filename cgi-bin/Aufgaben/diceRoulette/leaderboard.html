@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/leaderboard.css" />
+    <script src="scripts/leaderboard.js" defer></script>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <title>Leaderboard - Dice Game</title>
+  </head>
+  <body>
+    <main>
+      <div id="leaderboard">
+        <h1>Leaderboard</h1>
+        <!-- View Options -->
+        <div id="view-options" class="filter-option">
+          <label for="view-selector">View:</label>
+          <select id="view-selector">
+            <option value="efficiency">Basic</option>
+            <option value="performance">Performance</option>
+          </select>
+        </div>
+        <!-- Filter Options -->
+        <div id="filter-options" class="filter-option">
+          <label for="filter">Sort by:</label>
+          <select id="filter">
+            <option value="efficiency">Best Efficiency</option>
+            <option value="score">Max Points</option>
+            <option value="turns">Least Turns</option>
+            <option value="date">Most Recent</option>
+            <option value="bustRate">Lowest Bust Rate</option>
+          </select>
+          <button id="apply-filter">Apply</button>
+        </div>
+        <!-- Leaderboard Table -->
+        <table id="leaderboard-table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Name</th>
+              <th>Score</th>
+              <th>Turns</th>
+              <th>Score/Turns</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Leaderboard rows will be dynamically inserted here -->
+          </tbody>
+        </table>
+        <!-- Link to go back to the game -->
+        <a href="index.html" class="back-link">Go back to the Game!</a>
+        <div class="button-group">
+          <button id="download-leaderboard">Download Leaderboard</button>
+          <button id="upload-leaderboard">Upload Leaderboard</button>
+        </div>
+      </div>
+      <!-- Modal for Detailed Stats -->
+      <div id="stats-modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2 id="modal-title">Player Stats</h2>
+          <div id="modal-body">
+            <!-- Detailed stats will be dynamically inserted here -->
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
